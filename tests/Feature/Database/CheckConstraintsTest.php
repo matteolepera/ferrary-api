@@ -88,3 +88,31 @@ it('rifiuta più vittorie che podi', function () {
         'podiums' => 10,
     ]))->toThrow(QueryException::class, 'chk_racing_wins_podiums');
 });
+
+it('accetta più podi che gare per le statistiche di squadra', function () {
+    $versionId = createVersion(['vehicle_type' => 'f1', 'body_type' => 'monoposto']);
+
+    DB::table('version_racing')->insert([
+        'version_id' => $versionId,
+        'championship' => 'Formula 1',
+        'season_start' => 2004,
+        'races' => 18,
+        'wins' => 15,
+        'podiums' => 29,
+    ]);
+
+    expect(DB::table('version_racing')->count())->toBe(1);
+});
+
+it('rifiuta più vittorie che gare', function () {
+    $versionId = createVersion(['vehicle_type' => 'f1', 'body_type' => 'monoposto']);
+
+    expect(fn () => DB::table('version_racing')->insert([
+        'version_id' => $versionId,
+        'championship' => 'Formula 1',
+        'season_start' => 2004,
+        'races' => 18,
+        'wins' => 20,
+        'podiums' => 30,
+    ]))->toThrow(QueryException::class, 'chk_racing_wins_races');
+});
