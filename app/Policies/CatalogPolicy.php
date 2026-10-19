@@ -12,6 +12,11 @@ use Illuminate\Database\Eloquent\Model;
  */
 abstract class CatalogPolicy
 {
+    public function before(User $user, string $ability): ?bool
+    {
+        return $user->isMaster() ? true : null;
+    }
+
     public function viewAny(User $user): bool
     {
         return true;
