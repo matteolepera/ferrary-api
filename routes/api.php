@@ -13,6 +13,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::prefix('admin')->group(function () {
         Route::get('/staff', [StaffController::class, 'index']);
         Route::get('/staff/{user}', [StaffController::class, 'show']);
+        Route::post('/staff', [StaffController::class, 'store']);
     });
 
 });
