@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Enums\VehicleType;
+use App\Models\Concerns\LogsCatalogActivity;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -14,7 +15,7 @@ use Spatie\Translatable\HasTranslations;
 
 class Version extends Model
 {
-    use HasFactory, HasTranslations, SoftDeletes;
+    use HasFactory, HasTranslations, LogsCatalogActivity, SoftDeletes;
 
     public array $translatable = ['description'];
 

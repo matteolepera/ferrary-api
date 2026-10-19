@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\LogsCatalogActivity;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Driver extends Model
 {
-    use HasFactory;
+    use HasFactory, LogsCatalogActivity;
 
     protected $fillable = ['first_name', 'last_name', 'slug', 'nationality', 'birth_date'];
 

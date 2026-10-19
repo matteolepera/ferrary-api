@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\LogsCatalogActivity;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
@@ -9,7 +10,7 @@ use Spatie\Translatable\HasTranslations;
 
 class Engine extends Model
 {
-    use HasFactory, HasTranslations;
+    use HasFactory, HasTranslations, LogsCatalogActivity;
 
     public array $translatable = ['description'];
 
