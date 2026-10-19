@@ -16,6 +16,8 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/staff', [StaffController::class, 'store']);
         Route::patch('/staff/{user}', [StaffController::class, 'update']);
         Route::delete('/staff/{user}', [StaffController::class, 'destroy']);
+        Route::patch('/staff/{user}/role', [StaffController::class, 'changeRole']);
+        Route::post('/staff/{user}/transfer-master', [StaffController::class, 'transferMaster']);
     });
 
 });

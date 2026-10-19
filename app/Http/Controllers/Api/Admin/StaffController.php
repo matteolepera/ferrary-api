@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\Admin;
 
+use App\Actions\TransferMasterRole;
 use App\Enums\UserRole;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StoreStaffRequest;
@@ -9,9 +10,11 @@ use App\Http\Requests\Admin\UpdateStaffRequest;
 use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Validation\Rule;
 
 class StaffController extends Controller
 {
@@ -84,5 +87,46 @@ class StaffController extends Controller
 
         // 204 No Content: operazione riuscita, nessun contenuto da restituire
         return response()->noContent();
+    }
+
+    /**
+     * Cambia il ruolo di un membro dello staff (admin ↔ moderatore).
+     * Il ruolo di master non si assegna da qui: serve il trasferimento.
+     */
+    public function changeRole(Request $request, User $user): UserResource
+    {
+        // 1. Chi fa la richiesta può gestire questo utente?
+        //    Lo controlliamo subito: chi non ha alcun potere su di lui riceve 403 senza passare dalla validazione.
+        Gate::authorize('update', $user);
+
+        // 2. Il ruolo inviato esiste? Per un solo campo basta validare qui, senza una Form Request dedicata.
+        $validated = $request->validate([
+            'role' => ['required', Rule::enum(UserRole::class)],
+        ]);
+
+        $role = UserRole::from($validated['role']);
+
+        // 3. Può assegnare proprio questo ruolo? (es. un admin non può promuovere ad admin)
+        Gate::authorize('changeRole', [$user, $role]);
+
+        $user->role = $role;
+        $user->save();
+
+        return new UserResource($user);
+    }
+
+    /**
+     * Trasferisce il ruolo di master a un altro membro dello staff.
+     * Solo il master può farlo, e dopo il trasferimento diventa admin.
+     */
+    public function transferMaster(User $user, TransferMasterRole $transferMasterRole): UserResource
+    {
+        Gate::authorize('transferMaster', $user);
+
+        // La logica (transazione, ordine declassa-poi-promuovi) è nell'azione, la stessa usata dal comando Artisan
+        $transferMasterRole->handle($user);
+
+        // fresh() ricarica l'utente dal database, così la risposta mostra il ruolo aggiornato
+        return new UserResource($user->fresh());
     }
 }
