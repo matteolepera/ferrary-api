@@ -5,10 +5,12 @@ namespace App\Http\Controllers\Api\Admin;
 use App\Enums\UserRole;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StoreStaffRequest;
+use App\Http\Requests\Admin\UpdateStaffRequest;
 use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Gate;
 
 class StaffController extends Controller
@@ -56,5 +58,31 @@ class StaffController extends Controller
         return (new UserResource($user))
             ->response()
             ->setStatusCode(201);
+    }
+
+    /**
+     * Modifica nome, email o password di un membro dello staff.
+     * Il permesso è già stato verificato da UpdateStaffRequest.
+     */
+    public function update(UpdateStaffRequest $request, User $user): UserResource
+    {
+        // validated() contiene solo i campi inviati e validati: aggiorniamo solo quelli
+        $user->update($request->validated());
+
+        return new UserResource($user);
+    }
+
+    /**
+     * Elimina definitivamente un membro dello staff.
+     * Risponde 204 se riesce, 403 se l'utente non può eliminarlo (compreso il master su sé stesso).
+     */
+    public function destroy(User $user): Response
+    {
+        Gate::authorize('delete', $user);
+
+        $user->delete();
+
+        // 204 No Content: operazione riuscita, nessun contenuto da restituire
+        return response()->noContent();
     }
 }
