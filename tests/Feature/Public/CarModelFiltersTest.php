@@ -89,8 +89,8 @@ it('filtra per periodo di produzione', function () {
 
     expect($slugs('year_from=2000'))->toBe(['attuale'])
         ->and($slugs('year_to=1995'))->toBe(['f40'])
-        // La F40 era in produzione nel 1990: i due periodi si sovrappongono
-        ->and($slugs('year_from=1990&year_to=2025'))->toBe(['attuale', 'f40']);
+        // Il test riguarda il filtro, non l'ordine: confronto indipendente dall'ordine
+        ->and($slugs('year_from=1990&year_to=2025'))->toEqualCanonicalizing(['attuale', 'f40']);
 });
 
 it('applica tutti i filtri sulle versioni alla stessa versione', function () {
