@@ -38,6 +38,8 @@ class VersionPowertrain extends Model
     {
         return [
             'powertrain_type' => PowertrainType::class,
+            'battery_kwh' => 'float',
+            'fuel_consumption_l100' => 'float',
         ];
     }
 
