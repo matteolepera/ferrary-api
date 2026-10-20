@@ -22,6 +22,9 @@ class CarModelResource extends JsonResource
             'slug' => $this->slug,
             'description' => $this->description,
             'category' => new CategoryResource($this->whenLoaded('category')),
+            // Copertina per l'elenco: quella della versione principale.
+            // Compare solo se il controller ha caricato 'mainVersion'; vale null se la versione non ha copertina.
+            'cover' => new ImageResource($this->whenLoaded('mainVersion', fn () => $this->mainVersion?->cover)),
 
             // Linea di discendenza: predecessore e successori, per navigare la storia dei modelli
             'predecessor' => new CarModelResource($this->whenLoaded('predecessor')),

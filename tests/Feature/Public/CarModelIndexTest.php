@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\CarModel;
+use App\Models\Image;
 use App\Models\Version;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -65,4 +66,32 @@ it('divide i risultati in pagine da 24', function () {
 
     $this->getJson('/api/models?page=2')
         ->assertJsonCount(6, 'data');
+});
+
+it('mostra la copertina della prima versione pubblicata', function () {
+    $model = CarModel::factory()->published()->create();
+
+    // Tre versioni con la propria copertina: vince la prima pubblicata nell'ordine
+    $draft = Version::factory()->create(['car_model_id' => $model->id, 'sort_order' => 0]);
+    $main = Version::factory()->published()->create(['car_model_id' => $model->id, 'sort_order' => 1]);
+    $other = Version::factory()->published()->create(['car_model_id' => $model->id, 'sort_order' => 2]);
+
+    Image::factory()->cover()->create(['version_id' => $draft->id, 'path' => 'versions/bozza.jpg']);
+    Image::factory()->cover()->create(['version_id' => $main->id, 'path' => 'versions/principale.jpg']);
+    Image::factory()->cover()->create(['version_id' => $other->id, 'path' => 'versions/altra.jpg']);
+
+    $cover = $this->getJson('/api/models')->json('data.0.cover');
+
+    // La bozza ha sort_order più basso, ma non è pubblicata: non deve essere scelta
+    expect($cover['url'])->toEndWith('/storage/versions/principale.jpg');
+});
+
+it('restituisce una copertina vuota se la versione principale non ne ha', function () {
+    CarModel::factory()->published()
+        ->has(Version::factory()->published(), 'versions')
+        ->create();
+
+    $this->getJson('/api/models')
+        ->assertOk()
+        ->assertJsonPath('data.0.cover', null);
 });

@@ -75,6 +75,11 @@ class Version extends Model
         return $this->hasMany(Image::class)->orderBy('sort_order');
     }
 
+    /**
+     * L'immagine di copertina della versione.
+     *
+     * @return HasOne<Image, $this>
+     */
     public function cover(): HasOne
     {
         return $this->hasOne(Image::class)->where('is_cover', true);

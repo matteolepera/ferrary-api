@@ -24,8 +24,9 @@ class CarModelController extends Controller
             // $query non ha tipo: Laravel ci passa una query sulle versioni, ma un tipo
             // generico come "Builder" non direbbe a Larastan che è proprio una query su Version.
             ->whereHas('versions', fn ($query) => $query->published())
-            // Carica le categorie di tutti i modelli in un'unica query (evita il problema N+1)
-            ->with('category')
+            // Carica in anticipo categorie, versioni principali e loro copertine:
+            // tre query in tutto, qualunque sia il numero di modelli nella pagina
+            ->with(['category', 'mainVersion.cover'])
             // Conta solo le versioni pubblicate: il pubblico non deve sapere quante bozze esistono
             ->withCount(['versions' => fn ($query) => $query->published()])
             ->orderBy('name')
