@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Public\CarModelIndexRequest;
 use App\Http\Resources\CarModelResource;
 use App\Models\CarModel;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -15,19 +16,30 @@ class CarModelController extends Controller
     /**
      * Elenco paginato dei modelli visibili al pubblico.
      */
-    public function index(): AnonymousResourceCollection
+    /**
+     * Elenco paginato dei modelli visibili, con filtri opzionali.
+     */
+    public function index(CarModelIndexRequest $request): AnonymousResourceCollection
     {
+        $filters = $request->validated();
+
         $models = CarModel::query()
             ->visible()
+            ->when($filters['category'] ?? null, fn ($query, string $slug) => $query
+                ->whereRelation('category', 'slug', $slug))
+            ->when($filters['search'] ?? null, fn ($query, string $search) => $query
+                // Le parentesi raggruppano le due condizioni in OR, senza toccare quelle di visible()
+                ->where(fn ($query) => $query
+                    ->where('name', 'like', "%{$search}%")
+                    ->orWhereHas('versions', fn ($query) => $query
+                        ->published()
+                        ->where('name', 'like', "%{$search}%"))))
             ->with(['category', 'mainVersion.cover'])
-            // Carica in anticipo categorie, versioni principali e loro copertine:
-            // tre query in tutto, qualunque sia il numero di modelli nella pagina
-            ->with(['category', 'mainVersion.cover'])
-            // Conta solo le versioni pubblicate: il pubblico non deve sapere quante bozze esistono
             ->withCount(['versions' => fn ($query) => $query->published()])
             ->orderBy('name')
-            // 24 modelli per pagina: divisibile per 2, 3, 4 e 6, quindi la griglia del sito resta sempre piena
-            ->paginate(24);
+            ->paginate(24)
+            // Mantiene i filtri nei link delle altre pagine
+            ->withQueryString();
 
         return CarModelResource::collection($models);
     }
