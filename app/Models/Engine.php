@@ -28,6 +28,15 @@ class Engine extends Model
         'description',
     ];
 
+    protected function casts(): array
+    {
+        return [
+            // DECIMAL arriva da MySQL come stringa ("82.00"): il cast lo trasforma in numero (82.0)
+            'bore_mm' => 'float',
+            'stroke_mm' => 'float',
+        ];
+    }
+
     public function versions(): HasManyThrough
     {
         return $this->hasManyThrough(

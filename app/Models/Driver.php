@@ -6,7 +6,11 @@ use App\Models\Concerns\LogsCatalogActivity;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Support\Carbon;
 
+/**
+ * @property Carbon|null $birth_date
+ */
 class Driver extends Model
 {
     use HasFactory, LogsCatalogActivity;
