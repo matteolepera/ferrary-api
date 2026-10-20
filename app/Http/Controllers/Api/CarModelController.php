@@ -24,9 +24,10 @@ class CarModelController extends Controller
         $models = CarModel::query()
             ->visible()
             ->filter($request->validated())
+            ->sorted($request->validated('sort'))
             ->with(['category', 'mainVersion.cover'])
             ->withCount(['versions' => fn ($query) => $query->published()])
-            ->orderBy('name')
+            ->withMin(['versions' => fn ($query) => $query->published()], 'year_start')
             ->paginate(24)
             ->withQueryString();
 

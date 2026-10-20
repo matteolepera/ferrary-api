@@ -33,6 +33,7 @@ class CarModelIndexRequest extends FormRequest
                 'max:2100',
                 Rule::when($this->filled('year_from'), ['gte:year_from']),
             ],
+            'sort' => ['nullable', Rule::in(['name', '-name', 'year', '-year'])],
         ];
     }
 }

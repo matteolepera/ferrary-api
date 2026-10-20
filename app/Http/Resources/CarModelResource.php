@@ -36,6 +36,9 @@ class CarModelResource extends JsonResource
             // Solo il numero di versioni, senza caricarle: utile negli elenchi ("3 versioni").
             // Compare solo se il controller lo chiede con ->withCount('versions').
             'versions_count' => $this->whenCounted('versions'),
+
+            // Anno della prima versione pubblicata, se calcolato dal controller con withMin
+            'first_year' => $this->whenAggregated('versions', 'year_start', 'min'),
         ];
     }
 }

@@ -126,4 +126,28 @@ class CarModel extends Model
                     ->when($filters['year_to'] ?? null, fn ($query, $year) => $query
                         ->where('year_start', '<=', $year))));
     }
+
+    /**
+     * Ordinamento dell'archivio: name, -name, year, -year.
+     *
+     * @param  Builder<CarModel>  $query
+     */
+    public function scopeSorted(Builder $query, ?string $sort): void
+    {
+        $direction = str_starts_with((string) $sort, '-') ? 'desc' : 'asc';
+
+        match (ltrim((string) $sort, '-')) {
+            // Anno della prima versione pubblicata, poi nome a parità di anno
+            'year' => $query
+                ->orderBy(
+                    Version::query()
+                        ->selectRaw('min(year_start)')
+                        ->whereColumn('versions.car_model_id', 'car_models.id')
+                        ->published(),
+                    $direction,
+                )
+                ->orderBy('name'),
+            default => $query->orderBy('name', $direction),
+        };
+    }
 }
