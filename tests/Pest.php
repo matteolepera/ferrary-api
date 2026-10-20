@@ -3,6 +3,7 @@
 use App\Models\CarModel;
 use App\Models\Version;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\DB;
 use Tests\TestCase;
 
 /*
@@ -62,4 +63,20 @@ function visibleCarModel(array $attributes = []): CarModel
     return CarModel::factory()->published()
         ->has(Version::factory()->published(), 'versions')
         ->create($attributes);
+}
+
+/**
+ * Esegue il codice indicato e restituisce quante query ha fatto.
+ */
+function countQueries(callable $callback): int
+{
+    DB::flushQueryLog();
+    DB::enableQueryLog();
+
+    $callback();
+
+    $count = count(DB::getQueryLog());
+    DB::disableQueryLog();
+
+    return $count;
 }

@@ -54,13 +54,13 @@ it('omette il motore se la relazione non è stata caricata', function () {
 });
 
 it('restituisce le statistiche sportive', function () {
-    // Valori coerenti tra loro: vittorie ≤ gare e vittorie ≤ podi.
-    // Sovrascrivere solo 'wins' violerebbe i vincoli, con i valori casuali della factory.
+    // Tutti i valori legati da vincoli (gare, vittorie, podi, pole) sono fissati insieme
     $racing = VersionRacing::factory()->create([
         'championship' => 'Formula 1',
         'races' => 18,
         'wins' => 15,
         'podiums' => 29,
+        'poles' => 12,
     ]);
 
     $data = toJsonArray(new VersionRacingResource($racing));
