@@ -45,6 +45,11 @@ class CarModel extends Model
         return $this->hasMany(CarModel::class, 'predecessor_id');
     }
 
+    /**
+     * Le versioni del modello, nell'ordine scelto per il selettore.
+     *
+     * @return HasMany<Version, $this>
+     */
     public function versions(): HasMany
     {
         return $this->hasMany(Version::class)->orderBy('sort_order');
