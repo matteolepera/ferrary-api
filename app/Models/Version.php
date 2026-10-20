@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Enums\VehicleType;
 use App\Models\Concerns\LogsCatalogActivity;
+use App\Models\Concerns\Publishable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -11,11 +12,15 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Carbon;
 use Spatie\Translatable\HasTranslations;
 
+/**
+ * @property Carbon|null $published_at
+ */
 class Version extends Model
 {
-    use HasFactory, HasTranslations, LogsCatalogActivity, SoftDeletes;
+    use HasFactory, HasTranslations, LogsCatalogActivity, Publishable, SoftDeletes;
 
     public array $translatable = ['description'];
 

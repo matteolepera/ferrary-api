@@ -3,16 +3,21 @@
 namespace App\Models;
 
 use App\Models\Concerns\LogsCatalogActivity;
+use App\Models\Concerns\Publishable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Carbon;
 use Spatie\Translatable\HasTranslations;
 
+/**
+ * @property Carbon|null $published_at
+ */
 class CarModel extends Model
 {
-    use HasFactory, HasTranslations, LogsCatalogActivity, SoftDeletes;
+    use HasFactory, HasTranslations, LogsCatalogActivity, Publishable, SoftDeletes;
 
     public array $translatable = ['description'];
 
