@@ -10,12 +10,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 uses(RefreshDatabase::class);
 
-// Trasforma una Resource nel JSON che riceverebbe il frontend, e lo rilegge come array PHP
-function toJsonArray(mixed $resource): array
-{
-    return json_decode(json_encode($resource), true);
-}
-
 it('raggruppa le specifiche e restituisce numeri', function () {
     $spec = VersionSpec::factory()->create(['length_mm' => 4358, 'zero_to_100_sec' => 2.9]);
 
