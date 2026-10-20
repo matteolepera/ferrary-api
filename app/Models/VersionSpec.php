@@ -31,6 +31,16 @@ class VersionSpec extends Model
         'fiorano_lap_sec',
     ];
 
+    protected function casts(): array
+    {
+        return [
+            // I DECIMAL arrivano da MySQL come stringhe: li trasformiamo in numeri
+            'zero_to_100_sec' => 'float',
+            'zero_to_200_sec' => 'float',
+            'fiorano_lap_sec' => 'float',
+        ];
+    }
+
     public function version(): BelongsTo
     {
         return $this->belongsTo(Version::class);

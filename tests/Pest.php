@@ -15,7 +15,7 @@ use Tests\TestCase;
 */
 
 pest()->extend(TestCase::class)
- // ->use(RefreshDatabase::class)
+    // ->use(RefreshDatabase::class)
     ->in('Feature');
 
 /*
@@ -44,7 +44,10 @@ expect()->extend('toBeOne', function () {
 |
 */
 
-function something()
+/**
+ * Trasforma una Resource nel JSON che riceverebbe il frontend, e lo rilegge come array PHP.
+ */
+function toJsonArray(mixed $resource): array
 {
-    // ..
+    return json_decode(json_encode($resource), true);
 }
