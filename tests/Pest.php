@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\CarModel;
+use App\Models\Version;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -50,4 +52,14 @@ expect()->extend('toBeOne', function () {
 function toJsonArray(mixed $resource): array
 {
     return json_decode(json_encode($resource), true);
+}
+
+/**
+ * Crea un modello visibile al pubblico: pubblicato, con una versione pubblicata.
+ */
+function visibleCarModel(array $attributes = []): CarModel
+{
+    return CarModel::factory()->published()
+        ->has(Version::factory()->published(), 'versions')
+        ->create($attributes);
 }

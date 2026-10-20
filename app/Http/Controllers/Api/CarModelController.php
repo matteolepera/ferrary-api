@@ -18,12 +18,8 @@ class CarModelController extends Controller
     public function index(): AnonymousResourceCollection
     {
         $models = CarModel::query()
-            // Solo modelli pubblicati (scope del trait Publishable)...
-            ->published()
-            // ...che abbiano almeno una versione pubblicata: niente schede vuote.
-            // $query non ha tipo: Laravel ci passa una query sulle versioni, ma un tipo
-            // generico come "Builder" non direbbe a Larastan che è proprio una query su Version.
-            ->whereHas('versions', fn ($query) => $query->published())
+            ->visible()
+            ->with(['category', 'mainVersion.cover'])
             // Carica in anticipo categorie, versioni principali e loro copertine:
             // tre query in tutto, qualunque sia il numero di modelli nella pagina
             ->with(['category', 'mainVersion.cover'])
@@ -47,6 +43,9 @@ class CarModelController extends Controller
         $carModel->load([
             'category',
             'versions' => fn ($query) => $query->published()->with('cover'),
+            // Solo modelli visibili: un link a una bozza porterebbe a un 404
+            'predecessor' => fn ($query) => $query->visible(),
+            'successors' => fn ($query) => $query->visible()->orderBy('name'),
         ]);
 
         // Niente schede vuote

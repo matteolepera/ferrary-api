@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Concerns\LogsCatalogActivity;
 use App\Models\Concerns\Publishable;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -36,11 +37,17 @@ class CarModel extends Model
         return $this->belongsTo(Category::class);
     }
 
+    /**
+     * @return BelongsTo<CarModel, $this>
+     */
     public function predecessor(): BelongsTo
     {
         return $this->belongsTo(CarModel::class, 'predecessor_id');
     }
 
+    /**
+     * @return HasMany<CarModel, $this>
+     */
     public function successors(): HasMany
     {
         return $this->hasMany(CarModel::class, 'predecessor_id');
@@ -70,5 +77,16 @@ class CarModel extends Model
             // ...considerando solo quelle pubblicate
             fn ($query) => $query->published(),
         );
+    }
+
+    /**
+     * Visibile al pubblico: pubblicato e con almeno una versione pubblicata.
+     *
+     * @param  Builder<CarModel>  $query
+     */
+    public function scopeVisible(Builder $query): void
+    {
+        $query->published()
+            ->whereHas('versions', fn ($query) => $query->published());
     }
 }
