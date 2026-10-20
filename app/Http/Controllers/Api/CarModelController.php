@@ -21,24 +21,13 @@ class CarModelController extends Controller
      */
     public function index(CarModelIndexRequest $request): AnonymousResourceCollection
     {
-        $filters = $request->validated();
-
         $models = CarModel::query()
             ->visible()
-            ->when($filters['category'] ?? null, fn ($query, string $slug) => $query
-                ->whereRelation('category', 'slug', $slug))
-            ->when($filters['search'] ?? null, fn ($query, string $search) => $query
-                // Le parentesi raggruppano le due condizioni in OR, senza toccare quelle di visible()
-                ->where(fn ($query) => $query
-                    ->where('name', 'like', "%{$search}%")
-                    ->orWhereHas('versions', fn ($query) => $query
-                        ->published()
-                        ->where('name', 'like', "%{$search}%"))))
+            ->filter($request->validated())
             ->with(['category', 'mainVersion.cover'])
             ->withCount(['versions' => fn ($query) => $query->published()])
             ->orderBy('name')
             ->paginate(24)
-            // Mantiene i filtri nei link delle altre pagine
             ->withQueryString();
 
         return CarModelResource::collection($models);

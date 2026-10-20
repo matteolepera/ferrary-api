@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Spatie\Translatable\HasTranslations;
 
@@ -88,5 +89,41 @@ class CarModel extends Model
     {
         $query->published()
             ->whereHas('versions', fn ($query) => $query->published());
+    }
+
+    /**
+     * Filtri dell'archivio pubblico. Le chiavi assenti vengono ignorate.
+     *
+     * @param  Builder<CarModel>  $query
+     * @param  array<string, mixed>  $filters
+     */
+    public function scopeFilter(Builder $query, array $filters): void
+    {
+        $query
+            ->when($filters['category'] ?? null, fn ($query, $slug) => $query
+                ->whereRelation('category', 'slug', $slug))
+            ->when($filters['search'] ?? null, fn ($query, $search) => $query
+                // Raggruppa l'OR senza toccare le altre condizioni
+                ->where(fn ($query) => $query
+                    ->where('name', 'like', "%{$search}%")
+                    ->orWhereHas('versions', fn ($query) => $query
+                        ->published()
+                        ->where('name', 'like', "%{$search}%"))))
+            // Tutti i filtri sulle versioni devono valere per la stessa versione
+            ->when(Arr::hasAny($filters, ['vehicle_type', 'powertrain', 'year_from', 'year_to']), fn ($query) => $query
+                ->whereHas('versions', fn ($query) => $query
+                    ->published()
+                    ->when($filters['vehicle_type'] ?? null, fn ($query, $type) => $query
+                        ->where('vehicle_type', $type))
+                    ->when($filters['powertrain'] ?? null, fn ($query, $type) => $query
+                        ->whereRelation('powertrain', 'powertrain_type', $type))
+                    // Prodotta almeno fino a quell'anno (o ancora in produzione)
+                    ->when($filters['year_from'] ?? null, fn ($query, $year) => $query
+                        ->where(fn ($query) => $query
+                            ->whereNull('year_end')
+                            ->orWhere('year_end', '>=', $year)))
+                    // Prodotta a partire da quell'anno o prima
+                    ->when($filters['year_to'] ?? null, fn ($query, $year) => $query
+                        ->where('year_start', '<=', $year))));
     }
 }
