@@ -35,4 +35,23 @@ class CarModelController extends Controller
 
         return CarModelResource::collection($models);
     }
+
+    /**
+     * Dettaglio pubblico di un modello, cercato per slug.
+     */
+    public function show(CarModel $carModel): CarModelResource
+    {
+        // 404 e non 403: non riveliamo che una bozza esiste
+        abort_unless($carModel->isPublished(), 404);
+
+        $carModel->load([
+            'category',
+            'versions' => fn ($query) => $query->published()->with('cover'),
+        ]);
+
+        // Niente schede vuote
+        abort_if($carModel->versions->isEmpty(), 404);
+
+        return new CarModelResource($carModel);
+    }
 }
