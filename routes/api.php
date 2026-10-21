@@ -58,6 +58,8 @@ Route::middleware('auth:sanctum')->group(function () {
 
         Route::get('/versions/{version}/racing', [Admin\VersionRacingController::class, 'index']);
         Route::post('/versions/{version}/racing', [Admin\VersionRacingController::class, 'store']);
+        Route::patch('/racing/{racing}', [Admin\VersionRacingController::class, 'update']);
+        Route::delete('/racing/{racing}', [Admin\VersionRacingController::class, 'destroy']);
     });
 
 });

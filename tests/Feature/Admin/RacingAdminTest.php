@@ -72,3 +72,56 @@ it('permette lo stesso campionato in un\'altra versione', function () {
     ])
         ->assertCreated();
 });
+
+it('sostituisce completamente un record', function () {
+    $racing = VersionRacing::factory()->create([
+        'version_id' => $this->version->id,
+        'championship' => 'Formula 1',
+        'races' => 18,
+        'wins' => 15,
+        'podiums' => 29,
+        'poles' => 12,
+        'notes' => ['it' => 'Note vecchie'],
+    ]);
+
+    $this->patchJson("/api/admin/racing/{$racing->id}", [
+        'championship' => 'Formula 1',
+        'season_start' => 2004,
+        'races' => 18,
+    ])
+        ->assertOk()
+        ->assertJsonPath('data.races', 18)
+        // Non inviati: diventano vuoti
+        ->assertJsonPath('data.wins', null)
+        ->assertJsonPath('data.notes', []);
+});
+
+it('permette di mantenere lo stesso campionato', function () {
+    $racing = VersionRacing::factory()->create(['version_id' => $this->version->id, 'championship' => 'Formula 1']);
+
+    $this->patchJson("/api/admin/racing/{$racing->id}", [
+        'championship' => 'Formula 1',
+        'season_start' => 2004,
+    ])
+        ->assertOk();
+});
+
+it('rifiuta un campionato già usato da un altro record della versione', function () {
+    VersionRacing::factory()->create(['version_id' => $this->version->id, 'championship' => 'Formula 1']);
+    $other = VersionRacing::factory()->create(['version_id' => $this->version->id, 'championship' => 'WEC']);
+
+    $this->patchJson("/api/admin/racing/{$other->id}", [
+        'championship' => 'Formula 1',
+        'season_start' => 2004,
+    ])
+        ->assertJsonValidationErrors('championship');
+});
+
+it('elimina un record sportivo', function () {
+    $racing = VersionRacing::factory()->create(['version_id' => $this->version->id]);
+
+    $this->deleteJson("/api/admin/racing/{$racing->id}")
+        ->assertNoContent();
+
+    $this->assertModelMissing($racing);
+});
