@@ -47,6 +47,8 @@ class VersionResource extends JsonResource
             'powertrain' => $this->whenLoaded('powertrain', fn () => $this->powertrain
                 ? Arr::except($this->powertrain->attributesToArray(), ['version_id', 'created_at', 'updated_at'])
                 : null),
+            'designers' => DesignerResource::collection($this->whenLoaded('designers')),
+            'drivers' => DriverResource::collection($this->whenLoaded('drivers')),
         ];
     }
 }

@@ -23,6 +23,8 @@ class DesignerResource extends JsonResource
             'type' => $this->type,
             'country' => $this->country,
             'versions_count' => $this->whenCounted('versions'),
+            // Presente solo quando il designer arriva da una versione
+            'role' => $this->whenPivotLoaded('designer_version', fn () => data_get($this->resource, 'pivot.role')),
         ];
     }
 }
