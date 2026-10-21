@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Api\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StoreImageRequest;
+use App\Http\Requests\Admin\UpdateImageRequest;
 use App\Http\Resources\Admin\ImageResource;
+use App\Models\Image;
 use App\Models\Version;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -55,5 +57,27 @@ class ImageController extends Controller
         return (new ImageResource($image))
             ->response()
             ->setStatusCode(201);
+    }
+
+    public function update(UpdateImageRequest $request, Image $image): ImageResource
+    {
+        DB::transaction(function () use ($request, $image) {
+            if ($request->has('alt_text')) {
+                $image->replaceTranslations('alt_text', array_filter($request->validated('alt_text'), 'filled'));
+            }
+
+            if ($request->boolean('is_cover')) {
+                // Una sola copertina per versione: toglie il segno alle altre
+                Image::where('version_id', $image->version_id)
+                    ->whereKeyNot($image->id)
+                    ->update(['is_cover' => false]);
+
+                $image->is_cover = true;
+            }
+
+            $image->save();
+        });
+
+        return new ImageResource($image);
     }
 }

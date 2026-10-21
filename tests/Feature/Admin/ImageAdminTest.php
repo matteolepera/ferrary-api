@@ -85,3 +85,34 @@ it('elenca le immagini della versione in ordine', function () {
 
     expect($orders)->toBe([1, 2]);
 });
+
+it('modifica il testo alternativo, rimuovendo le traduzioni svuotate', function () {
+    $image = Image::factory()->create([
+        'version_id' => $this->version->id,
+        'alt_text' => ['it' => 'Vecchio', 'en' => 'Old'],
+    ]);
+
+    $this->patchJson("/api/admin/images/{$image->id}", ['alt_text' => ['it' => 'Nuovo testo', 'en' => '']])
+        ->assertOk()
+        ->assertJsonPath('data.alt_text', ['it' => 'Nuovo testo']);
+});
+
+it('sposta la copertina su un\'altra immagine', function () {
+    $cover = Image::factory()->cover()->create(['version_id' => $this->version->id]);
+    $other = Image::factory()->create(['version_id' => $this->version->id]);
+
+    $this->patchJson("/api/admin/images/{$other->id}", ['is_cover' => true])
+        ->assertOk()
+        ->assertJsonPath('data.is_cover', true);
+
+    expect($cover->fresh()->is_cover)->toBeFalse();
+});
+
+it('non permette di togliere la copertina direttamente', function () {
+    $cover = Image::factory()->cover()->create(['version_id' => $this->version->id]);
+
+    $this->patchJson("/api/admin/images/{$cover->id}", ['is_cover' => false])
+        ->assertJsonValidationErrors(['is_cover' => 'Per cambiare copertina, imposta come copertina un\'altra immagine.']);
+
+    expect($cover->fresh()->is_cover)->toBeTrue();
+});

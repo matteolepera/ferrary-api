@@ -72,6 +72,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
         Route::get('/versions/{version}/images', [Admin\ImageController::class, 'index']);
         Route::post('/versions/{version}/images', [Admin\ImageController::class, 'store']);
+        Route::patch('/images/{image}', [Admin\ImageController::class, 'update']);
     });
 
 });
