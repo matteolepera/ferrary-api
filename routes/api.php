@@ -50,11 +50,15 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('/models/{carModel}', [Admin\CarModelController::class, 'show']);
         Route::post('/models', [Admin\CarModelController::class, 'store']);
         Route::patch('/models/{carModel}', [Admin\CarModelController::class, 'update']);
+        Route::post('/models/{carModel}/publish', [Admin\PublicationController::class, 'publishModel']);
+        Route::post('/models/{carModel}/unpublish', [Admin\PublicationController::class, 'unpublishModel']);
 
         Route::get('/models/{carModel}/versions', [Admin\VersionController::class, 'index']);
         Route::get('/versions/{version}', [Admin\VersionController::class, 'show']);
         Route::post('/models/{carModel}/versions', [Admin\VersionController::class, 'store']);
         Route::patch('/versions/{version}', [Admin\VersionController::class, 'update']);
+        Route::post('/versions/{version}/publish', [Admin\PublicationController::class, 'publishVersion']);
+        Route::post('/versions/{version}/unpublish', [Admin\PublicationController::class, 'unpublishVersion']);
 
         Route::get('/versions/{version}/racing', [Admin\VersionRacingController::class, 'index']);
         Route::post('/versions/{version}/racing', [Admin\VersionRacingController::class, 'store']);
