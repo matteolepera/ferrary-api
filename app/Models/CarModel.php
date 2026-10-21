@@ -160,5 +160,12 @@ class CarModel extends Model
         static::softDeleted(function (CarModel $carModel) {
             $carModel->versions()->update(['deleted_at' => $carModel->deleted_at]);
         });
+        // Ripristina solo le versioni cestinate insieme al modello: hanno il suo stesso deleted_at
+        static::restoring(function (CarModel $carModel) {
+            Version::onlyTrashed()
+                ->where('car_model_id', $carModel->id)
+                ->where('deleted_at', $carModel->deleted_at)
+                ->update(['deleted_at' => null]);
+        });
     }
 }

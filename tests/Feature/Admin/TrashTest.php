@@ -75,3 +75,83 @@ it('nasconde i modelli nel cestino dall\'elenco dell\'admin', function () {
         ->getJson('/api/admin/models')
         ->assertJsonCount(1, 'data');
 });
+
+it('mostra modelli e versioni cestinate da sole', function () {
+    // Modello cestinato con la sua versione: compare solo il modello
+    $trashedModel = CarModel::factory()->create();
+    Version::factory()->create(['car_model_id' => $trashedModel->id]);
+    $trashedModel->delete();
+
+    // Versione cestinata da sola, con il modello attivo
+    $trashedVersion = Version::factory()->create();
+    $trashedVersion->delete();
+
+    // Elementi attivi: non compaiono
+    Version::factory()->create();
+
+    $this->actingAs($this->admin)
+        ->getJson('/api/admin/trash')
+        ->assertOk()
+        ->assertJsonCount(1, 'models')
+        ->assertJsonPath('models.0.id', $trashedModel->id)
+        ->assertJsonCount(1, 'versions')
+        ->assertJsonPath('versions.0.id', $trashedVersion->id)
+        ->assertJsonPath('versions.0.model.id', $trashedVersion->car_model_id);
+});
+
+it('nasconde il cestino ai moderatori', function () {
+    $this->actingAs(User::factory()->moderator()->create())
+        ->getJson('/api/admin/trash')
+        ->assertForbidden();
+});
+
+it('ripristina il modello con le sole versioni cestinate insieme a lui', function () {
+    $model = CarModel::factory()->create();
+    $together = Version::factory()->create(['car_model_id' => $model->id]);
+    $alone = Version::factory()->create(['car_model_id' => $model->id]);
+    $alone->delete();
+
+    $this->travel(1)->days();
+    $model->delete();
+
+    $this->actingAs($this->admin)
+        ->postJson("/api/admin/models/{$model->id}/restore")
+        ->assertOk();
+
+    expect($model->fresh()->trashed())->toBeFalse()
+        ->and(Version::withTrashed()->findOrFail($together->id)->trashed())->toBeFalse()
+        // Era stata cestinata prima, da sola: resta nel cestino
+        ->and(Version::withTrashed()->findOrFail($alone->id)->trashed())->toBeTrue();
+});
+
+it('ripristina una versione cestinata da sola', function () {
+    $version = Version::factory()->create();
+    $version->delete();
+
+    $this->actingAs($this->admin)
+        ->postJson("/api/admin/versions/{$version->id}/restore")
+        ->assertOk();
+
+    expect($version->fresh()->trashed())->toBeFalse();
+});
+
+it('non ripristina una versione il cui modello è nel cestino', function () {
+    $model = CarModel::factory()->create();
+    $version = Version::factory()->create(['car_model_id' => $model->id]);
+    $model->delete();
+
+    $this->actingAs($this->admin)
+        ->postJson("/api/admin/versions/{$version->id}/restore")
+        ->assertStatus(409);
+
+    expect(Version::withTrashed()->findOrFail($version->id)->trashed())->toBeTrue();
+});
+
+it('impedisce al moderatore di ripristinare', function () {
+    $model = CarModel::factory()->create();
+    $model->delete();
+
+    $this->actingAs(User::factory()->moderator()->create())
+        ->postJson("/api/admin/models/{$model->id}/restore")
+        ->assertForbidden();
+});

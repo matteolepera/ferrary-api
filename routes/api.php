@@ -81,6 +81,10 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::patch('/images/{image}', [Admin\ImageController::class, 'update']);
         Route::put('/versions/{version}/images/order', [Admin\ImageController::class, 'reorder']);
         Route::delete('/images/{image}', [Admin\ImageController::class, 'destroy']);
+
+        Route::get('/trash', [Admin\TrashController::class, 'index']);
+        Route::post('/models/{carModel}/restore', [Admin\TrashController::class, 'restoreModel'])->withTrashed();
+        Route::post('/versions/{version}/restore', [Admin\TrashController::class, 'restoreVersion'])->withTrashed();
     });
 
 });
