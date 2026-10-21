@@ -27,6 +27,8 @@ class DesignerResource extends JsonResource
             // whenPivotLoaded lo aggiunge solo quando il designer arriva da una versione:
             // nella pagina di un singolo designer questo campo semplicemente non compare.
             'role' => $this->whenPivotLoaded('designer_version', fn () => data_get($this->resource, 'pivot.role')),
+            'versions' => VersionResource::collection($this->whenLoaded('versions')),
+            'versions_count' => $this->whenCounted('versions'),
         ];
     }
 }

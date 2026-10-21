@@ -13,6 +13,9 @@ class Designer extends Model
 
     protected $fillable = ['name', 'slug', 'type', 'country'];
 
+    /**
+     * @return BelongsToMany<Version, $this>
+     */
     public function versions(): BelongsToMany
     {
         return $this->belongsToMany(Version::class)->withPivot('role');

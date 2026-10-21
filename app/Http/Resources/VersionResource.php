@@ -52,6 +52,8 @@ class VersionResource extends JsonResource
             'powertrain' => new VersionPowertrainResource($this->whenLoaded('powertrain')),
             'racing' => VersionRacingResource::collection($this->whenLoaded('racingRecords')),
             'designers' => DesignerResource::collection($this->whenLoaded('designers')),
+            // Ruolo del designer su questa versione: presente solo nella pagina di un designer
+            'designer_role' => $this->whenPivotLoaded('designer_version', fn () => data_get($this->resource, 'pivot.role')),
             'drivers' => DriverResource::collection($this->whenLoaded('drivers')),
         ];
     }

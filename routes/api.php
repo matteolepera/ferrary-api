@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\Admin\StaffController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CarModelController;
+use App\Http\Controllers\Api\DesignerController;
 use App\Http\Controllers\Api\EngineController;
 use App\Http\Controllers\Api\VersionController;
 use Illuminate\Support\Facades\Route;
@@ -15,6 +16,9 @@ Route::get('/versions/{version:slug}', [VersionController::class, 'show']);
 
 Route::get('/engines', [EngineController::class, 'index']);
 Route::get('/engines/{engine}', [EngineController::class, 'show']);
+
+Route::get('/designers', [DesignerController::class, 'index']);
+Route::get('/designers/{designer:slug}', [DesignerController::class, 'show']);
 
 // --- API pubblica: nessun login richiesto ---
 Route::get('/models', [CarModelController::class, 'index']);
