@@ -6,6 +6,7 @@ use App\Enums\PublicationStatus;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\CarModelIndexRequest;
 use App\Http\Requests\Admin\StoreCarModelRequest;
+use App\Http\Requests\Admin\UpdateCarModelRequest;
 use App\Http\Resources\Admin\CarModelResource;
 use App\Models\CarModel;
 use Illuminate\Http\JsonResponse;
@@ -56,5 +57,21 @@ class CarModelController extends Controller
         return (new CarModelResource($carModel))
             ->response()
             ->setStatusCode(201);
+    }
+
+    public function update(UpdateCarModelRequest $request, CarModel $carModel): CarModelResource
+    {
+        $data = $request->validated();
+
+        if (array_key_exists('description', $data)) {
+            $carModel->replaceTranslations('description', array_filter($data['description'], 'filled'));
+            unset($data['description']);
+        }
+
+        $carModel->fill($data)->save();
+
+        $carModel->load(['category', 'predecessor'])->loadCount('versions');
+
+        return new CarModelResource($carModel);
     }
 }

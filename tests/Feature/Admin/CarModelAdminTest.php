@@ -125,3 +125,53 @@ it('rifiuta lo slug di un modello nel cestino', function () {
     ])
         ->assertJsonValidationErrors('slug');
 });
+
+it('modifica un modello e sostituisce le traduzioni', function () {
+    $model = CarModel::factory()->create([
+        'description' => ['it' => 'Vecchia', 'en' => 'Old'],
+    ]);
+
+    $this->patchJson("/api/admin/models/{$model->id}", [
+        'name' => '812',
+        'description' => ['it' => 'Nuova descrizione', 'en' => ''],
+    ])
+        ->assertOk()
+        ->assertJsonPath('data.name', '812');
+
+    expect($model->fresh()->getTranslations('description'))->toBe(['it' => 'Nuova descrizione']);
+});
+
+it('permette di togliere il predecessore', function () {
+    $model = CarModel::factory()->create(['predecessor_id' => CarModel::factory()->create()->id]);
+
+    $this->patchJson("/api/admin/models/{$model->id}", ['predecessor_id' => null])
+        ->assertOk()
+        ->assertJsonPath('data.predecessor_id', null);
+});
+
+it('rifiuta il modello stesso come predecessore', function () {
+    $model = CarModel::factory()->create();
+
+    $this->patchJson("/api/admin/models/{$model->id}", ['predecessor_id' => $model->id])
+        ->assertJsonValidationErrors('predecessor_id');
+});
+
+it('rifiuta un predecessore che creerebbe un ciclo', function () {
+    // Catena esistente: f12 → 812 → 12cilindri
+    $f12 = CarModel::factory()->create();
+    $m812 = CarModel::factory()->create(['predecessor_id' => $f12->id]);
+    $twelve = CarModel::factory()->create(['predecessor_id' => $m812->id]);
+
+    // La F12 non può avere come predecessore un suo discendente
+    $this->patchJson("/api/admin/models/{$f12->id}", ['predecessor_id' => $twelve->id])
+        ->assertJsonValidationErrors('predecessor_id');
+});
+
+it('accetta un predecessore valido', function () {
+    $f12 = CarModel::factory()->create();
+    $m812 = CarModel::factory()->create();
+
+    $this->patchJson("/api/admin/models/{$m812->id}", ['predecessor_id' => $f12->id])
+        ->assertOk()
+        ->assertJsonPath('data.predecessor.id', $f12->id);
+});

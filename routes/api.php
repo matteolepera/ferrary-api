@@ -49,6 +49,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('/models', [Admin\CarModelController::class, 'index']);
         Route::get('/models/{carModel}', [Admin\CarModelController::class, 'show']);
         Route::post('/models', [Admin\CarModelController::class, 'store']);
+        Route::patch('/models/{carModel}', [Admin\CarModelController::class, 'update']);
     });
 
 });
