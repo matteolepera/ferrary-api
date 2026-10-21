@@ -43,7 +43,7 @@ class ImageController extends Controller
         try {
             $image = DB::transaction(function () use ($request, $version, $path) {
                 // La prima immagine di una versione diventa la copertina in automatico
-                $isCover = $request->boolean('is_cover') || !$version->images()->exists();
+                $isCover = $request->boolean('is_cover') || ! $version->images()->exists();
 
                 // Una sola copertina per versione
                 if ($isCover) {
@@ -106,7 +106,7 @@ class ImageController extends Controller
 
         // L'elenco deve contenere tutte e sole le immagini della versione, una volta ciascuna
         $data = $request->validate([
-            'images' => ['required', 'array', 'size:' . count($ids)],
+            'images' => ['required', 'array', 'size:'.count($ids)],
             'images.*' => ['integer', 'distinct', Rule::in($ids)],
         ]);
 
@@ -134,7 +134,7 @@ class ImageController extends Controller
                 Image::where('version_id', $image->version_id)
                     ->orderBy('sort_order')
                     ->first()
-                        ?->update(['is_cover' => true]);
+                    ?->update(['is_cover' => true]);
             }
         });
 

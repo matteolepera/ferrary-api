@@ -94,7 +94,7 @@ class TrashController extends Controller
             Version::withTrashed()
                 ->where('car_model_id', $carModel->id)
                 ->get()
-                ->each(fn(Version $version) => $this->purgeVersion($version));
+                ->each(fn (Version $version) => $this->purgeVersion($version));
 
             $carModel->forceDelete();
         });
@@ -111,7 +111,7 @@ class TrashController extends Controller
 
         abort_unless($version->trashed(), 409, 'Si possono eliminare definitivamente solo le versioni nel cestino.');
 
-        DB::transaction(fn() => $this->purgeVersion($version));
+        DB::transaction(fn () => $this->purgeVersion($version));
 
         return response()->noContent();
     }
@@ -122,7 +122,7 @@ class TrashController extends Controller
      */
     private function purgeVersion(Version $version): void
     {
-        $version->images()->get()->each(fn(Image $image) => $image->delete());
+        $version->images()->get()->each(fn (Image $image) => $image->delete());
 
         $version->forceDelete();
     }

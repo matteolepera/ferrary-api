@@ -47,10 +47,23 @@ return [
      */
     'openapi_version' => OpenApiVersion::V3_1,
 
-    'info' => [
-        'version' => env('API_VERSION', '1.0.0'),
-        'description' => 'API dell\'archivio Ferrary: catalogo pubblico di tutte le Ferrari e area di gestione per lo staff.',
-    ],
+    'description' => <<<'MD'
+API dell'archivio Ferrary: catalogo pubblico di tutte le Ferrari e area di gestione per lo staff.
+
+## Autenticazione
+
+Gli endpoint dell'area admin usano la sessione di Laravel Sanctum, con i cookie. Il flusso è:
+
+1. `GET /sanctum/csrf-cookie`: imposta il cookie `XSRF-TOKEN`.
+2. `POST /api/login` con email e password, inviando il valore del cookie nell'intestazione `X-XSRF-TOKEN`.
+3. Da quel momento ogni richiesta porta con sé il cookie di sessione.
+
+Gli endpoint pubblici non richiedono il login.
+
+## Lingua
+
+Le risposte pubbliche seguono l'intestazione `Accept-Language` (`it` o `en`); senza indicazioni, la lingua è l'italiano.
+MD,
 
     'ui' => [
         'title' => 'Ferrary API',

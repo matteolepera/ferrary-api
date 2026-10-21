@@ -24,12 +24,12 @@ class CarModelController extends Controller
     public function index(CarModelIndexRequest $request): AnonymousResourceCollection
     {
         $models = CarModel::query()
-            ->when($request->validated('search'), fn($query, $search) => $query
+            ->when($request->validated('search'), fn ($query, $search) => $query
                 ->where('name', 'like', "%{$search}%"))
             // enum() converte il parametro nell'enum, oppure restituisce null se manca
-            ->when($request->enum('status', PublicationStatus::class), fn($query, $status) => $query
+            ->when($request->enum('status', PublicationStatus::class), fn ($query, $status) => $query
                 ->status($status))
-            ->when($request->validated('category_id'), fn($query, $categoryId) => $query
+            ->when($request->validated('category_id'), fn ($query, $categoryId) => $query
                 ->where('category_id', $categoryId))
             ->with('category')
             ->withCount('versions')

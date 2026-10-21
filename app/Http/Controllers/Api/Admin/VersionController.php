@@ -57,12 +57,12 @@ class VersionController extends Controller
             ]);
 
             // Le sezioni facoltative si salvano solo se contengono almeno un valore
-            $specs = array_filter($data['specs'] ?? [], fn($value) => $value !== null);
+            $specs = array_filter($data['specs'] ?? [], fn ($value) => $value !== null);
             if ($specs !== []) {
                 $version->specs()->create($specs);
             }
 
-            $powertrain = array_filter($data['powertrain'] ?? [], fn($value) => $value !== null);
+            $powertrain = array_filter($data['powertrain'] ?? [], fn ($value) => $value !== null);
             if ($powertrain !== []) {
                 $version->powertrain()->create($powertrain);
             }
@@ -111,7 +111,7 @@ class VersionController extends Controller
      */
     private function replaceSection(HasOne $relation, ?array $values): void
     {
-        $values = array_filter($values ?? [], fn($value) => $value !== null);
+        $values = array_filter($values ?? [], fn ($value) => $value !== null);
 
         if ($values === []) {
             // first()->delete() invece di una delete diretta: così il registro attività lo annota
