@@ -20,6 +20,9 @@ use Illuminate\Support\Facades\Gate;
 #[Group('Admin · Cestino', weight: 18)]
 class TrashController extends Controller
 {
+    /**
+     * 	Contenuto del cestino: modelli e versioni cestinate da sole.
+     */
     public function index(): JsonResponse
     {
         Gate::authorize('viewTrash');
@@ -56,6 +59,9 @@ class TrashController extends Controller
         return new CarModelResource($carModel);
     }
 
+    /**
+     * Ripristina una versione; risponde 409 se il suo modello è nel cestino.
+     */
     public function restoreVersion(Version $version): VersionResource
     {
         Gate::authorize('restore', $version);
@@ -88,7 +94,7 @@ class TrashController extends Controller
             Version::withTrashed()
                 ->where('car_model_id', $carModel->id)
                 ->get()
-                ->each(fn (Version $version) => $this->purgeVersion($version));
+                ->each(fn(Version $version) => $this->purgeVersion($version));
 
             $carModel->forceDelete();
         });
@@ -105,7 +111,7 @@ class TrashController extends Controller
 
         abort_unless($version->trashed(), 409, 'Si possono eliminare definitivamente solo le versioni nel cestino.');
 
-        DB::transaction(fn () => $this->purgeVersion($version));
+        DB::transaction(fn() => $this->purgeVersion($version));
 
         return response()->noContent();
     }
@@ -116,7 +122,7 @@ class TrashController extends Controller
      */
     private function purgeVersion(Version $version): void
     {
-        $version->images()->get()->each(fn (Image $image) => $image->delete());
+        $version->images()->get()->each(fn(Image $image) => $image->delete());
 
         $version->forceDelete();
     }

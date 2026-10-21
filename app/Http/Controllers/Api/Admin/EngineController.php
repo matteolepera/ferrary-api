@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Gate;
 #[Group('Admin · Cataloghi', weight: 16)]
 class EngineController extends Controller
 {
+    /**
+     * 	Elenco dei motori, con il numero di versioni che li montano.
+     */
     public function index(): AnonymousResourceCollection
     {
         Gate::authorize('viewAny', Engine::class);
@@ -26,6 +29,9 @@ class EngineController extends Controller
         );
     }
 
+    /**
+     * 	Dettaglio di un motore.
+     */
     public function show(Engine $engine): EngineResource
     {
         Gate::authorize('view', $engine);
@@ -33,6 +39,9 @@ class EngineController extends Controller
         return new EngineResource($engine->loadCount('versions'));
     }
 
+    /**
+     * Crea un motore.
+     */
     public function store(EngineRequest $request): JsonResponse
     {
         $data = $request->validated();
@@ -60,6 +69,9 @@ class EngineController extends Controller
         return new EngineResource($engine);
     }
 
+    /**
+     * 	Elimina un motore inutilizzato; risponde 409 se è usato da una versione.
+     */
     public function destroy(Engine $engine): Response
     {
         Gate::authorize('delete', $engine);

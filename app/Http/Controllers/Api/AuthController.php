@@ -13,6 +13,9 @@ use Illuminate\Validation\ValidationException;
 #[Group('Autenticazione', weight: 0)]
 class AuthController extends Controller
 {
+    /**
+     * Effettua il login e restituisce l'utente collegato.
+     */
     public function login(Request $request): UserResource
     {
         $credentials = $request->validate([
@@ -20,7 +23,7 @@ class AuthController extends Controller
             'password' => ['required', 'string'],
         ]);
 
-        if (! Auth::attempt($credentials, $request->boolean('remember'))) {
+        if (!Auth::attempt($credentials, $request->boolean('remember'))) {
             throw ValidationException::withMessages([
                 'email' => 'Email o password non corrette.',
             ]);
@@ -31,6 +34,9 @@ class AuthController extends Controller
         return new UserResource($request->user());
     }
 
+    /**
+     * Chiude la sessione dell’utente collegato.
+     */
     public function logout(Request $request): Response
     {
         Auth::guard('web')->logout();
@@ -41,6 +47,9 @@ class AuthController extends Controller
         return response()->noContent();
     }
 
+    /**
+     * Restituisce l’utente collegato.
+     */
     public function me(Request $request): UserResource
     {
         return new UserResource($request->user());

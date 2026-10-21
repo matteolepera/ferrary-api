@@ -30,6 +30,9 @@ class VersionController extends Controller
         return VersionResource::collection($carModel->versions()->get());
     }
 
+    /**
+     * Dettaglio di una versione, con specifiche, motorizzazione, designer e piloti.
+     */
     public function show(Version $version): VersionResource
     {
         Gate::authorize('view', $version);
@@ -39,6 +42,9 @@ class VersionController extends Controller
         return new VersionResource($version);
     }
 
+    /**
+     * Crea una versione in bozza, con specifiche e motorizzazione in un’unica operazione.
+     */
     public function store(StoreVersionRequest $request, CarModel $carModel): JsonResponse
     {
         $data = $request->validated();
@@ -51,12 +57,12 @@ class VersionController extends Controller
             ]);
 
             // Le sezioni facoltative si salvano solo se contengono almeno un valore
-            $specs = array_filter($data['specs'] ?? [], fn ($value) => $value !== null);
+            $specs = array_filter($data['specs'] ?? [], fn($value) => $value !== null);
             if ($specs !== []) {
                 $version->specs()->create($specs);
             }
 
-            $powertrain = array_filter($data['powertrain'] ?? [], fn ($value) => $value !== null);
+            $powertrain = array_filter($data['powertrain'] ?? [], fn($value) => $value !== null);
             if ($powertrain !== []) {
                 $version->powertrain()->create($powertrain);
             }
@@ -71,6 +77,9 @@ class VersionController extends Controller
             ->setStatusCode(201);
     }
 
+    /**
+     * 	Modifica una versione; le sezioni inviate sostituiscono quelle esistenti.
+     */
     public function update(UpdateVersionRequest $request, Version $version): VersionResource
     {
         $data = $request->validated();
@@ -102,7 +111,7 @@ class VersionController extends Controller
      */
     private function replaceSection(HasOne $relation, ?array $values): void
     {
-        $values = array_filter($values ?? [], fn ($value) => $value !== null);
+        $values = array_filter($values ?? [], fn($value) => $value !== null);
 
         if ($values === []) {
             // first()->delete() invece di una delete diretta: così il registro attività lo annota

@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Gate;
 #[Group('Admin · Cataloghi', weight: 16)]
 class DesignerController extends Controller
 {
+    /**
+     * 	Elenco dei designer, con il numero di versioni a cui hanno lavorato.
+     */
     public function index(): AnonymousResourceCollection
     {
         Gate::authorize('viewAny', Designer::class);
@@ -24,6 +27,9 @@ class DesignerController extends Controller
         );
     }
 
+    /**
+     * 	Dettaglio di un designer.
+     */
     public function show(Designer $designer): DesignerResource
     {
         Gate::authorize('view', $designer);
@@ -31,6 +37,9 @@ class DesignerController extends Controller
         return new DesignerResource($designer->loadCount('versions'));
     }
 
+    /**
+     * 	Crea un designer, generando lo slug dal nome se manca.
+     */
     public function store(DesignerRequest $request): JsonResponse
     {
         $designer = Designer::create($request->validated());
@@ -40,6 +49,9 @@ class DesignerController extends Controller
             ->setStatusCode(201);
     }
 
+    /**
+     * Modifica un designer.
+     */
     public function update(DesignerRequest $request, Designer $designer): DesignerResource
     {
         $designer->update($request->validated());
@@ -47,6 +59,9 @@ class DesignerController extends Controller
         return new DesignerResource($designer);
     }
 
+    /**
+     *  Elimina un designer non collegato; risponde 409 se ha delle versioni.
+     */
     public function destroy(Designer $designer): Response
     {
         Gate::authorize('delete', $designer);

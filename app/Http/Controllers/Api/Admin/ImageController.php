@@ -22,6 +22,9 @@ use Throwable;
 #[Group('Admin · Immagini', weight: 15)]
 class ImageController extends Controller
 {
+    /**
+     * 	Immagini di una versione, nell’ordine della galleria.
+     */
     public function index(Version $version): AnonymousResourceCollection
     {
         Gate::authorize('view', $version);
@@ -29,6 +32,9 @@ class ImageController extends Controller
         return ImageResource::collection($version->images()->get());
     }
 
+    /**
+     * 	Carica un’immagine; la prima di una versione diventa la copertina.
+     */
     public function store(StoreImageRequest $request, Version $version): JsonResponse
     {
         // store() genera un nome casuale e univoco: nessuna sovrascrittura, nessun nome pericoloso
@@ -37,7 +43,7 @@ class ImageController extends Controller
         try {
             $image = DB::transaction(function () use ($request, $version, $path) {
                 // La prima immagine di una versione diventa la copertina in automatico
-                $isCover = $request->boolean('is_cover') || ! $version->images()->exists();
+                $isCover = $request->boolean('is_cover') || !$version->images()->exists();
 
                 // Una sola copertina per versione
                 if ($isCover) {
@@ -64,6 +70,9 @@ class ImageController extends Controller
             ->setStatusCode(201);
     }
 
+    /**
+     * 	Modifica il testo alternativo o imposta l’immagine come copertina.
+     */
     public function update(UpdateImageRequest $request, Image $image): ImageResource
     {
         DB::transaction(function () use ($request, $image) {
@@ -97,7 +106,7 @@ class ImageController extends Controller
 
         // L'elenco deve contenere tutte e sole le immagini della versione, una volta ciascuna
         $data = $request->validate([
-            'images' => ['required', 'array', 'size:'.count($ids)],
+            'images' => ['required', 'array', 'size:' . count($ids)],
             'images.*' => ['integer', 'distinct', Rule::in($ids)],
         ]);
 
@@ -110,6 +119,9 @@ class ImageController extends Controller
         return ImageResource::collection($version->images()->get());
     }
 
+    /**
+     * 	Elimina un’immagine e il suo file; la copertina passa alla prima rimasta.
+     */
     public function destroy(Image $image): Response
     {
         Gate::authorize('update', $image->version);
@@ -122,7 +134,7 @@ class ImageController extends Controller
                 Image::where('version_id', $image->version_id)
                     ->orderBy('sort_order')
                     ->first()
-                    ?->update(['is_cover' => true]);
+                        ?->update(['is_cover' => true]);
             }
         });
 

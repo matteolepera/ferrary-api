@@ -18,15 +18,18 @@ use Illuminate\Support\Facades\Gate;
 #[Group('Admin · Modelli', weight: 12)]
 class CarModelController extends Controller
 {
+    /**
+     * Elenco dei modelli, bozze comprese, con filtri per nome, stato e categoria.
+     */
     public function index(CarModelIndexRequest $request): AnonymousResourceCollection
     {
         $models = CarModel::query()
-            ->when($request->validated('search'), fn ($query, $search) => $query
+            ->when($request->validated('search'), fn($query, $search) => $query
                 ->where('name', 'like', "%{$search}%"))
             // enum() converte il parametro nell'enum, oppure restituisce null se manca
-            ->when($request->enum('status', PublicationStatus::class), fn ($query, $status) => $query
+            ->when($request->enum('status', PublicationStatus::class), fn($query, $status) => $query
                 ->status($status))
-            ->when($request->validated('category_id'), fn ($query, $categoryId) => $query
+            ->when($request->validated('category_id'), fn($query, $categoryId) => $query
                 ->where('category_id', $categoryId))
             ->with('category')
             ->withCount('versions')
@@ -38,6 +41,9 @@ class CarModelController extends Controller
         return CarModelResource::collection($models);
     }
 
+    /**
+     * Dettaglio di un modello, con categoria e predecessore.
+     */
     public function show(CarModel $carModel): CarModelResource
     {
         Gate::authorize('view', $carModel);
@@ -47,6 +53,9 @@ class CarModelController extends Controller
         return new CarModelResource($carModel);
     }
 
+    /**
+     * Crea un modello in bozza.
+     */
     public function store(StoreCarModelRequest $request): JsonResponse
     {
         $data = $request->validated();
@@ -62,6 +71,9 @@ class CarModelController extends Controller
             ->setStatusCode(201);
     }
 
+    /**
+     * Modifica un modello, con il controllo dei cicli nel predecessore.
+     */
     public function update(UpdateCarModelRequest $request, CarModel $carModel): CarModelResource
     {
         $data = $request->validated();

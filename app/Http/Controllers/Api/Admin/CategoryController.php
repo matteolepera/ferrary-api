@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Gate;
 #[Group('Admin · Categorie', weight: 11)]
 class CategoryController extends Controller
 {
+    /**
+     * Elenco delle categorie, con il numero dei loro modelli.
+     */
     public function index(): AnonymousResourceCollection
     {
         Gate::authorize('viewAny', Category::class);
@@ -29,6 +32,9 @@ class CategoryController extends Controller
         return CategoryResource::collection($categories);
     }
 
+    /**
+     * Dettaglio di una categoria, con il numero dei suoi modelli.
+     */
     public function show(Category $category): CategoryResource
     {
         Gate::authorize('view', $category);
@@ -39,6 +45,9 @@ class CategoryController extends Controller
         return new CategoryResource($category);
     }
 
+    /**
+     * Crea una categoria, generando lo slug dal nome italiano se manca.
+     */
     public function store(StoreCategoryRequest $request): JsonResponse
     {
         $data = $request->validated();
@@ -53,6 +62,9 @@ class CategoryController extends Controller
             ->setStatusCode(201);
     }
 
+    /**
+     * Modifica una categoria; le traduzioni svuotate vengono rimosse.
+     */
     public function update(UpdateCategoryRequest $request, Category $category): CategoryResource
     {
         $data = $request->validated();
@@ -68,6 +80,9 @@ class CategoryController extends Controller
         return new CategoryResource($category);
     }
 
+    /**
+     * Elimina una categoria vuota; risponde 409 se contiene modelli.
+     */
     public function destroy(Category $category): Response
     {
         Gate::authorize('delete', $category);
