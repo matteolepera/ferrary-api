@@ -7,12 +7,14 @@ use App\Http\Requests\Admin\EngineRequest;
 use App\Http\Resources\Admin\EngineResource;
 use App\Models\Engine;
 use App\Models\VersionPowertrain;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Gate;
 
+#[Group('Admin · Cataloghi', weight: 16)]
 class EngineController extends Controller
 {
     public function index(): AnonymousResourceCollection

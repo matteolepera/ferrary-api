@@ -9,11 +9,13 @@ use App\Http\Requests\Admin\StoreCarModelRequest;
 use App\Http\Requests\Admin\UpdateCarModelRequest;
 use App\Http\Resources\Admin\CarModelResource;
 use App\Models\CarModel;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Gate;
 
+#[Group('Admin · Modelli', weight: 12)]
 class CarModelController extends Controller
 {
     public function index(CarModelIndexRequest $request): AnonymousResourceCollection

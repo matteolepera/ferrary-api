@@ -7,12 +7,14 @@ use App\Http\Requests\Admin\RacingRecordRequest;
 use App\Http\Resources\Admin\VersionRacingResource;
 use App\Models\Version;
 use App\Models\VersionRacing;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Gate;
 
+#[Group('Admin · Dati sportivi', weight: 14)]
 class VersionRacingController extends Controller
 {
     public function index(Version $version): AnonymousResourceCollection

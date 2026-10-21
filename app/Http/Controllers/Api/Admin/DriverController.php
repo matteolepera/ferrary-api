@@ -6,11 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\DriverRequest;
 use App\Http\Resources\Admin\DriverResource;
 use App\Models\Driver;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Gate;
 
+#[Group('Admin · Cataloghi', weight: 16)]
 class DriverController extends Controller
 {
     public function index(): AnonymousResourceCollection

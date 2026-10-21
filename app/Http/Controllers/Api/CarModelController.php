@@ -6,11 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Public\CarModelIndexRequest;
 use App\Http\Resources\CarModelResource;
 use App\Models\CarModel;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 /**
  * Endpoint pubblici dei modelli: accessibili senza login, mostrano solo contenuti pubblicati.
  */
+#[Group('Pubblico · Modelli', weight: 1)]
 class CarModelController extends Controller
 {
     /**

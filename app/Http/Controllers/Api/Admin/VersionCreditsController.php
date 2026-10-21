@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\Admin\DesignerResource;
 use App\Http\Resources\Admin\DriverResource;
 use App\Models\Version;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Facades\DB;
@@ -16,6 +17,7 @@ use Illuminate\Validation\Rule;
 /**
  * Collegamenti tra una versione e i suoi designer e piloti.
  */
+#[Group('Admin · Versioni', weight: 13)]
 class VersionCreditsController extends Controller
 {
     /**

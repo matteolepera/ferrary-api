@@ -6,11 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\DesignerRequest;
 use App\Http\Resources\Admin\DesignerResource;
 use App\Models\Designer;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Gate;
 
+#[Group('Admin · Cataloghi', weight: 16)]
 class DesignerController extends Controller
 {
     public function index(): AnonymousResourceCollection

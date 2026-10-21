@@ -8,6 +8,7 @@ use App\Http\Requests\Admin\UpdateVersionRequest;
 use App\Http\Resources\Admin\VersionResource;
 use App\Models\CarModel;
 use App\Models\Version;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -16,6 +17,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 
+#[Group('Admin · Versioni', weight: 13)]
 class VersionController extends Controller
 {
     /**

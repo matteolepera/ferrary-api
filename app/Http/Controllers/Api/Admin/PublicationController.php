@@ -7,12 +7,14 @@ use App\Http\Resources\Admin\CarModelResource;
 use App\Http\Resources\Admin\VersionResource;
 use App\Models\CarModel;
 use App\Models\Version;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 
 /**
  * Pubblicazione, programmazione e ritiro di modelli e versioni.
  */
+#[Group('Admin · Pubblicazione', weight: 17)]
 class PublicationController extends Controller
 {
     public function publishModel(Request $request, CarModel $carModel): CarModelResource

@@ -8,6 +8,7 @@ use App\Http\Requests\Admin\UpdateImageRequest;
 use App\Http\Resources\Admin\ImageResource;
 use App\Models\Image;
 use App\Models\Version;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -18,6 +19,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 use Throwable;
 
+#[Group('Admin · Immagini', weight: 15)]
 class ImageController extends Controller
 {
     public function index(Version $version): AnonymousResourceCollection
