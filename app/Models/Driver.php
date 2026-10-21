@@ -24,6 +24,9 @@ class Driver extends Model
         ];
     }
 
+    /**
+     * @return BelongsToMany<Version, $this>
+     */
     public function versions(): BelongsToMany
     {
         return $this->belongsToMany(Version::class);
