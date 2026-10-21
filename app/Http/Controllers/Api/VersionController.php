@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\VersionResource;
 use App\Models\CarModel;
 use App\Models\Version;
+use Illuminate\Database\Eloquent\Builder;
 
 class VersionController extends Controller
 {
@@ -30,5 +31,16 @@ class VersionController extends Controller
         ]);
 
         return new VersionResource($version);
+    }
+
+    /**
+     * Visibile al pubblico: pubblicata e di un modello visibile.
+     *
+     * @param  Builder<Version>  $query
+     */
+    public function scopeVisible(Builder $query): void
+    {
+        $query->published()
+            ->whereHas('carModel', fn ($query) => $query->visible());
     }
 }

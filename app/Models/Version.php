@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Enums\VehicleType;
 use App\Models\Concerns\LogsCatalogActivity;
 use App\Models\Concerns\Publishable;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -50,6 +51,9 @@ class Version extends Model
         ];
     }
 
+    /**
+     * @return BelongsTo<CarModel, $this>
+     */
     public function carModel(): BelongsTo
     {
         return $this->belongsTo(CarModel::class);
@@ -93,5 +97,16 @@ class Version extends Model
     public function drivers(): BelongsToMany
     {
         return $this->belongsToMany(Driver::class);
+    }
+
+    /**
+     * Visibile al pubblico: pubblicata e di un modello visibile.
+     *
+     * @param  Builder<Version>  $query
+     */
+    public function scopeVisible(Builder $query): void
+    {
+        $query->published()
+            ->whereHas('carModel', fn ($query) => $query->visible());
     }
 }

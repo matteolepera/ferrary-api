@@ -24,6 +24,8 @@ class DriverResource extends JsonResource
             'nationality' => $this->nationality,
             // Data in formato standard ISO (es. "1969-01-03"): React la formatterà come preferisce
             'birth_date' => $this->birth_date?->toDateString(),
+            'versions' => VersionResource::collection($this->whenLoaded('versions')),
+            'versions_count' => $this->whenCounted('versions'),
         ];
     }
 }

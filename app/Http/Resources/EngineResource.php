@@ -29,6 +29,8 @@ class EngineResource extends JsonResource
             'valves_per_cylinder' => $this->valves_per_cylinder,
             'aspiration' => $this->aspiration,
             'description' => $this->description,
+            'versions' => VersionResource::collection($this->whenLoaded('versions')),
+            'versions_count' => $this->whenCounted('versions'),
         ];
     }
 }

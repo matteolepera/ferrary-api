@@ -37,6 +37,11 @@ class Engine extends Model
         ];
     }
 
+    /**
+     * Le versioni che montano questo motore, attraverso le motorizzazioni.
+     *
+     * @return HasManyThrough<Version, VersionPowertrain, $this>
+     */
     public function versions(): HasManyThrough
     {
         return $this->hasManyThrough(

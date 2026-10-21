@@ -3,17 +3,29 @@
 use App\Http\Controllers\Api\Admin\StaffController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CarModelController;
+use App\Http\Controllers\Api\DesignerController;
+use App\Http\Controllers\Api\DriverController;
+use App\Http\Controllers\Api\EngineController;
 use App\Http\Controllers\Api\VersionController;
 use Illuminate\Support\Facades\Route;
 
 Route::post('/login', [AuthController::class, 'login'])->middleware('throttle:login');
 
+// --- API pubblica: nessun login richiesto ---
+Route::get('/models', [CarModelController::class, 'index']);
+
 Route::get('/models/{carModel:slug}', [CarModelController::class, 'show']);
 
 Route::get('/versions/{version:slug}', [VersionController::class, 'show']);
 
-// --- API pubblica: nessun login richiesto ---
-Route::get('/models', [CarModelController::class, 'index']);
+Route::get('/engines', [EngineController::class, 'index']);
+Route::get('/engines/{engine}', [EngineController::class, 'show']);
+
+Route::get('/designers', [DesignerController::class, 'index']);
+Route::get('/designers/{designer:slug}', [DesignerController::class, 'show']);
+
+Route::get('/drivers', [DriverController::class, 'index']);
+Route::get('/drivers/{driver:slug}', [DriverController::class, 'show']);
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
