@@ -116,3 +116,37 @@ it('non permette di togliere la copertina direttamente', function () {
 
     expect($cover->fresh()->is_cover)->toBeTrue();
 });
+
+it('riordina le immagini della versione', function () {
+    [$first, $second, $third] = Image::factory()->count(3)->sequence(
+        ['sort_order' => 1],
+        ['sort_order' => 2],
+        ['sort_order' => 3],
+    )->create(['version_id' => $this->version->id]);
+
+    $this->putJson("/api/admin/versions/{$this->version->id}/images/order", [
+        'images' => [$third->id, $first->id, $second->id],
+    ])
+        ->assertOk();
+
+    $ordered = $this->getJson("/api/admin/versions/{$this->version->id}/images")->json('data');
+
+    expect(array_column($ordered, 'id'))->toBe([$third->id, $first->id, $second->id]);
+});
+
+it('rifiuta un elenco incompleto', function () {
+    [$first] = Image::factory()->count(2)->create(['version_id' => $this->version->id]);
+
+    $this->putJson("/api/admin/versions/{$this->version->id}/images/order", ['images' => [$first->id]])
+        ->assertJsonValidationErrors('images');
+});
+
+it('rifiuta un\'immagine di un\'altra versione', function () {
+    $own = Image::factory()->create(['version_id' => $this->version->id]);
+    $foreign = Image::factory()->create();
+
+    $this->putJson("/api/admin/versions/{$this->version->id}/images/order", ['images' => [$foreign->id]])
+        ->assertJsonValidationErrors('images.0');
+
+    expect($own->fresh()->sort_order)->toBe($own->sort_order);
+});

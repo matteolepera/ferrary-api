@@ -9,10 +9,12 @@ use App\Http\Resources\Admin\ImageResource;
 use App\Models\Image;
 use App\Models\Version;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\Rule;
 use Throwable;
 
 class ImageController extends Controller
@@ -79,5 +81,29 @@ class ImageController extends Controller
         });
 
         return new ImageResource($image);
+    }
+
+    /**
+     * Riordina le immagini della versione secondo l'elenco di id ricevuto.
+     */
+    public function reorder(Request $request, Version $version): AnonymousResourceCollection
+    {
+        Gate::authorize('update', $version);
+
+        $ids = $version->images()->pluck('id')->all();
+
+        // L'elenco deve contenere tutte e sole le immagini della versione, una volta ciascuna
+        $data = $request->validate([
+            'images' => ['required', 'array', 'size:'.count($ids)],
+            'images.*' => ['integer', 'distinct', Rule::in($ids)],
+        ]);
+
+        DB::transaction(function () use ($data) {
+            foreach ($data['images'] as $position => $id) {
+                Image::whereKey($id)->update(['sort_order' => $position + 1]);
+            }
+        });
+
+        return ImageResource::collection($version->images()->get());
     }
 }
