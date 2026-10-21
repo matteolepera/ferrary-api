@@ -31,7 +31,7 @@ class VersionController extends Controller
     {
         Gate::authorize('view', $version);
 
-        $version->load(['specs', 'powertrain']);
+        $version->load(['specs', 'powertrain', 'designers', 'drivers']);
 
         return new VersionResource($version);
     }
@@ -88,7 +88,7 @@ class VersionController extends Controller
             }
         });
 
-        $version->load(['specs', 'powertrain']);
+        $version->load(['specs', 'powertrain', 'designers', 'drivers']);
 
         return new VersionResource($version);
     }
