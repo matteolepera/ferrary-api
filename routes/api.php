@@ -64,6 +64,8 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::apiResource('engines', Admin\EngineController::class);
 
         Route::apiResource('designers', Admin\DesignerController::class);
+
+        Route::apiResource('drivers', Admin\DriverController::class);
     });
 
 });
