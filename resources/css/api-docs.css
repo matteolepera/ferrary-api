@@ -1,0 +1,93 @@
+/* Font dei titoli: condensato, nello spirito delle grafiche Ferrari */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap');
+
+:root {
+    --ferrary-red: #da291c;
+    --ferrary-red-bright: #ff3b2f;
+    --ferrary-red-dark: #a51d13;
+    --ferrary-yellow: #ffd400;
+    --ferrary-heading: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+}
+
+/* --- Modalità scura: nero profondo e rosso --- */
+.dark-mode {
+    --scalar-background-1: #0a0a0b;
+    --scalar-background-2: #131315;
+    --scalar-background-3: #1c1c1f;
+    --scalar-border-color: #2a2a2e;
+    --scalar-color-1: #f5f5f5;
+    --scalar-color-2: #b8b8bd;
+    --scalar-color-3: #7a7a82;
+    --scalar-color-accent: var(--ferrary-red-bright);
+    --scalar-background-accent: rgba(218, 41, 28, 0.18);
+
+    --scalar-sidebar-background-1: #0d0d0f;
+    --scalar-sidebar-item-hover-background: rgba(218, 41, 28, 0.12);
+    --scalar-sidebar-item-active-background: rgba(218, 41, 28, 0.22);
+    --scalar-sidebar-color-active: #ffffff;
+}
+
+/* --- Modalità chiara: bianco e rosso corsa --- */
+.light-mode {
+    --scalar-background-1: #ffffff;
+    --scalar-background-2: #f6f6f7;
+    --scalar-background-3: #ececee;
+    --scalar-border-color: #e2e2e5;
+    --scalar-color-1: #141414;
+    --scalar-color-2: #4f4f57;
+    --scalar-color-3: #8b8b94;
+    --scalar-color-accent: var(--ferrary-red);
+    --scalar-background-accent: rgba(218, 41, 28, 0.08);
+
+    --scalar-sidebar-item-hover-background: rgba(218, 41, 28, 0.06);
+    --scalar-sidebar-item-active-background: rgba(218, 41, 28, 0.12);
+    --scalar-sidebar-color-active: var(--ferrary-red);
+}
+
+/* Pulsanti principali in rosso */
+.dark-mode,
+.light-mode {
+    --scalar-button-1: var(--ferrary-red);
+    --scalar-button-1-color: #ffffff;
+    --scalar-button-1-hover: var(--ferrary-red-dark);
+    --scalar-color-red: var(--ferrary-red-bright);
+}
+
+/* Bagliore rosso in cima alla pagina */
+.section-flare {
+    top: -200px;
+    height: 500px;
+    background: radial-gradient(ellipse at 50% 0%, rgba(218, 41, 28, 0.45), transparent 70%);
+}
+
+/* Titoli: condensati, maiuscoli, spaziati */
+h1,
+h2,
+h3 {
+    font-family: var(--ferrary-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Il titolo principale con la sua linea rossa e la punta gialla */
+h1::after {
+    content: '';
+    display: block;
+    width: 72px;
+    height: 4px;
+    margin-top: 14px;
+    background: linear-gradient(90deg, var(--ferrary-red) 80%, var(--ferrary-yellow) 80%);
+}
+
+/* Fibra di carbonio, appena accennata, nella barra laterale (solo in modalità scura) */
+.dark-mode .sidebar {
+    background-color: #0d0d0f;
+    background-image:
+        linear-gradient(27deg, #111113 5px, transparent 5px) 0 5px,
+        linear-gradient(207deg, #111113 5px, transparent 5px) 10px 0,
+        linear-gradient(27deg, #151517 5px, transparent 5px) 0 10px,
+        linear-gradient(207deg, #151517 5px, transparent 5px) 10px 5px,
+        linear-gradient(90deg, #121214 10px, transparent 10px),
+        linear-gradient(#131315 25%, #111113 25%, #111113 50%, transparent 50%, transparent 75%, #141416 75%, #141416);
+    background-size: 20px 20px;
+}
