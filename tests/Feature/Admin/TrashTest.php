@@ -1,9 +1,12 @@
 <?php
 
 use App\Models\CarModel;
+use App\Models\Image;
 use App\Models\User;
 use App\Models\Version;
+use App\Models\VersionSpec;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Storage;
 
 uses(RefreshDatabase::class);
 
@@ -154,4 +157,64 @@ it('impedisce al moderatore di ripristinare', function () {
     $this->actingAs(User::factory()->moderator()->create())
         ->postJson("/api/admin/models/{$model->id}/restore")
         ->assertForbidden();
+});
+
+it('elimina definitivamente un modello con versioni, dati collegati e file', function () {
+    Storage::fake('public');
+
+    $model = CarModel::factory()->create();
+    $version = Version::factory()->create(['car_model_id' => $model->id]);
+    VersionSpec::factory()->create(['version_id' => $version->id]);
+    $image = Image::factory()->create(['version_id' => $version->id]);
+    Storage::disk('public')->put($image->path, 'contenuto');
+
+    $model->delete();
+
+    $this->actingAs(User::factory()->master()->create())
+        ->deleteJson("/api/admin/trash/models/{$model->id}")
+        ->assertNoContent();
+
+    expect(CarModel::withTrashed()->find($model->id))->toBeNull()
+        ->and(Version::withTrashed()->find($version->id))->toBeNull()
+        ->and(VersionSpec::find($version->id))->toBeNull()
+        ->and(Image::find($image->id))->toBeNull();
+
+    Storage::disk('public')->assertMissing($image->path);
+});
+
+it('elimina definitivamente una singola versione', function () {
+    Storage::fake('public');
+
+    $version = Version::factory()->create();
+    $image = Image::factory()->create(['version_id' => $version->id]);
+    Storage::disk('public')->put($image->path, 'contenuto');
+    $version->delete();
+
+    $this->actingAs(User::factory()->master()->create())
+        ->deleteJson("/api/admin/trash/versions/{$version->id}")
+        ->assertNoContent();
+
+    expect(Version::withTrashed()->find($version->id))->toBeNull();
+    Storage::disk('public')->assertMissing($image->path);
+});
+
+it('riserva l\'eliminazione definitiva al master', function () {
+    $model = CarModel::factory()->create();
+    $model->delete();
+
+    $this->actingAs($this->admin)
+        ->deleteJson("/api/admin/trash/models/{$model->id}")
+        ->assertForbidden();
+
+    expect(CarModel::withTrashed()->find($model->id))->not->toBeNull();
+});
+
+it('elimina definitivamente solo ciò che è nel cestino', function () {
+    $model = CarModel::factory()->create();
+
+    $this->actingAs(User::factory()->master()->create())
+        ->deleteJson("/api/admin/trash/models/{$model->id}")
+        ->assertStatus(409);
+
+    $this->assertModelExists($model);
 });

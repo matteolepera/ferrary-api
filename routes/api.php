@@ -83,6 +83,8 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::delete('/images/{image}', [Admin\ImageController::class, 'destroy']);
 
         Route::get('/trash', [Admin\TrashController::class, 'index']);
+        Route::delete('/trash/models/{carModel}', [Admin\TrashController::class, 'forceDeleteModel'])->withTrashed();
+        Route::delete('/trash/versions/{version}', [Admin\TrashController::class, 'forceDeleteVersion'])->withTrashed();
         Route::post('/models/{carModel}/restore', [Admin\TrashController::class, 'restoreModel'])->withTrashed();
         Route::post('/versions/{version}/restore', [Admin\TrashController::class, 'restoreVersion'])->withTrashed();
     });
