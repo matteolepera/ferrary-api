@@ -2,6 +2,7 @@
 
 namespace App\Models\Concerns;
 
+use App\Enums\PublicationStatus;
 use Illuminate\Database\Eloquent\Builder;
 
 /**
@@ -30,5 +31,33 @@ trait Publishable
     public function isPublished(): bool
     {
         return $this->published_at !== null && $this->published_at->isPast();
+    }
+
+    /**
+     * Stato di pubblicazione, per le etichette dell'admin.
+     */
+    public function publicationStatus(): PublicationStatus
+    {
+        if ($this->published_at === null) {
+            return PublicationStatus::Draft;
+        }
+
+        return $this->published_at->isFuture()
+            ? PublicationStatus::Scheduled
+            : PublicationStatus::Published;
+    }
+
+    /**
+     * Scope: filtra per stato di pubblicazione.
+     */
+    public function scopeStatus(Builder $query, PublicationStatus $status): void
+    {
+        $column = $this->qualifyColumn('published_at');
+
+        match ($status) {
+            PublicationStatus::Draft => $query->whereNull($column),
+            PublicationStatus::Scheduled => $query->where($column, '>', now()),
+            PublicationStatus::Published => $query->where($column, '<=', now()),
+        };
     }
 }

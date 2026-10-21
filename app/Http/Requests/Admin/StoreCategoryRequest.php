@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Admin;
 
 use App\Models\Category;
+use App\Rules\Slug;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Str;
 
@@ -33,7 +34,7 @@ class StoreCategoryRequest extends FormRequest
             'name.it' => ['required', 'string', 'max:100'],
             'name.en' => ['nullable', 'string', 'max:100'],
             // Solo minuscole, numeri e trattini singoli tra le parole
-            'slug' => ['required', 'string', 'max:120', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/', 'unique:categories,slug'],
+            'slug' => ['required', 'string', 'max:120', new Slug, 'unique:categories,slug'],
             // 'sometimes': se manca, il database usa il valore predefinito 0
             'sort_order' => ['sometimes', 'integer', 'min:0', 'max:65535'],
         ];

@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Admin;
 
 use App\Models\Category;
+use App\Rules\Slug;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -31,7 +32,7 @@ class UpdateCategoryRequest extends FormRequest
                 'sometimes',
                 'string',
                 'max:120',
-                'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/',
+                new Slug,
                 Rule::unique('categories', 'slug')->ignore($category),
             ],
             'sort_order' => ['sometimes', 'integer', 'min:0', 'max:65535'],
