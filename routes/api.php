@@ -41,6 +41,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/staff/{user}/transfer-master', [StaffController::class, 'transferMaster']);
         Route::get('/categories', [Admin\CategoryController::class, 'index']);
         Route::get('/categories/{category}', [Admin\CategoryController::class, 'show']);
+        Route::post('/categories', [Admin\CategoryController::class, 'store']);
     });
 
 });

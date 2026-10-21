@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Api\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\StoreCategoryRequest;
 use App\Http\Resources\Admin\CategoryResource;
 use App\Models\Category;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Facades\Gate;
 
@@ -31,5 +33,19 @@ class CategoryController extends Controller
         $category->loadCount('carModels');
 
         return new CategoryResource($category);
+    }
+
+    public function store(StoreCategoryRequest $request): JsonResponse
+    {
+        $data = $request->validated();
+
+        // Salva solo le traduzioni compilate: un inglese vuoto non va salvato come stringa vuota
+        $data['name'] = array_filter($data['name'], 'filled');
+
+        $category = Category::create($data);
+
+        return (new CategoryResource($category))
+            ->response()
+            ->setStatusCode(201);
     }
 }

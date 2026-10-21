@@ -38,3 +38,55 @@ it('mostra una singola categoria', function () {
 it('richiede il login', function () {
     $this->getJson('/api/admin/categories')->assertUnauthorized();
 });
+
+it('crea una categoria con entrambe le traduzioni', function () {
+    $this->actingAs(User::factory()->moderator()->create())
+        ->postJson('/api/admin/categories', [
+            'name' => ['it' => 'Hypercar', 'en' => 'Hypercar'],
+            'slug' => 'hypercar',
+            'sort_order' => 3,
+        ])
+        ->assertCreated()
+        ->assertJsonPath('data.slug', 'hypercar')
+        ->assertJsonPath('data.sort_order', 3);
+
+    expect(Category::where('slug', 'hypercar')->exists())->toBeTrue();
+});
+
+it('genera lo slug dal nome italiano', function () {
+    $this->actingAs(User::factory()->moderator()->create())
+        ->postJson('/api/admin/categories', ['name' => ['it' => 'Berlinetta V12']])
+        ->assertCreated()
+        ->assertJsonPath('data.slug', 'berlinetta-v12');
+});
+
+it('salva solo le traduzioni compilate', function () {
+    $this->actingAs(User::factory()->moderator()->create())
+        ->postJson('/api/admin/categories', ['name' => ['it' => 'Sport prototipi', 'en' => '']])
+        ->assertCreated();
+
+    expect(Category::firstOrFail()->getTranslations('name'))->toBe(['it' => 'Sport prototipi']);
+});
+
+it('richiede il nome italiano', function () {
+    $this->actingAs(User::factory()->moderator()->create())
+        ->postJson('/api/admin/categories', ['name' => ['en' => 'Only English']])
+        ->assertJsonValidationErrors('name.it');
+});
+
+it('rifiuta uno slug già usato, anche se generato', function () {
+    Category::factory()->create(['slug' => 'berlinetta-v12']);
+
+    $this->actingAs(User::factory()->moderator()->create())
+        ->postJson('/api/admin/categories', ['name' => ['it' => 'Berlinetta V12']])
+        ->assertJsonValidationErrors('slug');
+});
+
+it('rifiuta uno slug con un formato non valido', function () {
+    $this->actingAs(User::factory()->moderator()->create())
+        ->postJson('/api/admin/categories', [
+            'name' => ['it' => 'Hypercar'],
+            'slug' => 'Hyper Car',
+        ])
+        ->assertJsonValidationErrors('slug');
+});
