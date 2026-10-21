@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Enums\Drivetrain;
+use App\Enums\GearboxType;
 use App\Enums\PowertrainType;
 use App\Models\Concerns\LogsCatalogActivity;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -40,6 +42,8 @@ class VersionPowertrain extends Model
             'powertrain_type' => PowertrainType::class,
             'battery_kwh' => 'float',
             'fuel_consumption_l100' => 'float',
+            'gearbox_type' => GearboxType::class,
+            'drivetrain' => Drivetrain::class,
         ];
     }
 

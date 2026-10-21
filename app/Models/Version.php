@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Enums\BodyType;
+use App\Enums\ProductionType;
 use App\Enums\VehicleType;
 use App\Models\Concerns\LogsCatalogActivity;
 use App\Models\Concerns\Publishable;
@@ -46,6 +48,8 @@ class Version extends Model
     {
         return [
             'vehicle_type' => VehicleType::class,
+            'body_type' => BodyType::class,
+            'production_type' => ProductionType::class,
             'in_production' => 'boolean',
             'published_at' => 'datetime',
         ];
