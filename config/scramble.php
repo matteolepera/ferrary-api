@@ -47,7 +47,16 @@ return [
      */
     'openapi_version' => OpenApiVersion::V3_1,
 
-    'description' => <<<'MD'
+    'info' => [
+        /*
+         * Versione dell'API, mostrata nella documentazione.
+         */
+        'version' => env('API_VERSION', '1.0.0'),
+
+        /*
+         * Introduzione della documentazione, in Markdown.
+         */
+        'description' => <<<'MD'
 API dell'archivio Ferrary: catalogo pubblico di tutte le Ferrari e area di gestione per lo staff.
 
 ## Autenticazione
@@ -64,6 +73,7 @@ Gli endpoint pubblici non richiedono il login.
 
 Le risposte pubbliche seguono l'intestazione `Accept-Language` (`it` o `en`); senza indicazioni, la lingua è l'italiano.
 MD,
+    ],
 
     'ui' => [
         'title' => 'Ferrary API',
