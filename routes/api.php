@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\Admin;
 use App\Http\Controllers\Api\Admin\StaffController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CarModelController;
@@ -38,6 +39,11 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::delete('/staff/{user}', [StaffController::class, 'destroy']);
         Route::patch('/staff/{user}/role', [StaffController::class, 'changeRole']);
         Route::post('/staff/{user}/transfer-master', [StaffController::class, 'transferMaster']);
+        Route::get('/categories', [Admin\CategoryController::class, 'index']);
+        Route::get('/categories/{category}', [Admin\CategoryController::class, 'show']);
+        Route::post('/categories', [Admin\CategoryController::class, 'store']);
+        Route::patch('/categories/{category}', [Admin\CategoryController::class, 'update']);
+        Route::delete('/categories/{category}', [Admin\CategoryController::class, 'destroy']);
     });
 
 });

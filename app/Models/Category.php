@@ -16,6 +16,9 @@ class Category extends Model
 
     protected $fillable = ['name', 'slug', 'sort_order'];
 
+    /**
+     * @return HasMany<CarModel, $this>
+     */
     public function carModels(): HasMany
     {
         return $this->hasMany(CarModel::class);
