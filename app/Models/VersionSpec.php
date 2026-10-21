@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Enums\BrakeType;
+use App\Enums\ChassisMaterial;
 use App\Models\Concerns\LogsCatalogActivity;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -38,6 +40,8 @@ class VersionSpec extends Model
             'zero_to_100_sec' => 'float',
             'zero_to_200_sec' => 'float',
             'fiorano_lap_sec' => 'float',
+            'chassis_material' => ChassisMaterial::class,
+            'brakes' => BrakeType::class,
         ];
     }
 
