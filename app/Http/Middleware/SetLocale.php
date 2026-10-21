@@ -9,16 +9,22 @@ use Symfony\Component\HttpFoundation\Response;
 class SetLocale
 {
     /**
-     * Imposta la lingua dell'app in base all'intestazione Accept-Language.
+     * Imposta la lingua dell'app in base ad Accept-Language e la dichiara nella risposta.
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // Sceglie tra le lingue supportate quella preferita dal client;
-        // se nessuna corrisponde, restituisce la prima dell'elenco (l'italiano)
-        $locale = $request->getPreferredLanguage(config('ferrary.locales'));
+        $locale = $request->getPreferredLanguage(config('ferrary.locales')) ?? config('app.locale');
 
-        app()->setLocale($locale ?? config('app.locale'));
+        app()->setLocale($locale);
 
-        return $next($request);
+        $response = $next($request);
+
+        // Dichiara la lingua usata nella risposta
+        $response->headers->set('Content-Language', $locale);
+
+        // La risposta cambia con la lingua richiesta: le cache devono tenerne conto
+        $response->setVary('Accept-Language', false);
+
+        return $response;
     }
 }

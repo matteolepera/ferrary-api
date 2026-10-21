@@ -37,3 +37,17 @@ it('ripiega sull\'italiano se manca la traduzione inglese', function () {
     $this->getJson('/api/models', ['Accept-Language' => 'en'])
         ->assertJsonPath('data.0.description', 'Solo in italiano');
 });
+
+it('dichiara la lingua della risposta', function () {
+    $this->getJson('/api/models', ['Accept-Language' => 'en'])
+        ->assertHeader('Content-Language', 'en');
+
+    $this->getJson('/api/models', ['Accept-Language' => 'de'])
+        ->assertHeader('Content-Language', 'it');
+});
+
+it('indica alle cache che la risposta dipende dalla lingua', function () {
+    $response = $this->getJson('/api/models', ['Accept-Language' => 'en']);
+
+    expect($response->headers->get('Vary'))->toContain('Accept-Language');
+});
