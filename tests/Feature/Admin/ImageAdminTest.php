@@ -150,3 +150,29 @@ it('rifiuta un\'immagine di un\'altra versione', function () {
 
     expect($own->fresh()->sort_order)->toBe($own->sort_order);
 });
+
+it('elimina l\'immagine insieme al suo file', function () {
+    $response = uploadImage($this->version);
+    $image = Image::findOrFail($response->json('data.id'));
+
+    Storage::disk('public')->assertExists($image->path);
+
+    $this->deleteJson("/api/admin/images/{$image->id}")
+        ->assertNoContent();
+
+    $this->assertModelMissing($image);
+    Storage::disk('public')->assertMissing($image->path);
+});
+
+it('passa la copertina alla prima immagine rimasta', function () {
+    $cover = Image::factory()->cover()->create(['version_id' => $this->version->id, 'sort_order' => 1]);
+    $last = Image::factory()->create(['version_id' => $this->version->id, 'sort_order' => 3]);
+    $next = Image::factory()->create(['version_id' => $this->version->id, 'sort_order' => 2]);
+
+    $this->deleteJson("/api/admin/images/{$cover->id}")
+        ->assertNoContent();
+
+    // La nuova copertina è la prima nell'ordine della galleria, non l'ultima creata
+    expect($next->fresh()->is_cover)->toBeTrue()
+        ->and($last->fresh()->is_cover)->toBeFalse();
+});

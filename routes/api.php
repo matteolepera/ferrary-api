@@ -74,6 +74,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/versions/{version}/images', [Admin\ImageController::class, 'store']);
         Route::patch('/images/{image}', [Admin\ImageController::class, 'update']);
         Route::put('/versions/{version}/images/order', [Admin\ImageController::class, 'reorder']);
+        Route::delete('/images/{image}', [Admin\ImageController::class, 'destroy']);
     });
 
 });

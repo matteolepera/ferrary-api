@@ -11,6 +11,7 @@ use App\Models\Version;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Storage;
@@ -105,5 +106,24 @@ class ImageController extends Controller
         });
 
         return ImageResource::collection($version->images()->get());
+    }
+
+    public function destroy(Image $image): Response
+    {
+        Gate::authorize('update', $image->version);
+
+        DB::transaction(function () use ($image) {
+            $image->delete();
+
+            // Se era la copertina, la passa alla prima immagine rimasta
+            if ($image->is_cover) {
+                Image::where('version_id', $image->version_id)
+                    ->orderBy('sort_order')
+                    ->first()
+                    ?->update(['is_cover' => true]);
+            }
+        });
+
+        return response()->noContent();
     }
 }
