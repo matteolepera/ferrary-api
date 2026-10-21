@@ -78,6 +78,11 @@ class Version extends Model
         return $this->hasMany(VersionRacing::class);
     }
 
+    /**
+     * Le immagini della galleria, nell'ordine scelto.
+     *
+     * @return HasMany<Image, $this>
+     */
     public function images(): HasMany
     {
         return $this->hasMany(Image::class)->orderBy('sort_order');

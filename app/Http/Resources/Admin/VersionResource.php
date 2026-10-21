@@ -22,6 +22,7 @@ class VersionResource extends JsonResource
         return [
             'id' => $this->id,
             'car_model_id' => $this->car_model_id,
+            'model' => new CarModelResource($this->whenLoaded('carModel')),
             'name' => $this->name,
             'slug' => $this->slug,
             'vehicle_type' => $this->vehicle_type,
@@ -39,6 +40,7 @@ class VersionResource extends JsonResource
             'published_at' => $this->published_at?->toIso8601String(),
             'created_at' => $this->created_at?->toIso8601String(),
             'updated_at' => $this->updated_at?->toIso8601String(),
+            'deleted_at' => $this->deleted_at?->toIso8601String(),
 
             // Tutte le colonne delle tabelle collegate, tranne quelle tecniche
             'specs' => $this->whenLoaded('specs', fn () => $this->specs

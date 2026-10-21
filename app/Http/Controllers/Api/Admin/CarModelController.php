@@ -11,6 +11,7 @@ use App\Http\Resources\Admin\CarModelResource;
 use App\Models\CarModel;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Gate;
 
 class CarModelController extends Controller
@@ -73,5 +74,17 @@ class CarModelController extends Controller
         $carModel->load(['category', 'predecessor'])->loadCount('versions');
 
         return new CarModelResource($carModel);
+    }
+
+    /**
+     * Sposta il modello nel cestino, insieme alle sue versioni.
+     */
+    public function destroy(CarModel $carModel): Response
+    {
+        Gate::authorize('delete', $carModel);
+
+        $carModel->delete();
+
+        return response()->noContent();
     }
 }

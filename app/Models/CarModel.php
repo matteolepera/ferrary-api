@@ -150,4 +150,22 @@ class CarModel extends Model
             default => $query->orderBy('name', $direction),
         };
     }
+
+    /**
+     * Nel cestino insieme al modello vanno anche le sue versioni, con lo stesso deleted_at:
+     * è il segno che permetterà di ripristinarle insieme a lui.
+     */
+    protected static function booted(): void
+    {
+        static::softDeleted(function (CarModel $carModel) {
+            $carModel->versions()->update(['deleted_at' => $carModel->deleted_at]);
+        });
+        // Ripristina solo le versioni cestinate insieme al modello: hanno il suo stesso deleted_at
+        static::restoring(function (CarModel $carModel) {
+            Version::onlyTrashed()
+                ->where('car_model_id', $carModel->id)
+                ->where('deleted_at', $carModel->deleted_at)
+                ->update(['deleted_at' => null]);
+        });
+    }
 }
