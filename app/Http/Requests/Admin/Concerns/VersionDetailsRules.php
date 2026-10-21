@@ -2,10 +2,13 @@
 
 namespace App\Http\Requests\Admin\Concerns;
 
+use App\Enums\BodyType;
 use App\Enums\BrakeType;
 use App\Enums\ChassisMaterial;
 use App\Enums\Drivetrain;
 use App\Enums\GearboxType;
+use App\Enums\ProductionType;
+use App\Enums\VehicleType;
 use Illuminate\Validation\Rule;
 
 /**
@@ -14,6 +17,33 @@ use Illuminate\Validation\Rule;
  */
 trait VersionDetailsRules
 {
+    /**
+     * @return array<string, mixed>
+     */
+    protected function versionRules(): array
+    {
+        return [
+            'vehicle_type' => ['required', Rule::enum(VehicleType::class)],
+            'body_type' => [
+                'nullable',
+                Rule::enum(BodyType::class),
+                Rule::when($this->input('vehicle_type') === VehicleType::F1->value, [Rule::in([BodyType::Monoposto->value])]),
+            ],
+            'project_code' => ['sometimes', 'nullable', 'string', 'max:30'],
+            'seats' => ['sometimes', 'nullable', 'integer', 'min:1', 'max:9'],
+            'year_start' => ['required', 'integer', 'min:1947', 'max:2100'],
+            'year_end' => ['nullable', 'integer', 'gte:year_start', 'max:2100', 'prohibited_if:in_production,true'],
+            'in_production' => ['sometimes', 'boolean'],
+            'production_type' => ['nullable', Rule::enum(ProductionType::class)],
+            'units_produced' => [
+                'nullable',
+                'integer',
+                'min:1',
+                Rule::when($this->input('production_type') === ProductionType::OneOff->value, ['max:1']),
+            ],
+        ];
+    }
+
     /**
      * @return array<string, mixed>
      */

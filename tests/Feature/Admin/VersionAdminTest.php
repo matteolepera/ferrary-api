@@ -138,3 +138,54 @@ it('annulla tutto se una parte del salvataggio fallisce', function () {
     // La versione era stata salvata prima della motorizzazione: la transazione l'ha annullata
     expect(Version::count())->toBe(0);
 });
+
+it('sostituisce completamente la sezione delle specifiche', function () {
+    $version = Version::factory()->create();
+    VersionSpec::factory()->create(['version_id' => $version->id, 'top_speed_kmh' => 300, 'brakes' => 'carboceramici']);
+
+    $this->patchJson("/api/admin/versions/{$version->id}", ['specs' => ['top_speed_kmh' => 340]])
+        ->assertOk()
+        ->assertJsonPath('data.specs.top_speed_kmh', 340)
+        // Non inviato: diventa vuoto
+        ->assertJsonPath('data.specs.brakes', null);
+});
+
+it('elimina una sezione inviata come null', function () {
+    $version = Version::factory()->create();
+    VersionPowertrain::factory()->create(['version_id' => $version->id]);
+
+    $this->patchJson("/api/admin/versions/{$version->id}", ['powertrain' => null])
+        ->assertOk()
+        ->assertJsonPath('data.powertrain', null);
+
+    expect(VersionPowertrain::count())->toBe(0);
+});
+
+it('crea una sezione che prima non c\'era', function () {
+    $version = Version::factory()->create();
+
+    $this->patchJson("/api/admin/versions/{$version->id}", ['powertrain' => ['electric_power_cv' => 800]])
+        ->assertOk()
+        ->assertJsonPath('data.powertrain.powertrain_type', 'elettrico');
+});
+
+it('controlla la coerenza con i valori già salvati', function () {
+    $version = Version::factory()->create(['year_start' => 2015, 'year_end' => 2020, 'in_production' => false]);
+
+    // L'anno di fine già salvato non è compatibile con "in produzione"
+    $this->patchJson("/api/admin/versions/{$version->id}", ['in_production' => true])
+        ->assertJsonValidationErrors('year_end');
+
+    // Il nuovo anno di inizio sarebbe dopo l'anno di fine già salvato
+    $this->patchJson("/api/admin/versions/{$version->id}", ['year_start' => 2025])
+        ->assertJsonValidationErrors('year_end');
+});
+
+it('permette di modificare insieme i campi legati da vincoli', function () {
+    $version = Version::factory()->create(['year_start' => 2015, 'year_end' => 2020, 'in_production' => false]);
+
+    $this->patchJson("/api/admin/versions/{$version->id}", ['in_production' => true, 'year_end' => null])
+        ->assertOk()
+        ->assertJsonPath('data.in_production', true)
+        ->assertJsonPath('data.year_end', null);
+});
