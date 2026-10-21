@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Admin\CarModelResource;
+use App\Http\Resources\Admin\VersionResource;
 use App\Models\CarModel;
 use App\Models\Version;
 use Illuminate\Http\Request;
@@ -50,5 +51,19 @@ class PublicationController extends Controller
 
         $record->published_at = null;
         $record->save();
+    }
+
+    public function publishVersion(Request $request, Version $version): VersionResource
+    {
+        $this->publish($request, $version);
+
+        return new VersionResource($version);
+    }
+
+    public function unpublishVersion(Version $version): VersionResource
+    {
+        $this->unpublish($version);
+
+        return new VersionResource($version);
     }
 }

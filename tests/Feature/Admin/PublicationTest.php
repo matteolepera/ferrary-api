@@ -2,6 +2,7 @@
 
 use App\Models\CarModel;
 use App\Models\User;
+use App\Models\Version;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Spatie\Activitylog\Models\Activity;
 
@@ -65,4 +66,43 @@ it('registra chi ha pubblicato', function () {
 
     expect($activity->causer->is($this->admin))->toBeTrue()
         ->and($activity->attribute_changes['attributes'])->toHaveKey('published_at');
+});
+
+it('pubblica subito una versione', function () {
+    $version = Version::factory()->create();
+
+    $this->actingAs($this->admin)
+        ->postJson("/api/admin/versions/{$version->id}/publish")
+        ->assertOk()
+        ->assertJsonPath('data.status', 'published');
+});
+
+it('programma la pubblicazione di una versione', function () {
+    $version = Version::factory()->create();
+
+    $this->actingAs($this->admin)
+        ->postJson("/api/admin/versions/{$version->id}/publish", [
+            'published_at' => now()->addDays(3)->toIso8601String(),
+        ])
+        ->assertOk()
+        ->assertJsonPath('data.status', 'scheduled');
+});
+
+it('ritira una versione pubblicata', function () {
+    $version = Version::factory()->published()->create();
+
+    $this->actingAs($this->admin)
+        ->postJson("/api/admin/versions/{$version->id}/unpublish")
+        ->assertOk()
+        ->assertJsonPath('data.status', 'draft');
+});
+
+it('impedisce al moderatore di pubblicare una versione', function () {
+    $version = Version::factory()->create();
+
+    $this->actingAs(User::factory()->moderator()->create())
+        ->postJson("/api/admin/versions/{$version->id}/publish")
+        ->assertForbidden();
+
+    expect($version->fresh()->published_at)->toBeNull();
 });
