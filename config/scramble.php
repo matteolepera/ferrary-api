@@ -59,15 +59,37 @@ return [
         'description' => <<<'MD'
 API dell'archivio Ferrary: catalogo pubblico di tutte le Ferrari e area di gestione per lo staff.
 
+Gli endpoint sono divisi in due aree: **Pubblico**, consultabile da chiunque, e **Admin**, riservata allo staff.
+
 ## Autenticazione
 
-Gli endpoint dell'area admin usano la sessione di Laravel Sanctum, con i cookie. Il flusso è:
+L'area admin usa la sessione di Laravel Sanctum, con i cookie. Il flusso è:
 
 1. `GET /sanctum/csrf-cookie`: imposta il cookie `XSRF-TOKEN`.
 2. `POST /api/login` con email e password, inviando il valore del cookie nell'intestazione `X-XSRF-TOKEN`.
 3. Da quel momento ogni richiesta porta con sé il cookie di sessione.
 
-Gli endpoint pubblici non richiedono il login.
+## Convenzioni
+
+**Risposte.** I dati sono sempre nella chiave `data`. Gli elenchi paginati aggiungono `links` e `meta`, con pagina corrente, totale e ultima pagina.
+
+**Codici di stato.**
+
+| Codice | Significato |
+|---|---|
+| 200, 201, 204 | Operazione riuscita (201: risorsa creata; 204: nessun contenuto) |
+| 401 | Serve il login |
+| 403 | Il ruolo dell'utente non permette l'operazione |
+| 404 | La risorsa non esiste, oppure non è pubblicata |
+| 409 | L'operazione è in conflitto con lo stato dei dati, ad esempio una categoria che contiene modelli |
+| 422 | Dati non validi: i dettagli sono in `errors`, campo per campo |
+| 429 | Troppi tentativi di login |
+
+**Identificativi.** L'API pubblica usa gli slug (`/models/812`), l'area admin gli id numerici (`/admin/models/3`).
+
+**Date.** Formato ISO 8601 (`2026-10-21T15:01:05+00:00`); le date senza orario sono `AAAA-MM-GG`.
+
+**Traduzioni.** L'API pubblica restituisce i testi nella lingua richiesta. L'area admin restituisce e riceve tutte le lingue, nella forma `{"it": "...", "en": "..."}`, e l'italiano è obbligatorio.
 
 ## Lingua
 
@@ -93,21 +115,31 @@ MD,
     'renderers' => [
         'scalar' => [
             'view' => 'scramble::scalar',
-            'theme' => 'none',
-            'darkMode' => true,
+            'theme' => 'default',
+            // Testo scuro su fondo chiaro: più riposante per le consultazioni lunghe; l'interruttore resta disponibile
+            'darkMode' => false,
             // Necessario perché "Try it" invii il cookie di sessione di Sanctum
             'credentials' => 'include',
 
-            // Interfaccia pulita: niente strumenti commerciali di Scalar
+            // Interfaccia senza distrazioni
             'showDeveloperTools' => 'never',
             'agent' => ['disabled' => true],
             'hideClientButton' => true,
             'documentDownloadType' => 'json',
 
-            // Esempi di codice: solo quelli utili per Ferrary
-            'featuredClients' => ['shell/curl', 'js/axios', 'php/laravel'],
+            // Navigazione: dentro ogni gruppo, prima le letture (GET) poi le scritture
+            'operationsSorter' => 'method',
 
-            // Il tema di Ferrary sta in un file CSS dedicato
+            // Lettura dei dati
+            'orderSchemaPropertiesBy' => 'preserve',
+            'orderRequiredPropertiesFirst' => true,
+            'expandAllResponses' => true,
+            'modelsSectionLabel' => 'Schemi dei dati',
+
+            // Esempi di codice: Axios, quello che useremo in React, come predefinito
+            'featuredClients' => ['js/axios', 'shell/curl'],
+            'defaultHttpClient' => ['targetKey' => 'js', 'clientKey' => 'axios'],
+
             'customCss' => file_get_contents(resource_path('css/api-docs.css')),
         ],
     ],
