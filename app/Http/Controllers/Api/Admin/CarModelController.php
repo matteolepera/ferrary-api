@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Api\Admin;
 use App\Enums\PublicationStatus;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\CarModelIndexRequest;
+use App\Http\Requests\Admin\StoreCarModelRequest;
 use App\Http\Resources\Admin\CarModelResource;
 use App\Models\CarModel;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Facades\Gate;
 
@@ -39,5 +41,20 @@ class CarModelController extends Controller
         $carModel->load(['category', 'predecessor'])->loadCount('versions');
 
         return new CarModelResource($carModel);
+    }
+
+    public function store(StoreCarModelRequest $request): JsonResponse
+    {
+        $data = $request->validated();
+        $data['description'] = array_filter($data['description'], 'filled');
+
+        // Nasce in bozza: published_at non è nel $fillable
+        $carModel = CarModel::create($data);
+
+        $carModel->load(['category', 'predecessor'])->loadCount('versions');
+
+        return (new CarModelResource($carModel))
+            ->response()
+            ->setStatusCode(201);
     }
 }

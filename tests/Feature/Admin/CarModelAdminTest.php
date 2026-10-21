@@ -73,3 +73,55 @@ it('richiede il login', function () {
 
     $this->getJson('/api/admin/models')->assertUnauthorized();
 });
+
+it('crea un modello in bozza, con lo slug generato dal nome', function () {
+    $category = Category::factory()->create();
+
+    $this->postJson('/api/admin/models', [
+        'name' => 'LaFerrari',
+        'category_id' => $category->id,
+        'description' => ['it' => 'Hypercar ibrida', 'en' => 'Hybrid hypercar'],
+    ])
+        ->assertCreated()
+        ->assertJsonPath('data.slug', 'laferrari')
+        ->assertJsonPath('data.status', 'draft')
+        ->assertJsonPath('data.category.id', $category->id)
+        ->assertJsonPath('data.versions_count', 0);
+});
+
+it('ignora published_at nella creazione', function () {
+    $this->postJson('/api/admin/models', [
+        'name' => 'F40',
+        'category_id' => Category::factory()->create()->id,
+        'description' => ['it' => 'Descrizione'],
+        'published_at' => now()->toIso8601String(),
+    ])
+        ->assertCreated()
+        ->assertJsonPath('data.status', 'draft');
+});
+
+it('richiede nome, categoria e descrizione italiana', function () {
+    $this->postJson('/api/admin/models', [])
+        ->assertJsonValidationErrors(['name', 'category_id', 'description.it']);
+});
+
+it('rifiuta categoria e predecessore inesistenti', function () {
+    $this->postJson('/api/admin/models', [
+        'name' => 'F40',
+        'category_id' => 999,
+        'predecessor_id' => 999,
+        'description' => ['it' => 'Descrizione'],
+    ])
+        ->assertJsonValidationErrors(['category_id', 'predecessor_id']);
+});
+
+it('rifiuta lo slug di un modello nel cestino', function () {
+    CarModel::factory()->create(['slug' => 'f40'])->delete();
+
+    $this->postJson('/api/admin/models', [
+        'name' => 'F40',
+        'category_id' => Category::factory()->create()->id,
+        'description' => ['it' => 'Descrizione'],
+    ])
+        ->assertJsonValidationErrors('slug');
+});
