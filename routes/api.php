@@ -62,6 +62,8 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::delete('/racing/{racing}', [Admin\VersionRacingController::class, 'destroy']);
 
         Route::apiResource('engines', Admin\EngineController::class);
+
+        Route::apiResource('designers', Admin\DesignerController::class);
     });
 
 });
