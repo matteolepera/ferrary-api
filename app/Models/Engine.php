@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Enums\Aspiration;
+use App\Enums\EngineArchitecture;
 use App\Models\Concerns\LogsCatalogActivity;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -34,6 +36,8 @@ class Engine extends Model
             // DECIMAL arriva da MySQL come stringa ("82.00"): il cast lo trasforma in numero (82.0)
             'bore_mm' => 'float',
             'stroke_mm' => 'float',
+            'architecture' => EngineArchitecture::class,
+            'aspiration' => Aspiration::class,
         ];
     }
 
