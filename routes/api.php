@@ -55,6 +55,9 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('/versions/{version}', [Admin\VersionController::class, 'show']);
         Route::post('/models/{carModel}/versions', [Admin\VersionController::class, 'store']);
         Route::patch('/versions/{version}', [Admin\VersionController::class, 'update']);
+
+        Route::get('/versions/{version}/racing', [Admin\VersionRacingController::class, 'index']);
+        Route::post('/versions/{version}/racing', [Admin\VersionRacingController::class, 'store']);
     });
 
 });
