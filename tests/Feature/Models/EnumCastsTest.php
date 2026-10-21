@@ -1,11 +1,16 @@
 <?php
 
+use App\Enums\Aspiration;
 use App\Enums\BodyType;
 use App\Enums\BrakeType;
 use App\Enums\ChassisMaterial;
+use App\Enums\DesignerType;
 use App\Enums\Drivetrain;
+use App\Enums\EngineArchitecture;
 use App\Enums\GearboxType;
 use App\Enums\ProductionType;
+use App\Models\Designer;
+use App\Models\Engine;
 use App\Models\Version;
 use App\Models\VersionPowertrain;
 use App\Models\VersionSpec;
@@ -34,4 +39,13 @@ it('converte i campi a scelta fissa in enum', function () {
         ->and($version->specs->brakes)->toBe(BrakeType::Carboceramici)
         ->and($version->powertrain->gearbox_type)->toBe(GearboxType::Manuale)
         ->and($version->powertrain->drivetrain)->toBe(Drivetrain::Posteriore);
+});
+
+it('converte i campi a scelta fissa di motori e designer in enum', function () {
+    $engine = Engine::factory()->create(['architecture' => 'piatto', 'v_angle_deg' => null, 'aspiration' => 'turbo']);
+    $designer = Designer::factory()->create(['type' => 'persona']);
+
+    expect($engine->fresh()->architecture)->toBe(EngineArchitecture::Piatto)
+        ->and($engine->fresh()->aspiration)->toBe(Aspiration::Turbo)
+        ->and($designer->fresh()->type)->toBe(DesignerType::Persona);
 });
