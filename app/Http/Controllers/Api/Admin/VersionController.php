@@ -11,6 +11,7 @@ use App\Models\Version;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Response;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
@@ -112,5 +113,17 @@ class VersionController extends Controller
         $columns = array_diff($relation->getRelated()->getFillable(), ['version_id']);
 
         $relation->updateOrCreate([], [...array_fill_keys($columns, null), ...$values]);
+    }
+
+    /**
+     * Sposta la versione nel cestino.
+     */
+    public function destroy(Version $version): Response
+    {
+        Gate::authorize('delete', $version);
+
+        $version->delete();
+
+        return response()->noContent();
     }
 }

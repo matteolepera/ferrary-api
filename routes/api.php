@@ -52,6 +52,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::patch('/models/{carModel}', [Admin\CarModelController::class, 'update']);
         Route::post('/models/{carModel}/publish', [Admin\PublicationController::class, 'publishModel']);
         Route::post('/models/{carModel}/unpublish', [Admin\PublicationController::class, 'unpublishModel']);
+        Route::delete('/models/{carModel}', [Admin\CarModelController::class, 'destroy']);
 
         Route::get('/models/{carModel}/versions', [Admin\VersionController::class, 'index']);
         Route::get('/versions/{version}', [Admin\VersionController::class, 'show']);
@@ -59,6 +60,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::patch('/versions/{version}', [Admin\VersionController::class, 'update']);
         Route::post('/versions/{version}/publish', [Admin\PublicationController::class, 'publishVersion']);
         Route::post('/versions/{version}/unpublish', [Admin\PublicationController::class, 'unpublishVersion']);
+        Route::delete('/versions/{version}', [Admin\VersionController::class, 'destroy']);
 
         Route::get('/versions/{version}/racing', [Admin\VersionRacingController::class, 'index']);
         Route::post('/versions/{version}/racing', [Admin\VersionRacingController::class, 'store']);
