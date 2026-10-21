@@ -90,3 +90,65 @@ it('rifiuta uno slug con un formato non valido', function () {
         ])
         ->assertJsonValidationErrors('slug');
 });
+
+it('modifica nome e slug di una categoria', function () {
+    $category = Category::factory()->create();
+
+    $this->actingAs(User::factory()->moderator()->create())
+        ->patchJson("/api/admin/categories/{$category->id}", [
+            'name' => ['it' => 'Gran Turismo', 'en' => 'Grand Tourer'],
+            'slug' => 'gran-turismo',
+        ])
+        ->assertOk()
+        ->assertJsonPath('data.slug', 'gran-turismo')
+        ->assertJsonPath('data.name.en', 'Grand Tourer');
+});
+
+it('rimuove una traduzione svuotata', function () {
+    $category = Category::factory()->create(['name' => ['it' => 'Hypercar', 'en' => 'Hypercar']]);
+
+    $this->actingAs(User::factory()->moderator()->create())
+        ->patchJson("/api/admin/categories/{$category->id}", ['name' => ['it' => 'Hypercar', 'en' => '']])
+        ->assertOk();
+
+    expect($category->fresh()->getTranslations('name'))->toBe(['it' => 'Hypercar']);
+});
+
+it('permette di mantenere lo stesso slug', function () {
+    $category = Category::factory()->create(['slug' => 'hypercar']);
+
+    $this->actingAs(User::factory()->moderator()->create())
+        ->patchJson("/api/admin/categories/{$category->id}", ['slug' => 'hypercar', 'sort_order' => 5])
+        ->assertOk()
+        ->assertJsonPath('data.sort_order', 5);
+});
+
+it('impedisce al moderatore di eliminare una categoria', function () {
+    $category = Category::factory()->create();
+
+    $this->actingAs(User::factory()->moderator()->create())
+        ->deleteJson("/api/admin/categories/{$category->id}")
+        ->assertForbidden();
+});
+
+it('permette all\'admin di eliminare una categoria vuota', function () {
+    $category = Category::factory()->create();
+
+    $this->actingAs(User::factory()->admin()->create())
+        ->deleteJson("/api/admin/categories/{$category->id}")
+        ->assertNoContent();
+
+    $this->assertModelMissing($category);
+});
+
+it('non elimina una categoria che contiene modelli, anche nel cestino', function () {
+    $category = Category::factory()->create();
+    CarModel::factory()->create(['category_id' => $category->id])->delete();
+
+    $this->actingAs(User::factory()->admin()->create())
+        ->deleteJson("/api/admin/categories/{$category->id}")
+        ->assertStatus(409)
+        ->assertJsonPath('message', 'La categoria contiene dei modelli: spostali in un\'altra categoria prima di eliminarla.');
+
+    $this->assertModelExists($category);
+});

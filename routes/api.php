@@ -42,6 +42,8 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('/categories', [Admin\CategoryController::class, 'index']);
         Route::get('/categories/{category}', [Admin\CategoryController::class, 'show']);
         Route::post('/categories', [Admin\CategoryController::class, 'store']);
+        Route::patch('/categories/{category}', [Admin\CategoryController::class, 'update']);
+        Route::delete('/categories/{category}', [Admin\CategoryController::class, 'destroy']);
     });
 
 });
