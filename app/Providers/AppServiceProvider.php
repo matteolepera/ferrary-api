@@ -35,5 +35,8 @@ class AppServiceProvider extends ServiceProvider
 
         // Permesso generale, non legato a un record: vedere il contenuto del cestino
         Gate::define('viewTrash', fn (User $user) => $user->role !== UserRole::Moderator);
+
+        // Documentazione dell'API: visibile solo in locale e nei test
+        Gate::define('viewApiDocs', fn (?User $user = null) => app()->environment(['local', 'testing']));
     }
 }
