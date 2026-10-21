@@ -69,6 +69,12 @@ Route::middleware('auth:sanctum')->group(function () {
 
         Route::put('/versions/{version}/designers', [Admin\VersionCreditsController::class, 'designers']);
         Route::put('/versions/{version}/drivers', [Admin\VersionCreditsController::class, 'drivers']);
+
+        Route::get('/versions/{version}/images', [Admin\ImageController::class, 'index']);
+        Route::post('/versions/{version}/images', [Admin\ImageController::class, 'store']);
+        Route::patch('/images/{image}', [Admin\ImageController::class, 'update']);
+        Route::put('/versions/{version}/images/order', [Admin\ImageController::class, 'reorder']);
+        Route::delete('/images/{image}', [Admin\ImageController::class, 'destroy']);
     });
 
 });
