@@ -8,6 +8,7 @@ use App\Http\Resources\Admin\VersionResource;
 use App\Models\CarModel;
 use App\Models\Image;
 use App\Models\Version;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
@@ -16,8 +17,12 @@ use Illuminate\Support\Facades\Gate;
 /**
  * Contenuto del cestino e ripristino.
  */
+#[Group('Admin · Cestino', weight: 18)]
 class TrashController extends Controller
 {
+    /**
+     * 	Contenuto del cestino: modelli e versioni cestinate da sole.
+     */
     public function index(): JsonResponse
     {
         Gate::authorize('viewTrash');
@@ -54,6 +59,9 @@ class TrashController extends Controller
         return new CarModelResource($carModel);
     }
 
+    /**
+     * Ripristina una versione; risponde 409 se il suo modello è nel cestino.
+     */
     public function restoreVersion(Version $version): VersionResource
     {
         Gate::authorize('restore', $version);

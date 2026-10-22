@@ -9,13 +9,18 @@ use App\Http\Requests\Admin\StoreCarModelRequest;
 use App\Http\Requests\Admin\UpdateCarModelRequest;
 use App\Http\Resources\Admin\CarModelResource;
 use App\Models\CarModel;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Gate;
 
+#[Group('Admin · Modelli', weight: 12)]
 class CarModelController extends Controller
 {
+    /**
+     * Elenco dei modelli, bozze comprese, con filtri per nome, stato e categoria.
+     */
     public function index(CarModelIndexRequest $request): AnonymousResourceCollection
     {
         $models = CarModel::query()
@@ -36,6 +41,9 @@ class CarModelController extends Controller
         return CarModelResource::collection($models);
     }
 
+    /**
+     * Dettaglio di un modello, con categoria e predecessore.
+     */
     public function show(CarModel $carModel): CarModelResource
     {
         Gate::authorize('view', $carModel);
@@ -45,6 +53,9 @@ class CarModelController extends Controller
         return new CarModelResource($carModel);
     }
 
+    /**
+     * Crea un modello in bozza.
+     */
     public function store(StoreCarModelRequest $request): JsonResponse
     {
         $data = $request->validated();
@@ -60,6 +71,9 @@ class CarModelController extends Controller
             ->setStatusCode(201);
     }
 
+    /**
+     * Modifica un modello, con il controllo dei cicli nel predecessore.
+     */
     public function update(UpdateCarModelRequest $request, CarModel $carModel): CarModelResource
     {
         $data = $request->validated();

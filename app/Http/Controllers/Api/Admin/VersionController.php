@@ -8,6 +8,7 @@ use App\Http\Requests\Admin\UpdateVersionRequest;
 use App\Http\Resources\Admin\VersionResource;
 use App\Models\CarModel;
 use App\Models\Version;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -16,6 +17,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 
+#[Group('Admin · Versioni', weight: 13)]
 class VersionController extends Controller
 {
     /**
@@ -28,6 +30,9 @@ class VersionController extends Controller
         return VersionResource::collection($carModel->versions()->get());
     }
 
+    /**
+     * Dettaglio di una versione, con specifiche, motorizzazione, designer e piloti.
+     */
     public function show(Version $version): VersionResource
     {
         Gate::authorize('view', $version);
@@ -37,6 +42,9 @@ class VersionController extends Controller
         return new VersionResource($version);
     }
 
+    /**
+     * Crea una versione in bozza, con specifiche e motorizzazione in un’unica operazione.
+     */
     public function store(StoreVersionRequest $request, CarModel $carModel): JsonResponse
     {
         $data = $request->validated();
@@ -69,6 +77,9 @@ class VersionController extends Controller
             ->setStatusCode(201);
     }
 
+    /**
+     * 	Modifica una versione; le sezioni inviate sostituiscono quelle esistenti.
+     */
     public function update(UpdateVersionRequest $request, Version $version): VersionResource
     {
         $data = $request->validated();

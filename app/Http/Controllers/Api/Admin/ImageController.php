@@ -8,6 +8,7 @@ use App\Http\Requests\Admin\UpdateImageRequest;
 use App\Http\Resources\Admin\ImageResource;
 use App\Models\Image;
 use App\Models\Version;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -18,8 +19,12 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 use Throwable;
 
+#[Group('Admin · Immagini', weight: 15)]
 class ImageController extends Controller
 {
+    /**
+     * 	Immagini di una versione, nell’ordine della galleria.
+     */
     public function index(Version $version): AnonymousResourceCollection
     {
         Gate::authorize('view', $version);
@@ -27,6 +32,9 @@ class ImageController extends Controller
         return ImageResource::collection($version->images()->get());
     }
 
+    /**
+     * 	Carica un’immagine; la prima di una versione diventa la copertina.
+     */
     public function store(StoreImageRequest $request, Version $version): JsonResponse
     {
         // store() genera un nome casuale e univoco: nessuna sovrascrittura, nessun nome pericoloso
@@ -62,6 +70,9 @@ class ImageController extends Controller
             ->setStatusCode(201);
     }
 
+    /**
+     * 	Modifica il testo alternativo o imposta l’immagine come copertina.
+     */
     public function update(UpdateImageRequest $request, Image $image): ImageResource
     {
         DB::transaction(function () use ($request, $image) {
@@ -108,6 +119,9 @@ class ImageController extends Controller
         return ImageResource::collection($version->images()->get());
     }
 
+    /**
+     * 	Elimina un’immagine e il suo file; la copertina passa alla prima rimasta.
+     */
     public function destroy(Image $image): Response
     {
         Gate::authorize('update', $image->version);

@@ -7,14 +7,19 @@ use App\Http\Requests\Admin\RacingRecordRequest;
 use App\Http\Resources\Admin\VersionRacingResource;
 use App\Models\Version;
 use App\Models\VersionRacing;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Gate;
 
+#[Group('Admin · Dati sportivi', weight: 14)]
 class VersionRacingController extends Controller
 {
+    /**
+     * 	Dati sportivi di una versione, in ordine di stagione.
+     */
     public function index(Version $version): AnonymousResourceCollection
     {
         Gate::authorize('view', $version);
@@ -24,6 +29,9 @@ class VersionRacingController extends Controller
         );
     }
 
+    /**
+     * Aggiunge i dati di un campionato a una versione.
+     */
     public function store(RacingRecordRequest $request, Version $version): JsonResponse
     {
         $data = $request->validated();
@@ -51,6 +59,9 @@ class VersionRacingController extends Controller
         return new VersionRacingResource($racing);
     }
 
+    /**
+     * Elimina i dati di un campionato.
+     */
     public function destroy(VersionRacing $racing): Response
     {
         // Eliminare un record sportivo equivale a modificare la versione

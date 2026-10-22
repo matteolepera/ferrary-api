@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\VersionResource;
 use App\Models\CarModel;
 use App\Models\Version;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Database\Eloquent\Builder;
 
+#[Group('Pubblico · Versioni', weight: 2)]
 class VersionController extends Controller
 {
     /**

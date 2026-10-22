@@ -7,14 +7,19 @@ use App\Http\Resources\Admin\CarModelResource;
 use App\Http\Resources\Admin\VersionResource;
 use App\Models\CarModel;
 use App\Models\Version;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 
 /**
  * Pubblicazione, programmazione e ritiro di modelli e versioni.
  */
+#[Group('Admin · Pubblicazione', weight: 17)]
 class PublicationController extends Controller
 {
+    /**
+     * Pubblica un modello subito, o alla data indicata in published_at.
+     */
     public function publishModel(Request $request, CarModel $carModel): CarModelResource
     {
         $this->publish($request, $carModel);
@@ -22,6 +27,9 @@ class PublicationController extends Controller
         return new CarModelResource($carModel);
     }
 
+    /**
+     * Riporta un modello in bozza..
+     */
     public function unpublishModel(CarModel $carModel): CarModelResource
     {
         $this->unpublish($carModel);
@@ -53,6 +61,9 @@ class PublicationController extends Controller
         $record->save();
     }
 
+    /**
+     * Pubblica una versione subito, o alla data indicata in published_at.
+     */
     public function publishVersion(Request $request, Version $version): VersionResource
     {
         $this->publish($request, $version);
@@ -60,6 +71,9 @@ class PublicationController extends Controller
         return new VersionResource($version);
     }
 
+    /**
+     * Riporta una versione in bozza.
+     */
     public function unpublishVersion(Version $version): VersionResource
     {
         $this->unpublish($version);

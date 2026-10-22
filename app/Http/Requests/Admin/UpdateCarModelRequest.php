@@ -20,7 +20,7 @@ class UpdateCarModelRequest extends FormRequest
      */
     public function rules(): array
     {
-        /** @var CarModel $carModel */
+        /** @var CarModel|null $carModel */
         $carModel = $this->route('carModel');
 
         return [

@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\DesignerResource;
 use App\Models\Designer;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
+#[Group('Pubblico · Cataloghi', weight: 3)]
 class DesignerController extends Controller
 {
     /**

@@ -1,0 +1,9 @@
+/*
+ * Personalizzazioni della documentazione dell'API.
+ * L'identità visiva di Ferrary verrà applicata qui, quando sarà definita.
+ */
+
+/* Nasconde il pulsante promozionale "Generate SDK" accanto agli esempi di codice */
+.selected-client-action {
+    display: none;
+}

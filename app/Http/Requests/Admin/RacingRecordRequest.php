@@ -14,17 +14,20 @@ class RacingRecordRequest extends FormRequest
 {
     public function authorize(): bool
     {
-        return $this->user()->can('update', $this->targetVersion());
+        $version = $this->targetVersion();
+
+        return $version !== null && $this->user()->can('update', $version);
     }
 
     /**
      * La versione del record: dall'indirizzo in creazione, dal record stesso in modifica.
+     * Vale null solo quando la richiesta non arriva da una rotta, ad esempio mentre Scramble genera la documentazione.
      */
-    public function targetVersion(): Version
+    public function targetVersion(): ?Version
     {
         $racing = $this->route('racing');
 
-        /** @var Version */
+        /** @var Version|null */
         return $racing instanceof VersionRacing ? $racing->version : $this->route('version');
     }
 
@@ -40,7 +43,7 @@ class RacingRecordRequest extends FormRequest
                 'string',
                 'max:100',
                 Rule::unique('version_racing', 'championship')
-                    ->where('version_id', $this->targetVersion()->id)
+                    ->where('version_id', $this->targetVersion()?->id)
                     ->ignore($this->route('racing')),
             ],
             'season_start' => ['required', 'integer', 'min:1947', 'max:2100'],

@@ -9,6 +9,7 @@ use App\Http\Requests\Admin\StoreStaffRequest;
 use App\Http\Requests\Admin\UpdateStaffRequest;
 use App\Http\Resources\UserResource;
 use App\Models\User;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -16,8 +17,12 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Validation\Rule;
 
+#[Group('Admin · Staff', weight: 10)]
 class StaffController extends Controller
 {
+    /**
+     * Elenco dello staff, ordinato per ruolo e nome.
+     */
     public function index(): AnonymousResourceCollection
     {
         Gate::authorize('viewAny', User::class);
@@ -30,6 +35,9 @@ class StaffController extends Controller
         return UserResource::collection($users);
     }
 
+    /**
+     * Dettaglio di un membro dello staff.
+     */
     public function show(User $user): UserResource
     {
         Gate::authorize('view', $user);

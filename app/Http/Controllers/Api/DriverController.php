@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\DriverResource;
 use App\Models\Driver;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
+#[Group('Pubblico · Cataloghi', weight: 3)]
 class DriverController extends Controller
 {
     /**

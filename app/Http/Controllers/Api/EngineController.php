@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\EngineResource;
 use App\Models\Engine;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
+#[Group('Pubblico · Cataloghi', weight: 3)]
 class EngineController extends Controller
 {
     /**
