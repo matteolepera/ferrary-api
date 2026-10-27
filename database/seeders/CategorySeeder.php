@@ -12,12 +12,16 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
+        // Le famiglie seguono la classificazione di Ferrari: per destinazione d'uso, non per motore.
+        // L'ordine dell'array diventa il sort_order.
         $categories = [
-            ['slug' => 'berlinetta-v8', 'name' => ['it' => 'Berlinetta V8', 'en' => 'V8 Berlinetta']],
-            ['slug' => 'berlinetta-v12', 'name' => ['it' => 'Berlinetta V12', 'en' => 'V12 Berlinetta']],
-            ['slug' => 'hypercar', 'name' => ['it' => 'Hypercar', 'en' => 'Hypercar']],
+            ['slug' => 'sportive', 'name' => ['it' => 'Sportive', 'en' => 'Sports cars']],
+            ['slug' => 'gran-turismo', 'name' => ['it' => 'Gran Turismo', 'en' => 'Grand tourers']],
+            ['slug' => 'hypercar', 'name' => ['it' => 'Hypercar', 'en' => 'Hypercars']],
+            ['slug' => 'icona', 'name' => ['it' => 'Icona', 'en' => 'Icona']],
+            ['slug' => 'corsa', 'name' => ['it' => 'Corsa', 'en' => 'Racing']],
             ['slug' => 'formula-1', 'name' => ['it' => 'Formula 1', 'en' => 'Formula 1']],
-            ['slug' => 'sport-prototipi', 'name' => ['it' => 'Sport prototipi', 'en' => 'Sports prototypes']],
+            ['slug' => 'concept', 'name' => ['it' => 'Concept', 'en' => 'Concepts']],
         ];
 
         foreach ($categories as $index => $category) {

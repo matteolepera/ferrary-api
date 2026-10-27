@@ -75,7 +75,7 @@ class FerrariSeeder extends Seeder
 
     private function seed812(): void
     {
-        $model = $this->carModel('berlinetta-v12', [
+        $model = $this->carModel('sportive', [
             'name' => '812',
             'slug' => '812',
             'description' => [
@@ -125,7 +125,7 @@ class FerrariSeeder extends Seeder
 
     private function seedSf90(): void
     {
-        $model = $this->carModel('berlinetta-v8', [
+        $model = $this->carModel('sportive', [
             'name' => 'SF90',
             'slug' => 'sf90',
             'description' => [
