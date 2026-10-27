@@ -26,6 +26,27 @@ class CarModelResource extends JsonResource
             // Compare solo se il controller ha caricato 'mainVersion'; vale null se la versione non ha copertina.
             'cover' => new ImageResource($this->whenLoaded('mainVersion', fn () => $this->mainVersion?->cover)),
 
+            // I tre dati chiave della versione principale, per le card e il carosello.
+            // Compaiono solo se il controller ha caricato specifiche e motorizzazione.
+            'highlights' => $this->whenLoaded('mainVersion', function () {
+                $version = $this->mainVersion;
+
+                // Senza il caricamento anticipato, leggere specs e powertrain farebbe partire nuove query
+                if ($version === null || ! $version->relationLoaded('specs') || ! $version->relationLoaded('powertrain')) {
+                    return null;
+                }
+
+                $specs = $version->specs;
+                $powertrain = $version->powertrain;
+
+                return [
+                    // La potenza di sistema delle ibride, altrimenti quella del motore termico
+                    'power_cv' => $powertrain->system_power_cv ?? $powertrain?->ice_power_cv,
+                    'zero_to_100_sec' => $specs?->zero_to_100_sec === null ? null : (float) $specs->zero_to_100_sec,
+                    'top_speed_kmh' => $specs?->top_speed_kmh,
+                ];
+            }),
+
             // Linea di discendenza: predecessore e successori, per navigare la storia dei modelli
             'predecessor' => new CarModelResource($this->whenLoaded('predecessor')),
             'successors' => CarModelResource::collection($this->whenLoaded('successors')),

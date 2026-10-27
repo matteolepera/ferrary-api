@@ -3,6 +3,8 @@
 use App\Models\CarModel;
 use App\Models\Image;
 use App\Models\Version;
+use App\Models\VersionPowertrain;
+use App\Models\VersionSpec;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 uses(RefreshDatabase::class);
@@ -94,4 +96,36 @@ it('restituisce una copertina vuota se la versione principale non ne ha', functi
     $this->getJson('/api/models')
         ->assertOk()
         ->assertJsonPath('data.0.cover', null);
+});
+
+it('mostra i dati chiave della versione principale', function () {
+    $model = visibleCarModel();
+    $version = $model->versions()->first();
+
+    // Le accelerazioni sono legate da un vincolo: 0-200 deve essere più lento di 0-100
+    VersionSpec::factory()->create([
+        'version_id' => $version->id,
+        'top_speed_kmh' => 340,
+        'zero_to_100_sec' => 2.5,
+        'zero_to_200_sec' => 6.7,
+    ]);
+    VersionPowertrain::factory()->hybrid()->create([
+        'version_id' => $version->id,
+        'system_power_cv' => 1000,
+    ]);
+
+    $this->getJson('/api/models')
+        ->assertOk()
+        ->assertJsonPath('data.0.highlights.power_cv', 1000)
+        ->assertJsonPath('data.0.highlights.zero_to_100_sec', 2.5)
+        ->assertJsonPath('data.0.highlights.top_speed_kmh', 340);
+});
+
+it('restituisce dati chiave vuoti se la versione non ha scheda tecnica', function () {
+    visibleCarModel();
+
+    $this->getJson('/api/models')
+        ->assertOk()
+        ->assertJsonPath('data.0.highlights.power_cv', null)
+        ->assertJsonPath('data.0.highlights.top_speed_kmh', null);
 });

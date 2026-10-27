@@ -27,7 +27,9 @@ class CarModelController extends Controller
             ->visible()
             ->filter($request->validated())
             ->sorted($request->validated('sort'))
-            ->with(['category', 'mainVersion.cover'])
+            // Categoria, versione principale con copertina e dati chiave:
+// cinque query in tutto, qualunque sia il numero di modelli nella pagina
+            ->with(['category', 'mainVersion.cover', 'mainVersion.specs', 'mainVersion.powertrain'])
             ->withCount(['versions' => fn ($query) => $query->published()])
             ->withMin(['versions' => fn ($query) => $query->published()], 'year_start')
             ->paginate(24)
