@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\Admin;
 use App\Http\Controllers\Api\Admin\StaffController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CarModelController;
+use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\DesignerController;
 use App\Http\Controllers\Api\DriverController;
 use App\Http\Controllers\Api\EngineController;
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 Route::post('/login', [AuthController::class, 'login'])->middleware('throttle:login');
 
 // --- API pubblica: nessun login richiesto ---
+Route::get('/categories', [CategoryController::class, 'index']);
+
 Route::get('/models', [CarModelController::class, 'index']);
 
 Route::get('/models/{carModel:slug}', [CarModelController::class, 'show']);

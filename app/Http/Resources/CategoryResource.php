@@ -21,6 +21,8 @@ class CategoryResource extends JsonResource
             // Grazie a HasTranslations, 'name' è già il testo nella lingua corrente (it o en)
             'name' => $this->name,
             'slug' => $this->slug,
+            // Numero di modelli visibili, solo se il controller l'ha calcolato con withCount
+            'models_count' => $this->whenCounted('carModels'),
         ];
     }
 }
