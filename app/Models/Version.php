@@ -63,11 +63,21 @@ class Version extends Model
         return $this->belongsTo(CarModel::class);
     }
 
+    /**
+     * Dimensioni, peso, telaio e prestazioni della versione.
+     *
+     * @return HasOne<VersionSpec, $this>
+     */
     public function specs(): HasOne
     {
         return $this->hasOne(VersionSpec::class);
     }
 
+    /**
+     * Motore, parte elettrica e trasmissione della versione.
+     *
+     * @return HasOne<VersionPowertrain, $this>
+     */
     public function powertrain(): HasOne
     {
         return $this->hasOne(VersionPowertrain::class);
