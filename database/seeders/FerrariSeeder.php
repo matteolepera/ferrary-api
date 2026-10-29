@@ -121,6 +121,45 @@ class FerrariSeeder extends Seeder
         ]);
 
         $this->attachDesigners($version, ['centro-stile-ferrari', 'flavio-manzoni']);
+
+        // La versione spider con tetto rigido retrattile, presentata nel 2019
+        $gts = $this->version($model, [
+            'name' => '812 GTS',
+            'slug' => '812-gts',
+            'vehicle_type' => VehicleType::Stradale,
+            'body_type' => 'spider',
+            'seats' => 2,
+            'project_code' => null,
+            'year_start' => 2019,
+            'year_end' => null, // TODO: verificare l'anno di fine produzione
+            'production_type' => 'serie',
+        ]);
+
+        $gts->specs()->updateOrCreate([], [
+            'length_mm' => 4693,
+            'width_mm' => 1971,
+            'height_mm' => 1278,
+            'wheelbase_mm' => 2720,
+            'dry_weight_kg' => 1600,
+            'chassis_material' => 'alluminio',
+            'brakes' => 'carboceramici',
+            'top_speed_kmh' => 340,
+            'zero_to_100_sec' => 3.0,
+            'zero_to_200_sec' => 8.3,
+        ]);
+
+        // Stesso V12 della Superfast
+        $gts->powertrain()->updateOrCreate([], [
+            'engine_id' => $this->engineId('F140GA'),
+            'ice_power_cv' => 800,
+            'ice_torque_nm' => 718,
+            'ice_max_rpm' => 8500,
+            'gearbox_type' => 'doppia_frizione',
+            'gears' => 7,
+            'drivetrain' => 'posteriore',
+        ]);
+
+        $this->attachDesigners($gts, ['centro-stile-ferrari', 'flavio-manzoni']);
     }
 
     private function seedSf90(): void

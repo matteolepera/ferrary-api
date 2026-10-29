@@ -39,6 +39,10 @@ it('assegna le Ferrari di esempio alle famiglie di Ferrari', function () {
         ->and($family('f40'))->toBe('hypercar')
         ->and($family('f2004'))->toBe('formula-1')
         ->and(Category::orderBy('sort_order')->pluck('slug')->first())->toBe('sportive');
+
+    // La 812 ha due versioni: serve al frontend per provare la scelta della versione
+    expect(CarModel::where('slug', '812')->firstOrFail()->versions()->pluck('slug')->all())
+        ->toBe(['812-superfast', '812-gts']);
 });
 
 it('si può eseguire più volte senza creare duplicati', function () {
