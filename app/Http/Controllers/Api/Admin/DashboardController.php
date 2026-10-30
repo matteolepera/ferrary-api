@@ -5,10 +5,14 @@ namespace App\Http\Controllers\Api\Admin;
 use App\Enums\PublicationStatus;
 use App\Http\Controllers\Controller;
 use App\Models\CarModel;
+use App\Models\User;
 use App\Models\Version;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Spatie\Activitylog\Models\Activity;
 
 /**
  * I dati del pannello dell'area admin, in un'unica risposta.
@@ -20,6 +24,9 @@ class DashboardController extends Controller
 
     /** Quante schede da completare mostrare nel pannello */
     private const TO_COMPLETE_LIMIT = 12;
+
+    /** Quante attività recenti mostrare nel pannello */
+    private const ACTIVITY_LIMIT = 10;
 
     public function __invoke(): JsonResponse
     {
@@ -36,6 +43,7 @@ class DashboardController extends Controller
                 ],
                 'scheduled' => $this->upcoming(),
                 'to_complete' => $this->toComplete(),
+                'activity' => $this->activity(),
             ],
         ]);
     }
@@ -116,5 +124,75 @@ class DashboardController extends Controller
                 'updated_at' => $version->updated_at?->toIso8601String() ?? '',
             ])
             ->all();
+    }
+
+    /**
+     * Le ultime attività dello staff. Il log delle persone lo vede solo chi può gestire lo staff.
+     *
+     * @return list<array{id: int, log: string|null, action: string, causer: mixed, subject_type: string, subject_name: string|null, created_at: string}>
+     */
+    private function activity(): array
+    {
+        $logs = Gate::allows('viewAny', User::class) ? ['catalogo', 'staff'] : ['catalogo'];
+
+        return Activity::query()
+            ->whereIn('log_name', $logs)
+            // Chi e su cosa, per tutte le voci in poche query
+            ->with(['causer', 'subject'])
+            // Per id e non per data: due modifiche nello stesso secondo restano nell'ordine giusto
+            ->latest('id')
+            ->limit(self::ACTIVITY_LIMIT)
+            ->get()
+            ->map(fn (Activity $activity) => [
+                'id' => $activity->id,
+                'log' => $activity->log_name,
+                'action' => $this->action($activity),
+                'causer' => $activity->causer?->getAttribute('name'),
+                // "App\Models\CarModel" diventa "car_model"
+                'subject_type' => Str::snake(class_basename($activity->subject_type ?? '')),
+                'subject_name' => $this->subjectName($activity),
+                'created_at' => $activity->created_at?->toIso8601String() ?? '',
+            ])
+            ->all();
+    }
+
+    /**
+     * L'azione in parole semplici: per Spatie pubblicare e correggere un nome sono entrambi "updated".
+     */
+    private function action(Activity $activity): string
+    {
+        $changed = data_get($activity->attribute_changes, 'attributes', []);
+
+        if ($activity->event === 'updated' && is_array($changed)) {
+            if (array_key_exists('published_at', $changed)) {
+                $date = $changed['published_at'];
+
+                return match (true) {
+                    $date === null => 'unpublished',
+                    // Confrontata con il momento della modifica, non con adesso
+                    Carbon::parse($date)->isAfter($activity->created_at) => 'scheduled',
+                    default => 'published',
+                };
+            }
+
+            if (array_key_exists('role', $changed)) {
+                return 'role_changed';
+            }
+        }
+
+        return $activity->event ?? 'updated';
+    }
+
+    /**
+     * Il nome di ciò che è stato modificato. Se il record non esiste più,
+     * lo recuperiamo dai valori salvati nel registro.
+     */
+    private function subjectName(Activity $activity): ?string
+    {
+        $name = $activity->subject?->getAttribute('name')
+            ?? data_get($activity->attribute_changes, 'attributes.name')
+            ?? data_get($activity->attribute_changes, 'old.name');
+
+        return is_string($name) ? $name : null;
     }
 }

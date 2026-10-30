@@ -90,3 +90,37 @@ test('mette prima le schede modificate più di recente', function () {
 
     expect($names)->toBe(['Recente', 'Vecchia']);
 });
+
+test("mostra l'attività del catalogo a tutti, quella dello staff solo a chi gestisce le persone", function () {
+    $master = User::factory()->master()->create();
+    $this->actingAs($master);
+    CarModel::factory()->create();
+    $moderator = User::factory()->moderator()->create();
+
+    $logsFor = fn(User $user) => collect(
+        $this->actingAs($user)->getJson('/api/admin/dashboard')->assertOk()->json('data.activity')
+    )->pluck('log')->unique()->sort()->values()->all();
+
+    expect($logsFor($moderator))->toBe(['catalogo'])
+        ->and($logsFor($master))->toBe(['catalogo', 'staff']);
+});
+
+test('racconta chi ha programmato e chi ha pubblicato, dal più recente', function () {
+    $master = User::factory()->master()->create(['name' => 'Matteo']);
+    $this->actingAs($master);
+
+    $model = CarModel::factory()->create(['name' => 'F80', 'published_at' => null]);
+    // published_at non è assegnabile in massa: lo impostiamo come fa il controller dell'admin
+    $model->forceFill(['published_at' => now()->addDay()])->save();
+    $model->forceFill(['published_at' => now()->subMinute()])->save();
+
+    $activity = $this->getJson('/api/admin/dashboard')->assertOk()->json('data.activity');
+
+    expect($activity[0])->toMatchArray([
+        'log' => 'catalogo',
+        'action' => 'published',
+        'causer' => 'Matteo',
+        'subject_type' => 'car_model',
+        'subject_name' => 'F80',
+    ])->and($activity[1]['action'])->toBe('scheduled');
+});
