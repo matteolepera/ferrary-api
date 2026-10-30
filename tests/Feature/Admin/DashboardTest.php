@@ -97,7 +97,7 @@ test("mostra l'attività del catalogo a tutti, quella dello staff solo a chi ges
     CarModel::factory()->create();
     $moderator = User::factory()->moderator()->create();
 
-    $logsFor = fn(User $user) => collect(
+    $logsFor = fn (User $user) => collect(
         $this->actingAs($user)->getJson('/api/admin/dashboard')->assertOk()->json('data.activity')
     )->pluck('log')->unique()->sort()->values()->all();
 
