@@ -90,6 +90,8 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::delete('/trash/versions/{version}', [Admin\TrashController::class, 'forceDeleteVersion'])->withTrashed();
         Route::post('/models/{carModel}/restore', [Admin\TrashController::class, 'restoreModel'])->withTrashed();
         Route::post('/versions/{version}/restore', [Admin\TrashController::class, 'restoreVersion'])->withTrashed();
+
+        Route::get('/dashboard', Admin\DashboardController::class);
     });
 
 });
