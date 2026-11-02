@@ -76,4 +76,26 @@ class ActivityPresenter
 
         return is_string($name) ? $name : null;
     }
+
+    /**
+     * Le modifiche, campo per campo, con il valore prima e dopo.
+     * Una creazione ha solo i valori nuovi, un'eliminazione solo quelli vecchi.
+     *
+     * @return list<array{field: string, old: mixed, new: mixed}>
+     */
+    public function changes(Activity $activity): array
+    {
+        $new = data_get($activity->attribute_changes, 'attributes', []);
+        $old = data_get($activity->attribute_changes, 'old', []);
+        $new = is_array($new) ? $new : [];
+        $old = is_array($old) ? $old : [];
+
+        $fields = array_values(array_unique([...array_keys($new), ...array_keys($old)]));
+
+        return array_map(fn (string|int $field) => [
+            'field' => (string) $field,
+            'old' => $old[$field] ?? null,
+            'new' => $new[$field] ?? null,
+        ], $fields);
+    }
 }

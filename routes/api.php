@@ -92,6 +92,8 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/versions/{version}/restore', [Admin\TrashController::class, 'restoreVersion'])->withTrashed();
 
         Route::get('/dashboard', Admin\DashboardController::class);
+
+        Route::get('/activity', Admin\ActivityController::class);
     });
 
 });
