@@ -7,11 +7,10 @@ use App\Http\Controllers\Controller;
 use App\Models\CarModel;
 use App\Models\User;
 use App\Models\Version;
+use App\Support\ActivityPresenter;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 use Spatie\Activitylog\Models\Activity;
 
 /**
@@ -27,6 +26,11 @@ class DashboardController extends Controller
 
     /** Quante attività recenti mostrare nel pannello */
     private const ACTIVITY_LIMIT = 10;
+
+    /**
+     * Le frasi del registro le costruisce ActivityPresenter, la stessa classe del registro delle attività.
+     */
+    public function __construct(private ActivityPresenter $presenter) {}
 
     public function __invoke(): JsonResponse
     {
@@ -143,56 +147,7 @@ class DashboardController extends Controller
             ->latest('id')
             ->limit(self::ACTIVITY_LIMIT)
             ->get()
-            ->map(fn (Activity $activity) => [
-                'id' => $activity->id,
-                'log' => $activity->log_name,
-                'action' => $this->action($activity),
-                'causer' => $activity->causer?->getAttribute('name'),
-                // "App\Models\CarModel" diventa "car_model"
-                'subject_type' => Str::snake(class_basename($activity->subject_type ?? '')),
-                'subject_name' => $this->subjectName($activity),
-                'created_at' => $activity->created_at?->toIso8601String() ?? '',
-            ])
+            ->map(fn (Activity $activity) => $this->presenter->summary($activity))
             ->all();
-    }
-
-    /**
-     * L'azione in parole semplici: per Spatie pubblicare e correggere un nome sono entrambi "updated".
-     */
-    private function action(Activity $activity): string
-    {
-        $changed = data_get($activity->attribute_changes, 'attributes', []);
-
-        if ($activity->event === 'updated' && is_array($changed)) {
-            if (array_key_exists('published_at', $changed)) {
-                $date = $changed['published_at'];
-
-                return match (true) {
-                    $date === null => 'unpublished',
-                    // Confrontata con il momento della modifica, non con adesso
-                    Carbon::parse($date)->isAfter($activity->created_at) => 'scheduled',
-                    default => 'published',
-                };
-            }
-
-            if (array_key_exists('role', $changed)) {
-                return 'role_changed';
-            }
-        }
-
-        return $activity->event ?? 'updated';
-    }
-
-    /**
-     * Il nome di ciò che è stato modificato. Se il record non esiste più,
-     * lo recuperiamo dai valori salvati nel registro.
-     */
-    private function subjectName(Activity $activity): ?string
-    {
-        $name = $activity->subject?->getAttribute('name')
-            ?? data_get($activity->attribute_changes, 'attributes.name')
-            ?? data_get($activity->attribute_changes, 'old.name');
-
-        return is_string($name) ? $name : null;
     }
 }
