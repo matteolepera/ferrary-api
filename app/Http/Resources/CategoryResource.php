@@ -23,6 +23,12 @@ class CategoryResource extends JsonResource
             'slug' => $this->slug,
             // Numero di modelli visibili, solo se il controller l'ha calcolato con withCount
             'models_count' => $this->whenCounted('carModels'),
+            // La foto della famiglia, solo se il controller l'ha caricata; null se il modello non ha copertina
+            'cover' => $this->whenLoaded('featuredModel', function () {
+                $cover = $this->featuredModel?->mainVersion?->cover;
+
+                return $cover ? new ImageResource($cover) : null;
+            }),
         ];
     }
 }

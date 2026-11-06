@@ -20,6 +20,8 @@ class CategoryController extends Controller
             // Una famiglia senza modelli visibili porterebbe a un archivio vuoto
             ->whereHas('carModels', fn ($query) => $query->visible())
             ->withCount(['carModels' => fn ($query) => $query->visible()])
+            // La foto della famiglia: la copertina del suo modello più recente, in poche query
+            ->with('featuredModel.mainVersion.cover')
             // L'ordine deciso dallo staff, poi l'id a parità di posizione
             ->orderBy('sort_order')
             ->orderBy('id')
