@@ -36,7 +36,7 @@ it('assegna le Ferrari di esempio alle famiglie di Ferrari', function () {
 
     expect($family('812'))->toBe('sportive')
         ->and($family('sf90'))->toBe('sportive')
-        ->and($family('f40'))->toBe('hypercar')
+        ->and($family('f40'))->toBe('supercar')
         ->and($family('f2004'))->toBe('formula-1')
         ->and(Category::orderBy('sort_order')->pluck('slug')->first())->toBe('sportive');
 

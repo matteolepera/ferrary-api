@@ -27,7 +27,7 @@ class FerrariSeeder extends Seeder
 
     private function seedF40(): void
     {
-        $model = $this->carModel('hypercar', [
+        $model = $this->carModel('supercar', [
             'name' => 'F40',
             'slug' => 'f40',
             'description' => [

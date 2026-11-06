@@ -12,22 +12,29 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        // Le famiglie seguono la classificazione di Ferrari: per destinazione d'uso, non per motore.
-        // L'ordine dell'array diventa il sort_order.
+        // La classificazione dell'archivio, ispirata a quella ufficiale Ferrari e di Ferrari Corse Clienti.
+        // L'ordine è quello delle pillole dell'archivio e della sezione della home
         $categories = [
-            ['slug' => 'sportive', 'name' => ['it' => 'Sportive', 'en' => 'Sports cars']],
-            ['slug' => 'gran-turismo', 'name' => ['it' => 'Gran Turismo', 'en' => 'Grand tourers']],
-            ['slug' => 'hypercar', 'name' => ['it' => 'Hypercar', 'en' => 'Hypercars']],
-            ['slug' => 'icona', 'name' => ['it' => 'Icona', 'en' => 'Icona']],
-            ['slug' => 'corsa', 'name' => ['it' => 'Corsa', 'en' => 'Racing']],
-            ['slug' => 'formula-1', 'name' => ['it' => 'Formula 1', 'en' => 'Formula 1']],
-            ['slug' => 'concept', 'name' => ['it' => 'Concept', 'en' => 'Concepts']],
+            ['sportive', 'Sportive', 'Sports cars'],
+            ['gran-turismo', 'Gran Turismo', 'Grand tourers'],
+            ['serie-speciali', 'Serie speciali', 'Special series'],
+            ['supercar', 'Supercar', 'Supercars'],
+            ['icona', 'Icona', 'Icona'],
+            ['progetti-speciali', 'Progetti speciali', 'Special projects'],
+            ['formula-1', 'Formula 1', 'Formula 1'],
+            ['sport-prototipi', 'Sport prototipi', 'Sports prototypes'],
+            ['gt-storiche', 'GT storiche', 'Historic GT racers'],
+            ['gt2-gte', 'GT2 e GTE', 'GT2 and GTE'],
+            ['gt3', 'GT3', 'GT3'],
+            ['challenge', 'Challenge', 'Challenge'],
+            ['programmi-xx', 'Programmi XX', 'XX Programmes'],
+            ['concept', 'Concept', 'Concepts'],
         ];
 
-        foreach ($categories as $index => $category) {
+        foreach ($categories as $position => [$slug, $it, $en]) {
             Category::updateOrCreate(
-                ['slug' => $category['slug']],
-                [...$category, 'sort_order' => $index],
+                ['slug' => $slug],
+                ['name' => ['it' => $it, 'en' => $en], 'sort_order' => $position + 1],
             );
         }
     }
