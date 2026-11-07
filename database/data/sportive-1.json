@@ -1,0 +1,814 @@
+{
+  "engines": [
+    {
+      "code": "F131",
+      "name": "V8 aspirato",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 3586,
+      "bore_mm": 85,
+      "stroke_mm": 79,
+      "valves_per_cylinder": 5,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F136E",
+      "name": "V8 aspirato",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 4308,
+      "bore_mm": 92,
+      "stroke_mm": 81,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F136FB",
+      "name": "V8 aspirato",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 4497,
+      "bore_mm": 94,
+      "stroke_mm": 81,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F154CB",
+      "name": "V8 biturbo",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 3902,
+      "bore_mm": 86.5,
+      "stroke_mm": 83,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "F154CD",
+      "name": "V8 biturbo",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 3902,
+      "bore_mm": 86.5,
+      "stroke_mm": 83,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "F163",
+      "name": "V6 biturbo ibrido",
+      "architecture": "V",
+      "v_angle_deg": 120,
+      "cylinders": 6,
+      "displacement_cc": 2992,
+      "bore_mm": 88,
+      "stroke_mm": 82,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "F154FA",
+      "name": "V8 biturbo ibrido",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 3990,
+      "bore_mm": 88,
+      "stroke_mm": 82,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    }
+  ],
+  "models": [
+    {
+      "slug": "360",
+      "name": "360",
+      "category": "sportive",
+      "description": {
+        "it": "La prima berlinetta V8 Ferrari con telaio e carrozzeria interamente in alluminio, e il motore in vista sotto il lunotto.",
+        "en": "The first Ferrari V8 berlinetta with an all-aluminium chassis and body, and the engine on show under the rear screen."
+      },
+      "versions": [
+        {
+          "slug": "360-modena",
+          "name": "360 Modena",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1999,
+          "year_end": 2004,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, con il cambio manuale o il robotizzato F1.",
+            "en": "The berlinetta, with manual or F1 automated gearbox."
+          },
+          "powertrain": {
+            "engine": "F131",
+            "ice_power_cv": 400,
+            "ice_torque_nm": 373,
+            "ice_max_rpm": 8500,
+            "gearbox_type": "manuale",
+            "gears": 6,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4477,
+            "width_mm": 1922,
+            "height_mm": 1214,
+            "wheelbase_mm": 2600,
+            "dry_weight_kg": 1290,
+            "weight_front_pct": 43,
+            "chassis_material": "alluminio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 295,
+            "zero_to_100_sec": 4.5
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "360-spider",
+          "name": "360 Spider",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 2000,
+          "year_end": 2005,
+          "sort_order": 2,
+          "description": {
+            "it": "La versione scoperta, con la capote in tela ad azionamento elettrico.",
+            "en": "The open-top version, with an electrically operated fabric roof."
+          },
+          "powertrain": {
+            "engine": "F131",
+            "ice_power_cv": 400,
+            "ice_torque_nm": 373,
+            "ice_max_rpm": 8500,
+            "gearbox_type": "manuale",
+            "gears": 6,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4477,
+            "width_mm": 1922,
+            "wheelbase_mm": 2600,
+            "dry_weight_kg": 1350,
+            "chassis_material": "alluminio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 290,
+            "zero_to_100_sec": 4.6
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "f430",
+      "name": "F430",
+      "category": "sportive",
+      "predecessor": "360",
+      "description": {
+        "it": "Erede della 360, porta su strada il differenziale elettronico e il manettino nati in Formula 1.",
+        "en": "Successor to the 360, it brings the electronic differential and the manettino from Formula 1 to the road."
+      },
+      "versions": [
+        {
+          "slug": "f430",
+          "name": "F430",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2004,
+          "year_end": 2009,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, con il nuovo V8 da 4,3 litri.",
+            "en": "The berlinetta, with the new 4.3-litre V8."
+          },
+          "powertrain": {
+            "engine": "F136E",
+            "ice_power_cv": 490,
+            "ice_torque_nm": 465,
+            "gearbox_type": "manuale",
+            "gears": 6,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4512,
+            "width_mm": 1923,
+            "height_mm": 1214,
+            "wheelbase_mm": 2600,
+            "dry_weight_kg": 1350,
+            "weight_front_pct": 43,
+            "chassis_material": "alluminio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 315,
+            "zero_to_100_sec": 4.0
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "f430-spider",
+          "name": "F430 Spider",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 2005,
+          "year_end": 2009,
+          "sort_order": 2,
+          "description": {
+            "it": "La versione scoperta, con la capote che si ripiega sopra il motore.",
+            "en": "The open-top version, with a roof that folds away above the engine."
+          },
+          "powertrain": {
+            "engine": "F136E",
+            "ice_power_cv": 490,
+            "ice_torque_nm": 465,
+            "gearbox_type": "manuale",
+            "gears": 6,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4512,
+            "width_mm": 1923,
+            "wheelbase_mm": 2600,
+            "dry_weight_kg": 1420,
+            "chassis_material": "alluminio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 310,
+            "zero_to_100_sec": 4.1
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "458",
+      "name": "458",
+      "category": "sportive",
+      "predecessor": "f430",
+      "description": {
+        "it": "L'ultima berlinetta V8 Ferrari con motore aspirato, e la prima con il cambio a doppia frizione.",
+        "en": "The last Ferrari V8 berlinetta with a naturally aspirated engine, and the first with a dual-clutch gearbox."
+      },
+      "versions": [
+        {
+          "slug": "458-italia",
+          "name": "458 Italia",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2009,
+          "year_end": 2015,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, con il V8 che gira fino a 9000 giri.",
+            "en": "The berlinetta, with a V8 revving to 9,000 rpm."
+          },
+          "powertrain": {
+            "engine": "F136FB",
+            "ice_power_cv": 570,
+            "ice_torque_nm": 540,
+            "ice_max_rpm": 9000,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4527,
+            "width_mm": 1937,
+            "height_mm": 1213,
+            "wheelbase_mm": 2650,
+            "dry_weight_kg": 1380,
+            "weight_front_pct": 42,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 325,
+            "fiorano_lap_sec": 85.0
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "458-spider",
+          "name": "458 Spider",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 2011,
+          "year_end": 2015,
+          "sort_order": 2,
+          "description": {
+            "it": "La versione scoperta, con il tetto rigido ripiegabile in alluminio.",
+            "en": "The open-top version, with a folding aluminium hardtop."
+          },
+          "powertrain": {
+            "engine": "F136FB",
+            "ice_power_cv": 570,
+            "ice_torque_nm": 540,
+            "ice_max_rpm": 9000,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4527,
+            "width_mm": 1937,
+            "wheelbase_mm": 2650,
+            "dry_weight_kg": 1430,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 320
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "488",
+      "name": "488",
+      "category": "sportive",
+      "predecessor": "458",
+      "description": {
+        "it": "Il ritorno del turbo su una berlinetta V8 Ferrari, trent'anni dopo la 288 GTO e la F40.",
+        "en": "The return of turbocharging to a Ferrari V8 berlinetta, thirty years after the 288 GTO and F40."
+      },
+      "versions": [
+        {
+          "slug": "488-gtb",
+          "name": "488 GTB",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2015,
+          "year_end": 2019,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, con le prese d'aria divise sulle fiancate come la 308 GTB.",
+            "en": "The berlinetta, with split side air intakes recalling the 308 GTB."
+          },
+          "powertrain": {
+            "engine": "F154CB",
+            "ice_power_cv": 670,
+            "ice_torque_nm": 760,
+            "ice_max_rpm": 8000,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4568,
+            "width_mm": 1952,
+            "height_mm": 1213,
+            "wheelbase_mm": 2650,
+            "dry_weight_kg": 1370,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 330,
+            "zero_to_100_sec": 3.0,
+            "zero_to_200_sec": 8.3,
+            "fiorano_lap_sec": 83.0
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "488-spider",
+          "name": "488 Spider",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 2015,
+          "year_end": 2019,
+          "sort_order": 2,
+          "description": {
+            "it": "La versione scoperta, con il tetto rigido ripiegabile.",
+            "en": "The open-top version, with a folding hardtop."
+          },
+          "powertrain": {
+            "engine": "F154CB",
+            "ice_power_cv": 670,
+            "ice_torque_nm": 760,
+            "ice_max_rpm": 8000,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4568,
+            "width_mm": 1952,
+            "wheelbase_mm": 2650,
+            "dry_weight_kg": 1420,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 325,
+            "zero_to_100_sec": 3.0,
+            "zero_to_200_sec": 8.7
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "f8",
+      "name": "F8",
+      "category": "sportive",
+      "predecessor": "488",
+      "description": {
+        "it": "Il tributo al V8 più premiato della storia Ferrari, con il motore della 488 Pista.",
+        "en": "A tribute to the most awarded V8 in Ferrari history, using the 488 Pista's engine."
+      },
+      "versions": [
+        {
+          "slug": "f8-tributo",
+          "name": "F8 Tributo",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2019,
+          "year_end": 2022,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, con il lunotto in Lexan che richiama la F40.",
+            "en": "The berlinetta, with a Lexan rear screen recalling the F40."
+          },
+          "powertrain": {
+            "engine": "F154CD",
+            "ice_power_cv": 720,
+            "ice_torque_nm": 770,
+            "ice_max_rpm": 8000,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4611,
+            "width_mm": 1979,
+            "height_mm": 1206,
+            "wheelbase_mm": 2650,
+            "dry_weight_kg": 1330,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 340,
+            "zero_to_100_sec": 2.9,
+            "zero_to_200_sec": 7.8
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "f8-spider",
+          "name": "F8 Spider",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 2019,
+          "year_end": 2022,
+          "sort_order": 2,
+          "description": {
+            "it": "La versione scoperta, con il tetto rigido ripiegabile.",
+            "en": "The open-top version, with a folding hardtop."
+          },
+          "powertrain": {
+            "engine": "F154CD",
+            "ice_power_cv": 720,
+            "ice_torque_nm": 770,
+            "ice_max_rpm": 8000,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4611,
+            "width_mm": 1979,
+            "wheelbase_mm": 2650,
+            "dry_weight_kg": 1400,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 340,
+            "zero_to_100_sec": 2.9,
+            "zero_to_200_sec": 8.2
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "296",
+      "name": "296",
+      "category": "sportive",
+      "predecessor": "f8",
+      "description": {
+        "it": "La prima Ferrari stradale con un V6, ibrida plug-in, con l'angolo di 120 gradi tra le bancate.",
+        "en": "The first road-going Ferrari with a V6, a plug-in hybrid with a 120-degree angle between the banks."
+      },
+      "versions": [
+        {
+          "slug": "296-gtb",
+          "name": "296 GTB",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": true,
+          "body_type": "coupe",
+          "year_start": 2022,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, che può percorrere fino a 25 km in modalità elettrica.",
+            "en": "The berlinetta, which can cover up to 25 km in electric mode."
+          },
+          "powertrain": {
+            "engine": "F163",
+            "ice_power_cv": 663,
+            "ice_torque_nm": 740,
+            "ice_max_rpm": 8500,
+            "electric_power_cv": 167,
+            "electric_motors_count": 1,
+            "battery_kwh": 7.45,
+            "electric_range_km": 25,
+            "system_power_cv": 830,
+            "gearbox_type": "doppia_frizione",
+            "gears": 8,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4565,
+            "width_mm": 1958,
+            "height_mm": 1187,
+            "wheelbase_mm": 2600,
+            "dry_weight_kg": 1470,
+            "weight_front_pct": 40,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 330,
+            "zero_to_100_sec": 2.9,
+            "zero_to_200_sec": 7.3,
+            "fiorano_lap_sec": 81.0
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "296-gts",
+          "name": "296 GTS",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": true,
+          "body_type": "spider",
+          "year_start": 2022,
+          "sort_order": 2,
+          "description": {
+            "it": "La versione scoperta, con il tetto rigido che si apre in 14 secondi.",
+            "en": "The open-top version, with a hardtop that opens in 14 seconds."
+          },
+          "powertrain": {
+            "engine": "F163",
+            "ice_power_cv": 663,
+            "ice_torque_nm": 740,
+            "ice_max_rpm": 8500,
+            "electric_power_cv": 167,
+            "electric_motors_count": 1,
+            "battery_kwh": 7.45,
+            "electric_range_km": 25,
+            "system_power_cv": 830,
+            "gearbox_type": "doppia_frizione",
+            "gears": 8,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4565,
+            "width_mm": 1958,
+            "wheelbase_mm": 2600,
+            "dry_weight_kg": 1540,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 330,
+            "zero_to_100_sec": 2.9,
+            "zero_to_200_sec": 7.6
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sf90",
+      "name": "SF90",
+      "category": "sportive",
+      "description": {
+        "it": "La prima Ferrari ibrida plug-in di serie, con tre motori elettrici e la trazione integrale.",
+        "en": "The first series-production plug-in hybrid Ferrari, with three electric motors and all-wheel drive."
+      },
+      "versions": [
+        {
+          "slug": "sf90-stradale",
+          "name": "SF90 Stradale",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": true,
+          "body_type": "coupe",
+          "year_start": 2019,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, con 1000 cv di potenza complessiva.",
+            "en": "The berlinetta, with 1,000 cv of combined power."
+          },
+          "powertrain": {
+            "engine": "F154FA",
+            "ice_power_cv": 780,
+            "ice_torque_nm": 800,
+            "ice_max_rpm": 8000,
+            "electric_power_cv": 220,
+            "electric_motors_count": 3,
+            "battery_kwh": 7.9,
+            "electric_range_km": 25,
+            "system_power_cv": 1000,
+            "gearbox_type": "doppia_frizione",
+            "gears": 8,
+            "drivetrain": "integrale"
+          },
+          "specs": {
+            "length_mm": 4710,
+            "width_mm": 1972,
+            "height_mm": 1186,
+            "wheelbase_mm": 2650,
+            "dry_weight_kg": 1570,
+            "weight_front_pct": 45,
+            "chassis_material": "misto",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 340,
+            "zero_to_100_sec": 2.5,
+            "zero_to_200_sec": 6.7,
+            "fiorano_lap_sec": 79.0
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "sf90-spider",
+          "name": "SF90 Spider",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": true,
+          "body_type": "spider",
+          "year_start": 2020,
+          "sort_order": 2,
+          "description": {
+            "it": "La versione scoperta, con il tetto rigido ripiegabile.",
+            "en": "The open-top version, with a folding hardtop."
+          },
+          "powertrain": {
+            "engine": "F154FA",
+            "ice_power_cv": 780,
+            "ice_torque_nm": 800,
+            "ice_max_rpm": 8000,
+            "electric_power_cv": 220,
+            "electric_motors_count": 3,
+            "battery_kwh": 7.9,
+            "electric_range_km": 25,
+            "system_power_cv": 1000,
+            "gearbox_type": "doppia_frizione",
+            "gears": 8,
+            "drivetrain": "integrale"
+          },
+          "specs": {
+            "length_mm": 4710,
+            "width_mm": 1972,
+            "wheelbase_mm": 2650,
+            "dry_weight_kg": 1670,
+            "chassis_material": "misto",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 340,
+            "zero_to_100_sec": 2.5,
+            "zero_to_200_sec": 7.0
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
