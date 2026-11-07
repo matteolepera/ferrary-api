@@ -1,0 +1,711 @@
+{
+  "engines": [
+    {
+      "code": "F136FL",
+      "name": "V8 aspirato",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 4497,
+      "bore_mm": 94,
+      "stroke_mm": 81,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F140HB",
+      "name": "V12 aspirato",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 6496,
+      "bore_mm": 94,
+      "stroke_mm": 78,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    }
+  ],
+  "models": [
+    {
+      "slug": "360-challenge-stradale",
+      "name": "360 Challenge Stradale",
+      "category": "serie-speciali",
+      "description": {
+        "it": "La prima delle serie speciali moderne: la 360 Modena alleggerita e affinata con l'esperienza del campionato Challenge.",
+        "en": "The first of the modern special series: the 360 Modena lightened and honed with experience from the Challenge championship."
+      },
+      "versions": [
+        {
+          "slug": "360-challenge-stradale",
+          "name": "360 Challenge Stradale",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2003,
+          "year_end": 2004,
+          "description": {
+            "it": "Oltre cento chili in meno della 360 Modena, e i freni carboceramici di serie.",
+            "en": "Over a hundred kilos lighter than the 360 Modena, with carbon-ceramic brakes as standard."
+          },
+          "powertrain": {
+            "engine": "F131",
+            "ice_power_cv": 425,
+            "ice_torque_nm": 373,
+            "gearbox_type": "robotizzato",
+            "gears": 6,
+            "drivetrain": "posteriore",
+            "ice_max_rpm": 8500
+          },
+          "specs": {
+            "length_mm": 4477,
+            "width_mm": 1922,
+            "height_mm": 1199,
+            "wheelbase_mm": 2600,
+            "dry_weight_kg": 1180,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 300,
+            "zero_to_100_sec": 4.1
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "430-scuderia",
+      "name": "430 Scuderia",
+      "category": "serie-speciali",
+      "predecessor": "360-challenge-stradale",
+      "description": {
+        "it": "La F430 da pista per la strada, sviluppata con Michael Schumacher.",
+        "en": "The track-focused F430 for the road, developed with Michael Schumacher."
+      },
+      "versions": [
+        {
+          "slug": "430-scuderia",
+          "name": "430 Scuderia",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2007,
+          "year_end": 2009,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, con il cambio F1 che cambia marcia in 60 millisecondi.",
+            "en": "The berlinetta, with an F1 gearbox shifting in 60 milliseconds."
+          },
+          "powertrain": {
+            "engine": "F136E",
+            "ice_power_cv": 510,
+            "ice_torque_nm": 470,
+            "gearbox_type": "robotizzato",
+            "gears": 6,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4512,
+            "width_mm": 1923,
+            "height_mm": 1199,
+            "wheelbase_mm": 2600,
+            "dry_weight_kg": 1250,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 320,
+            "zero_to_100_sec": 3.6,
+            "fiorano_lap_sec": 85.0
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "scuderia-spider-16m",
+          "name": "Scuderia Spider 16M",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 2008,
+          "year_end": 2009,
+          "units_produced": 499,
+          "sort_order": 2,
+          "description": {
+            "it": "La spider che celebra il sedicesimo titolo costruttori di Formula 1, vinto nel 2008.",
+            "en": "The spider celebrating the sixteenth Formula 1 constructors' title, won in 2008."
+          },
+          "powertrain": {
+            "engine": "F136E",
+            "ice_power_cv": 510,
+            "ice_torque_nm": 470,
+            "gearbox_type": "robotizzato",
+            "gears": 6,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4512,
+            "width_mm": 1923,
+            "wheelbase_mm": 2600,
+            "dry_weight_kg": 1340,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 315,
+            "zero_to_100_sec": 3.7
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "458-speciale",
+      "name": "458 Speciale",
+      "category": "serie-speciali",
+      "predecessor": "430-scuderia",
+      "description": {
+        "it": "La versione estrema della 458, con l'aerodinamica attiva e il V8 aspirato più potente mai costruito da Ferrari per una stradale.",
+        "en": "The extreme version of the 458, with active aerodynamics and the most powerful naturally aspirated V8 Ferrari ever built for a road car."
+      },
+      "versions": [
+        {
+          "slug": "458-speciale",
+          "name": "458 Speciale",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2013,
+          "year_end": 2015,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, con il controllo dell'angolo di derapata Side Slip Control.",
+            "en": "The berlinetta, with Side Slip Control."
+          },
+          "powertrain": {
+            "engine": "F136FL",
+            "ice_power_cv": 605,
+            "ice_torque_nm": 540,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore",
+            "ice_max_rpm": 9000
+          },
+          "specs": {
+            "length_mm": 4571,
+            "width_mm": 1951,
+            "wheelbase_mm": 2650,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "height_mm": 1203,
+            "dry_weight_kg": 1290,
+            "weight_front_pct": 42,
+            "top_speed_kmh": 325,
+            "zero_to_100_sec": 3.0,
+            "zero_to_200_sec": 9.1,
+            "fiorano_lap_sec": 83.5
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "458-speciale-a",
+          "name": "458 Speciale A",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 2014,
+          "year_end": 2015,
+          "units_produced": 499,
+          "sort_order": 2,
+          "description": {
+            "it": "La spider, l'ultima Ferrari V8 aspirata a motore centrale.",
+            "en": "The spider, the last mid-engined naturally aspirated Ferrari V8."
+          },
+          "powertrain": {
+            "engine": "F136FL",
+            "ice_power_cv": 605,
+            "ice_torque_nm": 540,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore",
+            "ice_max_rpm": 9000
+          },
+          "specs": {
+            "length_mm": 4571,
+            "width_mm": 1951,
+            "wheelbase_mm": 2650,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "dry_weight_kg": 1340,
+            "top_speed_kmh": 320,
+            "zero_to_100_sec": 3.0,
+            "zero_to_200_sec": 9.5
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "488-pista",
+      "name": "488 Pista",
+      "category": "serie-speciali",
+      "predecessor": "458-speciale",
+      "description": {
+        "it": "La 488 con la tecnologia delle 488 da corsa, nel campionato Challenge e nel mondiale endurance.",
+        "en": "The 488 with technology from the racing 488s, in the Challenge series and the endurance world championship."
+      },
+      "versions": [
+        {
+          "slug": "488-pista",
+          "name": "488 Pista",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2018,
+          "year_end": 2020,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, con il condotto che attraversa il frontale, l'S-Duct.",
+            "en": "The berlinetta, with the duct running through the front end, the S-Duct."
+          },
+          "powertrain": {
+            "engine": "F154CD",
+            "ice_power_cv": 720,
+            "ice_torque_nm": 770,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore",
+            "ice_max_rpm": 8000
+          },
+          "specs": {
+            "length_mm": 4605,
+            "width_mm": 1975,
+            "wheelbase_mm": 2650,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "height_mm": 1206,
+            "dry_weight_kg": 1280,
+            "top_speed_kmh": 340,
+            "zero_to_100_sec": 2.85,
+            "zero_to_200_sec": 7.6,
+            "fiorano_lap_sec": 81.5
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "488-pista-spider",
+          "name": "488 Pista Spider",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 2018,
+          "year_end": 2020,
+          "sort_order": 2,
+          "description": {
+            "it": "La spider, con il tetto rigido ripiegabile.",
+            "en": "The spider, with a folding hardtop."
+          },
+          "powertrain": {
+            "engine": "F154CD",
+            "ice_power_cv": 720,
+            "ice_torque_nm": 770,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore",
+            "ice_max_rpm": 8000
+          },
+          "specs": {
+            "length_mm": 4605,
+            "width_mm": 1975,
+            "wheelbase_mm": 2650,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "dry_weight_kg": 1380,
+            "top_speed_kmh": 340,
+            "zero_to_100_sec": 2.85,
+            "zero_to_200_sec": 8.0
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "599-gto",
+      "name": "599 GTO",
+      "category": "serie-speciali",
+      "description": {
+        "it": "Il terzo nome GTO della storia Ferrari, dopo la 250 e la 288: la 599 derivata dalla 599XX da pista.",
+        "en": "The third GTO name in Ferrari history, after the 250 and the 288: the 599 derived from the 599XX track car."
+      },
+      "versions": [
+        {
+          "slug": "599-gto",
+          "name": "599 GTO",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2010,
+          "year_end": 2011,
+          "units_produced": 599,
+          "description": {
+            "it": "Alla presentazione, la Ferrari stradale più veloce mai costruita.",
+            "en": "At its launch, the fastest road-going Ferrari ever built."
+          },
+          "powertrain": {
+            "engine": "F140C",
+            "ice_power_cv": 670,
+            "ice_torque_nm": 620,
+            "gearbox_type": "robotizzato",
+            "gears": 6,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4710,
+            "width_mm": 1962,
+            "height_mm": 1326,
+            "wheelbase_mm": 2750,
+            "dry_weight_kg": 1495,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 335,
+            "zero_to_100_sec": 3.35,
+            "zero_to_200_sec": 9.8,
+            "fiorano_lap_sec": 84.0
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "f12tdf",
+      "name": "F12tdf",
+      "category": "serie-speciali",
+      "predecessor": "599-gto",
+      "description": {
+        "it": "Il nome omaggia il Tour de France automobilistico, dominato dalla 250 GT Berlinetta negli anni Cinquanta.",
+        "en": "The name pays tribute to the Tour de France Automobile, dominated by the 250 GT Berlinetta in the 1950s."
+      },
+      "versions": [
+        {
+          "slug": "f12tdf",
+          "name": "F12tdf",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2015,
+          "year_end": 2017,
+          "units_produced": 799,
+          "description": {
+            "it": "La prima Ferrari con le ruote posteriori sterzanti.",
+            "en": "The first Ferrari with rear-wheel steering."
+          },
+          "powertrain": {
+            "engine": "F140FC",
+            "ice_power_cv": 780,
+            "ice_torque_nm": 705,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore",
+            "ice_max_rpm": 8900
+          },
+          "specs": {
+            "length_mm": 4656,
+            "width_mm": 1961,
+            "height_mm": 1273,
+            "wheelbase_mm": 2720,
+            "dry_weight_kg": 1415,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 340,
+            "zero_to_100_sec": 2.9,
+            "zero_to_200_sec": 7.9,
+            "fiorano_lap_sec": 81.0
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "812-competizione",
+      "name": "812 Competizione",
+      "category": "serie-speciali",
+      "predecessor": "f12tdf",
+      "description": {
+        "it": "L'evoluzione più estrema della 812, con il V12 portato a 9500 giri.",
+        "en": "The most extreme evolution of the 812, with the V12 revving to 9,500 rpm."
+      },
+      "versions": [
+        {
+          "slug": "812-competizione",
+          "name": "812 Competizione",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2021,
+          "year_end": 2023,
+          "units_produced": 999,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, con il lunotto sostituito da un pannello in fibra di carbonio.",
+            "en": "The berlinetta, with the rear screen replaced by a carbon-fibre panel."
+          },
+          "powertrain": {
+            "engine": "F140HB",
+            "ice_power_cv": 830,
+            "ice_torque_nm": 692,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore",
+            "ice_max_rpm": 9500
+          },
+          "specs": {
+            "length_mm": 4696,
+            "width_mm": 1971,
+            "wheelbase_mm": 2720,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "height_mm": 1276,
+            "dry_weight_kg": 1487,
+            "top_speed_kmh": 340,
+            "zero_to_100_sec": 2.85,
+            "zero_to_200_sec": 7.5
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "812-competizione-a",
+          "name": "812 Competizione A",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "targa",
+          "year_start": 2021,
+          "year_end": 2023,
+          "units_produced": 599,
+          "sort_order": 2,
+          "description": {
+            "it": "La targa, con il tetto in fibra di carbonio asportabile.",
+            "en": "The targa, with a removable carbon-fibre roof."
+          },
+          "powertrain": {
+            "engine": "F140HB",
+            "ice_power_cv": 830,
+            "ice_torque_nm": 692,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore",
+            "ice_max_rpm": 9500
+          },
+          "specs": {
+            "length_mm": 4696,
+            "width_mm": 1971,
+            "wheelbase_mm": 2720,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 340,
+            "zero_to_100_sec": 2.85,
+            "zero_to_200_sec": 8.0
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sf90-xx",
+      "name": "SF90 XX",
+      "category": "serie-speciali",
+      "description": {
+        "it": "La prima Ferrari del programma XX omologata per la strada, con l'alettone fisso e l'aerodinamica da pista.",
+        "en": "The first car from Ferrari's XX programme homologated for the road, with a fixed wing and track aerodynamics."
+      },
+      "versions": [
+        {
+          "slug": "sf90-xx-stradale",
+          "name": "SF90 XX Stradale",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": true,
+          "body_type": "coupe",
+          "year_start": 2024,
+          "units_produced": 799,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, record sul giro di Fiorano per un'auto stradale.",
+            "en": "The berlinetta, holder of the Fiorano lap record for a road car."
+          },
+          "powertrain": {
+            "engine": "F154FA",
+            "ice_power_cv": 797,
+            "gearbox_type": "doppia_frizione",
+            "gears": 8,
+            "drivetrain": "integrale",
+            "electric_power_cv": 233,
+            "electric_motors_count": 3,
+            "system_power_cv": 1030
+          },
+          "specs": {
+            "dry_weight_kg": 1560,
+            "chassis_material": "misto",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 320,
+            "zero_to_100_sec": 2.3,
+            "zero_to_200_sec": 6.5,
+            "fiorano_lap_sec": 77.3
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "sf90-xx-spider",
+          "name": "SF90 XX Spider",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": true,
+          "body_type": "spider",
+          "year_start": 2024,
+          "units_produced": 599,
+          "sort_order": 2,
+          "description": {
+            "it": "La spider, con il tetto rigido ripiegabile.",
+            "en": "The spider, with a folding hardtop."
+          },
+          "powertrain": {
+            "engine": "F154FA",
+            "ice_power_cv": 797,
+            "gearbox_type": "doppia_frizione",
+            "gears": 8,
+            "drivetrain": "integrale",
+            "electric_power_cv": 233,
+            "electric_motors_count": 3,
+            "system_power_cv": 1030
+          },
+          "specs": {
+            "dry_weight_kg": 1660,
+            "chassis_material": "misto",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 320,
+            "zero_to_100_sec": 2.3,
+            "zero_to_200_sec": 6.7
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
