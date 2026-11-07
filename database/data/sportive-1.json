@@ -90,6 +90,7 @@
       "slug": "360",
       "name": "360",
       "category": "sportive",
+      "predecessor": "f355",
       "description": {
         "it": "La prima berlinetta V8 Ferrari con telaio e carrozzeria interamente in alluminio, e il motore in vista sotto il lunotto.",
         "en": "The first Ferrari V8 berlinetta with an all-aluminium chassis and body, and the engine on show under the rear screen."
