@@ -1,0 +1,512 @@
+{
+  "engines": [
+    {
+      "code": "F114B",
+      "name": "V8 biturbo",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 2855,
+      "bore_mm": 80,
+      "stroke_mm": 71,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "F120A",
+      "name": "V8 biturbo",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 2936,
+      "bore_mm": 82,
+      "stroke_mm": 69.5,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "F130B",
+      "name": "V12 aspirato",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 4698,
+      "bore_mm": 85,
+      "stroke_mm": 69,
+      "valves_per_cylinder": 5,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F140B",
+      "name": "V12 aspirato",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 5998,
+      "bore_mm": 92,
+      "stroke_mm": 75.2,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F140FE",
+      "name": "V12 aspirato ibrido",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 6262,
+      "bore_mm": 94,
+      "stroke_mm": 75.2,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F163CF",
+      "name": "V6 biturbo ibrido",
+      "architecture": "V",
+      "v_angle_deg": 120,
+      "cylinders": 6,
+      "displacement_cc": 2992,
+      "bore_mm": 88,
+      "stroke_mm": 82,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    }
+  ],
+  "designers": [
+    {
+      "slug": "pininfarina",
+      "name": "Pininfarina",
+      "type": "studio",
+      "country": "IT"
+    },
+    {
+      "slug": "centro-stile-ferrari",
+      "name": "Centro Stile Ferrari",
+      "type": "studio",
+      "country": "IT"
+    },
+    {
+      "slug": "flavio-manzoni",
+      "name": "Flavio Manzoni",
+      "type": "persona",
+      "country": "IT"
+    },
+    {
+      "slug": "leonardo-fioravanti",
+      "name": "Leonardo Fioravanti",
+      "type": "persona",
+      "country": "IT"
+    },
+    {
+      "slug": "ken-okuyama",
+      "name": "Ken Okuyama",
+      "type": "persona",
+      "country": "JP"
+    }
+  ],
+  "models": [
+    {
+      "slug": "288-gto",
+      "name": "288 GTO",
+      "category": "supercar",
+      "description": {
+        "it": "La prima della serie delle supercar Ferrari: nata per le corse del Gruppo B, rimasta su strada quando il campionato fu cancellato.",
+        "en": "The first of Ferrari's supercar series: born for Group B racing, it stayed on the road when the championship was cancelled."
+      },
+      "versions": [
+        {
+          "slug": "288-gto",
+          "name": "288 GTO",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1984,
+          "year_end": 1985,
+          "units_produced": 272,
+          "description": {
+            "it": "Telaio tubolare, carrozzeria in materiali compositi e un V8 biturbo montato longitudinalmente.",
+            "en": "Tubular chassis, composite bodywork and a longitudinally mounted twin-turbo V8."
+          },
+          "powertrain": {
+            "engine": "F114B",
+            "ice_power_cv": 400,
+            "ice_torque_nm": 496,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4290,
+            "width_mm": 1910,
+            "height_mm": 1120,
+            "wheelbase_mm": 2450,
+            "dry_weight_kg": 1160,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 305,
+            "zero_to_100_sec": 4.9,
+            "fiorano_lap_sec": 95.0
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "leonardo-fioravanti",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "f40",
+      "name": "F40",
+      "category": "supercar",
+      "predecessor": "288-gto",
+      "description": {
+        "it": "La supercar dei quarant'anni di Ferrari, l'ultima approvata da Enzo Ferrari.",
+        "en": "The supercar for Ferrari's 40th anniversary, the last approved by Enzo Ferrari."
+      },
+      "versions": [
+        {
+          "slug": "f40",
+          "name": "F40",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1987,
+          "year_end": 1992,
+          "units_produced": 1315,
+          "description": {
+            "it": "Essenziale per scelta: niente servosterzo né servofreno, e un abitacolo ridotto al minimo.",
+            "en": "Spartan by design: no power steering or brake servo, and a cockpit stripped to the minimum."
+          },
+          "powertrain": {
+            "engine": "F120A",
+            "ice_power_cv": 478,
+            "ice_torque_nm": 577,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4358,
+            "width_mm": 1970,
+            "height_mm": 1124,
+            "wheelbase_mm": 2450,
+            "dry_weight_kg": 1100,
+            "chassis_material": "misto",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 324,
+            "zero_to_100_sec": 4.1
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "leonardo-fioravanti",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "f50",
+      "name": "F50",
+      "category": "supercar",
+      "predecessor": "f40",
+      "description": {
+        "it": "Una Formula 1 con la targa: il V12 derivato dalle monoposto è parte portante del telaio.",
+        "en": "A Formula 1 car with number plates: the V12 derived from the single-seaters is a stressed member of the chassis."
+      },
+      "versions": [
+        {
+          "slug": "f50",
+          "name": "F50",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 1995,
+          "year_end": 1997,
+          "units_produced": 349,
+          "description": {
+            "it": "Monoscocca in fibra di carbonio e tetto rigido asportabile, per i cinquant'anni del marchio.",
+            "en": "Carbon-fibre monocoque and removable hardtop, for the brand's 50th anniversary."
+          },
+          "powertrain": {
+            "engine": "F130B",
+            "ice_power_cv": 520,
+            "ice_torque_nm": 471,
+            "gearbox_type": "manuale",
+            "gears": 6,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4480,
+            "width_mm": 1986,
+            "height_mm": 1120,
+            "wheelbase_mm": 2580,
+            "dry_weight_kg": 1230,
+            "chassis_material": "fibra_di_carbonio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 325,
+            "zero_to_100_sec": 3.87
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "enzo",
+      "name": "Enzo Ferrari",
+      "category": "supercar",
+      "predecessor": "f50",
+      "description": {
+        "it": "Dedicata al fondatore, porta su strada la tecnologia delle Ferrari di Formula 1 dei primi anni Duemila.",
+        "en": "Named after the founder, it brings the technology of early-2000s Ferrari Formula 1 cars to the road."
+      },
+      "versions": [
+        {
+          "slug": "enzo",
+          "name": "Enzo Ferrari",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2002,
+          "year_end": 2004,
+          "units_produced": 400,
+          "description": {
+            "it": "La prima Ferrari stradale con freni carboceramici e cambio robotizzato a palette.",
+            "en": "The first road-going Ferrari with carbon-ceramic brakes and a paddle-shift automated gearbox."
+          },
+          "powertrain": {
+            "engine": "F140B",
+            "ice_power_cv": 660,
+            "ice_torque_nm": 657,
+            "ice_max_rpm": 8200,
+            "gearbox_type": "robotizzato",
+            "gears": 6,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4702,
+            "width_mm": 2035,
+            "height_mm": 1147,
+            "wheelbase_mm": 2650,
+            "dry_weight_kg": 1255,
+            "weight_front_pct": 44,
+            "chassis_material": "fibra_di_carbonio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 350,
+            "zero_to_100_sec": 3.65,
+            "fiorano_lap_sec": 84.9
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "ken-okuyama",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "laferrari",
+      "name": "LaFerrari",
+      "category": "supercar",
+      "predecessor": "enzo",
+      "description": {
+        "it": "La prima Ferrari ibrida: il V12 aspirato lavora insieme al sistema HY-KERS derivato dalla Formula 1.",
+        "en": "The first hybrid Ferrari: the naturally aspirated V12 works with the HY-KERS system derived from Formula 1."
+      },
+      "versions": [
+        {
+          "slug": "laferrari",
+          "name": "LaFerrari",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "coupe",
+          "project_code": "F150",
+          "year_start": 2013,
+          "year_end": 2016,
+          "units_produced": 499,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, in 499 esemplari.",
+            "en": "The berlinetta, in 499 units."
+          },
+          "powertrain": {
+            "engine": "F140FE",
+            "ice_power_cv": 800,
+            "ice_torque_nm": 700,
+            "ice_max_rpm": 9250,
+            "electric_power_cv": 163,
+            "system_power_cv": 963,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4702,
+            "width_mm": 1992,
+            "height_mm": 1116,
+            "wheelbase_mm": 2650,
+            "dry_weight_kg": 1255,
+            "weight_front_pct": 41,
+            "chassis_material": "fibra_di_carbonio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 350,
+            "fiorano_lap_sec": 79.7
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "laferrari-aperta",
+          "name": "LaFerrari Aperta",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "spider",
+          "project_code": "F150",
+          "year_start": 2016,
+          "year_end": 2018,
+          "units_produced": 210,
+          "sort_order": 2,
+          "description": {
+            "it": "La versione scoperta, presentata per i settant'anni di Ferrari.",
+            "en": "The open-top version, presented for Ferrari's 70th anniversary."
+          },
+          "powertrain": {
+            "engine": "F140FE",
+            "ice_power_cv": 800,
+            "ice_torque_nm": 700,
+            "ice_max_rpm": 9250,
+            "electric_power_cv": 163,
+            "system_power_cv": 963,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4702,
+            "width_mm": 1992,
+            "wheelbase_mm": 2650,
+            "chassis_material": "fibra_di_carbonio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 350
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "f80",
+      "name": "F80",
+      "category": "supercar",
+      "predecessor": "laferrari",
+      "description": {
+        "it": "La supercar ibrida a trazione integrale, con un V6 biturbo derivato dalla 499P vincitrice a Le Mans.",
+        "en": "The all-wheel-drive hybrid supercar, with a twin-turbo V6 derived from the Le Mans-winning 499P."
+      },
+      "versions": [
+        {
+          "slug": "f80",
+          "name": "F80",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": true,
+          "body_type": "coupe",
+          "project_code": "F250",
+          "year_start": 2024,
+          "units_produced": 799,
+          "description": {
+            "it": "Abitacolo \"1+\", con il posto del passeggero arretrato, e oltre una tonnellata di carico aerodinamico.",
+            "en": "A \"1+\" cockpit with the passenger seat set back, and over a tonne of downforce."
+          },
+          "powertrain": {
+            "engine": "F163CF",
+            "ice_power_cv": 900,
+            "ice_torque_nm": 850,
+            "ice_max_rpm": 9000,
+            "electric_power_cv": 300,
+            "electric_motors_count": 3,
+            "battery_kwh": 2.28,
+            "system_power_cv": 1200,
+            "gearbox_type": "doppia_frizione",
+            "gears": 8,
+            "drivetrain": "integrale"
+          },
+          "specs": {
+            "length_mm": 4840,
+            "width_mm": 2060,
+            "height_mm": 1138,
+            "wheelbase_mm": 2665,
+            "dry_weight_kg": 1525,
+            "weight_front_pct": 42,
+            "chassis_material": "fibra_di_carbonio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 350,
+            "zero_to_100_sec": 2.15,
+            "zero_to_200_sec": 5.75,
+            "fiorano_lap_sec": 75.3
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

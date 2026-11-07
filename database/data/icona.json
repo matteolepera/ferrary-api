@@ -1,0 +1,208 @@
+{
+  "engines": [
+    {
+      "code": "F140GC",
+      "name": "V12 aspirato",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 6496,
+      "bore_mm": 94,
+      "stroke_mm": 78,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F140HC",
+      "name": "V12 aspirato",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 6496,
+      "bore_mm": 94,
+      "stroke_mm": 78,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    }
+  ],
+  "designers": [
+    {
+      "slug": "centro-stile-ferrari",
+      "name": "Centro Stile Ferrari",
+      "type": "studio",
+      "country": "IT"
+    },
+    {
+      "slug": "flavio-manzoni",
+      "name": "Flavio Manzoni",
+      "type": "persona",
+      "country": "IT"
+    }
+  ],
+  "models": [
+    {
+      "slug": "monza-sp",
+      "name": "Monza SP",
+      "category": "icona",
+      "description": {
+        "it": "La prima della serie Icona: barchette senza parabrezza ispirate alle 750 e 860 Monza degli anni Cinquanta.",
+        "en": "The first of the Icona series: windscreen-less barchettas inspired by the 1950s 750 and 860 Monza."
+      },
+      "versions": [
+        {
+          "slug": "monza-sp1",
+          "name": "Monza SP1",
+          "vehicle_type": "stradale",
+          "seats": 1,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "barchetta",
+          "year_start": 2019,
+          "year_end": 2022,
+          "sort_order": 1,
+          "description": {
+            "it": "La monoposto: un solo posto, con una copertura sul lato del passeggero.",
+            "en": "The single-seater: one seat, with a cover over the passenger side."
+          },
+          "powertrain": {
+            "engine": "F140GC",
+            "ice_power_cv": 810,
+            "ice_torque_nm": 719,
+            "ice_max_rpm": 8900,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4657,
+            "width_mm": 1996,
+            "height_mm": 1155,
+            "wheelbase_mm": 2720,
+            "dry_weight_kg": 1500,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 300,
+            "zero_to_100_sec": 2.9,
+            "zero_to_200_sec": 7.9
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "monza-sp2",
+          "name": "Monza SP2",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "barchetta",
+          "year_start": 2019,
+          "year_end": 2022,
+          "sort_order": 2,
+          "description": {
+            "it": "La biposto, con due abitacoli separati.",
+            "en": "The two-seater, with two separate cockpits."
+          },
+          "powertrain": {
+            "engine": "F140GC",
+            "ice_power_cv": 810,
+            "ice_torque_nm": 719,
+            "ice_max_rpm": 8900,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4657,
+            "width_mm": 1996,
+            "height_mm": 1155,
+            "wheelbase_mm": 2720,
+            "dry_weight_kg": 1520,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 300,
+            "zero_to_100_sec": 2.9,
+            "zero_to_200_sec": 7.9
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "daytona-sp3",
+      "name": "Daytona SP3",
+      "category": "icona",
+      "description": {
+        "it": "Omaggio ai prototipi che nel 1967 arrivarono in parata alla 24 Ore di Daytona, con il V12 aspirato in posizione centrale.",
+        "en": "A tribute to the prototypes that crossed the line in formation at the 1967 Daytona 24 Hours, with a mid-mounted naturally aspirated V12."
+      },
+      "versions": [
+        {
+          "slug": "daytona-sp3",
+          "name": "Daytona SP3",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "targa",
+          "year_start": 2022,
+          "year_end": 2025,
+          "units_produced": 599,
+          "description": {
+            "it": "Telaio in materiali compositi e tetto rigido asportabile.",
+            "en": "Composite chassis and removable hardtop."
+          },
+          "powertrain": {
+            "engine": "F140HC",
+            "ice_power_cv": 840,
+            "ice_torque_nm": 697,
+            "ice_max_rpm": 9500,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4686,
+            "width_mm": 2050,
+            "height_mm": 1142,
+            "wheelbase_mm": 2651,
+            "dry_weight_kg": 1485,
+            "weight_front_pct": 44,
+            "chassis_material": "fibra_di_carbonio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 340,
+            "zero_to_100_sec": 2.85,
+            "zero_to_200_sec": 7.4
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
