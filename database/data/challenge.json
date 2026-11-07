@@ -1,0 +1,282 @@
+{
+  "models": [
+    {
+      "slug": "348-challenge",
+      "name": "348 Challenge",
+      "category": "challenge",
+      "description": {
+        "it": "La prima auto del campionato monomarca Ferrari, nato nel 1993.",
+        "en": "The first car of the Ferrari one-make series, born in 1993."
+      },
+      "versions": [
+        {
+          "slug": "348-challenge",
+          "name": "348 Challenge",
+          "vehicle_type": "gt_corsa",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 1993,
+          "in_production": false,
+          "production_type": "serie",
+          "description": {
+            "it": "Una 348 preparata per la pista, con rollbar e sedile da corsa.",
+            "en": "A 348 prepared for the track, with roll bar and racing seat."
+          },
+          "powertrain": {
+            "engine": "F119H",
+            "drivetrain": "posteriore",
+            "ice_power_cv": 320,
+            "gearbox_type": "manuale",
+            "gears": 5
+          },
+          "year_end": 1995
+        }
+      ]
+    },
+    {
+      "slug": "f355-challenge",
+      "name": "F355 Challenge",
+      "category": "challenge",
+      "description": {
+        "it": "La F355 per il campionato Challenge.",
+        "en": "The F355 for the Challenge series."
+      },
+      "versions": [
+        {
+          "slug": "f355-challenge",
+          "name": "F355 Challenge",
+          "vehicle_type": "gt_corsa",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 1995,
+          "in_production": false,
+          "production_type": "serie",
+          "description": {
+            "it": "Con il cambio manuale a sei marce della stradale.",
+            "en": "With the road car's six-speed manual gearbox."
+          },
+          "powertrain": {
+            "engine": "F129B",
+            "drivetrain": "posteriore",
+            "ice_power_cv": 380,
+            "gearbox_type": "manuale",
+            "gears": 6
+          },
+          "year_end": 1999
+        }
+      ],
+      "predecessor": "348-challenge"
+    },
+    {
+      "slug": "360-challenge",
+      "name": "360 Challenge",
+      "category": "challenge",
+      "description": {
+        "it": "La 360 per il campionato Challenge, e la base della 360 Challenge Stradale.",
+        "en": "The 360 for the Challenge series, and the basis of the 360 Challenge Stradale."
+      },
+      "versions": [
+        {
+          "slug": "360-challenge",
+          "name": "360 Challenge",
+          "vehicle_type": "gt_corsa",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2000,
+          "in_production": false,
+          "production_type": "serie",
+          "description": {
+            "it": "Con il cambio robotizzato F1.",
+            "en": "With the F1 automated gearbox."
+          },
+          "powertrain": {
+            "engine": "F131",
+            "drivetrain": "posteriore",
+            "ice_power_cv": 400,
+            "gearbox_type": "robotizzato",
+            "gears": 6
+          },
+          "year_end": 2005
+        }
+      ],
+      "predecessor": "f355-challenge"
+    },
+    {
+      "slug": "f430-challenge",
+      "name": "F430 Challenge",
+      "category": "challenge",
+      "description": {
+        "it": "La F430 per il campionato Challenge, con i freni carboceramici.",
+        "en": "The F430 for the Challenge series, with carbon-ceramic brakes."
+      },
+      "versions": [
+        {
+          "slug": "f430-challenge",
+          "name": "F430 Challenge",
+          "vehicle_type": "gt_corsa",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2006,
+          "in_production": false,
+          "production_type": "serie",
+          "description": {
+            "it": "Con il cambio robotizzato F1.",
+            "en": "With the F1 automated gearbox."
+          },
+          "powertrain": {
+            "engine": "F136E",
+            "drivetrain": "posteriore",
+            "ice_power_cv": 490,
+            "gearbox_type": "robotizzato",
+            "gears": 6
+          },
+          "year_end": 2010
+        }
+      ],
+      "predecessor": "360-challenge"
+    },
+    {
+      "slug": "458-challenge",
+      "name": "458 Challenge",
+      "category": "challenge",
+      "description": {
+        "it": "La 458 per il campionato Challenge, la prima con il cambio a doppia frizione.",
+        "en": "The 458 for the Challenge series, the first with a dual-clutch gearbox."
+      },
+      "versions": [
+        {
+          "slug": "458-challenge",
+          "name": "458 Challenge",
+          "vehicle_type": "gt_corsa",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2011,
+          "in_production": false,
+          "production_type": "serie",
+          "description": {
+            "it": "La prima serie.",
+            "en": "The first series."
+          },
+          "powertrain": {
+            "engine": "F136FB",
+            "drivetrain": "posteriore",
+            "ice_power_cv": 570,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7
+          },
+          "year_end": 2013
+        },
+        {
+          "slug": "458-challenge-evo",
+          "name": "458 Challenge Evo",
+          "vehicle_type": "gt_corsa",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2014,
+          "in_production": false,
+          "production_type": "serie",
+          "description": {
+            "it": "L'evoluzione con l'aerodinamica rivista.",
+            "en": "The evolution with revised aerodynamics."
+          },
+          "powertrain": {
+            "engine": "F136FB",
+            "drivetrain": "posteriore",
+            "ice_power_cv": 570,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7
+          },
+          "year_end": 2016
+        }
+      ],
+      "predecessor": "f430-challenge"
+    },
+    {
+      "slug": "488-challenge",
+      "name": "488 Challenge",
+      "category": "challenge",
+      "description": {
+        "it": "La prima auto del Challenge con il V8 turbo.",
+        "en": "The first Challenge car with the turbo V8."
+      },
+      "versions": [
+        {
+          "slug": "488-challenge",
+          "name": "488 Challenge",
+          "vehicle_type": "gt_corsa",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2017,
+          "in_production": false,
+          "production_type": "serie",
+          "description": {
+            "it": "La prima serie.",
+            "en": "The first series."
+          },
+          "powertrain": {
+            "engine": "F154CB",
+            "drivetrain": "posteriore",
+            "ice_power_cv": 670,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7
+          },
+          "year_end": 2019
+        },
+        {
+          "slug": "488-challenge-evo",
+          "name": "488 Challenge Evo",
+          "vehicle_type": "gt_corsa",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2020,
+          "in_production": false,
+          "production_type": "serie",
+          "description": {
+            "it": "L'evoluzione con l'aerodinamica della 488 GT3 Evo.",
+            "en": "The evolution with the 488 GT3 Evo's aerodynamics."
+          },
+          "powertrain": {
+            "engine": "F154CB",
+            "drivetrain": "posteriore",
+            "ice_power_cv": 670,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7
+          },
+          "year_end": 2023
+        }
+      ],
+      "predecessor": "458-challenge"
+    },
+    {
+      "slug": "296-challenge",
+      "name": "296 Challenge",
+      "category": "challenge",
+      "description": {
+        "it": "La prima auto del Challenge con il V6 turbo, senza la parte ibrida della stradale.",
+        "en": "The first Challenge car with the turbo V6, without the road car's hybrid system."
+      },
+      "versions": [
+        {
+          "slug": "296-challenge",
+          "name": "296 Challenge",
+          "vehicle_type": "gt_corsa",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2024,
+          "in_production": true,
+          "production_type": "serie",
+          "description": {
+            "it": "700 cv dal solo motore termico.",
+            "en": "700 cv from the combustion engine alone."
+          },
+          "powertrain": {
+            "engine": "F163",
+            "drivetrain": "posteriore",
+            "ice_power_cv": 700
+          }
+        }
+      ],
+      "predecessor": "488-challenge"
+    }
+  ]
+}

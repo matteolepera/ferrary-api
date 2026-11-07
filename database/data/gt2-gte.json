@@ -1,0 +1,164 @@
+{
+  "engines": [
+    {
+      "code": "F136",
+      "name": "V8 aspirato, famiglia F136",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 4497,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F154",
+      "name": "V8 biturbo, famiglia F154",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 3902,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "F136GT",
+      "name": "V8 aspirato da corsa, famiglia F136",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 3997,
+      "aspiration": "aspirato"
+    }
+  ],
+  "models": [
+    {
+      "slug": "f430-gt2",
+      "name": "F430 GT2",
+      "category": "gt2-gte",
+      "description": {
+        "it": "La F430 da corsa per la classe GT2 del mondiale endurance e di Le Mans.",
+        "en": "The racing F430 for the GT2 class of endurance racing and Le Mans."
+      },
+      "versions": [
+        {
+          "slug": "f430-gt2",
+          "name": "F430 GT2",
+          "vehicle_type": "gt_corsa",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2006,
+          "in_production": false,
+          "production_type": "serie",
+          "description": {
+            "it": "Vinse la classe GT2 a Le Mans nel 2008 e nel 2009.",
+            "en": "It won the GT2 class at Le Mans in 2008 and 2009."
+          },
+          "powertrain": {
+            "engine": "F136GT",
+            "drivetrain": "posteriore",
+            "gearbox_type": "sequenziale",
+            "gears": 6
+          },
+          "year_end": 2010,
+          "racing": [
+            {
+              "championship": "24 Ore di Le Mans, classe GT2",
+              "season_start": 2006,
+              "season_end": 2010,
+              "wins": 2,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "notes": "Vittorie di classe nel 2008 e nel 2009, con la squadra Risi Competizione."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "458-gte",
+      "name": "458 Italia GTE",
+      "category": "gt2-gte",
+      "description": {
+        "it": "La 458 da corsa per la classe GTE, con cui AF Corse vinse a Le Mans.",
+        "en": "The racing 458 for the GTE class, with which AF Corse won at Le Mans."
+      },
+      "versions": [
+        {
+          "slug": "458-italia-gte",
+          "name": "458 Italia GTE",
+          "vehicle_type": "gt_corsa",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2011,
+          "in_production": false,
+          "production_type": "serie",
+          "description": {
+            "it": "Nata come GT2 nel 2011, prese il nome GTE con il nuovo regolamento.",
+            "en": "Born as a GT2 in 2011, it took the GTE name under the new rules."
+          },
+          "powertrain": {
+            "engine": "F136",
+            "drivetrain": "posteriore",
+            "gearbox_type": "sequenziale",
+            "gears": 6
+          },
+          "year_end": 2016,
+          "racing": [
+            {
+              "championship": "24 Ore di Le Mans, classe GTE Pro",
+              "season_start": 2012,
+              "season_end": 2014,
+              "wins": 2,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "notes": "Vittorie di classe nel 2012 e nel 2014, con AF Corse."
+            }
+          ]
+        }
+      ],
+      "predecessor": "f430-gt2"
+    },
+    {
+      "slug": "488-gte",
+      "name": "488 GTE",
+      "category": "gt2-gte",
+      "description": {
+        "it": "La prima Ferrari GTE con il V8 turbo, l'ultima della classe GTE Pro.",
+        "en": "The first GTE Ferrari with the turbo V8, the last of the GTE Pro class."
+      },
+      "versions": [
+        {
+          "slug": "488-gte",
+          "name": "488 GTE",
+          "vehicle_type": "gt_corsa",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2016,
+          "in_production": false,
+          "production_type": "serie",
+          "description": {
+            "it": "Due vittorie di classe a Le Mans, nel 2019 e nel 2021.",
+            "en": "Two class wins at Le Mans, in 2019 and 2021."
+          },
+          "powertrain": {
+            "engine": "F154",
+            "drivetrain": "posteriore",
+            "gearbox_type": "sequenziale",
+            "gears": 6
+          },
+          "year_end": 2022,
+          "racing": [
+            {
+              "championship": "24 Ore di Le Mans, classe GTE Pro",
+              "season_start": 2016,
+              "season_end": 2022,
+              "wins": 2,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "notes": "Vittorie di classe nel 2019 e nel 2021, con AF Corse."
+            }
+          ]
+        }
+      ],
+      "predecessor": "458-gte"
+    }
+  ]
+}
