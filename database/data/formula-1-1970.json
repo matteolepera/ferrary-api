@@ -1,0 +1,525 @@
+{
+  "engines": [
+    {
+      "code": "001",
+      "name": "12 cilindri piatto Formula 1",
+      "architecture": "piatto",
+      "cylinders": 12,
+      "displacement_cc": 2991,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "015",
+      "name": "12 cilindri piatto Formula 1",
+      "architecture": "piatto",
+      "cylinders": 12,
+      "displacement_cc": 2991,
+      "aspiration": "aspirato"
+    }
+  ],
+  "drivers": [
+    {
+      "slug": "jacky-ickx",
+      "first_name": "Jacky",
+      "last_name": "Ickx",
+      "nationality": "BE",
+      "birth_date": "1945-01-01"
+    },
+    {
+      "slug": "clay-regazzoni",
+      "first_name": "Clay",
+      "last_name": "Regazzoni",
+      "nationality": "CH",
+      "birth_date": "1939-09-05"
+    },
+    {
+      "slug": "ignazio-giunti",
+      "first_name": "Ignazio",
+      "last_name": "Giunti",
+      "nationality": "IT",
+      "birth_date": "1941-08-30"
+    },
+    {
+      "slug": "arturo-merzario",
+      "first_name": "Arturo",
+      "last_name": "Merzario",
+      "nationality": "IT",
+      "birth_date": "1943-03-11"
+    },
+    {
+      "slug": "niki-lauda",
+      "first_name": "Niki",
+      "last_name": "Lauda",
+      "nationality": "AT",
+      "birth_date": "1949-02-22"
+    },
+    {
+      "slug": "carlos-reutemann",
+      "first_name": "Carlos",
+      "last_name": "Reutemann",
+      "nationality": "AR",
+      "birth_date": "1942-04-12"
+    },
+    {
+      "slug": "jody-scheckter",
+      "first_name": "Jody",
+      "last_name": "Scheckter",
+      "nationality": "ZA",
+      "birth_date": "1950-01-29"
+    }
+  ],
+  "models": [
+    {
+      "slug": "312-b",
+      "name": "312 B",
+      "category": "formula-1",
+      "description": {
+        "it": "La prima Ferrari di Formula 1 con il 12 cilindri piatto, da cui la B di boxer.",
+        "en": "The first Ferrari Formula 1 car with the flat-twelve, hence the B for boxer."
+      },
+      "versions": [
+        {
+          "slug": "312-b",
+          "name": "312 B",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1970,
+          "year_end": 1970,
+          "in_production": false,
+          "description": {
+            "it": "Quattro vittorie, tre di Ickx e una di Regazzoni a Monza.",
+            "en": "Four wins, three for Ickx and one for Regazzoni at Monza."
+          },
+          "powertrain": {
+            "engine": "001",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "alluminio"
+          },
+          "designers": [
+            {
+              "slug": "mauro-forghieri",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "jacky-ickx",
+            "clay-regazzoni",
+            "ignazio-giunti"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1970,
+              "season_end": 1970,
+              "wins": 4,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "races": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "312-b2",
+      "name": "312 B2",
+      "category": "formula-1",
+      "description": {
+        "it": "L'evoluzione della 312 B, con le sospensioni posteriori ridisegnate.",
+        "en": "The evolution of the 312 B, with redesigned rear suspension."
+      },
+      "versions": [
+        {
+          "slug": "312-b2",
+          "name": "312 B2",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1971,
+          "year_end": 1972,
+          "in_production": false,
+          "description": {
+            "it": "Una vittoria per stagione, entrambe di Jacky Ickx.",
+            "en": "One win per season, both by Jacky Ickx."
+          },
+          "powertrain": {
+            "engine": "001",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "alluminio"
+          },
+          "designers": [
+            {
+              "slug": "mauro-forghieri",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "jacky-ickx",
+            "clay-regazzoni",
+            "mario-andretti",
+            "arturo-merzario"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1971,
+              "season_end": 1972,
+              "wins": 2,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "notes": "Una vittoria nel 1971 e una nel 1972, entrambe di Ickx. Nel 1971 corse insieme alla 312 B, che vinse in Sudafrica."
+            }
+          ]
+        }
+      ],
+      "predecessor": "312-b"
+    },
+    {
+      "slug": "312-b3",
+      "name": "312 B3",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto della rinascita: con l'arrivo di Lauda e Regazzoni tornò a vincere nel 1974.",
+        "en": "The car of the revival: with the arrival of Lauda and Regazzoni it won again in 1974."
+      },
+      "versions": [
+        {
+          "slug": "312-b3",
+          "name": "312 B3",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1973,
+          "year_end": 1974,
+          "in_production": false,
+          "description": {
+            "it": "Nessuna vittoria nel 1973, tre nel 1974, con Regazzoni secondo nel mondiale.",
+            "en": "No wins in 1973, three in 1974, with Regazzoni second in the championship."
+          },
+          "powertrain": {
+            "engine": "001",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "alluminio"
+          },
+          "designers": [
+            {
+              "slug": "mauro-forghieri",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "jacky-ickx",
+            "arturo-merzario",
+            "niki-lauda",
+            "clay-regazzoni"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1973,
+              "season_end": 1974,
+              "wins": 3,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "notes": "Nessuna vittoria nel 1973, tre nel 1974."
+            }
+          ]
+        }
+      ],
+      "predecessor": "312-b2"
+    },
+    {
+      "slug": "312-t",
+      "name": "312 T",
+      "category": "formula-1",
+      "description": {
+        "it": "La prima monoposto con il cambio trasversale, la T, che riportò il titolo a Maranello dopo undici anni.",
+        "en": "The first car with a transverse gearbox, the T, which brought the title back to Maranello after eleven years."
+      },
+      "versions": [
+        {
+          "slug": "312-t",
+          "name": "312 T",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1975,
+          "year_end": 1976,
+          "in_production": false,
+          "description": {
+            "it": "Lauda campione del mondo nel 1975, con cinque vittorie.",
+            "en": "Lauda world champion in 1975, with five wins."
+          },
+          "powertrain": {
+            "engine": "015",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "alluminio"
+          },
+          "designers": [
+            {
+              "slug": "mauro-forghieri",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "niki-lauda",
+            "clay-regazzoni"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1975,
+              "season_end": 1976,
+              "wins": 9,
+              "drivers_titles": 1,
+              "constructors_titles": 1,
+              "notes": "Sei vittorie e i due titoli nel 1975; tre vittorie nelle prime tre gare del 1976, prima della 312 T2."
+            }
+          ]
+        }
+      ],
+      "predecessor": "312-b3"
+    },
+    {
+      "slug": "312-t2",
+      "name": "312 T2",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto dell'incidente di Lauda al Nürburgring e del suo ritorno in gara quaranta giorni dopo.",
+        "en": "The car of Lauda's accident at the Nürburgring and his return to racing forty days later."
+      },
+      "versions": [
+        {
+          "slug": "312-t2",
+          "name": "312 T2",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1976,
+          "year_end": 1978,
+          "in_production": false,
+          "description": {
+            "it": "Il titolo costruttori nel 1976, e entrambi i titoli nel 1977.",
+            "en": "The constructors' title in 1976, and both titles in 1977."
+          },
+          "powertrain": {
+            "engine": "015",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "alluminio"
+          },
+          "designers": [
+            {
+              "slug": "mauro-forghieri",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "niki-lauda",
+            "clay-regazzoni",
+            "carlos-reutemann",
+            "gilles-villeneuve"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1976,
+              "season_end": 1978,
+              "wins": 8,
+              "drivers_titles": 1,
+              "constructors_titles": 2,
+              "notes": "Tre vittorie e il titolo costruttori nel 1976, condiviso con la 312 T; quattro vittorie e i due titoli nel 1977; una vittoria nelle prime due gare del 1978, prima della 312 T3."
+            }
+          ]
+        }
+      ],
+      "predecessor": "312-t"
+    },
+    {
+      "slug": "312-t3",
+      "name": "312 T3",
+      "category": "formula-1",
+      "description": {
+        "it": "La prima monoposto di Gilles Villeneuve a vincere, in Canada, a casa sua.",
+        "en": "The first car with which Gilles Villeneuve won, in Canada, at home."
+      },
+      "versions": [
+        {
+          "slug": "312-t3",
+          "name": "312 T3",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1978,
+          "year_end": 1978,
+          "in_production": false,
+          "description": {
+            "it": "Quattro vittorie, tre di Reutemann e una di Villeneuve.",
+            "en": "Four wins, three for Reutemann and one for Villeneuve."
+          },
+          "powertrain": {
+            "engine": "015",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "alluminio"
+          },
+          "designers": [
+            {
+              "slug": "mauro-forghieri",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "carlos-reutemann",
+            "gilles-villeneuve"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1978,
+              "season_end": 1978,
+              "wins": 4,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ],
+      "predecessor": "312-t2"
+    },
+    {
+      "slug": "312-t4",
+      "name": "312 T4",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto dell'ultimo titolo piloti Ferrari prima di Schumacher, vinto da Jody Scheckter.",
+        "en": "The car of Ferrari's last drivers' title before Schumacher, won by Jody Scheckter."
+      },
+      "versions": [
+        {
+          "slug": "312-t4",
+          "name": "312 T4",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1979,
+          "year_end": 1979,
+          "in_production": false,
+          "description": {
+            "it": "Sei vittorie, Scheckter campione e Villeneuve secondo.",
+            "en": "Six wins, Scheckter champion and Villeneuve second."
+          },
+          "powertrain": {
+            "engine": "015",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "alluminio"
+          },
+          "designers": [
+            {
+              "slug": "mauro-forghieri",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "jody-scheckter",
+            "gilles-villeneuve"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1979,
+              "season_end": 1979,
+              "wins": 6,
+              "drivers_titles": 1,
+              "constructors_titles": 1,
+              "notes": "Debuttò alla terza gara della stagione, in Sudafrica."
+            }
+          ]
+        }
+      ],
+      "predecessor": "312-t3"
+    },
+    {
+      "slug": "312-t5",
+      "name": "312 T5",
+      "category": "formula-1",
+      "description": {
+        "it": "L'ultima delle 312, superata dalle monoposto a effetto suolo.",
+        "en": "The last of the 312s, overtaken by the ground-effect cars."
+      },
+      "versions": [
+        {
+          "slug": "312-t5",
+          "name": "312 T5",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1980,
+          "year_end": 1980,
+          "in_production": false,
+          "description": {
+            "it": "Una stagione senza vittorie; Scheckter si ritirò a fine anno.",
+            "en": "A season without wins; Scheckter retired at the end of the year."
+          },
+          "powertrain": {
+            "engine": "015",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "alluminio"
+          },
+          "designers": [
+            {
+              "slug": "mauro-forghieri",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "jody-scheckter",
+            "gilles-villeneuve"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1980,
+              "season_end": 1980,
+              "wins": 0,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ],
+      "predecessor": "312-t4"
+    }
+  ]
+}
