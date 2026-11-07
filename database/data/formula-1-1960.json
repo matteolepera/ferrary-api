@@ -1,0 +1,545 @@
+{
+  "engines": [
+    {
+      "code": "178",
+      "name": "V6 Dino Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 120,
+      "cylinders": 6,
+      "displacement_cc": 1476,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "205B",
+      "name": "V8 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 1489,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "207",
+      "name": "12 cilindri piatto Formula 1",
+      "architecture": "piatto",
+      "cylinders": 12,
+      "displacement_cc": 1489,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "218",
+      "name": "V12 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 2989,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "242",
+      "name": "V12 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 2989,
+      "aspiration": "aspirato"
+    }
+  ],
+  "designers": [
+    {
+      "slug": "carlo-chiti",
+      "name": "Carlo Chiti",
+      "type": "persona",
+      "country": "IT"
+    }
+  ],
+  "drivers": [
+    {
+      "slug": "phil-hill",
+      "first_name": "Phil",
+      "last_name": "Hill",
+      "nationality": "US",
+      "birth_date": "1927-04-20"
+    },
+    {
+      "slug": "wolfgang-von-trips",
+      "first_name": "Wolfgang",
+      "last_name": "von Trips",
+      "nationality": "DE",
+      "birth_date": "1928-05-04"
+    },
+    {
+      "slug": "richie-ginther",
+      "first_name": "Richie",
+      "last_name": "Ginther",
+      "nationality": "US",
+      "birth_date": "1930-08-05"
+    },
+    {
+      "slug": "giancarlo-baghetti",
+      "first_name": "Giancarlo",
+      "last_name": "Baghetti",
+      "nationality": "IT",
+      "birth_date": "1934-12-25"
+    },
+    {
+      "slug": "ricardo-rodriguez",
+      "first_name": "Ricardo",
+      "last_name": "Rodríguez",
+      "nationality": "MX",
+      "birth_date": "1942-02-14"
+    },
+    {
+      "slug": "lorenzo-bandini",
+      "first_name": "Lorenzo",
+      "last_name": "Bandini",
+      "nationality": "IT",
+      "birth_date": "1935-12-21"
+    },
+    {
+      "slug": "willy-mairesse",
+      "first_name": "Willy",
+      "last_name": "Mairesse",
+      "nationality": "BE",
+      "birth_date": "1928-10-01"
+    },
+    {
+      "slug": "john-surtees",
+      "first_name": "John",
+      "last_name": "Surtees",
+      "nationality": "GB",
+      "birth_date": "1934-02-11"
+    },
+    {
+      "slug": "ludovico-scarfiotti",
+      "first_name": "Ludovico",
+      "last_name": "Scarfiotti",
+      "nationality": "IT",
+      "birth_date": "1933-10-18"
+    },
+    {
+      "slug": "mike-parkes",
+      "first_name": "Mike",
+      "last_name": "Parkes",
+      "nationality": "GB",
+      "birth_date": "1931-09-24"
+    },
+    {
+      "slug": "chris-amon",
+      "first_name": "Chris",
+      "last_name": "Amon",
+      "nationality": "NZ",
+      "birth_date": "1943-07-20"
+    },
+    {
+      "slug": "andrea-de-adamich",
+      "first_name": "Andrea",
+      "last_name": "de Adamich",
+      "nationality": "IT",
+      "birth_date": "1941-10-03"
+    },
+    {
+      "slug": "derek-bell",
+      "first_name": "Derek",
+      "last_name": "Bell",
+      "nationality": "GB",
+      "birth_date": "1941-10-31"
+    },
+    {
+      "slug": "pedro-rodriguez",
+      "first_name": "Pedro",
+      "last_name": "Rodríguez",
+      "nationality": "MX",
+      "birth_date": "1940-01-18"
+    }
+  ],
+  "models": [
+    {
+      "slug": "156-f1",
+      "name": "156 F1",
+      "category": "formula-1",
+      "description": {
+        "it": "La \"Sharknose\", con le prese d'aria a narici di squalo: la prima Ferrari a motore posteriore a vincere il mondiale.",
+        "en": "The \"Sharknose\", with its shark-nostril air intakes: the first rear-engined Ferrari to win the championship."
+      },
+      "versions": [
+        {
+          "slug": "156-f1",
+          "name": "156 F1",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1961,
+          "year_end": 1964,
+          "in_production": false,
+          "description": {
+            "it": "Phil Hill campione del 1961, in una stagione segnata dalla morte di von Trips a Monza.",
+            "en": "Phil Hill champion in 1961, in a season marked by von Trips' death at Monza."
+          },
+          "powertrain": {
+            "engine": "178",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "designers": [
+            {
+              "slug": "carlo-chiti",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "phil-hill",
+            "wolfgang-von-trips",
+            "richie-ginther",
+            "giancarlo-baghetti",
+            "ricardo-rodriguez",
+            "lorenzo-bandini",
+            "willy-mairesse",
+            "john-surtees"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1961,
+              "season_end": 1964,
+              "wins": 7,
+              "drivers_titles": 1,
+              "constructors_titles": 1,
+              "notes": "Cinque vittorie e i due titoli nel 1961; nessuna vittoria nel 1962; nella versione aggiornata del 1963, la 156 F1-63, vinse in Germania con Surtees nel 1963 e in Austria con Bandini nel 1964."
+            }
+          ],
+          "specs": {
+            "chassis_material": "acciaio"
+          }
+        }
+      ],
+      "predecessor": "dino-246-f1"
+    },
+    {
+      "slug": "158",
+      "name": "158",
+      "category": "formula-1",
+      "description": {
+        "it": "La prima Ferrari di Formula 1 con la monoscocca, con cui John Surtees divenne campione su due e quattro ruote.",
+        "en": "The first Ferrari Formula 1 car with a monocoque, with which John Surtees became champion on two and four wheels."
+      },
+      "versions": [
+        {
+          "slug": "158",
+          "name": "158",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1964,
+          "year_end": 1965,
+          "in_production": false,
+          "description": {
+            "it": "Surtees campione del 1964, all'ultima gara in Messico.",
+            "en": "Surtees champion in 1964, at the final race in Mexico."
+          },
+          "powertrain": {
+            "engine": "205B",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "designers": [
+            {
+              "slug": "mauro-forghieri",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "john-surtees",
+            "lorenzo-bandini"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1964,
+              "season_end": 1965,
+              "wins": 2,
+              "drivers_titles": 1,
+              "constructors_titles": 1,
+              "notes": "Le due vittorie del 1964, in Germania e in Italia; il titolo costruttori del 1964 fu vinto insieme alla 1512 e alla 156 F1-63."
+            }
+          ],
+          "specs": {
+            "chassis_material": "alluminio"
+          }
+        }
+      ],
+      "predecessor": "156-f1"
+    },
+    {
+      "slug": "1512",
+      "name": "1512",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto con il 12 cilindri piatto di un litro e mezzo, corsa insieme alla 158.",
+        "en": "The car with the 1.5-litre flat-twelve, raced alongside the 158."
+      },
+      "versions": [
+        {
+          "slug": "1512",
+          "name": "1512",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1964,
+          "year_end": 1965,
+          "in_production": false,
+          "description": {
+            "it": "Nessuna vittoria, ma un motore che anticipava le 312 B degli anni Settanta.",
+            "en": "No wins, but an engine that anticipated the 312 B of the 1970s."
+          },
+          "powertrain": {
+            "engine": "207",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "designers": [
+            {
+              "slug": "mauro-forghieri",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "john-surtees",
+            "lorenzo-bandini"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1964,
+              "season_end": 1965,
+              "wins": 0,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ],
+          "specs": {
+            "chassis_material": "alluminio"
+          }
+        }
+      ],
+      "predecessor": "156-f1"
+    },
+    {
+      "slug": "312-f1-66",
+      "name": "312 F1-66",
+      "category": "formula-1",
+      "description": {
+        "it": "La prima Ferrari della formula dei tre litri, con il V12.",
+        "en": "The first Ferrari of the three-litre formula, with the V12."
+      },
+      "versions": [
+        {
+          "slug": "312-f1-66",
+          "name": "312 F1-66",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1966,
+          "year_end": 1966,
+          "in_production": false,
+          "description": {
+            "it": "Due vittorie: Surtees in Belgio, prima di lasciare la squadra, e Scarfiotti a Monza.",
+            "en": "Two wins: Surtees in Belgium, before leaving the team, and Scarfiotti at Monza."
+          },
+          "powertrain": {
+            "engine": "218",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "designers": [
+            {
+              "slug": "mauro-forghieri",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "john-surtees",
+            "lorenzo-bandini",
+            "ludovico-scarfiotti",
+            "mike-parkes"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1966,
+              "season_end": 1966,
+              "wins": 2,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ],
+      "predecessor": "158"
+    },
+    {
+      "slug": "312-f1-67",
+      "name": "312 F1-67",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto della stagione in cui Lorenzo Bandini morì dopo l'incidente di Monaco.",
+        "en": "The car of the season in which Lorenzo Bandini died after his accident in Monaco."
+      },
+      "versions": [
+        {
+          "slug": "312-f1-67",
+          "name": "312 F1-67",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1967,
+          "year_end": 1967,
+          "in_production": false,
+          "description": {
+            "it": "Nessuna vittoria.",
+            "en": "No wins."
+          },
+          "powertrain": {
+            "engine": "218",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "designers": [
+            {
+              "slug": "mauro-forghieri",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "lorenzo-bandini",
+            "chris-amon",
+            "mike-parkes",
+            "ludovico-scarfiotti"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1967,
+              "season_end": 1967,
+              "wins": 0,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ],
+      "predecessor": "312-f1-66"
+    },
+    {
+      "slug": "312-f1-68",
+      "name": "312 F1-68",
+      "category": "formula-1",
+      "description": {
+        "it": "Una delle prime monoposto con l'alettone posteriore, introdotto in gara a Spa.",
+        "en": "One of the first cars with a rear wing, introduced in racing at Spa."
+      },
+      "versions": [
+        {
+          "slug": "312-f1-68",
+          "name": "312 F1-68",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1968,
+          "year_end": 1968,
+          "in_production": false,
+          "description": {
+            "it": "Una vittoria, di Jacky Ickx sotto la pioggia in Francia.",
+            "en": "One win, for Jacky Ickx in the rain in France."
+          },
+          "powertrain": {
+            "engine": "242",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "designers": [
+            {
+              "slug": "mauro-forghieri",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "chris-amon",
+            "jacky-ickx",
+            "andrea-de-adamich",
+            "derek-bell"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1968,
+              "season_end": 1968,
+              "wins": 1,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ],
+      "predecessor": "312-f1-67"
+    },
+    {
+      "slug": "312-f1-69",
+      "name": "312 F1-69",
+      "category": "formula-1",
+      "description": {
+        "it": "L'ultima Ferrari di Formula 1 con il V12 prima del 12 cilindri piatto.",
+        "en": "The last Ferrari Formula 1 car with the V12 before the flat-twelve."
+      },
+      "versions": [
+        {
+          "slug": "312-f1-69",
+          "name": "312 F1-69",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1969,
+          "year_end": 1969,
+          "in_production": false,
+          "description": {
+            "it": "Una stagione senza vittorie.",
+            "en": "A season without wins."
+          },
+          "powertrain": {
+            "engine": "242",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "designers": [
+            {
+              "slug": "mauro-forghieri",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "chris-amon",
+            "pedro-rodriguez"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1969,
+              "season_end": 1969,
+              "wins": 0,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ],
+      "predecessor": "312-f1-68"
+    }
+  ]
+}

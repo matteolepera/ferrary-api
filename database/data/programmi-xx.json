@@ -1,0 +1,188 @@
+{
+  "engines": [
+    {
+      "code": "F140",
+      "name": "V12 aspirato, famiglia F140",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 6262,
+      "aspiration": "aspirato"
+    }
+  ],
+  "models": [
+    {
+      "slug": "fxx",
+      "name": "FXX",
+      "category": "programmi-xx",
+      "description": {
+        "it": "La prima del programma XX: auto da pista per clienti, che le guidano in eventi riservati mentre Ferrari raccoglie i dati.",
+        "en": "The first of the XX programme: track cars for clients, who drive them at private events while Ferrari gathers the data."
+      },
+      "versions": [
+        {
+          "slug": "fxx",
+          "name": "FXX",
+          "vehicle_type": "pista",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2005,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Derivata dalla Enzo, con il V12 portato a 6,3 litri.",
+            "en": "Derived from the Enzo, with the V12 enlarged to 6.3 litres."
+          },
+          "powertrain": {
+            "engine": "F140",
+            "drivetrain": "posteriore",
+            "ice_power_cv": 800,
+            "gearbox_type": "robotizzato",
+            "gears": 6
+          },
+          "year_end": 2007,
+          "units_produced": 30
+        },
+        {
+          "slug": "fxx-evoluzione",
+          "name": "FXX Evoluzione",
+          "vehicle_type": "pista",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2007,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Il pacchetto di aggiornamento con più potenza e un cambio più rapido.",
+            "en": "The upgrade package with more power and a faster gearbox."
+          },
+          "powertrain": {
+            "engine": "F140",
+            "drivetrain": "posteriore",
+            "ice_power_cv": 860,
+            "gearbox_type": "robotizzato",
+            "gears": 6
+          },
+          "year_end": 2009
+        }
+      ]
+    },
+    {
+      "slug": "599xx",
+      "name": "599XX",
+      "category": "programmi-xx",
+      "description": {
+        "it": "La 599 del programma XX, con aerodinamica attiva e un V12 che gira a 9000 giri.",
+        "en": "The 599 of the XX programme, with active aerodynamics and a V12 revving to 9,000 rpm."
+      },
+      "versions": [
+        {
+          "slug": "599xx",
+          "name": "599XX",
+          "vehicle_type": "pista",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2009,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "La prima serie.",
+            "en": "The first series."
+          },
+          "powertrain": {
+            "engine": "F140C",
+            "drivetrain": "posteriore",
+            "ice_power_cv": 730,
+            "gearbox_type": "robotizzato",
+            "gears": 6
+          },
+          "year_end": 2011
+        },
+        {
+          "slug": "599xx-evo",
+          "name": "599XX Evo",
+          "vehicle_type": "pista",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2012,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "L'evoluzione, con un alettone più grande.",
+            "en": "The evolution, with a larger wing."
+          },
+          "powertrain": {
+            "engine": "F140C",
+            "drivetrain": "posteriore",
+            "ice_power_cv": 750,
+            "gearbox_type": "robotizzato",
+            "gears": 6
+          },
+          "year_end": 2013
+        }
+      ],
+      "predecessor": "fxx"
+    },
+    {
+      "slug": "fxx-k",
+      "name": "FXX K",
+      "category": "programmi-xx",
+      "description": {
+        "it": "La LaFerrari del programma XX: la K sta per KERS, il sistema ibrido.",
+        "en": "The LaFerrari of the XX programme: the K stands for KERS, the hybrid system."
+      },
+      "versions": [
+        {
+          "slug": "fxx-k",
+          "name": "FXX K",
+          "vehicle_type": "pista",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2015,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "1050 cv complessivi, tra il V12 e il motore elettrico.",
+            "en": "1,050 cv combined, between the V12 and the electric motor."
+          },
+          "powertrain": {
+            "engine": "F140FE",
+            "drivetrain": "posteriore",
+            "electric_power_cv": 190,
+            "system_power_cv": 1050,
+            "ice_power_cv": 860,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7
+          },
+          "year_end": 2017,
+          "units_produced": 40
+        },
+        {
+          "slug": "fxx-k-evo",
+          "name": "FXX K Evo",
+          "vehicle_type": "pista",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2017,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Il pacchetto di aggiornamento aerodinamico, con un alettone posteriore fisso.",
+            "en": "The aerodynamic upgrade package, with a fixed rear wing."
+          },
+          "powertrain": {
+            "engine": "F140FE",
+            "drivetrain": "posteriore",
+            "electric_power_cv": 190,
+            "system_power_cv": 1050,
+            "ice_power_cv": 860,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7
+          },
+          "year_end": 2019
+        }
+      ],
+      "predecessor": "599xx"
+    }
+  ]
+}

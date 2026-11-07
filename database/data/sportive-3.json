@@ -1,0 +1,715 @@
+{
+  "engines": [
+    {
+      "code": "F119D",
+      "name": "V8 quattrovalvole",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 3405,
+      "bore_mm": 85,
+      "stroke_mm": 75,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F119H",
+      "name": "V8 quattrovalvole",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 3405,
+      "bore_mm": 85,
+      "stroke_mm": 75,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F129B",
+      "name": "V8 cinquevalvole",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 3496,
+      "bore_mm": 85,
+      "stroke_mm": 77,
+      "valves_per_cylinder": 5,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F102A",
+      "name": "12 cilindri piatto",
+      "architecture": "piatto",
+      "cylinders": 12,
+      "displacement_cc": 4390,
+      "bore_mm": 81,
+      "stroke_mm": 71,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F102B",
+      "name": "12 cilindri piatto",
+      "architecture": "piatto",
+      "cylinders": 12,
+      "displacement_cc": 4942,
+      "bore_mm": 82,
+      "stroke_mm": 78,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F110A",
+      "name": "12 cilindri piatto a iniezione",
+      "architecture": "piatto",
+      "cylinders": 12,
+      "displacement_cc": 4942,
+      "bore_mm": 82,
+      "stroke_mm": 78,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F113A",
+      "name": "12 cilindri piatto quattrovalvole",
+      "architecture": "piatto",
+      "cylinders": 12,
+      "displacement_cc": 4942,
+      "bore_mm": 82,
+      "stroke_mm": 78,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F113D",
+      "name": "12 cilindri piatto quattrovalvole",
+      "architecture": "piatto",
+      "cylinders": 12,
+      "displacement_cc": 4942,
+      "bore_mm": 82,
+      "stroke_mm": 78,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F113G",
+      "name": "12 cilindri piatto quattrovalvole",
+      "architecture": "piatto",
+      "cylinders": 12,
+      "displacement_cc": 4942,
+      "bore_mm": 82,
+      "stroke_mm": 78,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    }
+  ],
+  "models": [
+    {
+      "slug": "348",
+      "name": "348",
+      "category": "sportive",
+      "predecessor": "328",
+      "description": {
+        "it": "La prima berlinetta V8 Ferrari di serie con il motore montato in senso longitudinale, l'ultima V8 approvata da Enzo Ferrari.",
+        "en": "The first series-production Ferrari V8 berlinetta with a longitudinally mounted engine, the last V8 approved by Enzo Ferrari."
+      },
+      "versions": [
+        {
+          "slug": "348-tb",
+          "name": "348 tb",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1989,
+          "year_end": 1993,
+          "units_produced": 2894,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta: la \"t\" sta per trasversale, la posizione del cambio dietro il motore.",
+            "en": "The berlinetta: the \"t\" stands for transverse, the position of the gearbox behind the engine."
+          },
+          "powertrain": {
+            "engine": "F119D",
+            "ice_power_cv": 300,
+            "ice_torque_nm": 324,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4230,
+            "width_mm": 1894,
+            "height_mm": 1170,
+            "wheelbase_mm": 2450,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 275,
+            "zero_to_100_sec": 5.6
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "348-ts",
+          "name": "348 ts",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "targa",
+          "year_start": 1989,
+          "year_end": 1993,
+          "units_produced": 4228,
+          "sort_order": 2,
+          "description": {
+            "it": "La versione con il tetto asportabile.",
+            "en": "The version with a removable roof panel."
+          },
+          "powertrain": {
+            "engine": "F119D",
+            "ice_power_cv": 300,
+            "ice_torque_nm": 324,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4230,
+            "width_mm": 1894,
+            "height_mm": 1170,
+            "wheelbase_mm": 2450,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "348-gtb",
+          "name": "348 GTB",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1993,
+          "year_end": 1994,
+          "sort_order": 3,
+          "description": {
+            "it": "La seconda serie, con più potenza e un assetto rivisto.",
+            "en": "The second series, with more power and revised suspension."
+          },
+          "powertrain": {
+            "engine": "F119H",
+            "ice_power_cv": 320,
+            "ice_torque_nm": 324,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4230,
+            "width_mm": 1894,
+            "height_mm": 1170,
+            "wheelbase_mm": 2450,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "348-gts",
+          "name": "348 GTS",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "targa",
+          "year_start": 1993,
+          "year_end": 1994,
+          "sort_order": 4,
+          "description": {
+            "it": "La seconda serie con il tetto asportabile.",
+            "en": "The second series with a removable roof panel."
+          },
+          "powertrain": {
+            "engine": "F119H",
+            "ice_power_cv": 320,
+            "ice_torque_nm": 324,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4230,
+            "width_mm": 1894,
+            "height_mm": 1170,
+            "wheelbase_mm": 2450,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "348-spider",
+          "name": "348 Spider",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 1993,
+          "year_end": 1995,
+          "units_produced": 1090,
+          "sort_order": 5,
+          "description": {
+            "it": "La prima Ferrari V8 a motore centrale con la capote in tela.",
+            "en": "The first mid-engined Ferrari V8 with a fabric soft top."
+          },
+          "powertrain": {
+            "engine": "F119H",
+            "ice_power_cv": 320,
+            "ice_torque_nm": 324,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4230,
+            "width_mm": 1894,
+            "height_mm": 1170,
+            "wheelbase_mm": 2450,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "f355",
+      "name": "F355",
+      "category": "sportive",
+      "predecessor": "348",
+      "description": {
+        "it": "Il nome dice tutto: 3,5 litri e cinque valvole per cilindro. Dal 1997 è la prima Ferrari stradale con il cambio a palette F1.",
+        "en": "The name says it all: 3.5 litres and five valves per cylinder. From 1997 it was the first road-going Ferrari with the F1 paddle-shift gearbox."
+      },
+      "versions": [
+        {
+          "slug": "f355-berlinetta",
+          "name": "F355 Berlinetta",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1994,
+          "year_end": 1999,
+          "units_produced": 4871,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, con il fondo piatto studiato in galleria del vento.",
+            "en": "The berlinetta, with a flat underbody developed in the wind tunnel."
+          },
+          "powertrain": {
+            "engine": "F129B",
+            "ice_power_cv": 380,
+            "ice_torque_nm": 363,
+            "gearbox_type": "manuale",
+            "gears": 6,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4250,
+            "width_mm": 1900,
+            "height_mm": 1170,
+            "wheelbase_mm": 2450,
+            "dry_weight_kg": 1350,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 295,
+            "zero_to_100_sec": 4.7
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "f355-gts",
+          "name": "F355 GTS",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "targa",
+          "year_start": 1995,
+          "year_end": 1999,
+          "sort_order": 2,
+          "description": {
+            "it": "La versione con il tetto asportabile, l'ultima Ferrari targa.",
+            "en": "The version with a removable roof panel, the last Ferrari targa."
+          },
+          "powertrain": {
+            "engine": "F129B",
+            "ice_power_cv": 380,
+            "ice_torque_nm": 363,
+            "gearbox_type": "manuale",
+            "gears": 6,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4250,
+            "width_mm": 1900,
+            "height_mm": 1170,
+            "wheelbase_mm": 2450,
+            "dry_weight_kg": 1350,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "f355-spider",
+          "name": "F355 Spider",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 1995,
+          "year_end": 1999,
+          "units_produced": 3717,
+          "sort_order": 3,
+          "description": {
+            "it": "La prima Ferrari con la capote ad azionamento elettrico.",
+            "en": "The first Ferrari with an electrically operated soft top."
+          },
+          "powertrain": {
+            "engine": "F129B",
+            "ice_power_cv": 380,
+            "ice_torque_nm": 363,
+            "gearbox_type": "manuale",
+            "gears": 6,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4250,
+            "width_mm": 1900,
+            "height_mm": 1170,
+            "wheelbase_mm": 2450,
+            "dry_weight_kg": 1350,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "berlinetta-boxer",
+      "name": "Berlinetta Boxer",
+      "category": "sportive",
+      "description": {
+        "it": "La prima Ferrari stradale con un 12 cilindri a motore centrale, con le bancate contrapposte.",
+        "en": "The first road-going Ferrari with a mid-mounted twelve-cylinder engine, with horizontally opposed banks."
+      },
+      "versions": [
+        {
+          "slug": "365-gt4-bb",
+          "name": "365 GT4 BB",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1973,
+          "year_end": 1976,
+          "units_produced": 387,
+          "sort_order": 1,
+          "description": {
+            "it": "La prima, con il 12 cilindri di 4,4 litri a carburatori.",
+            "en": "The first, with the 4.4-litre carburetted twelve-cylinder."
+          },
+          "powertrain": {
+            "engine": "F102A",
+            "ice_power_cv": 380,
+            "ice_torque_nm": 431,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4360,
+            "width_mm": 1800,
+            "height_mm": 1120,
+            "wheelbase_mm": 2500,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ]
+        },
+        {
+          "slug": "512-bb",
+          "name": "512 BB",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1976,
+          "year_end": 1981,
+          "units_produced": 929,
+          "sort_order": 2,
+          "description": {
+            "it": "Il motore cresce a cinque litri, da cui il nome: 5 litri e 12 cilindri.",
+            "en": "The engine grows to five litres, hence the name: 5 litres and 12 cylinders."
+          },
+          "powertrain": {
+            "engine": "F102B",
+            "ice_power_cv": 360,
+            "ice_torque_nm": 451,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ]
+        },
+        {
+          "slug": "512-bbi",
+          "name": "512 BBi",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1981,
+          "year_end": 1984,
+          "units_produced": 1007,
+          "sort_order": 3,
+          "description": {
+            "it": "L'iniezione meccanica sostituisce i carburatori.",
+            "en": "Mechanical fuel injection replaces the carburettors."
+          },
+          "powertrain": {
+            "engine": "F110A",
+            "ice_power_cv": 340,
+            "ice_torque_nm": 451,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "testarossa",
+      "name": "Testarossa",
+      "category": "sportive",
+      "predecessor": "berlinetta-boxer",
+      "description": {
+        "it": "L'icona degli anni Ottanta, con le prese d'aria a lamelle sulle fiancate e le teste del motore verniciate di rosso.",
+        "en": "The icon of the 1980s, with slatted side intakes and engine heads painted red."
+      },
+      "versions": [
+        {
+          "slug": "testarossa",
+          "name": "Testarossa",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1984,
+          "year_end": 1991,
+          "units_produced": 7177,
+          "sort_order": 1,
+          "description": {
+            "it": "La prima serie, con il 12 cilindri a quattro valvole per cilindro.",
+            "en": "The first series, with the four-valve-per-cylinder twelve-cylinder."
+          },
+          "powertrain": {
+            "engine": "F113A",
+            "ice_power_cv": 390,
+            "ice_torque_nm": 490,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4485,
+            "width_mm": 1976,
+            "height_mm": 1130,
+            "wheelbase_mm": 2550,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 290,
+            "zero_to_100_sec": 5.8
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "512-tr",
+          "name": "512 TR",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1991,
+          "year_end": 1994,
+          "units_produced": 2261,
+          "sort_order": 2,
+          "description": {
+            "it": "L'evoluzione, con più potenza e il frontale ridisegnato.",
+            "en": "The evolution, with more power and a redesigned front end."
+          },
+          "powertrain": {
+            "engine": "F113D",
+            "ice_power_cv": 428,
+            "ice_torque_nm": 491,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4480,
+            "width_mm": 1976,
+            "height_mm": 1135,
+            "wheelbase_mm": 2550,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 314,
+            "zero_to_100_sec": 4.8
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "f512-m",
+          "name": "F512 M",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1994,
+          "year_end": 1996,
+          "units_produced": 501,
+          "sort_order": 3,
+          "description": {
+            "it": "L'ultima, con i fari scoperti al posto di quelli a scomparsa.",
+            "en": "The last, with exposed headlights in place of pop-ups."
+          },
+          "powertrain": {
+            "engine": "F113G",
+            "ice_power_cv": 440,
+            "ice_torque_nm": 500,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4480,
+            "width_mm": 1976,
+            "height_mm": 1135,
+            "wheelbase_mm": 2550,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 315,
+            "zero_to_100_sec": 4.7
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,876 @@
+{
+  "engines": [
+    {
+      "code": "F130E",
+      "name": "V12 aspirato da corsa",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 3997,
+      "aspiration": "aspirato"
+    }
+  ],
+  "designers": [
+    {
+      "slug": "carrozzeria-touring",
+      "name": "Carrozzeria Touring",
+      "type": "studio",
+      "country": "IT"
+    }
+  ],
+  "drivers": [
+    {
+      "slug": "antonio-fuoco",
+      "first_name": "Antonio",
+      "last_name": "Fuoco",
+      "nationality": "IT",
+      "birth_date": "1996-05-20"
+    },
+    {
+      "slug": "miguel-molina",
+      "first_name": "Miguel",
+      "last_name": "Molina",
+      "nationality": "ES",
+      "birth_date": "1989-02-20"
+    },
+    {
+      "slug": "nicklas-nielsen",
+      "first_name": "Nicklas",
+      "last_name": "Nielsen",
+      "nationality": "DK",
+      "birth_date": "1997-02-06"
+    },
+    {
+      "slug": "alessandro-pier-guidi",
+      "first_name": "Alessandro",
+      "last_name": "Pier Guidi",
+      "nationality": "IT",
+      "birth_date": "1984-12-18"
+    },
+    {
+      "slug": "james-calado",
+      "first_name": "James",
+      "last_name": "Calado",
+      "nationality": "GB",
+      "birth_date": "1989-06-13"
+    },
+    {
+      "slug": "antonio-giovinazzi",
+      "first_name": "Antonio",
+      "last_name": "Giovinazzi",
+      "nationality": "IT",
+      "birth_date": "1993-12-14"
+    },
+    {
+      "slug": "robert-kubica",
+      "first_name": "Robert",
+      "last_name": "Kubica",
+      "nationality": "PL",
+      "birth_date": "1984-12-07"
+    },
+    {
+      "slug": "yifei-ye",
+      "first_name": "Yifei",
+      "last_name": "Ye",
+      "nationality": "CN"
+    },
+    {
+      "slug": "phil-hanson",
+      "first_name": "Phil",
+      "last_name": "Hanson",
+      "nationality": "GB"
+    }
+  ],
+  "models": [
+    {
+      "slug": "166-mm",
+      "name": "166 MM",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "La barchetta che diede a Ferrari la prima vittoria a Le Mans, nel 1949, e il nome a un'intera tipologia di carrozzeria.",
+        "en": "The barchetta that gave Ferrari its first Le Mans win, in 1949, and its name to a whole body style."
+      },
+      "versions": [
+        {
+          "slug": "166-mm",
+          "name": "166 MM",
+          "vehicle_type": "prototipo",
+          "year_start": 1948,
+          "year_end": 1953,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Vinse la Mille Miglia e la 24 Ore di Le Mans nel 1949.",
+            "en": "It won the Mille Miglia and the Le Mans 24 Hours in 1949."
+          },
+          "body_type": "barchetta",
+          "powertrain": {
+            "engine": "166"
+          },
+          "designers": [
+            {
+              "slug": "carrozzeria-touring",
+              "role": "carrozzeria"
+            }
+          ],
+          "racing": [
+            {
+              "championship": "24 Ore di Le Mans",
+              "season_start": 1949,
+              "season_end": 1949,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "wins": 1,
+              "notes": "Vittoria assoluta con Luigi Chinetti e Lord Selsdon."
+            },
+            {
+              "championship": "Mille Miglia",
+              "season_start": 1949,
+              "season_end": 1949,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "wins": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "375-plus",
+      "name": "375 Plus",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "La barchetta con il V12 di quasi cinque litri che vinse Le Mans nel 1954.",
+        "en": "The barchetta with the nearly five-litre V12 that won Le Mans in 1954."
+      },
+      "versions": [
+        {
+          "slug": "375-plus",
+          "name": "375 Plus",
+          "vehicle_type": "prototipo",
+          "year_start": 1954,
+          "year_end": 1954,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Vittoria a Le Mans con José Froilán González e Maurice Trintignant.",
+            "en": "Le Mans win with José Froilán González and Maurice Trintignant."
+          },
+          "body_type": "barchetta",
+          "drivers": [
+            "jose-froilan-gonzalez",
+            "maurice-trintignant"
+          ],
+          "racing": [
+            {
+              "championship": "24 Ore di Le Mans",
+              "season_start": 1954,
+              "season_end": 1954,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "wins": 1
+            }
+          ]
+        }
+      ],
+      "predecessor": "166-mm"
+    },
+    {
+      "slug": "750-monza",
+      "name": "750 Monza",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "La barchetta con il quattro cilindri di tre litri, derivato dalla Formula 1.",
+        "en": "The barchetta with the three-litre four-cylinder, derived from Formula 1."
+      },
+      "versions": [
+        {
+          "slug": "750-monza",
+          "name": "750 Monza",
+          "vehicle_type": "prototipo",
+          "year_start": 1954,
+          "year_end": 1955,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Dedicata all'autodromo dove debuttò.",
+            "en": "Named after the circuit where it debuted."
+          },
+          "body_type": "barchetta",
+          "designers": [
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ]
+        }
+      ],
+      "predecessor": "375-plus"
+    },
+    {
+      "slug": "860-monza",
+      "name": "860 Monza",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "L'evoluzione della 750 Monza, con il quattro cilindri portato a 3,4 litri.",
+        "en": "The evolution of the 750 Monza, with the four-cylinder enlarged to 3.4 litres."
+      },
+      "versions": [
+        {
+          "slug": "860-monza",
+          "name": "860 Monza",
+          "vehicle_type": "prototipo",
+          "year_start": 1956,
+          "year_end": 1956,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Vinse la 12 Ore di Sebring del 1956 con Fangio e Castellotti.",
+            "en": "It won the 1956 Sebring 12 Hours with Fangio and Castellotti."
+          },
+          "body_type": "barchetta",
+          "designers": [
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ],
+          "drivers": [
+            "juan-manuel-fangio",
+            "eugenio-castellotti"
+          ],
+          "racing": [
+            {
+              "championship": "12 Ore di Sebring",
+              "season_start": 1956,
+              "season_end": 1956,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "wins": 1
+            }
+          ]
+        }
+      ],
+      "predecessor": "750-monza"
+    },
+    {
+      "slug": "290-mm",
+      "name": "290 MM",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "La barchetta V12 nata per la Mille Miglia.",
+        "en": "The V12 barchetta built for the Mille Miglia."
+      },
+      "versions": [
+        {
+          "slug": "290-mm",
+          "name": "290 MM",
+          "vehicle_type": "prototipo",
+          "year_start": 1956,
+          "year_end": 1957,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Vinse la Mille Miglia del 1956 con Eugenio Castellotti, sotto la pioggia.",
+            "en": "It won the 1956 Mille Miglia with Eugenio Castellotti, in the rain."
+          },
+          "body_type": "barchetta",
+          "designers": [
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ],
+          "drivers": [
+            "eugenio-castellotti"
+          ],
+          "racing": [
+            {
+              "championship": "Mille Miglia",
+              "season_start": 1956,
+              "season_end": 1956,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "wins": 1
+            }
+          ]
+        }
+      ],
+      "predecessor": "860-monza"
+    },
+    {
+      "slug": "315-s",
+      "name": "315 S",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "La barchetta dell'ultima Mille Miglia, nel 1957.",
+        "en": "The barchetta of the last Mille Miglia, in 1957."
+      },
+      "versions": [
+        {
+          "slug": "315-s",
+          "name": "315 S",
+          "vehicle_type": "prototipo",
+          "year_start": 1957,
+          "year_end": 1957,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Vinse la Mille Miglia del 1957 con Piero Taruffi, alla sua ultima corsa.",
+            "en": "It won the 1957 Mille Miglia with Piero Taruffi, in his last race."
+          },
+          "body_type": "barchetta",
+          "designers": [
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ],
+          "drivers": [
+            "piero-taruffi"
+          ],
+          "racing": [
+            {
+              "championship": "Mille Miglia",
+              "season_start": 1957,
+              "season_end": 1957,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "wins": 1
+            }
+          ]
+        }
+      ],
+      "predecessor": "290-mm"
+    },
+    {
+      "slug": "335-s",
+      "name": "335 S",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "La barchetta V12 di quattro litri, l'ultima prima del limite dei tre litri imposto nel 1958.",
+        "en": "The four-litre V12 barchetta, the last before the three-litre limit imposed in 1958."
+      },
+      "versions": [
+        {
+          "slug": "335-s",
+          "name": "335 S",
+          "vehicle_type": "prototipo",
+          "year_start": 1957,
+          "year_end": 1958,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Corse il mondiale marche del 1957.",
+            "en": "It raced the 1957 World Sportscar Championship."
+          },
+          "body_type": "barchetta",
+          "designers": [
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ]
+        }
+      ],
+      "predecessor": "315-s"
+    },
+    {
+      "slug": "250-testa-rossa",
+      "name": "250 Testa Rossa",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "La barchetta con le teste del motore verniciate di rosso, una delle Ferrari da corsa più vincenti di sempre.",
+        "en": "The barchetta with red-painted cylinder heads, one of the most successful racing Ferraris ever."
+      },
+      "versions": [
+        {
+          "slug": "250-testa-rossa",
+          "name": "250 Testa Rossa",
+          "vehicle_type": "prototipo",
+          "year_start": 1957,
+          "year_end": 1961,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Tre vittorie a Le Mans, nel 1958, nel 1960 e nel 1961.",
+            "en": "Three Le Mans wins, in 1958, 1960 and 1961."
+          },
+          "body_type": "barchetta",
+          "designers": [
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ],
+          "drivers": [
+            "phil-hill"
+          ],
+          "racing": [
+            {
+              "championship": "24 Ore di Le Mans",
+              "season_start": 1958,
+              "season_end": 1961,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "wins": 3,
+              "notes": "Vittorie assolute nel 1958, nel 1960 e nel 1961."
+            }
+          ]
+        }
+      ],
+      "predecessor": "335-s"
+    },
+    {
+      "slug": "250-p",
+      "name": "250 P",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "La prima Ferrari sport prototipo a motore posteriore.",
+        "en": "The first rear-engined Ferrari sports prototype."
+      },
+      "versions": [
+        {
+          "slug": "250-p",
+          "name": "250 P",
+          "vehicle_type": "prototipo",
+          "year_start": 1963,
+          "year_end": 1963,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Vinse Le Mans al debutto, nel 1963, con Ludovico Scarfiotti e Lorenzo Bandini.",
+            "en": "It won Le Mans on its debut, in 1963, with Ludovico Scarfiotti and Lorenzo Bandini."
+          },
+          "body_type": "barchetta",
+          "drivers": [
+            "ludovico-scarfiotti",
+            "lorenzo-bandini"
+          ],
+          "racing": [
+            {
+              "championship": "24 Ore di Le Mans",
+              "season_start": 1963,
+              "season_end": 1963,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "wins": 1
+            }
+          ]
+        }
+      ],
+      "predecessor": "250-testa-rossa"
+    },
+    {
+      "slug": "275-p",
+      "name": "275 P",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "L'evoluzione della 250 P, con il V12 portato a 3,3 litri.",
+        "en": "The evolution of the 250 P, with the V12 enlarged to 3.3 litres."
+      },
+      "versions": [
+        {
+          "slug": "275-p",
+          "name": "275 P",
+          "vehicle_type": "prototipo",
+          "year_start": 1964,
+          "year_end": 1964,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "La quinta vittoria consecutiva di Ferrari a Le Mans.",
+            "en": "Ferrari's fifth consecutive Le Mans win."
+          },
+          "body_type": "barchetta",
+          "racing": [
+            {
+              "championship": "24 Ore di Le Mans",
+              "season_start": 1964,
+              "season_end": 1964,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "wins": 1
+            }
+          ]
+        }
+      ],
+      "predecessor": "250-p"
+    },
+    {
+      "slug": "250-lm",
+      "name": "250 LM",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "Nata come Gran Turismo, corse tra i prototipi perché Ferrari non ne costruì abbastanza per omologarla.",
+        "en": "Born as a grand tourer, it raced among the prototypes because Ferrari did not build enough to homologate it."
+      },
+      "versions": [
+        {
+          "slug": "250-lm",
+          "name": "250 LM",
+          "vehicle_type": "prototipo",
+          "year_start": 1963,
+          "year_end": 1966,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "L'ultima Ferrari a vincere Le Mans in assoluto fino al 2023, con la squadra americana NART nel 1965.",
+            "en": "The last Ferrari to win Le Mans outright until 2023, with the American NART team in 1965."
+          },
+          "body_type": "coupe",
+          "units_produced": 32,
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ],
+          "racing": [
+            {
+              "championship": "24 Ore di Le Mans",
+              "season_start": 1965,
+              "season_end": 1965,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "wins": 1
+            }
+          ]
+        }
+      ],
+      "predecessor": "250-p"
+    },
+    {
+      "slug": "330-p3",
+      "name": "330 P3",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "Il prototipo del 1966, con il V12 a iniezione.",
+        "en": "The 1966 prototype, with the fuel-injected V12."
+      },
+      "versions": [
+        {
+          "slug": "330-p3",
+          "name": "330 P3",
+          "vehicle_type": "prototipo",
+          "year_start": 1966,
+          "year_end": 1966,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Vinse la 1000 km di Monza del 1966.",
+            "en": "It won the 1966 Monza 1000 km."
+          }
+        }
+      ],
+      "predecessor": "275-p"
+    },
+    {
+      "slug": "330-p4",
+      "name": "330 P4",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "Il prototipo dell'arrivo in parata alla 24 Ore di Daytona del 1967, primo, secondo e terzo.",
+        "en": "The prototype of the formation finish at the 1967 Daytona 24 Hours, first, second and third."
+      },
+      "versions": [
+        {
+          "slug": "330-p4",
+          "name": "330 P4",
+          "vehicle_type": "prototipo",
+          "year_start": 1967,
+          "year_end": 1967,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Il titolo del campionato prototipi del 1967.",
+            "en": "The 1967 prototype championship title."
+          },
+          "drivers": [
+            "lorenzo-bandini",
+            "chris-amon"
+          ],
+          "racing": [
+            {
+              "championship": "Campionato internazionale prototipi",
+              "season_start": 1967,
+              "season_end": 1967,
+              "drivers_titles": 0,
+              "constructors_titles": 1,
+              "notes": "Vittorie alla 24 Ore di Daytona, con le prime tre posizioni, e alla 1000 km di Monza."
+            }
+          ]
+        }
+      ],
+      "predecessor": "330-p3"
+    },
+    {
+      "slug": "312-p",
+      "name": "312 P",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "Il prototipo con il V12 di tre litri della Formula 1.",
+        "en": "The prototype with the three-litre Formula 1 V12."
+      },
+      "versions": [
+        {
+          "slug": "312-p",
+          "name": "312 P",
+          "vehicle_type": "prototipo",
+          "year_start": 1969,
+          "year_end": 1969,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Corse il mondiale marche del 1969, senza vittorie.",
+            "en": "It raced the 1969 World Sportscar Championship, without wins."
+          }
+        }
+      ],
+      "predecessor": "330-p4"
+    },
+    {
+      "slug": "512-s",
+      "name": "512 S",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "La berlinetta da cinque litri costruita per sfidare la Porsche 917.",
+        "en": "The five-litre berlinetta built to take on the Porsche 917."
+      },
+      "versions": [
+        {
+          "slug": "512-s",
+          "name": "512 S",
+          "vehicle_type": "prototipo",
+          "year_start": 1970,
+          "year_end": 1970,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Vinse la 12 Ore di Sebring del 1970 con Giunti, Vaccarella e Andretti.",
+            "en": "It won the 1970 Sebring 12 Hours with Giunti, Vaccarella and Andretti."
+          },
+          "body_type": "coupe",
+          "drivers": [
+            "ignazio-giunti",
+            "mario-andretti"
+          ],
+          "racing": [
+            {
+              "championship": "12 Ore di Sebring",
+              "season_start": 1970,
+              "season_end": 1970,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "wins": 1
+            }
+          ]
+        }
+      ],
+      "predecessor": "312-p"
+    },
+    {
+      "slug": "512-m",
+      "name": "512 M",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "L'evoluzione della 512 S, la M sta per modificata.",
+        "en": "The evolution of the 512 S, the M stands for modified."
+      },
+      "versions": [
+        {
+          "slug": "512-m",
+          "name": "512 M",
+          "vehicle_type": "prototipo",
+          "year_start": 1970,
+          "year_end": 1971,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Corse soprattutto con le squadre private, dopo l'uscita di Ferrari dalla categoria.",
+            "en": "It raced mostly with private teams, after Ferrari left the category."
+          },
+          "body_type": "coupe"
+        }
+      ],
+      "predecessor": "512-s"
+    },
+    {
+      "slug": "312-pb",
+      "name": "312 PB",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "La barchetta con il 12 cilindri piatto della Formula 1, che dominò il mondiale marche del 1972.",
+        "en": "The barchetta with the Formula 1 flat-twelve, which dominated the 1972 World Championship for Makes."
+      },
+      "versions": [
+        {
+          "slug": "312-pb",
+          "name": "312 PB",
+          "vehicle_type": "prototipo",
+          "year_start": 1971,
+          "year_end": 1973,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Nel 1972 vinse tutte le gare a cui partecipò.",
+            "en": "In 1972 it won every race it entered."
+          },
+          "body_type": "barchetta",
+          "powertrain": {
+            "engine": "001"
+          },
+          "designers": [
+            {
+              "slug": "mauro-forghieri",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "jacky-ickx",
+            "clay-regazzoni",
+            "arturo-merzario"
+          ],
+          "racing": [
+            {
+              "championship": "Campionato mondiale marche",
+              "season_start": 1971,
+              "season_end": 1973,
+              "drivers_titles": 0,
+              "constructors_titles": 1,
+              "notes": "Il titolo del 1972, con la vittoria in tutte le gare a cui partecipò. Ferrari non corse a Le Mans."
+            }
+          ]
+        }
+      ],
+      "predecessor": "512-m"
+    },
+    {
+      "slug": "333-sp",
+      "name": "333 SP",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "Il ritorno di Ferrari ai prototipi dopo vent'anni, per le squadre clienti americane ed europee.",
+        "en": "Ferrari's return to prototypes after twenty years, for American and European customer teams."
+      },
+      "versions": [
+        {
+          "slug": "333-sp",
+          "name": "333 SP",
+          "vehicle_type": "prototipo",
+          "year_start": 1994,
+          "year_end": 2003,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Tre vittorie alla 12 Ore di Sebring e una alla 24 Ore di Daytona.",
+            "en": "Three wins at the Sebring 12 Hours and one at the Daytona 24 Hours."
+          },
+          "body_type": "barchetta",
+          "powertrain": {
+            "engine": "F130E",
+            "ice_power_cv": 650
+          },
+          "racing": [
+            {
+              "championship": "12 Ore di Sebring",
+              "season_start": 1995,
+              "season_end": 1998,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "wins": 3,
+              "notes": "Vittorie nel 1995, nel 1997 e nel 1998."
+            },
+            {
+              "championship": "24 Ore di Daytona",
+              "season_start": 1998,
+              "season_end": 1998,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "wins": 1
+            }
+          ]
+        }
+      ],
+      "predecessor": "312-pb"
+    },
+    {
+      "slug": "499p",
+      "name": "499P",
+      "category": "sport-prototipi",
+      "description": {
+        "it": "La hypercar ibrida del ritorno di Ferrari nella classe regina dell'endurance, dopo cinquant'anni.",
+        "en": "The hybrid hypercar of Ferrari's return to endurance racing's top class, after fifty years."
+      },
+      "versions": [
+        {
+          "slug": "499p",
+          "name": "499P",
+          "vehicle_type": "prototipo",
+          "year_start": 2023,
+          "in_production": true,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Tre vittorie consecutive a Le Mans, dal 2023 al 2025, e i due titoli mondiali del 2025.",
+            "en": "Three consecutive Le Mans wins, from 2023 to 2025, and both world titles in 2025."
+          },
+          "body_type": "coupe",
+          "seats": 1,
+          "powertrain": {
+            "engine": "F163",
+            "electric_power_cv": 272,
+            "system_power_cv": 680,
+            "gearbox_type": "sequenziale",
+            "gears": 7,
+            "drivetrain": "integrale"
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "antonio-fuoco",
+            "miguel-molina",
+            "nicklas-nielsen",
+            "alessandro-pier-guidi",
+            "james-calado",
+            "antonio-giovinazzi",
+            "robert-kubica",
+            "yifei-ye",
+            "phil-hanson"
+          ],
+          "racing": [
+            {
+              "championship": "24 Ore di Le Mans",
+              "season_start": 2023,
+              "season_end": 2025,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "wins": 3,
+              "notes": "Vittorie con la numero 51 nel 2023, la 50 nel 2024 e la 83 nel 2025."
+            },
+            {
+              "championship": "Mondiale Endurance FIA, classe Hypercar",
+              "season_start": 2023,
+              "season_end": 2025,
+              "drivers_titles": 1,
+              "constructors_titles": 1,
+              "notes": "Titolo costruttori e titolo piloti nel 2025."
+            }
+          ]
+        }
+      ],
+      "predecessor": "333-sp"
+    }
+  ]
+}

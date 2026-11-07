@@ -1,0 +1,605 @@
+{
+  "engines": [
+    {
+      "code": "059/3",
+      "name": "V6 turbo ibrido Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 6,
+      "displacement_cc": 1600,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "059/4",
+      "name": "V6 turbo ibrido Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 6,
+      "displacement_cc": 1600,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "061",
+      "name": "V6 turbo ibrido Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 6,
+      "displacement_cc": 1600,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "062",
+      "name": "V6 turbo ibrido Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 6,
+      "displacement_cc": 1600,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "062 EVO",
+      "name": "V6 turbo ibrido Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 6,
+      "displacement_cc": 1600,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "064",
+      "name": "V6 turbo ibrido Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 6,
+      "displacement_cc": 1600,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    }
+  ],
+  "drivers": [
+    {
+      "slug": "fernando-alonso",
+      "first_name": "Fernando",
+      "last_name": "Alonso",
+      "nationality": "ES",
+      "birth_date": "1981-07-29"
+    },
+    {
+      "slug": "sebastian-vettel",
+      "first_name": "Sebastian",
+      "last_name": "Vettel",
+      "nationality": "DE",
+      "birth_date": "1987-07-03"
+    },
+    {
+      "slug": "charles-leclerc",
+      "first_name": "Charles",
+      "last_name": "Leclerc",
+      "nationality": "MC",
+      "birth_date": "1997-10-16"
+    }
+  ],
+  "models": [
+    {
+      "slug": "f10",
+      "name": "F10",
+      "category": "formula-1",
+      "predecessor": "f60",
+      "description": {
+        "it": "La prima Ferrari di Fernando Alonso, che vinse all'esordio in Bahrein.",
+        "en": "Fernando Alonso's first Ferrari, which won on its debut in Bahrain."
+      },
+      "versions": [
+        {
+          "slug": "f10",
+          "name": "F10",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2010,
+          "year_end": 2010,
+          "in_production": false,
+          "description": {
+            "it": "Alonso arrivò all'ultima gara in testa al campionato, e lo perse ad Abu Dhabi.",
+            "en": "Alonso arrived at the final race leading the championship, and lost it in Abu Dhabi."
+          },
+          "powertrain": {
+            "engine": "056",
+            "gearbox_type": "sequenziale",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "fernando-alonso",
+            "felipe-massa"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2010,
+              "season_end": 2010,
+              "races": 19,
+              "wins": 5,
+              "poles": 2,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "150-italia",
+      "name": "150° Italia",
+      "category": "formula-1",
+      "predecessor": "f10",
+      "description": {
+        "it": "Il nome celebra i centocinquant'anni dell'Unità d'Italia.",
+        "en": "The name celebrates the 150th anniversary of Italian unification."
+      },
+      "versions": [
+        {
+          "slug": "150-italia",
+          "name": "150° Italia",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2011,
+          "year_end": 2011,
+          "in_production": false,
+          "description": {
+            "it": "Una sola vittoria, al Gran Premio di Gran Bretagna.",
+            "en": "A single win, at the British Grand Prix."
+          },
+          "powertrain": {
+            "engine": "056",
+            "gearbox_type": "sequenziale",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "fernando-alonso",
+            "felipe-massa"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2011,
+              "season_end": 2011,
+              "races": 19,
+              "wins": 1,
+              "poles": 0,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "f2012",
+      "name": "F2012",
+      "category": "formula-1",
+      "predecessor": "150-italia",
+      "description": {
+        "it": "La monoposto con cui Alonso lottò per il titolo fino all'ultima gara, contro auto più veloci.",
+        "en": "The car with which Alonso fought for the title to the final race, against faster cars."
+      },
+      "versions": [
+        {
+          "slug": "f2012",
+          "name": "F2012",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2012,
+          "year_end": 2012,
+          "in_production": false,
+          "description": {
+            "it": "Tre vittorie e il secondo posto nel campionato piloti, a tre punti dal campione.",
+            "en": "Three wins and second place in the drivers' championship, three points behind the champion."
+          },
+          "powertrain": {
+            "engine": "056",
+            "gearbox_type": "sequenziale",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "fernando-alonso",
+            "felipe-massa"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2012,
+              "season_end": 2012,
+              "races": 20,
+              "wins": 3,
+              "poles": 2,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "f138",
+      "name": "F138",
+      "category": "formula-1",
+      "predecessor": "f2012",
+      "description": {
+        "it": "L'ultima Ferrari con il V8 aspirato: il nome unisce l'anno 2013 e gli otto cilindri.",
+        "en": "The last Ferrari with the naturally aspirated V8: the name combines the year 2013 and the eight cylinders."
+      },
+      "versions": [
+        {
+          "slug": "f138",
+          "name": "F138",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2013,
+          "year_end": 2013,
+          "in_production": false,
+          "description": {
+            "it": "Due vittorie con Alonso, in Cina e in Spagna.",
+            "en": "Two wins with Alonso, in China and Spain."
+          },
+          "powertrain": {
+            "engine": "056",
+            "gearbox_type": "sequenziale",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "fernando-alonso",
+            "felipe-massa"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2013,
+              "season_end": 2013,
+              "races": 19,
+              "wins": 2,
+              "poles": 0,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "f14-t",
+      "name": "F14 T",
+      "category": "formula-1",
+      "predecessor": "f138",
+      "description": {
+        "it": "La prima Ferrari dell'era ibrida, con il V6 turbo e il recupero di energia.",
+        "en": "The first Ferrari of the hybrid era, with the turbo V6 and energy recovery."
+      },
+      "versions": [
+        {
+          "slug": "f14-t",
+          "name": "F14 T",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2014,
+          "year_end": 2014,
+          "in_production": false,
+          "description": {
+            "it": "Una stagione senza vittorie, l'ultima di Alonso in Ferrari.",
+            "en": "A season without wins, Alonso's last at Ferrari."
+          },
+          "powertrain": {
+            "engine": "059/3",
+            "gearbox_type": "sequenziale",
+            "gears": 8,
+            "drivetrain": "posteriore",
+            "electric_power_cv": 163
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "fernando-alonso",
+            "kimi-raikkonen"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2014,
+              "season_end": 2014,
+              "races": 19,
+              "wins": 0,
+              "poles": 0,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sf15-t",
+      "name": "SF15-T",
+      "category": "formula-1",
+      "predecessor": "f14-t",
+      "description": {
+        "it": "La prima Ferrari di Sebastian Vettel, che vinse alla seconda gara in Malesia.",
+        "en": "Sebastian Vettel's first Ferrari, which won at the second race in Malaysia."
+      },
+      "versions": [
+        {
+          "slug": "sf15-t",
+          "name": "SF15-T",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2015,
+          "year_end": 2015,
+          "in_production": false,
+          "description": {
+            "it": "Tre vittorie, tutte di Vettel.",
+            "en": "Three wins, all by Vettel."
+          },
+          "powertrain": {
+            "engine": "059/4",
+            "gearbox_type": "sequenziale",
+            "gears": 8,
+            "drivetrain": "posteriore",
+            "electric_power_cv": 163
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "sebastian-vettel",
+            "kimi-raikkonen"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2015,
+              "season_end": 2015,
+              "races": 19,
+              "wins": 3,
+              "poles": 1,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sf16-h",
+      "name": "SF16-H",
+      "category": "formula-1",
+      "predecessor": "sf15-t",
+      "description": {
+        "it": "La monoposto di una stagione senza vittorie, con una livrea che riprendeva il bianco degli anni Settanta.",
+        "en": "The car of a winless season, with a livery bringing back the white of the 1970s."
+      },
+      "versions": [
+        {
+          "slug": "sf16-h",
+          "name": "SF16-H",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2016,
+          "year_end": 2016,
+          "in_production": false,
+          "description": {
+            "it": "Nessuna vittoria e nessuna pole.",
+            "en": "No wins and no pole positions."
+          },
+          "powertrain": {
+            "engine": "061",
+            "gearbox_type": "sequenziale",
+            "gears": 8,
+            "drivetrain": "posteriore",
+            "electric_power_cv": 163
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "sebastian-vettel",
+            "kimi-raikkonen"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2016,
+              "season_end": 2016,
+              "races": 21,
+              "wins": 0,
+              "poles": 0,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sf70h",
+      "name": "SF70H",
+      "category": "formula-1",
+      "predecessor": "sf16-h",
+      "description": {
+        "it": "Il nome celebra i settant'anni di Ferrari: la prima monoposto delle nuove regole con auto più larghe.",
+        "en": "The name celebrates Ferrari's 70th anniversary: the first car of the new rules with wider cars."
+      },
+      "versions": [
+        {
+          "slug": "sf70h",
+          "name": "SF70H",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2017,
+          "year_end": 2017,
+          "in_production": false,
+          "description": {
+            "it": "Vettel in testa al mondiale per metà stagione, cinque vittorie in tutto.",
+            "en": "Vettel led the championship for half the season, five wins in all."
+          },
+          "powertrain": {
+            "engine": "062",
+            "gearbox_type": "sequenziale",
+            "gears": 8,
+            "drivetrain": "posteriore",
+            "electric_power_cv": 163
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "sebastian-vettel",
+            "kimi-raikkonen"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2017,
+              "season_end": 2017,
+              "races": 20,
+              "wins": 5,
+              "poles": 5,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sf71h",
+      "name": "SF71H",
+      "category": "formula-1",
+      "predecessor": "sf70h",
+      "description": {
+        "it": "La monoposto con cui Ferrari lottò per il titolo con Mercedes fino all'autunno.",
+        "en": "The car with which Ferrari fought Mercedes for the title until the autumn."
+      },
+      "versions": [
+        {
+          "slug": "sf71h",
+          "name": "SF71H",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2018,
+          "year_end": 2018,
+          "in_production": false,
+          "description": {
+            "it": "Sei vittorie, l'ultima di Räikkönen ad Austin, la sua ultima in carriera.",
+            "en": "Six wins, the last by Räikkönen in Austin, the final victory of his career."
+          },
+          "powertrain": {
+            "engine": "062 EVO",
+            "gearbox_type": "sequenziale",
+            "gears": 8,
+            "drivetrain": "posteriore",
+            "electric_power_cv": 163
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "sebastian-vettel",
+            "kimi-raikkonen"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2018,
+              "season_end": 2018,
+              "races": 21,
+              "wins": 6,
+              "poles": 6,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sf90-formula-1",
+      "name": "SF90",
+      "category": "formula-1",
+      "predecessor": "sf71h",
+      "description": {
+        "it": "La prima Ferrari di Charles Leclerc, che vinse a Spa e a Monza.",
+        "en": "Charles Leclerc's first Ferrari, which won at Spa and Monza."
+      },
+      "versions": [
+        {
+          "slug": "sf90-formula-1",
+          "name": "SF90",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2019,
+          "year_end": 2019,
+          "in_production": false,
+          "description": {
+            "it": "Tre vittorie e nove pole, sette di Leclerc.",
+            "en": "Three wins and nine pole positions, seven of them by Leclerc."
+          },
+          "powertrain": {
+            "engine": "064",
+            "gearbox_type": "sequenziale",
+            "gears": 8,
+            "drivetrain": "posteriore",
+            "electric_power_cv": 163
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "sebastian-vettel",
+            "charles-leclerc"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2019,
+              "season_end": 2019,
+              "races": 21,
+              "wins": 3,
+              "poles": 9,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

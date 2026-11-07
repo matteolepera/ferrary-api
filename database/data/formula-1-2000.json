@@ -1,0 +1,705 @@
+{
+  "engines": [
+    {
+      "code": "049",
+      "name": "V10 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 10,
+      "displacement_cc": 2997,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "050",
+      "name": "V10 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 10,
+      "displacement_cc": 2997,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "051",
+      "name": "V10 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 10,
+      "displacement_cc": 2997,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "052",
+      "name": "V10 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 10,
+      "displacement_cc": 2997,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "053",
+      "name": "V10 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 10,
+      "displacement_cc": 2997,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "055",
+      "name": "V10 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 10,
+      "displacement_cc": 2997,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "056",
+      "name": "V8 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 2398,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    }
+  ],
+  "designers": [
+    {
+      "slug": "rory-byrne",
+      "name": "Rory Byrne",
+      "type": "persona",
+      "country": "ZA"
+    },
+    {
+      "slug": "aldo-costa",
+      "name": "Aldo Costa",
+      "type": "persona",
+      "country": "IT"
+    }
+  ],
+  "drivers": [
+    {
+      "slug": "michael-schumacher",
+      "first_name": "Michael",
+      "last_name": "Schumacher",
+      "nationality": "DE",
+      "birth_date": "1969-01-03"
+    },
+    {
+      "slug": "rubens-barrichello",
+      "first_name": "Rubens",
+      "last_name": "Barrichello",
+      "nationality": "BR",
+      "birth_date": "1972-05-23"
+    },
+    {
+      "slug": "felipe-massa",
+      "first_name": "Felipe",
+      "last_name": "Massa",
+      "nationality": "BR",
+      "birth_date": "1981-04-25"
+    },
+    {
+      "slug": "kimi-raikkonen",
+      "first_name": "Kimi",
+      "last_name": "Räikkönen",
+      "nationality": "FI",
+      "birth_date": "1979-10-17"
+    },
+    {
+      "slug": "giancarlo-fisichella",
+      "first_name": "Giancarlo",
+      "last_name": "Fisichella",
+      "nationality": "IT",
+      "birth_date": "1973-01-14"
+    },
+    {
+      "slug": "luca-badoer",
+      "first_name": "Luca",
+      "last_name": "Badoer",
+      "nationality": "IT",
+      "birth_date": "1971-01-25"
+    }
+  ],
+  "models": [
+    {
+      "slug": "f1-2000",
+      "name": "F1-2000",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto che riportò il titolo piloti a Maranello dopo ventun anni.",
+        "en": "The car that brought the drivers' title back to Maranello after twenty-one years."
+      },
+      "versions": [
+        {
+          "slug": "f1-2000",
+          "name": "F1-2000",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2000,
+          "year_end": 2000,
+          "in_production": false,
+          "description": {
+            "it": "Michael Schumacher campione del mondo, il primo titolo piloti Ferrari dal 1979.",
+            "en": "Michael Schumacher world champion, Ferrari's first drivers' title since 1979."
+          },
+          "powertrain": {
+            "engine": "049",
+            "gearbox_type": "sequenziale",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "designers": [
+            {
+              "slug": "rory-byrne",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "michael-schumacher",
+            "rubens-barrichello"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2000,
+              "season_end": 2000,
+              "drivers_titles": 1,
+              "constructors_titles": 1,
+              "races": 17,
+              "wins": 10,
+              "poles": 10
+            }
+          ]
+        }
+      ],
+      "predecessor": "f399"
+    },
+    {
+      "slug": "f2001",
+      "name": "F2001",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto del secondo titolo consecutivo di Michael Schumacher.",
+        "en": "The car of Michael Schumacher's second consecutive title."
+      },
+      "versions": [
+        {
+          "slug": "f2001",
+          "name": "F2001",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2001,
+          "year_end": 2001,
+          "in_production": false,
+          "description": {
+            "it": "Titolo piloti e costruttori, vinti con quattro gare d'anticipo.",
+            "en": "Drivers' and constructors' titles, won with four races to spare."
+          },
+          "powertrain": {
+            "engine": "050",
+            "gearbox_type": "sequenziale",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "designers": [
+            {
+              "slug": "rory-byrne",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "michael-schumacher",
+            "rubens-barrichello"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2001,
+              "season_end": 2001,
+              "drivers_titles": 1,
+              "constructors_titles": 1,
+              "races": 17,
+              "wins": 9,
+              "poles": 11
+            }
+          ]
+        }
+      ],
+      "predecessor": "f1-2000"
+    },
+    {
+      "slug": "f2002",
+      "name": "F2002",
+      "category": "formula-1",
+      "description": {
+        "it": "Una delle Formula 1 più vincenti di sempre: debuttò alla terza gara del 2002 e corse anche le prime gare del 2003.",
+        "en": "One of the most successful Formula 1 cars ever: it debuted at the third race of 2002 and also ran the first races of 2003."
+      },
+      "versions": [
+        {
+          "slug": "f2002",
+          "name": "F2002",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2002,
+          "year_end": 2002,
+          "in_production": false,
+          "description": {
+            "it": "Nel 2002 vinse quattordici delle quindici gare che corse.",
+            "en": "In 2002 it won fourteen of the fifteen races it entered."
+          },
+          "powertrain": {
+            "engine": "051",
+            "gearbox_type": "sequenziale",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "designers": [
+            {
+              "slug": "rory-byrne",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "michael-schumacher",
+            "rubens-barrichello"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2002,
+              "season_end": 2002,
+              "drivers_titles": 1,
+              "constructors_titles": 1,
+              "races": 15,
+              "wins": 14,
+              "notes": "Nel 2003 corse anche le prime quattro gare, vincendo il Gran Premio di San Marino."
+            }
+          ]
+        }
+      ],
+      "predecessor": "f2001"
+    },
+    {
+      "slug": "f2003-ga",
+      "name": "F2003-GA",
+      "category": "formula-1",
+      "description": {
+        "it": "Dedicata a Gianni Agnelli, scomparso all'inizio del 2003: da qui la sigla GA.",
+        "en": "Dedicated to Gianni Agnelli, who died at the start of 2003: hence the GA initials."
+      },
+      "versions": [
+        {
+          "slug": "f2003-ga",
+          "name": "F2003-GA",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2003,
+          "year_end": 2003,
+          "in_production": false,
+          "description": {
+            "it": "Debuttò al Gran Premio di Spagna e vinse il titolo in una stagione combattuta fino all'ultima gara.",
+            "en": "It debuted at the Spanish Grand Prix and won the title in a season fought to the final race."
+          },
+          "powertrain": {
+            "engine": "052",
+            "gearbox_type": "sequenziale",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "designers": [
+            {
+              "slug": "rory-byrne",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "michael-schumacher",
+            "rubens-barrichello"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2003,
+              "season_end": 2003,
+              "drivers_titles": 1,
+              "constructors_titles": 1,
+              "races": 12,
+              "wins": 7
+            }
+          ]
+        }
+      ],
+      "predecessor": "f2002"
+    },
+    {
+      "slug": "f2004",
+      "name": "F2004",
+      "category": "formula-1",
+      "description": {
+        "it": "La Ferrari di Formula 1 più vincente di sempre in una sola stagione.",
+        "en": "The most successful Ferrari Formula 1 car ever in a single season."
+      },
+      "versions": [
+        {
+          "slug": "f2004",
+          "name": "F2004",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2004,
+          "year_end": 2004,
+          "in_production": false,
+          "description": {
+            "it": "Quindici vittorie su diciotto gare, e il settimo titolo di Michael Schumacher.",
+            "en": "Fifteen wins from eighteen races, and Michael Schumacher's seventh title."
+          },
+          "powertrain": {
+            "engine": "053",
+            "gearbox_type": "sequenziale",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "designers": [
+            {
+              "slug": "rory-byrne",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "michael-schumacher",
+            "rubens-barrichello"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2004,
+              "season_end": 2004,
+              "drivers_titles": 1,
+              "constructors_titles": 1,
+              "races": 18,
+              "wins": 15,
+              "poles": 12
+            }
+          ]
+        }
+      ],
+      "predecessor": "f2003-ga"
+    },
+    {
+      "slug": "f2005",
+      "name": "F2005",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto di una stagione difficile, con il regolamento che imponeva un solo treno di gomme per gara.",
+        "en": "The car of a difficult season, under rules that allowed only one set of tyres per race."
+      },
+      "versions": [
+        {
+          "slug": "f2005",
+          "name": "F2005",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2005,
+          "year_end": 2005,
+          "in_production": false,
+          "description": {
+            "it": "L'unica vittoria arrivò al Gran Premio degli Stati Uniti, corso con sole sei auto.",
+            "en": "Its only win came at the United States Grand Prix, run with just six cars."
+          },
+          "powertrain": {
+            "engine": "055",
+            "gearbox_type": "sequenziale",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "designers": [
+            {
+              "slug": "aldo-costa",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "michael-schumacher",
+            "rubens-barrichello"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2005,
+              "season_end": 2005,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "races": 17,
+              "wins": 1,
+              "poles": 1
+            }
+          ]
+        }
+      ],
+      "predecessor": "f2004"
+    },
+    {
+      "slug": "248-f1",
+      "name": "248 F1",
+      "category": "formula-1",
+      "description": {
+        "it": "La prima Ferrari con il V8 di 2,4 litri imposto dal nuovo regolamento: 24 per la cilindrata, 8 per i cilindri.",
+        "en": "The first Ferrari with the 2.4-litre V8 required by the new rules: 24 for the displacement, 8 for the cylinders."
+      },
+      "versions": [
+        {
+          "slug": "248-f1",
+          "name": "248 F1",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2006,
+          "year_end": 2006,
+          "in_production": false,
+          "description": {
+            "it": "L'ultima stagione di Michael Schumacher in Ferrari, combattuta fino all'ultima gara.",
+            "en": "Michael Schumacher's last season at Ferrari, fought to the final race."
+          },
+          "powertrain": {
+            "engine": "056",
+            "gearbox_type": "sequenziale",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "designers": [
+            {
+              "slug": "aldo-costa",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "michael-schumacher",
+            "felipe-massa"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2006,
+              "season_end": 2006,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "races": 18,
+              "wins": 9,
+              "poles": 7
+            }
+          ]
+        }
+      ],
+      "predecessor": "f2005"
+    },
+    {
+      "slug": "f2007",
+      "name": "F2007",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto del titolo di Kimi Räikkönen, vinto all'ultima gara con un punto di vantaggio.",
+        "en": "The car of Kimi Räikkönen's title, won at the final race by a single point."
+      },
+      "versions": [
+        {
+          "slug": "f2007",
+          "name": "F2007",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2007,
+          "year_end": 2007,
+          "in_production": false,
+          "description": {
+            "it": "Titolo piloti e costruttori.",
+            "en": "Drivers' and constructors' titles."
+          },
+          "powertrain": {
+            "engine": "056",
+            "gearbox_type": "sequenziale",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "designers": [
+            {
+              "slug": "aldo-costa",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "kimi-raikkonen",
+            "felipe-massa"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2007,
+              "season_end": 2007,
+              "drivers_titles": 1,
+              "constructors_titles": 1,
+              "races": 17,
+              "wins": 9,
+              "poles": 9
+            }
+          ]
+        }
+      ],
+      "predecessor": "248-f1"
+    },
+    {
+      "slug": "f2008",
+      "name": "F2008",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto dell'ultimo titolo costruttori Ferrari, con Felipe Massa campione per pochi secondi a Interlagos.",
+        "en": "The car of Ferrari's last constructors' title, with Felipe Massa champion for a few seconds at Interlagos."
+      },
+      "versions": [
+        {
+          "slug": "f2008",
+          "name": "F2008",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2008,
+          "year_end": 2008,
+          "in_production": false,
+          "description": {
+            "it": "Titolo costruttori; il titolo piloti sfuggì a Massa per un punto.",
+            "en": "Constructors' title; the drivers' title escaped Massa by one point."
+          },
+          "powertrain": {
+            "engine": "056",
+            "gearbox_type": "sequenziale",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "designers": [
+            {
+              "slug": "aldo-costa",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "kimi-raikkonen",
+            "felipe-massa"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2008,
+              "season_end": 2008,
+              "drivers_titles": 0,
+              "constructors_titles": 1,
+              "races": 18,
+              "wins": 8,
+              "poles": 8
+            }
+          ]
+        }
+      ],
+      "predecessor": "f2007"
+    },
+    {
+      "slug": "f60",
+      "name": "F60",
+      "category": "formula-1",
+      "description": {
+        "it": "Il nome celebra la sessantesima stagione di Ferrari in Formula 1.",
+        "en": "The name celebrates Ferrari's sixtieth season in Formula 1."
+      },
+      "versions": [
+        {
+          "slug": "f60",
+          "name": "F60",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2009,
+          "year_end": 2009,
+          "in_production": false,
+          "description": {
+            "it": "L'anno del KERS e delle nuove regole aerodinamiche: una sola vittoria, a Spa.",
+            "en": "The year of KERS and new aerodynamic rules: a single win, at Spa."
+          },
+          "powertrain": {
+            "engine": "056",
+            "gearbox_type": "sequenziale",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "designers": [
+            {
+              "slug": "aldo-costa",
+              "role": "design"
+            }
+          ],
+          "drivers": [
+            "kimi-raikkonen",
+            "felipe-massa",
+            "luca-badoer",
+            "giancarlo-fisichella"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2009,
+              "season_end": 2009,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "races": 17,
+              "wins": 1,
+              "poles": 0
+            }
+          ]
+        }
+      ],
+      "predecessor": "f2008"
+    }
+  ]
+}

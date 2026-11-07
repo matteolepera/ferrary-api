@@ -1,0 +1,336 @@
+{
+  "engines": [
+    {
+      "code": "168/62",
+      "name": "V12 Colombo da corsa",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 2953,
+      "bore_mm": 73,
+      "stroke_mm": 58.8,
+      "aspiration": "aspirato"
+    }
+  ],
+  "designers": [
+    {
+      "slug": "giotto-bizzarrini",
+      "name": "Giotto Bizzarrini",
+      "type": "persona",
+      "country": "IT"
+    }
+  ],
+  "models": [
+    {
+      "slug": "250-gto",
+      "name": "250 GTO",
+      "category": "gt-storiche",
+      "description": {
+        "it": "La Gran Turismo da corsa più famosa di sempre, costruita in trentasei esemplari.",
+        "en": "The most famous racing grand tourer ever, built in thirty-six examples."
+      },
+      "versions": [
+        {
+          "slug": "250-gto",
+          "name": "250 GTO",
+          "vehicle_type": "gt_corsa",
+          "year_start": 1962,
+          "year_end": 1964,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Tre titoli consecutivi nel campionato costruttori GT, dal 1962 al 1964.",
+            "en": "Three consecutive titles in the GT manufacturers' championship, from 1962 to 1964."
+          },
+          "body_type": "coupe",
+          "units_produced": 36,
+          "powertrain": {
+            "engine": "168/62",
+            "ice_power_cv": 300
+          },
+          "designers": [
+            {
+              "slug": "giotto-bizzarrini",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ],
+          "racing": [
+            {
+              "championship": "Campionato internazionale costruttori GT",
+              "season_start": 1962,
+              "season_end": 1964,
+              "drivers_titles": 0,
+              "constructors_titles": 3,
+              "notes": "Titoli nella classe oltre i due litri nel 1962, nel 1963 e nel 1964."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "275-gtb-c",
+      "name": "275 GTB/C",
+      "category": "gt-storiche",
+      "description": {
+        "it": "La versione da corsa della 275 GTB, con la carrozzeria in alluminio sottile.",
+        "en": "The racing version of the 275 GTB, with thin aluminium bodywork."
+      },
+      "versions": [
+        {
+          "slug": "275-gtb-c",
+          "name": "275 GTB/C",
+          "vehicle_type": "gt_corsa",
+          "year_start": 1966,
+          "year_end": 1966,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Dodici esemplari, per i clienti che correvano nella categoria GT.",
+            "en": "Twelve examples, for customers racing in the GT category."
+          },
+          "body_type": "coupe",
+          "units_produced": 12,
+          "powertrain": {
+            "engine": "213"
+          },
+          "designers": [
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ]
+        }
+      ],
+      "predecessor": "250-gto"
+    },
+    {
+      "slug": "365-gtb4-competizione",
+      "name": "365 GTB/4 Competizione",
+      "category": "gt-storiche",
+      "description": {
+        "it": "La Daytona da corsa, costruita in tre serie per le squadre private.",
+        "en": "The racing Daytona, built in three series for private teams."
+      },
+      "versions": [
+        {
+          "slug": "365-gtb4-competizione",
+          "name": "365 GTB/4 Competizione",
+          "vehicle_type": "gt_corsa",
+          "year_start": 1971,
+          "year_end": 1973,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Quindici esemplari, cinque per ogni serie.",
+            "en": "Fifteen examples, five per series."
+          },
+          "body_type": "coupe",
+          "units_produced": 15,
+          "powertrain": {
+            "engine": "251"
+          }
+        }
+      ],
+      "predecessor": "275-gtb-c"
+    },
+    {
+      "slug": "512-bb-lm",
+      "name": "512 BB LM",
+      "category": "gt-storiche",
+      "description": {
+        "it": "La Berlinetta Boxer da corsa, con la carrozzeria allungata per Le Mans.",
+        "en": "The racing Berlinetta Boxer, with bodywork lengthened for Le Mans."
+      },
+      "versions": [
+        {
+          "slug": "512-bb-lm",
+          "name": "512 BB LM",
+          "vehicle_type": "gt_corsa",
+          "year_start": 1978,
+          "year_end": 1982,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Costruita per le squadre private, con il 12 cilindri piatto di cinque litri.",
+            "en": "Built for private teams, with the five-litre flat-twelve."
+          },
+          "body_type": "coupe",
+          "units_produced": 25,
+          "powertrain": {
+            "engine": "F102B"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ],
+      "predecessor": "365-gtb4-competizione"
+    },
+    {
+      "slug": "f40-lm",
+      "name": "F40 LM",
+      "category": "gt-storiche",
+      "description": {
+        "it": "La F40 da corsa preparata da Michelotto per il campionato IMSA e le gare di durata.",
+        "en": "The racing F40 prepared by Michelotto for the IMSA championship and endurance races."
+      },
+      "versions": [
+        {
+          "slug": "f40-lm",
+          "name": "F40 LM",
+          "vehicle_type": "gt_corsa",
+          "year_start": 1989,
+          "year_end": 1994,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Diciannove esemplari.",
+            "en": "Nineteen examples."
+          },
+          "body_type": "coupe",
+          "units_produced": 19,
+          "powertrain": {
+            "engine": "F120A"
+          }
+        }
+      ],
+      "predecessor": "512-bb-lm"
+    },
+    {
+      "slug": "f40-gte",
+      "name": "F40 GTE",
+      "category": "gt-storiche",
+      "description": {
+        "it": "L'ultima evoluzione da corsa della F40, per il campionato BPR e Le Mans.",
+        "en": "The last racing evolution of the F40, for the BPR series and Le Mans."
+      },
+      "versions": [
+        {
+          "slug": "f40-gte",
+          "name": "F40 GTE",
+          "vehicle_type": "gt_corsa",
+          "year_start": 1995,
+          "year_end": 1996,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Preparata da Michelotto, come la F40 LM.",
+            "en": "Prepared by Michelotto, like the F40 LM."
+          },
+          "body_type": "coupe",
+          "powertrain": {
+            "engine": "F120A"
+          }
+        }
+      ],
+      "predecessor": "f40-lm"
+    },
+    {
+      "slug": "f50-gt",
+      "name": "F50 GT",
+      "category": "gt-storiche",
+      "description": {
+        "it": "La F50 da corsa per la classe GT1, il cui programma fu cancellato prima del debutto.",
+        "en": "The racing F50 for the GT1 class, whose programme was cancelled before its debut."
+      },
+      "versions": [
+        {
+          "slug": "f50-gt",
+          "name": "F50 GT",
+          "vehicle_type": "gt_corsa",
+          "year_start": 1996,
+          "year_end": 1996,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Tre esemplari, venduti ai clienti senza aver mai corso.",
+            "en": "Three examples, sold to customers without ever racing."
+          },
+          "body_type": "coupe",
+          "units_produced": 3,
+          "powertrain": {
+            "engine": "F130B",
+            "ice_power_cv": 750
+          }
+        }
+      ],
+      "predecessor": "f40-gte"
+    },
+    {
+      "slug": "550-gts-maranello",
+      "name": "550 GTS Maranello",
+      "category": "gt-storiche",
+      "description": {
+        "it": "La 550 Maranello da corsa sviluppata da Prodrive, senza il supporto ufficiale di Ferrari.",
+        "en": "The racing 550 Maranello developed by Prodrive, without official Ferrari support."
+      },
+      "versions": [
+        {
+          "slug": "550-gts-maranello",
+          "name": "550 GTS Maranello",
+          "vehicle_type": "gt_corsa",
+          "year_start": 2001,
+          "year_end": 2004,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Vinse la classe GTS a Le Mans nel 2003.",
+            "en": "It won the GTS class at Le Mans in 2003."
+          },
+          "body_type": "coupe",
+          "powertrain": {
+            "engine": "F133A"
+          },
+          "racing": [
+            {
+              "championship": "24 Ore di Le Mans, classe GTS",
+              "season_start": 2001,
+              "season_end": 2004,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "wins": 1,
+              "notes": "Vittoria di classe nel 2003."
+            }
+          ]
+        }
+      ],
+      "predecessor": "f50-gt"
+    },
+    {
+      "slug": "575-gtc",
+      "name": "575 GTC",
+      "category": "gt-storiche",
+      "description": {
+        "it": "La 575M da corsa per la classe GT del campionato FIA GT.",
+        "en": "The racing 575M for the GT class of the FIA GT championship."
+      },
+      "versions": [
+        {
+          "slug": "575-gtc",
+          "name": "575 GTC",
+          "vehicle_type": "gt_corsa",
+          "year_start": 2003,
+          "year_end": 2005,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Costruita da Ferrari Corse Clienti, dopo l'esperienza della 550 GTS.",
+            "en": "Built by Ferrari Corse Clienti, after the experience of the 550 GTS."
+          },
+          "body_type": "coupe",
+          "powertrain": {
+            "engine": "F133E"
+          }
+        }
+      ],
+      "predecessor": "550-gts-maranello"
+    }
+  ]
+}

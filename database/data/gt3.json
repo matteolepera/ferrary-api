@@ -1,0 +1,122 @@
+{
+  "models": [
+    {
+      "slug": "458-gt3",
+      "name": "458 Italia GT3",
+      "category": "gt3",
+      "description": {
+        "it": "La prima Ferrari GT3 costruita a Maranello, per i campionati GT di tutto il mondo.",
+        "en": "The first GT3 Ferrari built in Maranello, for GT championships around the world."
+      },
+      "versions": [
+        {
+          "slug": "458-italia-gt3",
+          "name": "458 Italia GT3",
+          "vehicle_type": "gt_corsa",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2011,
+          "in_production": false,
+          "production_type": "serie",
+          "description": {
+            "it": "Corse in decine di campionati, dalla Blancpain alle serie nazionali.",
+            "en": "It raced in dozens of championships, from Blancpain to national series."
+          },
+          "powertrain": {
+            "engine": "F136",
+            "drivetrain": "posteriore",
+            "gearbox_type": "sequenziale",
+            "gears": 6
+          },
+          "year_end": 2015
+        }
+      ]
+    },
+    {
+      "slug": "488-gt3",
+      "name": "488 GT3",
+      "category": "gt3",
+      "description": {
+        "it": "La prima Ferrari GT3 con il V8 turbo.",
+        "en": "The first GT3 Ferrari with the turbo V8."
+      },
+      "versions": [
+        {
+          "slug": "488-gt3",
+          "name": "488 GT3",
+          "vehicle_type": "gt_corsa",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2016,
+          "in_production": false,
+          "production_type": "serie",
+          "description": {
+            "it": "La prima serie.",
+            "en": "The first series."
+          },
+          "powertrain": {
+            "engine": "F154",
+            "drivetrain": "posteriore",
+            "gearbox_type": "sequenziale",
+            "gears": 6
+          },
+          "year_end": 2019
+        },
+        {
+          "slug": "488-gt3-evo-2020",
+          "name": "488 GT3 Evo 2020",
+          "vehicle_type": "gt_corsa",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2020,
+          "in_production": false,
+          "production_type": "serie",
+          "description": {
+            "it": "L'evoluzione con l'aerodinamica e l'elettronica riviste.",
+            "en": "The evolution with revised aerodynamics and electronics."
+          },
+          "powertrain": {
+            "engine": "F154",
+            "drivetrain": "posteriore",
+            "gearbox_type": "sequenziale",
+            "gears": 6
+          },
+          "year_end": 2022
+        }
+      ],
+      "predecessor": "458-gt3"
+    },
+    {
+      "slug": "296-gt3",
+      "name": "296 GT3",
+      "category": "gt3",
+      "description": {
+        "it": "La GT3 con il V6 turbo della 296, senza la parte ibrida, vietata dal regolamento.",
+        "en": "The GT3 with the 296's turbo V6, without the hybrid system, banned by the rules."
+      },
+      "versions": [
+        {
+          "slug": "296-gt3",
+          "name": "296 GT3",
+          "vehicle_type": "gt_corsa",
+          "body_type": "coupe",
+          "seats": 1,
+          "year_start": 2023,
+          "in_production": true,
+          "production_type": "serie",
+          "description": {
+            "it": "Debuttò nel 2023 nei campionati GT3 di tutto il mondo.",
+            "en": "It made its debut in 2023 in GT3 championships around the world."
+          },
+          "powertrain": {
+            "engine": "F163",
+            "drivetrain": "posteriore",
+            "gearbox_type": "sequenziale",
+            "gears": 6
+          }
+        }
+      ],
+      "predecessor": "488-gt3"
+    }
+  ]
+}

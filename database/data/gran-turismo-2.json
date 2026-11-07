@@ -1,0 +1,870 @@
+{
+  "engines": [
+    {
+      "code": "F116B",
+      "name": "V12",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 5474,
+      "bore_mm": 88,
+      "stroke_mm": 75,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F116C",
+      "name": "V12",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 5474,
+      "bore_mm": 88,
+      "stroke_mm": 75,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F133F",
+      "name": "V12",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 5748,
+      "bore_mm": 89,
+      "stroke_mm": 77,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F140EB",
+      "name": "V12",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 6262,
+      "bore_mm": 94,
+      "stroke_mm": 75.2,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F140ED",
+      "name": "V12",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 6262,
+      "bore_mm": 94,
+      "stroke_mm": 75.2,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F140IA",
+      "name": "V12",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 6496,
+      "bore_mm": 94,
+      "stroke_mm": 78,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F136IB",
+      "name": "V8 a iniezione diretta",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 4297,
+      "bore_mm": 94,
+      "stroke_mm": 77.4,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F154BB",
+      "name": "V8 biturbo",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 3855,
+      "bore_mm": 86.5,
+      "stroke_mm": 82,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "F154BH",
+      "name": "V8 biturbo",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 3855,
+      "bore_mm": 86.5,
+      "stroke_mm": 82,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "F154B",
+      "name": "V8 biturbo, famiglia F154 da 3,9 litri",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 3855,
+      "bore_mm": 86.5,
+      "stroke_mm": 82,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    }
+  ],
+  "models": [
+    {
+      "slug": "456",
+      "name": "456",
+      "category": "gran-turismo",
+      "predecessor": "412",
+      "description": {
+        "it": "La 2+2 con il V12 anteriore che riportò Ferrari alle grandi Gran Turismo, dopo la 412.",
+        "en": "The front-V12 2+2 that brought Ferrari back to the grand tourer, after the 412."
+      },
+      "versions": [
+        {
+          "slug": "456-gt",
+          "name": "456 GT",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1992,
+          "year_end": 1997,
+          "sort_order": 1,
+          "description": {
+            "it": "La prima serie, con il cambio manuale a sei marce.",
+            "en": "The first series, with a six-speed manual gearbox."
+          },
+          "powertrain": {
+            "engine": "F116B",
+            "ice_power_cv": 442,
+            "ice_torque_nm": 550,
+            "gearbox_type": "manuale",
+            "gears": 6,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4730,
+            "width_mm": 1920,
+            "height_mm": 1300,
+            "wheelbase_mm": 2600,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "dry_weight_kg": 1690,
+            "top_speed_kmh": 302,
+            "zero_to_100_sec": 5.2
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "456-gta",
+          "name": "456 GTA",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1996,
+          "year_end": 1997,
+          "sort_order": 2,
+          "description": {
+            "it": "La versione con il cambio automatico a quattro marce.",
+            "en": "The version with a four-speed automatic gearbox."
+          },
+          "powertrain": {
+            "engine": "F116B",
+            "ice_power_cv": 442,
+            "ice_torque_nm": 550,
+            "gearbox_type": "automatico",
+            "gears": 4,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4730,
+            "width_mm": 1920,
+            "height_mm": 1300,
+            "wheelbase_mm": 2600,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "456m-gt",
+          "name": "456M GT",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1998,
+          "year_end": 2003,
+          "sort_order": 3,
+          "description": {
+            "it": "La seconda serie, la M sta per \"modificata\": frontale e interni rivisti.",
+            "en": "The second series, the M stands for \"modified\": revised front end and interior."
+          },
+          "powertrain": {
+            "engine": "F116C",
+            "ice_power_cv": 442,
+            "ice_torque_nm": 550,
+            "gearbox_type": "manuale",
+            "gears": 6,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4730,
+            "width_mm": 1920,
+            "height_mm": 1300,
+            "wheelbase_mm": 2600,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 300
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "456m-gta",
+          "name": "456M GTA",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1998,
+          "year_end": 2003,
+          "sort_order": 4,
+          "description": {
+            "it": "La seconda serie con il cambio automatico.",
+            "en": "The second series with the automatic gearbox."
+          },
+          "powertrain": {
+            "engine": "F116C",
+            "ice_power_cv": 442,
+            "ice_torque_nm": 550,
+            "gearbox_type": "automatico",
+            "gears": 4,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4730,
+            "width_mm": 1920,
+            "height_mm": 1300,
+            "wheelbase_mm": 2600,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "612-scaglietti",
+      "name": "612 Scaglietti",
+      "category": "gran-turismo",
+      "predecessor": "456",
+      "description": {
+        "it": "La 2+2 dedicata a Sergio Scaglietti, il carrozziere delle Ferrari degli anni Cinquanta e Sessanta, con telaio e carrozzeria in alluminio.",
+        "en": "The 2+2 named after Sergio Scaglietti, the coachbuilder of 1950s and 1960s Ferraris, with an aluminium chassis and body."
+      },
+      "versions": [
+        {
+          "slug": "612-scaglietti",
+          "name": "612 Scaglietti",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2004,
+          "year_end": 2011,
+          "description": {
+            "it": "Quattro posti veri, con il V12 della 575M arretrato dietro l'asse anteriore.",
+            "en": "Four real seats, with the 575M's V12 set back behind the front axle."
+          },
+          "powertrain": {
+            "engine": "F133F",
+            "ice_power_cv": 540,
+            "ice_torque_nm": 588,
+            "gearbox_type": "robotizzato",
+            "gears": 6,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4902,
+            "width_mm": 1957,
+            "height_mm": 1344,
+            "wheelbase_mm": 2950,
+            "dry_weight_kg": 1840,
+            "chassis_material": "alluminio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 315,
+            "zero_to_100_sec": 4.2
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ff",
+      "name": "FF",
+      "category": "gran-turismo",
+      "predecessor": "612-scaglietti",
+      "description": {
+        "it": "Ferrari Four: quattro posti e, per la prima volta, quattro ruote motrici, con un sistema brevettato da Ferrari.",
+        "en": "Ferrari Four: four seats and, for the first time, four-wheel drive, with a system patented by Ferrari."
+      },
+      "versions": [
+        {
+          "slug": "ff",
+          "name": "FF",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2011,
+          "year_end": 2016,
+          "description": {
+            "it": "Linea da shooting brake e un bagagliaio da vera auto da viaggio.",
+            "en": "Shooting-brake lines and a boot fit for a real touring car."
+          },
+          "powertrain": {
+            "engine": "F140EB",
+            "ice_power_cv": 660,
+            "ice_torque_nm": 683,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "integrale",
+            "ice_max_rpm": 8000
+          },
+          "specs": {
+            "length_mm": 4907,
+            "width_mm": 1953,
+            "height_mm": 1379,
+            "wheelbase_mm": 2990,
+            "dry_weight_kg": 1790,
+            "weight_front_pct": 47,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 335,
+            "zero_to_100_sec": 3.7
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gtc4lusso",
+      "name": "GTC4Lusso",
+      "category": "gran-turismo",
+      "predecessor": "ff",
+      "description": {
+        "it": "L'evoluzione della FF, con le quattro ruote sterzanti, e per la prima volta anche un V8.",
+        "en": "The evolution of the FF, with four-wheel steering, and for the first time a V8 too."
+      },
+      "versions": [
+        {
+          "slug": "gtc4lusso",
+          "name": "GTC4Lusso",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2016,
+          "year_end": 2020,
+          "sort_order": 1,
+          "description": {
+            "it": "Con il V12 e le quattro ruote motrici.",
+            "en": "With the V12 and four-wheel drive."
+          },
+          "powertrain": {
+            "engine": "F140ED",
+            "ice_power_cv": 690,
+            "ice_torque_nm": 697,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "integrale",
+            "ice_max_rpm": 8250
+          },
+          "specs": {
+            "length_mm": 4922,
+            "width_mm": 1980,
+            "height_mm": 1383,
+            "wheelbase_mm": 2990,
+            "dry_weight_kg": 1790,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 335,
+            "zero_to_100_sec": 3.4
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "gtc4lusso-t",
+          "name": "GTC4Lusso T",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2016,
+          "year_end": 2020,
+          "sort_order": 2,
+          "description": {
+            "it": "Con il V8 biturbo e la sola trazione posteriore.",
+            "en": "With the twin-turbo V8 and rear-wheel drive only."
+          },
+          "powertrain": {
+            "engine": "F154B",
+            "ice_power_cv": 610,
+            "ice_torque_nm": 760,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4922,
+            "width_mm": 1980,
+            "height_mm": 1383,
+            "wheelbase_mm": 2990,
+            "dry_weight_kg": 1740,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 320,
+            "zero_to_100_sec": 3.5
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "california",
+      "name": "California",
+      "category": "gran-turismo",
+      "description": {
+        "it": "La prima Ferrari con il V8 anteriore, il tetto rigido ripiegabile e il cambio a doppia frizione.",
+        "en": "The first Ferrari with a front-mounted V8, a folding hardtop and a dual-clutch gearbox."
+      },
+      "versions": [
+        {
+          "slug": "california",
+          "name": "California",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 2008,
+          "year_end": 2014,
+          "sort_order": 1,
+          "description": {
+            "it": "La prima serie, con il V8 aspirato a iniezione diretta.",
+            "en": "The first series, with the naturally aspirated direct-injection V8."
+          },
+          "powertrain": {
+            "engine": "F136IB",
+            "ice_power_cv": 460,
+            "ice_torque_nm": 485,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore",
+            "ice_max_rpm": 8000
+          },
+          "specs": {
+            "length_mm": 4563,
+            "width_mm": 1902,
+            "height_mm": 1308,
+            "wheelbase_mm": 2670,
+            "dry_weight_kg": 1630,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 310,
+            "zero_to_100_sec": 4.0
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "california-t",
+          "name": "California T",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 2014,
+          "year_end": 2017,
+          "sort_order": 2,
+          "description": {
+            "it": "Il ritorno del turbo su una Ferrari V8 stradale, per la prima volta dalla F40.",
+            "en": "The return of turbocharging to a road-going Ferrari V8, for the first time since the F40."
+          },
+          "powertrain": {
+            "engine": "F154BB",
+            "ice_power_cv": 560,
+            "ice_torque_nm": 755,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore",
+            "ice_max_rpm": 7500
+          },
+          "specs": {
+            "length_mm": 4570,
+            "width_mm": 1910,
+            "height_mm": 1322,
+            "wheelbase_mm": 2670,
+            "dry_weight_kg": 1625,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 316,
+            "zero_to_100_sec": 3.6
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "portofino",
+      "name": "Portofino",
+      "category": "gran-turismo",
+      "predecessor": "california",
+      "description": {
+        "it": "L'erede della California: più leggera, più potente, con un nome preso dalla Riviera ligure.",
+        "en": "The California's successor: lighter, more powerful, named after the Ligurian Riviera."
+      },
+      "versions": [
+        {
+          "slug": "portofino",
+          "name": "Portofino",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 2017,
+          "year_end": 2020,
+          "sort_order": 1,
+          "description": {
+            "it": "La prima serie, con il cambio a sette marce.",
+            "en": "The first series, with a seven-speed gearbox."
+          },
+          "powertrain": {
+            "engine": "F154B",
+            "ice_power_cv": 600,
+            "ice_torque_nm": 760,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4586,
+            "width_mm": 1938,
+            "height_mm": 1318,
+            "wheelbase_mm": 2670,
+            "dry_weight_kg": 1545,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 320,
+            "zero_to_100_sec": 3.5,
+            "zero_to_200_sec": 10.8
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "portofino-m",
+          "name": "Portofino M",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 2020,
+          "year_end": 2023,
+          "sort_order": 2,
+          "description": {
+            "it": "La M sta per \"modificata\": più potenza e il cambio a otto marce della SF90.",
+            "en": "The M stands for \"modified\": more power and the SF90's eight-speed gearbox."
+          },
+          "powertrain": {
+            "engine": "F154B",
+            "ice_power_cv": 620,
+            "ice_torque_nm": 760,
+            "gearbox_type": "doppia_frizione",
+            "gears": 8,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4594,
+            "width_mm": 1938,
+            "height_mm": 1318,
+            "wheelbase_mm": 2670,
+            "dry_weight_kg": 1545,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 320,
+            "zero_to_100_sec": 3.45,
+            "zero_to_200_sec": 9.8
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "roma",
+      "name": "Roma",
+      "category": "gran-turismo",
+      "predecessor": "portofino",
+      "description": {
+        "it": "La Gran Turismo ispirata alla \"dolce vita\" degli anni Cinquanta e Sessanta, senza prese d'aria aggressive.",
+        "en": "The grand tourer inspired by the \"dolce vita\" of the 1950s and 1960s, without aggressive air intakes."
+      },
+      "versions": [
+        {
+          "slug": "roma",
+          "name": "Roma",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": true,
+          "body_type": "coupe",
+          "year_start": 2020,
+          "sort_order": 1,
+          "description": {
+            "it": "La coupé 2+2, con il frontale senza griglia tradizionale.",
+            "en": "The 2+2 coupé, with a front end without a traditional grille."
+          },
+          "powertrain": {
+            "engine": "F154BH",
+            "ice_power_cv": 620,
+            "ice_torque_nm": 760,
+            "gearbox_type": "doppia_frizione",
+            "gears": 8,
+            "drivetrain": "posteriore",
+            "ice_max_rpm": 7500
+          },
+          "specs": {
+            "length_mm": 4656,
+            "width_mm": 1974,
+            "height_mm": 1301,
+            "wheelbase_mm": 2670,
+            "dry_weight_kg": 1472,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 320,
+            "zero_to_100_sec": 3.4,
+            "zero_to_200_sec": 9.3
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "roma-spider",
+          "name": "Roma Spider",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": true,
+          "body_type": "spider",
+          "year_start": 2023,
+          "sort_order": 2,
+          "description": {
+            "it": "Il ritorno della capote in tela su una Ferrari a motore anteriore, dopo oltre cinquant'anni.",
+            "en": "The return of a fabric roof on a front-engined Ferrari, after more than fifty years."
+          },
+          "powertrain": {
+            "engine": "F154BH",
+            "ice_power_cv": 620,
+            "ice_torque_nm": 760,
+            "gearbox_type": "doppia_frizione",
+            "gears": 8,
+            "drivetrain": "posteriore",
+            "ice_max_rpm": 7500
+          },
+          "specs": {
+            "length_mm": 4656,
+            "width_mm": 1974,
+            "wheelbase_mm": 2670,
+            "dry_weight_kg": 1556,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 320,
+            "zero_to_100_sec": 3.4,
+            "zero_to_200_sec": 9.0
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "purosangue",
+      "name": "Purosangue",
+      "category": "gran-turismo",
+      "description": {
+        "it": "La prima Ferrari a quattro porte e quattro posti, con il V12 aspirato: Ferrari evita di chiamarla SUV.",
+        "en": "The first four-door, four-seat Ferrari, with a naturally aspirated V12: Ferrari avoids calling it an SUV."
+      },
+      "versions": [
+        {
+          "slug": "purosangue",
+          "name": "Purosangue",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": true,
+          "body_type": "suv",
+          "year_start": 2022,
+          "description": {
+            "it": "Le porte posteriori si aprono controvento, e le sospensioni sono attive.",
+            "en": "The rear doors are rear-hinged, and the suspension is active."
+          },
+          "powertrain": {
+            "engine": "F140IA",
+            "ice_power_cv": 725,
+            "ice_torque_nm": 716,
+            "gearbox_type": "doppia_frizione",
+            "gears": 8,
+            "drivetrain": "integrale",
+            "ice_max_rpm": 8250
+          },
+          "specs": {
+            "length_mm": 4973,
+            "width_mm": 2028,
+            "height_mm": 1589,
+            "wheelbase_mm": 3018,
+            "dry_weight_kg": 2033,
+            "weight_front_pct": 49,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 310,
+            "zero_to_100_sec": 3.3,
+            "zero_to_200_sec": 10.6
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

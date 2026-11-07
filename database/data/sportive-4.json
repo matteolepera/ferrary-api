@@ -1,0 +1,858 @@
+{
+  "engines": [
+    {
+      "code": "213",
+      "name": "V12 Colombo",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 3286,
+      "bore_mm": 77,
+      "stroke_mm": 58.8,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "226",
+      "name": "V12 Colombo quattro alberi",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 3286,
+      "bore_mm": 77,
+      "stroke_mm": 58.8,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "251",
+      "name": "V12 quattro alberi",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 4390,
+      "bore_mm": 81,
+      "stroke_mm": 71,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F133A",
+      "name": "V12",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 5474,
+      "bore_mm": 88,
+      "stroke_mm": 75,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F133E",
+      "name": "V12",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 5748,
+      "bore_mm": 89,
+      "stroke_mm": 77,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F140C",
+      "name": "V12",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 5999,
+      "bore_mm": 92,
+      "stroke_mm": 75.2,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F140FC",
+      "name": "V12",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 6262,
+      "bore_mm": 94,
+      "stroke_mm": 75.2,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F140GA",
+      "name": "V12",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 6496,
+      "bore_mm": 94,
+      "stroke_mm": 78,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F140HD",
+      "name": "V12",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 6496,
+      "bore_mm": 94,
+      "stroke_mm": 78,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    }
+  ],
+  "models": [
+    {
+      "slug": "275",
+      "name": "275",
+      "category": "sportive",
+      "description": {
+        "it": "La prima Ferrari stradale con il cambio al retrotreno e le sospensioni posteriori indipendenti.",
+        "en": "The first road-going Ferrari with a rear transaxle and independent rear suspension."
+      },
+      "versions": [
+        {
+          "slug": "275-gtb",
+          "name": "275 GTB",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1964,
+          "year_end": 1966,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, prima con il muso corto e poi con quello lungo.",
+            "en": "The berlinetta, first with a short nose and later with a long one."
+          },
+          "powertrain": {
+            "engine": "213",
+            "ice_power_cv": 280,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_torque_nm": 294
+          },
+          "specs": {
+            "length_mm": 4325,
+            "width_mm": 1725,
+            "height_mm": 1245,
+            "wheelbase_mm": 2400,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 250
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ]
+        },
+        {
+          "slug": "275-gts",
+          "name": "275 GTS",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 1964,
+          "year_end": 1966,
+          "units_produced": 200,
+          "sort_order": 2,
+          "description": {
+            "it": "La spider, più orientata al turismo che alla velocità.",
+            "en": "The spider, aimed more at touring than at speed."
+          },
+          "powertrain": {
+            "engine": "213",
+            "ice_power_cv": 260,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2400,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "275-gtb-4",
+          "name": "275 GTB/4",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1966,
+          "year_end": 1968,
+          "units_produced": 330,
+          "sort_order": 3,
+          "description": {
+            "it": "La prima Ferrari stradale con quattro alberi a camme in testa.",
+            "en": "The first road-going Ferrari with four overhead camshafts."
+          },
+          "powertrain": {
+            "engine": "226",
+            "ice_power_cv": 300,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "length_mm": 4325,
+            "width_mm": 1725,
+            "height_mm": 1245,
+            "wheelbase_mm": 2400,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 268
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "365-gtb4",
+      "name": "365 GTB/4 Daytona",
+      "category": "sportive",
+      "predecessor": "275",
+      "description": {
+        "it": "Il soprannome Daytona viene dalla tripletta Ferrari alla 24 Ore del 1967. L'ultima grande berlinetta V12 anteriore prima della Boxer.",
+        "en": "The Daytona nickname comes from Ferrari's 1-2-3 at the 1967 24 Hours. The last great front-V12 berlinetta before the Boxer."
+      },
+      "versions": [
+        {
+          "slug": "365-gtb4",
+          "name": "365 GTB/4",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1968,
+          "year_end": 1973,
+          "units_produced": 1284,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, con i fari dietro una fascia in plexiglas e poi a scomparsa.",
+            "en": "The berlinetta, with headlights behind a Plexiglas band and later pop-ups."
+          },
+          "powertrain": {
+            "engine": "251",
+            "ice_power_cv": 352,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_torque_nm": 431
+          },
+          "specs": {
+            "length_mm": 4425,
+            "width_mm": 1760,
+            "height_mm": 1245,
+            "wheelbase_mm": 2400,
+            "dry_weight_kg": 1200,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 280
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            },
+            {
+              "slug": "leonardo-fioravanti",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "365-gts4",
+          "name": "365 GTS/4",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 1969,
+          "year_end": 1973,
+          "units_produced": 122,
+          "sort_order": 2,
+          "description": {
+            "it": "La spider, oggi una delle Ferrari più ricercate dai collezionisti.",
+            "en": "The spider, today one of the Ferraris most sought after by collectors."
+          },
+          "powertrain": {
+            "engine": "251",
+            "ice_power_cv": 352,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_torque_nm": 431
+          },
+          "specs": {
+            "length_mm": 4425,
+            "width_mm": 1760,
+            "wheelbase_mm": 2400,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            },
+            {
+              "slug": "leonardo-fioravanti",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "550",
+      "name": "550",
+      "category": "sportive",
+      "predecessor": "testarossa",
+      "description": {
+        "it": "Il ritorno del V12 anteriore sulla berlinetta di punta, dopo vent'anni di motori centrali.",
+        "en": "The return of the front V12 to the flagship berlinetta, after twenty years of mid-engines."
+      },
+      "versions": [
+        {
+          "slug": "550-maranello",
+          "name": "550 Maranello",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1996,
+          "year_end": 2002,
+          "units_produced": 3083,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, con il nome della città di Ferrari.",
+            "en": "The berlinetta, named after Ferrari's home town."
+          },
+          "powertrain": {
+            "engine": "F133A",
+            "ice_power_cv": 485,
+            "gearbox_type": "manuale",
+            "gears": 6,
+            "drivetrain": "posteriore",
+            "ice_torque_nm": 568
+          },
+          "specs": {
+            "length_mm": 4550,
+            "width_mm": 1935,
+            "height_mm": 1277,
+            "wheelbase_mm": 2500,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "dry_weight_kg": 1690,
+            "top_speed_kmh": 320,
+            "zero_to_100_sec": 4.4
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "550-barchetta-pininfarina",
+          "name": "550 Barchetta Pininfarina",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "barchetta",
+          "year_start": 2000,
+          "year_end": 2001,
+          "units_produced": 448,
+          "sort_order": 2,
+          "description": {
+            "it": "La barchetta per i settant'anni di Pininfarina, con una capote solo provvisoria.",
+            "en": "The barchetta for Pininfarina's 70th anniversary, with only a temporary soft top."
+          },
+          "powertrain": {
+            "engine": "F133A",
+            "ice_power_cv": 485,
+            "gearbox_type": "manuale",
+            "gears": 6,
+            "drivetrain": "posteriore",
+            "ice_torque_nm": 568
+          },
+          "specs": {
+            "length_mm": 4550,
+            "width_mm": 1935,
+            "wheelbase_mm": 2500,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 300
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "575m",
+      "name": "575M",
+      "category": "sportive",
+      "predecessor": "550",
+      "description": {
+        "it": "L'evoluzione della 550: la M sta per \"modificata\", con un V12 più grande e il cambio F1 a richiesta.",
+        "en": "The evolution of the 550: the M stands for \"modified\", with a bigger V12 and an optional F1 gearbox."
+      },
+      "versions": [
+        {
+          "slug": "575m-maranello",
+          "name": "575M Maranello",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2002,
+          "year_end": 2006,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta.",
+            "en": "The berlinetta."
+          },
+          "powertrain": {
+            "engine": "F133E",
+            "ice_power_cv": 515,
+            "gearbox_type": "manuale",
+            "gears": 6,
+            "drivetrain": "posteriore",
+            "ice_torque_nm": 588
+          },
+          "specs": {
+            "length_mm": 4550,
+            "width_mm": 1935,
+            "height_mm": 1277,
+            "wheelbase_mm": 2500,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "dry_weight_kg": 1730,
+            "top_speed_kmh": 325,
+            "zero_to_100_sec": 4.2
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "superamerica",
+          "name": "Superamerica",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "targa",
+          "year_start": 2005,
+          "year_end": 2006,
+          "units_produced": 559,
+          "sort_order": 2,
+          "description": {
+            "it": "Con il tetto in vetro elettrocromico che ruota all'indietro di 180 gradi.",
+            "en": "With an electrochromic glass roof that rotates backwards through 180 degrees."
+          },
+          "powertrain": {
+            "engine": "F133E",
+            "ice_power_cv": 540,
+            "gearbox_type": "manuale",
+            "gears": 6,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2500,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "599",
+      "name": "599",
+      "category": "sportive",
+      "predecessor": "575m",
+      "description": {
+        "it": "La berlinetta V12 con il motore della Enzo, e la prima Ferrari con il controllo di trazione F1-Trac.",
+        "en": "The V12 berlinetta with the Enzo's engine, and the first Ferrari with F1-Trac traction control."
+      },
+      "versions": [
+        {
+          "slug": "599-gtb-fiorano",
+          "name": "599 GTB Fiorano",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2006,
+          "year_end": 2012,
+          "sort_order": 1,
+          "description": {
+            "it": "Il nome ricorda la pista di prova di Ferrari, dove è stata messa a punto.",
+            "en": "The name recalls Ferrari's test track, where it was developed."
+          },
+          "powertrain": {
+            "engine": "F140C",
+            "ice_power_cv": 620,
+            "gearbox_type": "robotizzato",
+            "gears": 6,
+            "drivetrain": "posteriore",
+            "ice_torque_nm": 608
+          },
+          "specs": {
+            "length_mm": 4665,
+            "width_mm": 1962,
+            "height_mm": 1336,
+            "wheelbase_mm": 2750,
+            "dry_weight_kg": 1580,
+            "weight_front_pct": 47,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 330,
+            "zero_to_100_sec": 3.7,
+            "fiorano_lap_sec": 84.0
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "f12",
+      "name": "F12",
+      "category": "sportive",
+      "predecessor": "599",
+      "description": {
+        "it": "La V12 anteriore con l'aerodinamica attiva e il condotto che attraversa il cofano, l'Aero Bridge.",
+        "en": "The front-V12 with active aerodynamics and the duct that runs through the bonnet, the Aero Bridge."
+      },
+      "versions": [
+        {
+          "slug": "f12berlinetta",
+          "name": "F12berlinetta",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2012,
+          "year_end": 2017,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, la Ferrari stradale più potente del suo tempo.",
+            "en": "The berlinetta, the most powerful road-going Ferrari of its time."
+          },
+          "powertrain": {
+            "engine": "F140FC",
+            "ice_power_cv": 740,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore",
+            "ice_torque_nm": 690,
+            "ice_max_rpm": 8700
+          },
+          "specs": {
+            "length_mm": 4618,
+            "width_mm": 1942,
+            "height_mm": 1273,
+            "wheelbase_mm": 2720,
+            "dry_weight_kg": 1525,
+            "weight_front_pct": 46,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "top_speed_kmh": 340,
+            "zero_to_100_sec": 3.1,
+            "zero_to_200_sec": 8.5,
+            "fiorano_lap_sec": 83.0
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "812",
+      "name": "812",
+      "category": "sportive",
+      "predecessor": "f12",
+      "description": {
+        "it": "800 cv e 12 cilindri: il V12 aspirato più potente mai montato su una Ferrari di serie.",
+        "en": "800 cv and 12 cylinders: the most powerful naturally aspirated V12 ever fitted to a series-production Ferrari."
+      },
+      "versions": [
+        {
+          "slug": "812-superfast",
+          "name": "812 Superfast",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 2017,
+          "year_end": 2022,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, la prima Ferrari con lo sterzo elettrico.",
+            "en": "The berlinetta, the first Ferrari with electric power steering."
+          },
+          "powertrain": {
+            "engine": "F140GA",
+            "ice_power_cv": 800,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore",
+            "ice_torque_nm": 718,
+            "ice_max_rpm": 8900
+          },
+          "specs": {
+            "length_mm": 4657,
+            "width_mm": 1971,
+            "wheelbase_mm": 2720,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "height_mm": 1276,
+            "dry_weight_kg": 1525,
+            "weight_front_pct": 47,
+            "top_speed_kmh": 340,
+            "zero_to_100_sec": 2.9,
+            "zero_to_200_sec": 7.9
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "812-gts",
+          "name": "812 GTS",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 2020,
+          "year_end": 2022,
+          "sort_order": 2,
+          "description": {
+            "it": "La prima spider V12 anteriore di serie dai tempi della 365 GTS/4.",
+            "en": "The first series-production front-V12 spider since the 365 GTS/4."
+          },
+          "powertrain": {
+            "engine": "F140GA",
+            "ice_power_cv": 800,
+            "gearbox_type": "doppia_frizione",
+            "gears": 7,
+            "drivetrain": "posteriore",
+            "ice_torque_nm": 718,
+            "ice_max_rpm": 8900
+          },
+          "specs": {
+            "length_mm": 4657,
+            "width_mm": 1971,
+            "wheelbase_mm": 2720,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "dry_weight_kg": 1645,
+            "top_speed_kmh": 340,
+            "zero_to_100_sec": 3.0,
+            "zero_to_200_sec": 8.3
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "12cilindri",
+      "name": "12Cilindri",
+      "category": "sportive",
+      "predecessor": "812",
+      "description": {
+        "it": "La V12 anteriore con il frontale ispirato alla 365 GTB/4 Daytona e un nome che è una dichiarazione.",
+        "en": "The front-V12 with a front end inspired by the 365 GTB/4 Daytona and a name that is a statement."
+      },
+      "versions": [
+        {
+          "slug": "12cilindri",
+          "name": "12Cilindri",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": true,
+          "body_type": "coupe",
+          "year_start": 2024,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta, con il cambio a doppia frizione a otto marce.",
+            "en": "The berlinetta, with an eight-speed dual-clutch gearbox."
+          },
+          "powertrain": {
+            "engine": "F140HD",
+            "ice_power_cv": 830,
+            "gearbox_type": "doppia_frizione",
+            "gears": 8,
+            "drivetrain": "posteriore",
+            "ice_torque_nm": 678,
+            "ice_max_rpm": 9500
+          },
+          "specs": {
+            "length_mm": 4733,
+            "height_mm": 1292,
+            "wheelbase_mm": 2700,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "dry_weight_kg": 1560,
+            "top_speed_kmh": 340,
+            "zero_to_100_sec": 2.9,
+            "zero_to_200_sec": 7.9
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "12cilindri-spider",
+          "name": "12Cilindri Spider",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": true,
+          "body_type": "spider",
+          "year_start": 2024,
+          "sort_order": 2,
+          "description": {
+            "it": "La spider, con il tetto rigido che si apre in 14 secondi.",
+            "en": "The spider, with a hardtop that opens in 14 seconds."
+          },
+          "powertrain": {
+            "engine": "F140HD",
+            "ice_power_cv": 830,
+            "gearbox_type": "doppia_frizione",
+            "gears": 8,
+            "drivetrain": "posteriore",
+            "ice_torque_nm": 678,
+            "ice_max_rpm": 9500
+          },
+          "specs": {
+            "length_mm": 4733,
+            "height_mm": 1292,
+            "wheelbase_mm": 2700,
+            "chassis_material": "alluminio",
+            "brakes": "carboceramici",
+            "dry_weight_kg": 1620,
+            "top_speed_kmh": 340,
+            "zero_to_100_sec": 2.95,
+            "zero_to_200_sec": 8.2
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            },
+            {
+              "slug": "flavio-manzoni",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

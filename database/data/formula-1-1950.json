@@ -1,0 +1,698 @@
+{
+  "engines": [
+    {
+      "code": "125",
+      "name": "V12 Colombo con compressore",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 1497,
+      "aspiration": "compressore"
+    },
+    {
+      "code": "375",
+      "name": "V12 Lampredi",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 4494,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "500",
+      "name": "4 cilindri in linea Lampredi",
+      "architecture": "in_linea",
+      "cylinders": 4,
+      "displacement_cc": 1985,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "625",
+      "name": "4 cilindri in linea Lampredi, famiglia da 2,5 litri",
+      "architecture": "in_linea",
+      "cylinders": 4,
+      "displacement_cc": 2498,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "DS50",
+      "name": "V8 Lancia, famiglia D50",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 2488,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "246",
+      "name": "V6 Dino, famiglia da 2,4 litri",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 6,
+      "displacement_cc": 2417,
+      "aspiration": "aspirato"
+    }
+  ],
+  "designers": [
+    {
+      "slug": "gioachino-colombo",
+      "name": "Gioachino Colombo",
+      "type": "persona",
+      "country": "IT"
+    },
+    {
+      "slug": "aurelio-lampredi",
+      "name": "Aurelio Lampredi",
+      "type": "persona",
+      "country": "IT"
+    },
+    {
+      "slug": "vittorio-jano",
+      "name": "Vittorio Jano",
+      "type": "persona",
+      "country": "IT"
+    }
+  ],
+  "drivers": [
+    {
+      "slug": "alberto-ascari",
+      "first_name": "Alberto",
+      "last_name": "Ascari",
+      "nationality": "IT",
+      "birth_date": "1918-07-13"
+    },
+    {
+      "slug": "luigi-villoresi",
+      "first_name": "Luigi",
+      "last_name": "Villoresi",
+      "nationality": "IT",
+      "birth_date": "1909-05-16"
+    },
+    {
+      "slug": "raymond-sommer",
+      "first_name": "Raymond",
+      "last_name": "Sommer",
+      "nationality": "FR",
+      "birth_date": "1906-08-31"
+    },
+    {
+      "slug": "jose-froilan-gonzalez",
+      "first_name": "José Froilán",
+      "last_name": "González",
+      "nationality": "AR",
+      "birth_date": "1922-10-05"
+    },
+    {
+      "slug": "piero-taruffi",
+      "first_name": "Piero",
+      "last_name": "Taruffi",
+      "nationality": "IT",
+      "birth_date": "1906-10-12"
+    },
+    {
+      "slug": "nino-farina",
+      "first_name": "Nino",
+      "last_name": "Farina",
+      "nationality": "IT",
+      "birth_date": "1906-10-30"
+    },
+    {
+      "slug": "mike-hawthorn",
+      "first_name": "Mike",
+      "last_name": "Hawthorn",
+      "nationality": "GB",
+      "birth_date": "1929-04-10"
+    },
+    {
+      "slug": "juan-manuel-fangio",
+      "first_name": "Juan Manuel",
+      "last_name": "Fangio",
+      "nationality": "AR",
+      "birth_date": "1911-06-24"
+    },
+    {
+      "slug": "peter-collins",
+      "first_name": "Peter",
+      "last_name": "Collins",
+      "nationality": "GB",
+      "birth_date": "1931-11-06"
+    },
+    {
+      "slug": "luigi-musso",
+      "first_name": "Luigi",
+      "last_name": "Musso",
+      "nationality": "IT",
+      "birth_date": "1924-07-28"
+    },
+    {
+      "slug": "eugenio-castellotti",
+      "first_name": "Eugenio",
+      "last_name": "Castellotti",
+      "nationality": "IT",
+      "birth_date": "1930-10-10"
+    },
+    {
+      "slug": "maurice-trintignant",
+      "first_name": "Maurice",
+      "last_name": "Trintignant",
+      "nationality": "FR",
+      "birth_date": "1917-10-30"
+    },
+    {
+      "slug": "tony-brooks",
+      "first_name": "Tony",
+      "last_name": "Brooks",
+      "nationality": "GB",
+      "birth_date": "1932-02-25"
+    },
+    {
+      "slug": "dan-gurney",
+      "first_name": "Dan",
+      "last_name": "Gurney",
+      "nationality": "US",
+      "birth_date": "1931-04-13"
+    },
+    {
+      "slug": "jean-behra",
+      "first_name": "Jean",
+      "last_name": "Behra",
+      "nationality": "FR",
+      "birth_date": "1921-02-16"
+    },
+    {
+      "slug": "cliff-allison",
+      "first_name": "Cliff",
+      "last_name": "Allison",
+      "nationality": "GB",
+      "birth_date": "1932-02-08"
+    }
+  ],
+  "models": [
+    {
+      "slug": "125-f1",
+      "name": "125 F1",
+      "category": "formula-1",
+      "description": {
+        "it": "La prima Ferrari da Gran Premio, con il V12 di un litro e mezzo sovralimentato.",
+        "en": "The first Ferrari Grand Prix car, with the supercharged 1.5-litre V12."
+      },
+      "versions": [
+        {
+          "slug": "125-f1",
+          "name": "125 F1",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1950,
+          "year_end": 1950,
+          "in_production": false,
+          "description": {
+            "it": "Corse nel primo mondiale di Formula 1, quello del 1950, senza vittorie.",
+            "en": "It raced in the first Formula 1 world championship, in 1950, without wins."
+          },
+          "powertrain": {
+            "engine": "125",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "acciaio",
+            "brakes": "tamburo"
+          },
+          "drivers": [
+            "alberto-ascari",
+            "luigi-villoresi",
+            "raymond-sommer"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1950,
+              "season_end": 1950,
+              "wins": 0,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "notes": "Corse anche prima del mondiale, nel 1948 e nel 1949, quando i Gran Premi non assegnavano ancora un titolo."
+            }
+          ],
+          "designers": [
+            {
+              "slug": "gioachino-colombo",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "375-f1",
+      "name": "375 F1",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto della prima vittoria Ferrari nel mondiale, a Silverstone nel 1951.",
+        "en": "The car of Ferrari's first world championship win, at Silverstone in 1951."
+      },
+      "versions": [
+        {
+          "slug": "375-f1",
+          "name": "375 F1",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1950,
+          "year_end": 1951,
+          "in_production": false,
+          "description": {
+            "it": "Tre vittorie nel 1951: González in Gran Bretagna, Ascari in Germania e in Italia.",
+            "en": "Three wins in 1951: González in Britain, Ascari in Germany and Italy."
+          },
+          "powertrain": {
+            "engine": "375",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "acciaio",
+            "brakes": "tamburo"
+          },
+          "drivers": [
+            "alberto-ascari",
+            "luigi-villoresi",
+            "jose-froilan-gonzalez",
+            "piero-taruffi"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1950,
+              "season_end": 1951,
+              "wins": 3,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ],
+          "designers": [
+            {
+              "slug": "aurelio-lampredi",
+              "role": "design"
+            }
+          ]
+        }
+      ],
+      "predecessor": "125-f1"
+    },
+    {
+      "slug": "500-f2",
+      "name": "500 F2",
+      "category": "formula-1",
+      "description": {
+        "it": "Nata per la Formula 2, vinse due mondiali quando il campionato si corse con quelle regole.",
+        "en": "Built for Formula 2, it won two world championships when the series was run to those rules."
+      },
+      "versions": [
+        {
+          "slug": "500-f2",
+          "name": "500 F2",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1952,
+          "year_end": 1953,
+          "in_production": false,
+          "description": {
+            "it": "Alberto Ascari campione nel 1952 e nel 1953, con nove vittorie consecutive.",
+            "en": "Alberto Ascari champion in 1952 and 1953, with nine consecutive wins."
+          },
+          "powertrain": {
+            "engine": "500",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "acciaio",
+            "brakes": "tamburo"
+          },
+          "drivers": [
+            "alberto-ascari",
+            "luigi-villoresi",
+            "piero-taruffi",
+            "nino-farina",
+            "mike-hawthorn"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1952,
+              "season_end": 1953,
+              "wins": 14,
+              "drivers_titles": 2,
+              "constructors_titles": 0,
+              "notes": "Sette vittorie per stagione. Il mondiale del 1952 e del 1953 si corse con le regole della Formula 2."
+            }
+          ],
+          "designers": [
+            {
+              "slug": "aurelio-lampredi",
+              "role": "design"
+            }
+          ]
+        }
+      ],
+      "predecessor": "375-f1"
+    },
+    {
+      "slug": "625-f1",
+      "name": "625 F1",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto a quattro cilindri della nuova formula da due litri e mezzo.",
+        "en": "The four-cylinder car of the new two-and-a-half-litre formula."
+      },
+      "versions": [
+        {
+          "slug": "625-f1",
+          "name": "625 F1",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1954,
+          "year_end": 1955,
+          "in_production": false,
+          "description": {
+            "it": "Due vittorie: González a Silverstone nel 1954 e Trintignant a Monaco nel 1955.",
+            "en": "Two wins: González at Silverstone in 1954 and Trintignant in Monaco in 1955."
+          },
+          "powertrain": {
+            "engine": "625",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "acciaio",
+            "brakes": "tamburo"
+          },
+          "drivers": [
+            "jose-froilan-gonzalez",
+            "mike-hawthorn",
+            "maurice-trintignant",
+            "nino-farina"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1954,
+              "season_end": 1955,
+              "wins": 2,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ],
+          "designers": [
+            {
+              "slug": "aurelio-lampredi",
+              "role": "design"
+            }
+          ]
+        }
+      ],
+      "predecessor": "500-f2"
+    },
+    {
+      "slug": "553-f1",
+      "name": "553 F1",
+      "category": "formula-1",
+      "description": {
+        "it": "La \"Squalo\", con i serbatoi laterali che le davano la forma da cui prese il nome.",
+        "en": "The \"Squalo\", with side fuel tanks giving it the shape that named it."
+      },
+      "versions": [
+        {
+          "slug": "553-f1",
+          "name": "553 F1",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1954,
+          "year_end": 1954,
+          "in_production": false,
+          "description": {
+            "it": "Una vittoria, di Mike Hawthorn in Spagna.",
+            "en": "One win, for Mike Hawthorn in Spain."
+          },
+          "powertrain": {
+            "engine": "625",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "acciaio",
+            "brakes": "tamburo"
+          },
+          "drivers": [
+            "mike-hawthorn",
+            "jose-froilan-gonzalez",
+            "nino-farina"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1954,
+              "season_end": 1954,
+              "wins": 1,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ],
+          "designers": [
+            {
+              "slug": "aurelio-lampredi",
+              "role": "design"
+            }
+          ]
+        }
+      ],
+      "predecessor": "500-f2"
+    },
+    {
+      "slug": "555-f1",
+      "name": "555 F1",
+      "category": "formula-1",
+      "description": {
+        "it": "La \"Supersqualo\", l'evoluzione della 553.",
+        "en": "The \"Supersqualo\", the evolution of the 553."
+      },
+      "versions": [
+        {
+          "slug": "555-f1",
+          "name": "555 F1",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1955,
+          "year_end": 1955,
+          "in_production": false,
+          "description": {
+            "it": "Una stagione senza vittorie.",
+            "en": "A season without wins."
+          },
+          "powertrain": {
+            "engine": "625",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "acciaio",
+            "brakes": "tamburo"
+          },
+          "drivers": [
+            "eugenio-castellotti",
+            "maurice-trintignant",
+            "mike-hawthorn"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1955,
+              "season_end": 1955,
+              "wins": 0,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ],
+          "designers": [
+            {
+              "slug": "aurelio-lampredi",
+              "role": "design"
+            }
+          ]
+        }
+      ],
+      "predecessor": "553-f1"
+    },
+    {
+      "slug": "d50",
+      "name": "D50",
+      "category": "formula-1",
+      "description": {
+        "it": "Nata come Lancia, passò a Ferrari nel 1955 con tutto il materiale della squadra Lancia: con lei Fangio vinse il suo quarto titolo.",
+        "en": "Born a Lancia, it passed to Ferrari in 1955 with all of Lancia's racing equipment: with it Fangio won his fourth title."
+      },
+      "versions": [
+        {
+          "slug": "d50",
+          "name": "D50",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1956,
+          "year_end": 1956,
+          "in_production": false,
+          "description": {
+            "it": "Cinque vittorie e il titolo piloti di Juan Manuel Fangio.",
+            "en": "Five wins and Juan Manuel Fangio's drivers' title."
+          },
+          "powertrain": {
+            "engine": "DS50",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "acciaio",
+            "brakes": "tamburo"
+          },
+          "drivers": [
+            "juan-manuel-fangio",
+            "peter-collins",
+            "luigi-musso",
+            "eugenio-castellotti"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1956,
+              "season_end": 1956,
+              "wins": 5,
+              "drivers_titles": 1,
+              "constructors_titles": 0,
+              "notes": "Corse con il nome Lancia-Ferrari D50."
+            }
+          ],
+          "designers": [
+            {
+              "slug": "vittorio-jano",
+              "role": "design"
+            }
+          ]
+        }
+      ],
+      "predecessor": "555-f1"
+    },
+    {
+      "slug": "801-f1",
+      "name": "801 F1",
+      "category": "formula-1",
+      "description": {
+        "it": "L'ultima evoluzione della D50.",
+        "en": "The final evolution of the D50."
+      },
+      "versions": [
+        {
+          "slug": "801-f1",
+          "name": "801 F1",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1957,
+          "year_end": 1957,
+          "in_production": false,
+          "description": {
+            "it": "Una stagione senza vittorie.",
+            "en": "A season without wins."
+          },
+          "powertrain": {
+            "engine": "DS50",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "acciaio",
+            "brakes": "tamburo"
+          },
+          "drivers": [
+            "mike-hawthorn",
+            "peter-collins",
+            "luigi-musso",
+            "eugenio-castellotti"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1957,
+              "season_end": 1957,
+              "wins": 0,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ],
+      "predecessor": "d50"
+    },
+    {
+      "slug": "dino-246-f1",
+      "name": "Dino 246 F1",
+      "category": "formula-1",
+      "description": {
+        "it": "L'ultima Ferrari di Formula 1 a motore anteriore, con il V6 Dino.",
+        "en": "The last front-engined Ferrari Formula 1 car, with the Dino V6."
+      },
+      "versions": [
+        {
+          "slug": "dino-246-f1",
+          "name": "Dino 246 F1",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1958,
+          "year_end": 1960,
+          "in_production": false,
+          "description": {
+            "it": "Mike Hawthorn campione nel 1958; l'ultima vittoria di una monoposto a motore anteriore, a Monza nel 1960.",
+            "en": "Mike Hawthorn champion in 1958; the last win by a front-engined car, at Monza in 1960."
+          },
+          "powertrain": {
+            "engine": "246",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "acciaio"
+          },
+          "drivers": [
+            "mike-hawthorn",
+            "peter-collins",
+            "luigi-musso",
+            "tony-brooks",
+            "phil-hill",
+            "dan-gurney",
+            "wolfgang-von-trips",
+            "jean-behra",
+            "cliff-allison"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1958,
+              "season_end": 1960,
+              "wins": 5,
+              "drivers_titles": 1,
+              "constructors_titles": 0,
+              "notes": "Due vittorie nel 1958, due nel 1959 e una nel 1960."
+            }
+          ]
+        }
+      ],
+      "predecessor": "801-f1"
+    }
+  ]
+}

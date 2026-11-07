@@ -1,0 +1,836 @@
+{
+  "engines": [
+    {
+      "code": "135B",
+      "name": "V6 Dino",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 6,
+      "displacement_cc": 1987,
+      "bore_mm": 86,
+      "stroke_mm": 57,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "135CS",
+      "name": "V6 Dino",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 6,
+      "displacement_cc": 2419,
+      "bore_mm": 92.5,
+      "stroke_mm": 60,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F106AB",
+      "name": "V8 a carburatori",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 2927,
+      "bore_mm": 81,
+      "stroke_mm": 71,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F106BB",
+      "name": "V8 a iniezione",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 2927,
+      "bore_mm": 81,
+      "stroke_mm": 71,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F105AB",
+      "name": "V8 quattrovalvole",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 2927,
+      "bore_mm": 81,
+      "stroke_mm": 71,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F105CB",
+      "name": "V8 quattrovalvole",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 3185,
+      "bore_mm": 83,
+      "stroke_mm": 73.6,
+      "valves_per_cylinder": 4,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F106CB",
+      "name": "V8 due litri",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 1991,
+      "bore_mm": 66.8,
+      "stroke_mm": 71,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F106D",
+      "name": "V8 due litri turbo",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 1991,
+      "bore_mm": 66.8,
+      "stroke_mm": 71,
+      "valves_per_cylinder": 2,
+      "aspiration": "turbo"
+    }
+  ],
+  "designers": [
+    {
+      "slug": "scaglietti",
+      "name": "Carrozzeria Scaglietti",
+      "type": "studio",
+      "country": "IT"
+    }
+  ],
+  "models": [
+    {
+      "slug": "dino",
+      "name": "Dino",
+      "category": "sportive",
+      "description": {
+        "it": "Le berlinette a motore centrale dedicate ad Alfredo \"Dino\" Ferrari, il figlio di Enzo: vendute con il marchio Dino, senza il Cavallino.",
+        "en": "The mid-engined berlinettas named after Alfredo \"Dino\" Ferrari, Enzo's son: sold under the Dino brand, without the Prancing Horse."
+      },
+      "versions": [
+        {
+          "slug": "dino-206-gt",
+          "name": "Dino 206 GT",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1967,
+          "year_end": 1969,
+          "units_produced": 152,
+          "sort_order": 1,
+          "description": {
+            "it": "La prima, con il V6 di due litri e la carrozzeria in alluminio.",
+            "en": "The first, with the two-litre V6 and aluminium bodywork."
+          },
+          "powertrain": {
+            "engine": "135B",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_power_cv": 180,
+            "ice_torque_nm": 187
+          },
+          "specs": {
+            "length_mm": 4150,
+            "width_mm": 1700,
+            "height_mm": 1115,
+            "wheelbase_mm": 2280,
+            "dry_weight_kg": 900,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 235
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ]
+        },
+        {
+          "slug": "dino-246-gt",
+          "name": "Dino 246 GT",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1969,
+          "year_end": 1974,
+          "units_produced": 2487,
+          "sort_order": 2,
+          "description": {
+            "it": "Il V6 cresce a 2,4 litri, il passo si allunga e la carrozzeria passa all'acciaio.",
+            "en": "The V6 grows to 2.4 litres, the wheelbase lengthens and the body switches to steel."
+          },
+          "powertrain": {
+            "engine": "135CS",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_power_cv": 195,
+            "ice_torque_nm": 225
+          },
+          "specs": {
+            "length_mm": 4235,
+            "width_mm": 1700,
+            "height_mm": 1135,
+            "wheelbase_mm": 2340,
+            "dry_weight_kg": 1080,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 240
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ]
+        },
+        {
+          "slug": "dino-246-gts",
+          "name": "Dino 246 GTS",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "targa",
+          "year_start": 1972,
+          "year_end": 1974,
+          "units_produced": 1274,
+          "sort_order": 3,
+          "description": {
+            "it": "La versione con il tetto asportabile.",
+            "en": "The version with a removable roof panel."
+          },
+          "powertrain": {
+            "engine": "135CS",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_power_cv": 195,
+            "ice_torque_nm": 225
+          },
+          "specs": {
+            "length_mm": 4235,
+            "width_mm": 1700,
+            "height_mm": 1135,
+            "wheelbase_mm": 2340,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "308",
+      "name": "308",
+      "category": "sportive",
+      "predecessor": "dino",
+      "description": {
+        "it": "La prima berlinetta Ferrari a due posti con un V8: diventerà la Ferrari più prodotta fino a quel momento.",
+        "en": "The first two-seat Ferrari berlinetta with a V8: it became the most produced Ferrari up to that point."
+      },
+      "versions": [
+        {
+          "slug": "308-gtb",
+          "name": "308 GTB",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1975,
+          "year_end": 1980,
+          "units_produced": 2897,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta: i primi esemplari avevano la carrozzeria in vetroresina, poi in acciaio.",
+            "en": "The berlinetta: the first examples had fibreglass bodywork, later steel."
+          },
+          "powertrain": {
+            "engine": "F106AB",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_power_cv": 255,
+            "ice_torque_nm": 284
+          },
+          "specs": {
+            "length_mm": 4230,
+            "width_mm": 1720,
+            "height_mm": 1120,
+            "wheelbase_mm": 2340,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 252
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            },
+            {
+              "slug": "leonardo-fioravanti",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "308-gts",
+          "name": "308 GTS",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "targa",
+          "year_start": 1977,
+          "year_end": 1980,
+          "units_produced": 3219,
+          "sort_order": 2,
+          "description": {
+            "it": "La versione con il tetto asportabile.",
+            "en": "The version with a removable roof panel."
+          },
+          "powertrain": {
+            "engine": "F106AB",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_power_cv": 255,
+            "ice_torque_nm": 284
+          },
+          "specs": {
+            "length_mm": 4230,
+            "width_mm": 1720,
+            "height_mm": 1120,
+            "wheelbase_mm": 2340,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            },
+            {
+              "slug": "leonardo-fioravanti",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "308-gtbi",
+          "name": "308 GTBi",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1980,
+          "year_end": 1982,
+          "units_produced": 494,
+          "sort_order": 3,
+          "description": {
+            "it": "L'iniezione elettronica sostituisce i carburatori, per le nuove norme sulle emissioni.",
+            "en": "Fuel injection replaces the carburettors, to meet new emissions rules."
+          },
+          "powertrain": {
+            "engine": "F106BB",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_power_cv": 214
+          },
+          "specs": {
+            "length_mm": 4230,
+            "width_mm": 1720,
+            "height_mm": 1120,
+            "wheelbase_mm": 2340,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            },
+            {
+              "slug": "leonardo-fioravanti",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "308-gtsi",
+          "name": "308 GTSi",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "targa",
+          "year_start": 1980,
+          "year_end": 1982,
+          "units_produced": 1743,
+          "sort_order": 4,
+          "description": {
+            "it": "La GTBi con il tetto asportabile.",
+            "en": "The GTBi with a removable roof panel."
+          },
+          "powertrain": {
+            "engine": "F106BB",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_power_cv": 214
+          },
+          "specs": {
+            "length_mm": 4230,
+            "width_mm": 1720,
+            "height_mm": 1120,
+            "wheelbase_mm": 2340,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            },
+            {
+              "slug": "leonardo-fioravanti",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "308-gtb-quattrovalvole",
+          "name": "308 GTB Quattrovalvole",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1982,
+          "year_end": 1985,
+          "units_produced": 748,
+          "sort_order": 5,
+          "description": {
+            "it": "Le teste a quattro valvole per cilindro restituiscono la potenza persa con l'iniezione.",
+            "en": "Four-valve cylinder heads restore the power lost with fuel injection."
+          },
+          "powertrain": {
+            "engine": "F105AB",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_power_cv": 240,
+            "ice_torque_nm": 260
+          },
+          "specs": {
+            "length_mm": 4230,
+            "width_mm": 1720,
+            "height_mm": 1120,
+            "wheelbase_mm": 2340,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 255
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            },
+            {
+              "slug": "leonardo-fioravanti",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "308-gts-quattrovalvole",
+          "name": "308 GTS Quattrovalvole",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "targa",
+          "year_start": 1982,
+          "year_end": 1985,
+          "units_produced": 3042,
+          "sort_order": 6,
+          "description": {
+            "it": "La Quattrovalvole con il tetto asportabile.",
+            "en": "The Quattrovalvole with a removable roof panel."
+          },
+          "powertrain": {
+            "engine": "F105AB",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_power_cv": 240,
+            "ice_torque_nm": 260
+          },
+          "specs": {
+            "length_mm": 4230,
+            "width_mm": 1720,
+            "height_mm": 1120,
+            "wheelbase_mm": 2340,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            },
+            {
+              "slug": "leonardo-fioravanti",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "208",
+      "name": "208",
+      "category": "sportive",
+      "description": {
+        "it": "La 308 con un V8 di due litri, nata per il mercato italiano, dove le auto oltre i due litri pagavano un'IVA più alta.",
+        "en": "The 308 with a two-litre V8, created for the Italian market, where cars over two litres paid higher VAT."
+      },
+      "versions": [
+        {
+          "slug": "208-gtb",
+          "name": "208 GTB",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1980,
+          "year_end": 1981,
+          "units_produced": 140,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta con il V8 più piccolo mai montato su una Ferrari di serie.",
+            "en": "The berlinetta with the smallest V8 ever fitted to a series-production Ferrari."
+          },
+          "powertrain": {
+            "engine": "F106CB",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_power_cv": 155
+          },
+          "specs": {
+            "length_mm": 4230,
+            "width_mm": 1720,
+            "height_mm": 1120,
+            "wheelbase_mm": 2340,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ]
+        },
+        {
+          "slug": "208-gts",
+          "name": "208 GTS",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "targa",
+          "year_start": 1980,
+          "year_end": 1981,
+          "units_produced": 160,
+          "sort_order": 2,
+          "description": {
+            "it": "La 208 con il tetto asportabile.",
+            "en": "The 208 with a removable roof panel."
+          },
+          "powertrain": {
+            "engine": "F106CB",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_power_cv": 155
+          },
+          "specs": {
+            "length_mm": 4230,
+            "width_mm": 1720,
+            "height_mm": 1120,
+            "wheelbase_mm": 2340,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ]
+        },
+        {
+          "slug": "208-gtb-turbo",
+          "name": "208 GTB Turbo",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1982,
+          "year_end": 1985,
+          "units_produced": 437,
+          "sort_order": 3,
+          "description": {
+            "it": "La prima Ferrari stradale con il turbo, con una tecnica derivata dalle Formula 1 dell'epoca.",
+            "en": "The first turbocharged road-going Ferrari, using technology derived from the Formula 1 cars of the time."
+          },
+          "powertrain": {
+            "engine": "F106D",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_power_cv": 220
+          },
+          "specs": {
+            "length_mm": 4230,
+            "width_mm": 1720,
+            "height_mm": 1120,
+            "wheelbase_mm": 2340,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ]
+        },
+        {
+          "slug": "208-gts-turbo",
+          "name": "208 GTS Turbo",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "targa",
+          "year_start": 1983,
+          "year_end": 1985,
+          "units_produced": 250,
+          "sort_order": 4,
+          "description": {
+            "it": "La 208 Turbo con il tetto asportabile.",
+            "en": "The 208 Turbo with a removable roof panel."
+          },
+          "powertrain": {
+            "engine": "F106D",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_power_cv": 220
+          },
+          "specs": {
+            "length_mm": 4230,
+            "width_mm": 1720,
+            "height_mm": 1120,
+            "wheelbase_mm": 2340,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "328",
+      "name": "328",
+      "category": "sportive",
+      "predecessor": "308",
+      "description": {
+        "it": "L'evoluzione della 308, con il V8 portato a 3,2 litri e le linee rese più morbide.",
+        "en": "The evolution of the 308, with the V8 enlarged to 3.2 litres and softened lines."
+      },
+      "versions": [
+        {
+          "slug": "328-gtb",
+          "name": "328 GTB",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1985,
+          "year_end": 1989,
+          "units_produced": 1344,
+          "sort_order": 1,
+          "description": {
+            "it": "La berlinetta.",
+            "en": "The berlinetta."
+          },
+          "powertrain": {
+            "engine": "F105CB",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_power_cv": 270,
+            "ice_torque_nm": 304
+          },
+          "specs": {
+            "length_mm": 4255,
+            "width_mm": 1730,
+            "height_mm": 1128,
+            "wheelbase_mm": 2350,
+            "dry_weight_kg": 1263,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 263
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            },
+            {
+              "slug": "leonardo-fioravanti",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "328-gts",
+          "name": "328 GTS",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "targa",
+          "year_start": 1985,
+          "year_end": 1989,
+          "units_produced": 6068,
+          "sort_order": 2,
+          "description": {
+            "it": "La versione con il tetto asportabile, la più venduta delle due.",
+            "en": "The version with a removable roof panel, the better-selling of the two."
+          },
+          "powertrain": {
+            "engine": "F105CB",
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore",
+            "ice_power_cv": 270,
+            "ice_torque_nm": 304
+          },
+          "specs": {
+            "length_mm": 4255,
+            "width_mm": 1730,
+            "height_mm": 1128,
+            "wheelbase_mm": 2350,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio",
+            "top_speed_kmh": 263
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            },
+            {
+              "slug": "leonardo-fioravanti",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

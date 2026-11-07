@@ -1,0 +1,391 @@
+{
+  "models": [
+    {
+      "slug": "dino-berlinetta-speciale",
+      "name": "Dino Berlinetta Speciale",
+      "category": "concept",
+      "description": {
+        "it": "La concept di Pininfarina che anticipò le linee della Dino 206 GT.",
+        "en": "The Pininfarina concept that anticipated the lines of the Dino 206 GT."
+      },
+      "versions": [
+        {
+          "slug": "dino-berlinetta-speciale",
+          "name": "Dino Berlinetta Speciale",
+          "vehicle_type": "concept",
+          "year_start": 1965,
+          "year_end": 1965,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "La concept di Pininfarina che anticipò le linee della Dino 206 GT.",
+            "en": "The Pininfarina concept that anticipated the lines of the Dino 206 GT."
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "365-p-berlinetta-speciale",
+      "name": "365 P Berlinetta Speciale",
+      "category": "concept",
+      "description": {
+        "it": "La concept a tre posti, con il guidatore al centro, costruita su una sport prototipo.",
+        "en": "The three-seat concept, with the driver in the middle, built on a sports prototype."
+      },
+      "versions": [
+        {
+          "slug": "365-p-berlinetta-speciale",
+          "name": "365 P Berlinetta Speciale",
+          "vehicle_type": "concept",
+          "year_start": 1966,
+          "year_end": 1966,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "La concept a tre posti, con il guidatore al centro, costruita su una sport prototipo.",
+            "en": "The three-seat concept, with the driver in the middle, built on a sports prototype."
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "seats": 3,
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "250-p5",
+      "name": "250 P5",
+      "category": "concept",
+      "description": {
+        "it": "Lo studio di Pininfarina su base 250 LM, con le linee che porteranno alla Modulo.",
+        "en": "Pininfarina's study on a 250 LM base, with lines that would lead to the Modulo."
+      },
+      "versions": [
+        {
+          "slug": "250-p5",
+          "name": "250 P5",
+          "vehicle_type": "concept",
+          "year_start": 1968,
+          "year_end": 1968,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Lo studio di Pininfarina su base 250 LM, con le linee che porteranno alla Modulo.",
+            "en": "Pininfarina's study on a 250 LM base, with lines that would lead to the Modulo."
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "512-s-berlinetta-speciale",
+      "name": "512 S Berlinetta Speciale",
+      "category": "concept",
+      "description": {
+        "it": "La concept di Pininfarina sulla 512 S da corsa, con l'abitacolo a cupola.",
+        "en": "Pininfarina's concept on the 512 S racing car, with a domed cockpit."
+      },
+      "versions": [
+        {
+          "slug": "512-s-berlinetta-speciale",
+          "name": "512 S Berlinetta Speciale",
+          "vehicle_type": "concept",
+          "year_start": 1969,
+          "year_end": 1969,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "La concept di Pininfarina sulla 512 S da corsa, con l'abitacolo a cupola.",
+            "en": "Pininfarina's concept on the 512 S racing car, with a domed cockpit."
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "sigma-grand-prix",
+      "name": "Sigma Grand Prix",
+      "category": "concept",
+      "description": {
+        "it": "Lo studio di Pininfarina per una Formula 1 più sicura, con strutture deformabili e serbatoi protetti.",
+        "en": "Pininfarina's study for a safer Formula 1 car, with crumple structures and protected fuel tanks."
+      },
+      "versions": [
+        {
+          "slug": "sigma-grand-prix",
+          "name": "Sigma Grand Prix",
+          "vehicle_type": "concept",
+          "year_start": 1969,
+          "year_end": 1969,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Lo studio di Pininfarina per una Formula 1 più sicura, con strutture deformabili e serbatoi protetti.",
+            "en": "Pininfarina's study for a safer Formula 1 car, with crumple structures and protected fuel tanks."
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ],
+          "body_type": "monoposto",
+          "seats": 1,
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "modulo",
+      "name": "Modulo",
+      "category": "concept",
+      "description": {
+        "it": "La concept più radicale di Pininfarina, alta meno di un metro, con il tetto che scorre in avanti per entrare.",
+        "en": "Pininfarina's most radical concept, under a metre tall, with a roof that slides forward to get in."
+      },
+      "versions": [
+        {
+          "slug": "modulo",
+          "name": "Modulo",
+          "vehicle_type": "concept",
+          "year_start": 1970,
+          "year_end": 1970,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "La concept più radicale di Pininfarina, alta meno di un metro, con il tetto che scorre in avanti per entrare.",
+            "en": "Pininfarina's most radical concept, under a metre tall, with a roof that slides forward to get in."
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "pinin",
+      "name": "Pinin",
+      "category": "concept",
+      "description": {
+        "it": "La berlina a quattro porte che Pininfarina presentò per i suoi cinquant'anni: l'unica Ferrari berlina mai costruita.",
+        "en": "The four-door saloon Pininfarina presented for its fiftieth anniversary: the only Ferrari saloon ever built."
+      },
+      "versions": [
+        {
+          "slug": "pinin",
+          "name": "Pinin",
+          "vehicle_type": "concept",
+          "year_start": 1980,
+          "year_end": 1980,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "La berlina a quattro porte che Pininfarina presentò per i suoi cinquant'anni: l'unica Ferrari berlina mai costruita.",
+            "en": "The four-door saloon Pininfarina presented for its fiftieth anniversary: the only Ferrari saloon ever built."
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ],
+          "seats": 4,
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "408-4rm",
+      "name": "408 4RM",
+      "category": "concept",
+      "description": {
+        "it": "Il prototipo sperimentale con la trazione integrale e il telaio in alluminio incollato.",
+        "en": "The experimental prototype with four-wheel drive and a bonded aluminium chassis."
+      },
+      "versions": [
+        {
+          "slug": "408-4rm",
+          "name": "408 4RM",
+          "vehicle_type": "concept",
+          "year_start": 1987,
+          "year_end": 1987,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Il prototipo sperimentale con la trazione integrale e il telaio in alluminio incollato.",
+            "en": "The experimental prototype with four-wheel drive and a bonded aluminium chassis."
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "mythos",
+      "name": "Mythos",
+      "category": "concept",
+      "description": {
+        "it": "La barchetta di Pininfarina sulla meccanica della Testarossa.",
+        "en": "Pininfarina's barchetta on Testarossa mechanicals."
+      },
+      "versions": [
+        {
+          "slug": "mythos",
+          "name": "Mythos",
+          "vehicle_type": "concept",
+          "year_start": 1989,
+          "year_end": 1989,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "La barchetta di Pininfarina sulla meccanica della Testarossa.",
+            "en": "Pininfarina's barchetta on Testarossa mechanicals."
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ],
+          "body_type": "barchetta",
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "rossa",
+      "name": "Rossa",
+      "category": "concept",
+      "description": {
+        "it": "La barchetta di Pininfarina per i suoi settant'anni, sulla 550 Maranello.",
+        "en": "Pininfarina's barchetta for its seventieth anniversary, on the 550 Maranello."
+      },
+      "versions": [
+        {
+          "slug": "rossa",
+          "name": "Rossa",
+          "vehicle_type": "concept",
+          "year_start": 2000,
+          "year_end": 2000,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "La barchetta di Pininfarina per i suoi settant'anni, sulla 550 Maranello.",
+            "en": "Pininfarina's barchetta for its seventieth anniversary, on the 550 Maranello."
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ],
+          "body_type": "barchetta",
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "millechili",
+      "name": "Millechili",
+      "category": "concept",
+      "description": {
+        "it": "Lo studio Ferrari su una berlinetta leggera, con un peso obiettivo di mille chili.",
+        "en": "Ferrari's study of a lightweight berlinetta, with a target weight of a thousand kilos."
+      },
+      "versions": [
+        {
+          "slug": "millechili",
+          "name": "Millechili",
+          "vehicle_type": "concept",
+          "year_start": 2007,
+          "year_end": 2007,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Lo studio Ferrari su una berlinetta leggera, con un peso obiettivo di mille chili.",
+            "en": "Ferrari's study of a lightweight berlinetta, with a target weight of a thousand kilos."
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "vision-gran-turismo",
+      "name": "Vision Gran Turismo",
+      "category": "concept",
+      "description": {
+        "it": "La prima concept Ferrari pensata per un videogioco, Gran Turismo 7.",
+        "en": "The first Ferrari concept designed for a video game, Gran Turismo 7."
+      },
+      "versions": [
+        {
+          "slug": "vision-gran-turismo",
+          "name": "Vision Gran Turismo",
+          "vehicle_type": "concept",
+          "year_start": 2022,
+          "year_end": 2022,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "La prima concept Ferrari pensata per un videogioco, Gran Turismo 7.",
+            "en": "The first Ferrari concept designed for a video game, Gran Turismo 7."
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "seats": 1,
+          "units_produced": 1
+        }
+      ]
+    }
+  ]
+}

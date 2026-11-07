@@ -1,0 +1,410 @@
+{
+  "engines": [
+    {
+      "code": "065",
+      "name": "V6 turbo ibrido Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 6,
+      "displacement_cc": 1600,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "065/6",
+      "name": "V6 turbo ibrido Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 6,
+      "displacement_cc": 1600,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "066/7",
+      "name": "V6 turbo ibrido Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 6,
+      "displacement_cc": 1600,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "066/10",
+      "name": "V6 turbo ibrido Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 6,
+      "displacement_cc": 1600,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "066/12",
+      "name": "V6 turbo ibrido Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 6,
+      "displacement_cc": 1600,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "066/15",
+      "name": "V6 turbo ibrido Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 6,
+      "displacement_cc": 1600,
+      "valves_per_cylinder": 4,
+      "aspiration": "turbo"
+    }
+  ],
+  "drivers": [
+    {
+      "slug": "carlos-sainz",
+      "first_name": "Carlos",
+      "last_name": "Sainz",
+      "nationality": "ES",
+      "birth_date": "1994-09-01"
+    },
+    {
+      "slug": "lewis-hamilton",
+      "first_name": "Lewis",
+      "last_name": "Hamilton",
+      "nationality": "GB",
+      "birth_date": "1985-01-07"
+    },
+    {
+      "slug": "oliver-bearman",
+      "first_name": "Oliver",
+      "last_name": "Bearman",
+      "nationality": "GB",
+      "birth_date": "2005-05-08"
+    }
+  ],
+  "models": [
+    {
+      "slug": "sf1000",
+      "name": "SF1000",
+      "category": "formula-1",
+      "predecessor": "sf90-formula-1",
+      "description": {
+        "it": "Il nome celebra il millesimo Gran Premio della Ferrari, corso al Mugello nel 2020.",
+        "en": "The name celebrates Ferrari's thousandth Grand Prix, run at Mugello in 2020."
+      },
+      "versions": [
+        {
+          "slug": "sf1000",
+          "name": "SF1000",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2020,
+          "year_end": 2020,
+          "in_production": false,
+          "description": {
+            "it": "Una stagione difficile, accorciata dalla pandemia, l'ultima di Vettel in Ferrari.",
+            "en": "A difficult season, shortened by the pandemic, Vettel's last at Ferrari."
+          },
+          "powertrain": {
+            "engine": "065",
+            "electric_power_cv": 163,
+            "gearbox_type": "sequenziale",
+            "gears": 8,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "sebastian-vettel",
+            "charles-leclerc"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2020,
+              "season_end": 2020,
+              "races": 17,
+              "wins": 0,
+              "poles": 0,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "podiums": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sf21",
+      "name": "SF21",
+      "category": "formula-1",
+      "predecessor": "sf1000",
+      "description": {
+        "it": "La prima Ferrari di Carlos Sainz, con un telaio in gran parte congelato dalle regole.",
+        "en": "Carlos Sainz's first Ferrari, with a chassis largely frozen by the rules."
+      },
+      "versions": [
+        {
+          "slug": "sf21",
+          "name": "SF21",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2021,
+          "year_end": 2021,
+          "in_production": false,
+          "description": {
+            "it": "Nessuna vittoria, due pole di Leclerc, a Monaco e a Baku.",
+            "en": "No wins, two pole positions for Leclerc, in Monaco and Baku."
+          },
+          "powertrain": {
+            "engine": "065/6",
+            "electric_power_cv": 163,
+            "gearbox_type": "sequenziale",
+            "gears": 8,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "charles-leclerc",
+            "carlos-sainz"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2021,
+              "season_end": 2021,
+              "races": 22,
+              "wins": 0,
+              "poles": 2,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "podiums": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "f1-75",
+      "name": "F1-75",
+      "category": "formula-1",
+      "predecessor": "sf21",
+      "description": {
+        "it": "La prima Ferrari delle nuove regole a effetto suolo, con un nome che celebra i settantacinque anni del marchio.",
+        "en": "The first Ferrari of the new ground-effect rules, with a name celebrating the brand's 75th anniversary."
+      },
+      "versions": [
+        {
+          "slug": "f1-75",
+          "name": "F1-75",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2022,
+          "year_end": 2022,
+          "in_production": false,
+          "description": {
+            "it": "Quattro vittorie e dodici pole: Ferrari tornò a lottare per il titolo nella prima parte della stagione.",
+            "en": "Four wins and twelve pole positions: Ferrari was back fighting for the title in the first part of the season."
+          },
+          "powertrain": {
+            "engine": "066/7",
+            "electric_power_cv": 163,
+            "gearbox_type": "sequenziale",
+            "gears": 8,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "charles-leclerc",
+            "carlos-sainz"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2022,
+              "season_end": 2022,
+              "races": 22,
+              "wins": 4,
+              "poles": 12,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "podiums": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sf-23",
+      "name": "SF-23",
+      "category": "formula-1",
+      "predecessor": "f1-75",
+      "description": {
+        "it": "La monoposto dell'unica vittoria non Red Bull del 2023, di Carlos Sainz a Singapore.",
+        "en": "The car of the only non-Red Bull win of 2023, by Carlos Sainz in Singapore."
+      },
+      "versions": [
+        {
+          "slug": "sf-23",
+          "name": "SF-23",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2023,
+          "year_end": 2023,
+          "in_production": false,
+          "description": {
+            "it": "Una vittoria, sei pole e nove podi.",
+            "en": "One win, six pole positions and nine podiums."
+          },
+          "powertrain": {
+            "engine": "066/10",
+            "electric_power_cv": 163,
+            "gearbox_type": "sequenziale",
+            "gears": 8,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "charles-leclerc",
+            "carlos-sainz"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2023,
+              "season_end": 2023,
+              "races": 22,
+              "wins": 1,
+              "poles": 6,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "podiums": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sf-24",
+      "name": "SF-24",
+      "category": "formula-1",
+      "predecessor": "sf-23",
+      "description": {
+        "it": "La monoposto della prima vittoria di Leclerc a Monaco, la sua corsa di casa.",
+        "en": "The car of Leclerc's first win in Monaco, his home race."
+      },
+      "versions": [
+        {
+          "slug": "sf-24",
+          "name": "SF-24",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2024,
+          "year_end": 2024,
+          "in_production": false,
+          "description": {
+            "it": "Cinque vittorie e il secondo posto nel campionato costruttori.",
+            "en": "Five wins and second place in the constructors' championship."
+          },
+          "powertrain": {
+            "engine": "066/12",
+            "electric_power_cv": 163,
+            "gearbox_type": "sequenziale",
+            "gears": 8,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "charles-leclerc",
+            "carlos-sainz",
+            "oliver-bearman"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2024,
+              "season_end": 2024,
+              "races": 24,
+              "wins": 5,
+              "poles": 3,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "notes": "Oliver Bearman sostituì Sainz al Gran Premio dell'Arabia Saudita, al suo debutto in Formula 1."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sf-25",
+      "name": "SF-25",
+      "category": "formula-1",
+      "predecessor": "sf-24",
+      "description": {
+        "it": "La prima Ferrari di Lewis Hamilton, e l'ultima con l'effetto suolo prima delle regole del 2026.",
+        "en": "Lewis Hamilton's first Ferrari, and the last with ground effect before the 2026 rules."
+      },
+      "versions": [
+        {
+          "slug": "sf-25",
+          "name": "SF-25",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 2025,
+          "year_end": 2025,
+          "in_production": false,
+          "description": {
+            "it": "Nessuna vittoria in Gran Premio; Hamilton vinse la Sprint in Cina, alla seconda gara della stagione.",
+            "en": "No Grand Prix wins; Hamilton won the Sprint in China, at the second race of the season."
+          },
+          "powertrain": {
+            "engine": "066/15",
+            "electric_power_cv": 163,
+            "gearbox_type": "sequenziale",
+            "gears": 8,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "charles-leclerc",
+            "lewis-hamilton"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 2025,
+              "season_end": 2025,
+              "races": 24,
+              "wins": 0,
+              "poles": 1,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "podiums": 7,
+              "fastest_laps": 2,
+              "notes": "Vittoria nella Sprint del Gran Premio della Cina con Lewis Hamilton."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

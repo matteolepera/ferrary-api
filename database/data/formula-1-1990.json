@@ -1,0 +1,740 @@
+{
+  "engines": [
+    {
+      "code": "036",
+      "name": "V12 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 3498,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "037",
+      "name": "V12 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 3498,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "040",
+      "name": "V12 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 3498,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "041",
+      "name": "V12 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 3498,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "044",
+      "name": "V12 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 75,
+      "cylinders": 12,
+      "displacement_cc": 2997,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "046",
+      "name": "V10 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 75,
+      "cylinders": 10,
+      "displacement_cc": 2998,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "046/2",
+      "name": "V10 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 75,
+      "cylinders": 10,
+      "displacement_cc": 2998,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "047",
+      "name": "V10 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 80,
+      "cylinders": 10,
+      "displacement_cc": 2997,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "048",
+      "name": "V10 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 80,
+      "cylinders": 10,
+      "displacement_cc": 2997,
+      "aspiration": "aspirato"
+    }
+  ],
+  "designers": [
+    {
+      "slug": "john-barnard",
+      "name": "John Barnard",
+      "type": "persona",
+      "country": "GB"
+    }
+  ],
+  "drivers": [
+    {
+      "slug": "alain-prost",
+      "first_name": "Alain",
+      "last_name": "Prost",
+      "nationality": "FR",
+      "birth_date": "1955-02-24"
+    },
+    {
+      "slug": "nigel-mansell",
+      "first_name": "Nigel",
+      "last_name": "Mansell",
+      "nationality": "GB",
+      "birth_date": "1953-08-08"
+    },
+    {
+      "slug": "jean-alesi",
+      "first_name": "Jean",
+      "last_name": "Alesi",
+      "nationality": "FR",
+      "birth_date": "1964-06-11"
+    },
+    {
+      "slug": "gianni-morbidelli",
+      "first_name": "Gianni",
+      "last_name": "Morbidelli",
+      "nationality": "IT",
+      "birth_date": "1968-01-13"
+    },
+    {
+      "slug": "ivan-capelli",
+      "first_name": "Ivan",
+      "last_name": "Capelli",
+      "nationality": "IT",
+      "birth_date": "1963-05-24"
+    },
+    {
+      "slug": "nicola-larini",
+      "first_name": "Nicola",
+      "last_name": "Larini",
+      "nationality": "IT",
+      "birth_date": "1964-03-19"
+    },
+    {
+      "slug": "gerhard-berger",
+      "first_name": "Gerhard",
+      "last_name": "Berger",
+      "nationality": "AT",
+      "birth_date": "1959-08-27"
+    },
+    {
+      "slug": "eddie-irvine",
+      "first_name": "Eddie",
+      "last_name": "Irvine",
+      "nationality": "GB",
+      "birth_date": "1965-11-10"
+    },
+    {
+      "slug": "mika-salo",
+      "first_name": "Mika",
+      "last_name": "Salo",
+      "nationality": "FI",
+      "birth_date": "1966-11-30"
+    }
+  ],
+  "models": [
+    {
+      "slug": "641",
+      "name": "641",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto con cui Alain Prost lottò per il titolo con Ayrton Senna fino al Giappone.",
+        "en": "The car with which Alain Prost fought Ayrton Senna for the title until Japan."
+      },
+      "versions": [
+        {
+          "slug": "641",
+          "name": "641",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1990,
+          "year_end": 1990,
+          "in_production": false,
+          "description": {
+            "it": "Sei vittorie, cinque di Prost e una di Mansell; il suo stile entrò nella collezione del MoMA di New York.",
+            "en": "Six wins, five for Prost and one for Mansell; its design entered the collection of New York's MoMA."
+          },
+          "powertrain": {
+            "engine": "036",
+            "gearbox_type": "sequenziale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "alain-prost",
+            "nigel-mansell"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1990,
+              "season_end": 1990,
+              "races": 16,
+              "wins": 6,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ],
+          "designers": [
+            {
+              "slug": "john-barnard",
+              "role": "design"
+            }
+          ]
+        }
+      ],
+      "predecessor": "640"
+    },
+    {
+      "slug": "642",
+      "name": "642",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto della prima parte del 1991, evoluzione della 641.",
+        "en": "The car of the first part of 1991, an evolution of the 641."
+      },
+      "versions": [
+        {
+          "slug": "642",
+          "name": "642",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1991,
+          "year_end": 1991,
+          "in_production": false,
+          "description": {
+            "it": "Corse le prime sei gare della stagione, senza vittorie.",
+            "en": "It ran the first six races of the season, without wins."
+          },
+          "powertrain": {
+            "engine": "037",
+            "gearbox_type": "sequenziale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "alain-prost",
+            "jean-alesi"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1991,
+              "season_end": 1991,
+              "races": 6,
+              "wins": 0,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "poles": 0
+            }
+          ]
+        }
+      ],
+      "predecessor": "641"
+    },
+    {
+      "slug": "643",
+      "name": "643",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto che sostituì la 642 dal Gran Premio di Francia del 1991.",
+        "en": "The car that replaced the 642 from the 1991 French Grand Prix."
+      },
+      "versions": [
+        {
+          "slug": "643",
+          "name": "643",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1991,
+          "year_end": 1991,
+          "in_production": false,
+          "description": {
+            "it": "Nessuna vittoria; Prost fu licenziato prima dell'ultima gara e sostituito da Morbidelli.",
+            "en": "No wins; Prost was dismissed before the final race and replaced by Morbidelli."
+          },
+          "powertrain": {
+            "engine": "037",
+            "gearbox_type": "sequenziale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "alain-prost",
+            "jean-alesi",
+            "gianni-morbidelli"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1991,
+              "season_end": 1991,
+              "races": 10,
+              "wins": 0,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "poles": 0
+            }
+          ]
+        }
+      ],
+      "predecessor": "642"
+    },
+    {
+      "slug": "f92a",
+      "name": "F92A",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto con il doppio fondo, un'idea aerodinamica coraggiosa che non funzionò come sperato.",
+        "en": "The car with the double floor, a bold aerodynamic idea that did not work as hoped."
+      },
+      "versions": [
+        {
+          "slug": "f92a",
+          "name": "F92A",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1992,
+          "year_end": 1992,
+          "in_production": false,
+          "description": {
+            "it": "Una stagione senza vittorie né pole.",
+            "en": "A season without wins or pole positions."
+          },
+          "powertrain": {
+            "engine": "040",
+            "gearbox_type": "sequenziale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "jean-alesi",
+            "ivan-capelli",
+            "nicola-larini"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1992,
+              "season_end": 1992,
+              "races": 16,
+              "wins": 0,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "poles": 0
+            }
+          ]
+        }
+      ],
+      "predecessor": "643"
+    },
+    {
+      "slug": "f93a",
+      "name": "F93A",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto del ritorno di Gerhard Berger a Maranello, con le sospensioni attive.",
+        "en": "The car of Gerhard Berger's return to Maranello, with active suspension."
+      },
+      "versions": [
+        {
+          "slug": "f93a",
+          "name": "F93A",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1993,
+          "year_end": 1993,
+          "in_production": false,
+          "description": {
+            "it": "Nessuna vittoria; il miglior risultato fu il secondo posto di Alesi a Monza.",
+            "en": "No wins; the best result was Alesi's second place at Monza."
+          },
+          "powertrain": {
+            "engine": "041",
+            "gearbox_type": "sequenziale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "jean-alesi",
+            "gerhard-berger"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1993,
+              "season_end": 1993,
+              "races": 16,
+              "wins": 0,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "poles": 0
+            }
+          ]
+        }
+      ],
+      "predecessor": "f92a"
+    },
+    {
+      "slug": "412-t1",
+      "name": "412 T1",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto che riportò Ferrari alla vittoria dopo quasi quattro anni, con Berger in Germania.",
+        "en": "The car that brought Ferrari back to winning after almost four years, with Berger in Germany."
+      },
+      "versions": [
+        {
+          "slug": "412-t1",
+          "name": "412 T1",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1994,
+          "year_end": 1994,
+          "in_production": false,
+          "description": {
+            "it": "Una vittoria, al Gran Premio di Germania.",
+            "en": "One win, at the German Grand Prix."
+          },
+          "powertrain": {
+            "engine": "041",
+            "gearbox_type": "sequenziale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "jean-alesi",
+            "gerhard-berger",
+            "nicola-larini"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1994,
+              "season_end": 1994,
+              "races": 16,
+              "wins": 1,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "poles": 3
+            }
+          ]
+        }
+      ],
+      "predecessor": "f93a"
+    },
+    {
+      "slug": "412-t2",
+      "name": "412 T2",
+      "category": "formula-1",
+      "description": {
+        "it": "L'ultima Ferrari di Formula 1 con il V12, ridotto a tre litri dal nuovo regolamento.",
+        "en": "The last Ferrari Formula 1 car with a V12, cut to three litres by the new rules."
+      },
+      "versions": [
+        {
+          "slug": "412-t2",
+          "name": "412 T2",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1995,
+          "year_end": 1995,
+          "in_production": false,
+          "description": {
+            "it": "Una vittoria, la prima e unica di Jean Alesi in carriera, in Canada.",
+            "en": "One win, Jean Alesi's first and only career victory, in Canada."
+          },
+          "powertrain": {
+            "engine": "044",
+            "gearbox_type": "sequenziale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "jean-alesi",
+            "gerhard-berger"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1995,
+              "season_end": 1995,
+              "races": 17,
+              "wins": 1,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ]
+        }
+      ],
+      "predecessor": "412-t1"
+    },
+    {
+      "slug": "f310",
+      "name": "F310",
+      "category": "formula-1",
+      "description": {
+        "it": "La prima Ferrari con il V10 e la prima di Michael Schumacher.",
+        "en": "The first Ferrari with a V10 and Michael Schumacher's first."
+      },
+      "versions": [
+        {
+          "slug": "f310",
+          "name": "F310",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1996,
+          "year_end": 1996,
+          "in_production": false,
+          "description": {
+            "it": "Tre vittorie, tra cui quella sotto la pioggia in Spagna.",
+            "en": "Three wins, including the one in the rain in Spain."
+          },
+          "powertrain": {
+            "engine": "046",
+            "gearbox_type": "sequenziale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "michael-schumacher",
+            "eddie-irvine"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1996,
+              "season_end": 1996,
+              "races": 16,
+              "wins": 3,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "poles": 3
+            }
+          ],
+          "designers": [
+            {
+              "slug": "john-barnard",
+              "role": "design"
+            }
+          ]
+        }
+      ],
+      "predecessor": "412-t2"
+    },
+    {
+      "slug": "f310b",
+      "name": "F310B",
+      "category": "formula-1",
+      "description": {
+        "it": "L'evoluzione della F310, con cui Schumacher lottò per il titolo fino all'ultima gara di Jerez.",
+        "en": "The evolution of the F310, with which Schumacher fought for the title until the final race at Jerez."
+      },
+      "versions": [
+        {
+          "slug": "f310b",
+          "name": "F310B",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1997,
+          "year_end": 1997,
+          "in_production": false,
+          "description": {
+            "it": "Cinque vittorie; i punti di Schumacher furono poi cancellati per la manovra di Jerez.",
+            "en": "Five wins; Schumacher's points were later annulled for the Jerez incident."
+          },
+          "powertrain": {
+            "engine": "046/2",
+            "gearbox_type": "sequenziale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "michael-schumacher",
+            "eddie-irvine"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1997,
+              "season_end": 1997,
+              "races": 17,
+              "wins": 5,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "poles": 3
+            }
+          ],
+          "designers": [
+            {
+              "slug": "john-barnard",
+              "role": "design"
+            }
+          ]
+        }
+      ],
+      "predecessor": "f310"
+    },
+    {
+      "slug": "f300",
+      "name": "F300",
+      "category": "formula-1",
+      "description": {
+        "it": "La prima Ferrari progettata da Rory Byrne, con le regole delle carreggiate strette e delle gomme scanalate.",
+        "en": "The first Ferrari designed by Rory Byrne, under the narrow-track and grooved-tyre rules."
+      },
+      "versions": [
+        {
+          "slug": "f300",
+          "name": "F300",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1998,
+          "year_end": 1998,
+          "in_production": false,
+          "description": {
+            "it": "Sei vittorie e il titolo perso all'ultima gara, a Suzuka.",
+            "en": "Six wins and the title lost at the final race, at Suzuka."
+          },
+          "powertrain": {
+            "engine": "047",
+            "gearbox_type": "sequenziale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "michael-schumacher",
+            "eddie-irvine"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1998,
+              "season_end": 1998,
+              "races": 16,
+              "wins": 6,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ],
+          "designers": [
+            {
+              "slug": "rory-byrne",
+              "role": "design"
+            }
+          ]
+        }
+      ],
+      "predecessor": "f310b"
+    },
+    {
+      "slug": "f399",
+      "name": "F399",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto del primo titolo costruttori Ferrari dal 1983.",
+        "en": "The car of Ferrari's first constructors' title since 1983."
+      },
+      "versions": [
+        {
+          "slug": "f399",
+          "name": "F399",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1999,
+          "year_end": 1999,
+          "in_production": false,
+          "description": {
+            "it": "Titolo costruttori; Irvine perse il titolo piloti all'ultima gara, dopo l'infortunio di Schumacher a Silverstone.",
+            "en": "Constructors' title; Irvine lost the drivers' title at the final race, after Schumacher's injury at Silverstone."
+          },
+          "powertrain": {
+            "engine": "048",
+            "gearbox_type": "sequenziale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "michael-schumacher",
+            "eddie-irvine",
+            "mika-salo"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1999,
+              "season_end": 1999,
+              "races": 16,
+              "wins": 6,
+              "drivers_titles": 0,
+              "constructors_titles": 1
+            }
+          ],
+          "designers": [
+            {
+              "slug": "rory-byrne",
+              "role": "design"
+            }
+          ]
+        }
+      ],
+      "predecessor": "f300"
+    }
+  ]
+}
