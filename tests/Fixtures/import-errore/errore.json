@@ -1,0 +1,13 @@
+{
+    "models": [
+        {
+            "slug": "auto-misteriosa",
+            "name": "Auto misteriosa",
+            "category": "categoria-inventata",
+            "description": {
+                "it": "Non deve finire nel database."
+            },
+            "versions": []
+        }
+    ]
+}

@@ -83,6 +83,11 @@ class Version extends Model
         return $this->hasOne(VersionPowertrain::class);
     }
 
+    /**
+     * I risultati della versione, campionato per campionato.
+     *
+     * @return HasMany<VersionRacing, $this>
+     */
     public function racingRecords(): HasMany
     {
         return $this->hasMany(VersionRacing::class);
@@ -108,11 +113,21 @@ class Version extends Model
         return $this->hasOne(Image::class)->where('is_cover', true);
     }
 
+    /**
+     * Chi ha disegnato la versione, con il suo ruolo.
+     *
+     * @return BelongsToMany<Designer, $this>
+     */
     public function designers(): BelongsToMany
     {
         return $this->belongsToMany(Designer::class)->withPivot('role');
     }
 
+    /**
+     * Chi ha guidato la versione in gara.
+     *
+     * @return BelongsToMany<Driver, $this>
+     */
     public function drivers(): BelongsToMany
     {
         return $this->belongsToMany(Driver::class);

@@ -1,0 +1,118 @@
+{
+    "engines": [
+        {
+            "code": "F114B",
+            "name": "V8 biturbo",
+            "architecture": "V",
+            "v_angle_deg": 90,
+            "cylinders": 8,
+            "displacement_cc": 2855,
+            "bore_mm": 80,
+            "stroke_mm": 71,
+            "valves_per_cylinder": 4,
+            "aspiration": "turbo"
+        },
+        {
+            "code": "F120A",
+            "name": "V8 biturbo",
+            "architecture": "V",
+            "v_angle_deg": 90,
+            "cylinders": 8,
+            "displacement_cc": 2936,
+            "bore_mm": 82,
+            "stroke_mm": 69.5,
+            "valves_per_cylinder": 4,
+            "aspiration": "turbo"
+        }
+    ],
+    "designers": [
+        {
+            "slug": "pininfarina",
+            "name": "Pininfarina",
+            "type": "studio",
+            "country": "IT"
+        }
+    ],
+    "models": [
+        {
+            "slug": "f40",
+            "name": "F40",
+            "category": "supercar",
+            "predecessor": "288-gto",
+            "description": {
+                "it": "La supercar dei quarant'anni di Ferrari.",
+                "en": "The supercar for Ferrari's 40th anniversary."
+            },
+            "versions": [
+                {
+                    "slug": "f40",
+                    "name": "F40",
+                    "vehicle_type": "stradale",
+                    "body_type": "coupe",
+                    "seats": 2,
+                    "year_start": 1987,
+                    "year_end": 1992,
+                    "in_production": false,
+                    "production_type": "serie_limitata",
+                    "powertrain": {
+                        "engine": "F120A",
+                        "ice_power_cv": 478,
+                        "gearbox_type": "manuale",
+                        "gears": 5,
+                        "drivetrain": "posteriore"
+                    },
+                    "specs": {
+                        "length_mm": 4358,
+                        "top_speed_kmh": 324,
+                        "zero_to_100_sec": 4.1
+                    },
+                    "designers": [
+                        {
+                            "slug": "pininfarina",
+                            "role": "carrozzeria"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "288-gto",
+            "name": "288 GTO",
+            "category": "supercar",
+            "description": {
+                "it": "La prima della serie delle supercar.",
+                "en": "The first of the supercar series."
+            },
+            "versions": [
+                {
+                    "slug": "288-gto",
+                    "name": "288 GTO",
+                    "vehicle_type": "stradale",
+                    "body_type": "coupe",
+                    "seats": 2,
+                    "year_start": 1984,
+                    "year_end": 1985,
+                    "in_production": false,
+                    "production_type": "serie_limitata",
+                    "units_produced": 272,
+                    "powertrain": {
+                        "engine": "F114B",
+                        "ice_power_cv": 400,
+                        "gearbox_type": "manuale",
+                        "gears": 5,
+                        "drivetrain": "posteriore"
+                    },
+                    "specs": {
+                        "top_speed_kmh": 305
+                    },
+                    "designers": [
+                        {
+                            "slug": "pininfarina",
+                            "role": "carrozzeria"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
