@@ -1,0 +1,657 @@
+{
+  "engines": [
+    {
+      "code": "021",
+      "name": "V6 turbo Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 120,
+      "cylinders": 6,
+      "displacement_cc": 1496,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "031",
+      "name": "V6 turbo Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 120,
+      "cylinders": 6,
+      "displacement_cc": 1496,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "032",
+      "name": "V6 turbo Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 120,
+      "cylinders": 6,
+      "displacement_cc": 1496,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "033",
+      "name": "V6 turbo Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 6,
+      "displacement_cc": 1496,
+      "aspiration": "turbo"
+    },
+    {
+      "code": "035",
+      "name": "V12 Formula 1",
+      "architecture": "V",
+      "v_angle_deg": 65,
+      "cylinders": 12,
+      "displacement_cc": 3498,
+      "aspiration": "aspirato"
+    }
+  ],
+  "designers": [
+    {
+      "slug": "mauro-forghieri",
+      "name": "Mauro Forghieri",
+      "type": "persona",
+      "country": "IT"
+    },
+    {
+      "slug": "harvey-postlethwaite",
+      "name": "Harvey Postlethwaite",
+      "type": "persona",
+      "country": "GB"
+    },
+    {
+      "slug": "gustav-brunner",
+      "name": "Gustav Brunner",
+      "type": "persona",
+      "country": "AT"
+    }
+  ],
+  "drivers": [
+    {
+      "slug": "gilles-villeneuve",
+      "first_name": "Gilles",
+      "last_name": "Villeneuve",
+      "nationality": "CA",
+      "birth_date": "1950-01-18"
+    },
+    {
+      "slug": "didier-pironi",
+      "first_name": "Didier",
+      "last_name": "Pironi",
+      "nationality": "FR",
+      "birth_date": "1952-03-26"
+    },
+    {
+      "slug": "patrick-tambay",
+      "first_name": "Patrick",
+      "last_name": "Tambay",
+      "nationality": "FR",
+      "birth_date": "1949-06-25"
+    },
+    {
+      "slug": "mario-andretti",
+      "first_name": "Mario",
+      "last_name": "Andretti",
+      "nationality": "US",
+      "birth_date": "1940-02-28"
+    },
+    {
+      "slug": "rene-arnoux",
+      "first_name": "René",
+      "last_name": "Arnoux",
+      "nationality": "FR",
+      "birth_date": "1948-07-04"
+    },
+    {
+      "slug": "michele-alboreto",
+      "first_name": "Michele",
+      "last_name": "Alboreto",
+      "nationality": "IT",
+      "birth_date": "1956-12-23"
+    },
+    {
+      "slug": "stefan-johansson",
+      "first_name": "Stefan",
+      "last_name": "Johansson",
+      "nationality": "SE",
+      "birth_date": "1956-09-08"
+    }
+  ],
+  "models": [
+    {
+      "slug": "126-ck",
+      "name": "126 CK",
+      "category": "formula-1",
+      "description": {
+        "it": "La prima Ferrari di Formula 1 con il turbo: la K sta per KKK, il costruttore dei turbocompressori.",
+        "en": "The first turbocharged Ferrari Formula 1 car: the K stands for KKK, the turbocharger maker."
+      },
+      "versions": [
+        {
+          "slug": "126-ck",
+          "name": "126 CK",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1981,
+          "year_end": 1981,
+          "in_production": false,
+          "description": {
+            "it": "Due vittorie di Gilles Villeneuve, a Monaco e in Spagna.",
+            "en": "Two wins for Gilles Villeneuve, in Monaco and Spain."
+          },
+          "powertrain": {
+            "engine": "021",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "alluminio"
+          },
+          "drivers": [
+            "gilles-villeneuve",
+            "didier-pironi"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1981,
+              "season_end": 1981,
+              "races": 15,
+              "wins": 2,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ],
+          "designers": [
+            {
+              "slug": "mauro-forghieri",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "126-c2",
+      "name": "126 C2",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto di una stagione segnata dalla morte di Gilles Villeneuve a Zolder e dall'incidente di Pironi a Hockenheim.",
+        "en": "The car of a season marked by Gilles Villeneuve's death at Zolder and Pironi's accident at Hockenheim."
+      },
+      "versions": [
+        {
+          "slug": "126-c2",
+          "name": "126 C2",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1982,
+          "year_end": 1982,
+          "in_production": false,
+          "description": {
+            "it": "Tre vittorie e il titolo costruttori.",
+            "en": "Three wins and the constructors' title."
+          },
+          "powertrain": {
+            "engine": "021",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "alluminio"
+          },
+          "drivers": [
+            "gilles-villeneuve",
+            "didier-pironi",
+            "patrick-tambay",
+            "mario-andretti"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1982,
+              "season_end": 1982,
+              "races": 16,
+              "wins": 3,
+              "drivers_titles": 0,
+              "constructors_titles": 1
+            }
+          ],
+          "designers": [
+            {
+              "slug": "harvey-postlethwaite",
+              "role": "design"
+            }
+          ]
+        }
+      ],
+      "predecessor": "126-ck"
+    },
+    {
+      "slug": "126-c2b",
+      "name": "126 C2B",
+      "category": "formula-1",
+      "description": {
+        "it": "L'evoluzione della C2 per il regolamento del 1983, che abolì il fondo piatto a effetto suolo.",
+        "en": "The C2's evolution for the 1983 rules, which banned flat-bottom ground effect."
+      },
+      "versions": [
+        {
+          "slug": "126-c2b",
+          "name": "126 C2B",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1983,
+          "year_end": 1983,
+          "in_production": false,
+          "description": {
+            "it": "Corse la prima metà della stagione, con due vittorie: Tambay a Imola e Arnoux in Canada.",
+            "en": "It ran the first half of the season, with two wins: Tambay at Imola and Arnoux in Canada."
+          },
+          "powertrain": {
+            "engine": "021",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "alluminio"
+          },
+          "drivers": [
+            "patrick-tambay",
+            "rene-arnoux"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1983,
+              "season_end": 1983,
+              "races": 8,
+              "wins": 2,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ],
+          "designers": [
+            {
+              "slug": "harvey-postlethwaite",
+              "role": "design"
+            }
+          ]
+        }
+      ],
+      "predecessor": "126-c2"
+    },
+    {
+      "slug": "126-c3",
+      "name": "126 C3",
+      "category": "formula-1",
+      "description": {
+        "it": "La prima Ferrari con la monoscocca in fibra di carbonio, debuttò al Gran Premio di Gran Bretagna.",
+        "en": "The first Ferrari with a carbon-fibre monocoque, it debuted at the British Grand Prix."
+      },
+      "versions": [
+        {
+          "slug": "126-c3",
+          "name": "126 C3",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1983,
+          "year_end": 1983,
+          "in_production": false,
+          "description": {
+            "it": "Due vittorie di Arnoux e il titolo costruttori, vinto insieme alla C2B.",
+            "en": "Two wins for Arnoux and the constructors' title, won together with the C2B."
+          },
+          "powertrain": {
+            "engine": "021",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "patrick-tambay",
+            "rene-arnoux"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1983,
+              "season_end": 1983,
+              "races": 7,
+              "wins": 2,
+              "drivers_titles": 0,
+              "constructors_titles": 1,
+              "notes": "Il titolo costruttori del 1983 fu vinto con la 126 C2B nella prima parte della stagione e con la 126 C3 nella seconda."
+            }
+          ],
+          "designers": [
+            {
+              "slug": "harvey-postlethwaite",
+              "role": "design"
+            }
+          ]
+        }
+      ],
+      "predecessor": "126-c2b"
+    },
+    {
+      "slug": "126-c4",
+      "name": "126 C4",
+      "category": "formula-1",
+      "description": {
+        "it": "L'ultima delle 126, l'anno del dominio McLaren.",
+        "en": "The last of the 126s, in the year of McLaren's dominance."
+      },
+      "versions": [
+        {
+          "slug": "126-c4",
+          "name": "126 C4",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1984,
+          "year_end": 1984,
+          "in_production": false,
+          "description": {
+            "it": "Una vittoria di Michele Alboreto, in Belgio, partito dalla pole.",
+            "en": "One win for Michele Alboreto, in Belgium, from pole position."
+          },
+          "powertrain": {
+            "engine": "031",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "michele-alboreto",
+            "rene-arnoux"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1984,
+              "season_end": 1984,
+              "races": 16,
+              "wins": 1,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "poles": 1
+            }
+          ]
+        }
+      ],
+      "predecessor": "126-c3"
+    },
+    {
+      "slug": "156-85",
+      "name": "156/85",
+      "category": "formula-1",
+      "description": {
+        "it": "La monoposto con cui Michele Alboreto guidò il mondiale fino all'estate.",
+        "en": "The car with which Michele Alboreto led the championship until the summer."
+      },
+      "versions": [
+        {
+          "slug": "156-85",
+          "name": "156/85",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1985,
+          "year_end": 1985,
+          "in_production": false,
+          "description": {
+            "it": "Due vittorie di Alboreto, in Canada e in Germania; secondo nel campionato piloti.",
+            "en": "Two wins for Alboreto, in Canada and Germany; second in the drivers' championship."
+          },
+          "powertrain": {
+            "engine": "031",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "michele-alboreto",
+            "rene-arnoux",
+            "stefan-johansson"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1985,
+              "season_end": 1985,
+              "races": 16,
+              "wins": 2,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "poles": 1
+            }
+          ]
+        }
+      ],
+      "predecessor": "126-c4"
+    },
+    {
+      "slug": "f1-86",
+      "name": "F1/86",
+      "category": "formula-1",
+      "description": {
+        "it": "Una stagione difficile, senza vittorie.",
+        "en": "A difficult season, without wins."
+      },
+      "versions": [
+        {
+          "slug": "f1-86",
+          "name": "F1/86",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1986,
+          "year_end": 1986,
+          "in_production": false,
+          "description": {
+            "it": "Nessuna vittoria e nessuna pole.",
+            "en": "No wins and no pole positions."
+          },
+          "powertrain": {
+            "engine": "032",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "michele-alboreto",
+            "stefan-johansson"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1986,
+              "season_end": 1986,
+              "races": 16,
+              "wins": 0,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "poles": 0
+            }
+          ]
+        }
+      ],
+      "predecessor": "156-85"
+    },
+    {
+      "slug": "f1-87",
+      "name": "F1/87",
+      "category": "formula-1",
+      "description": {
+        "it": "La prima Ferrari di Gerhard Berger, che vinse le ultime due gare della stagione.",
+        "en": "Gerhard Berger's first Ferrari, which won the last two races of the season."
+      },
+      "versions": [
+        {
+          "slug": "f1-87",
+          "name": "F1/87",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1987,
+          "year_end": 1987,
+          "in_production": false,
+          "description": {
+            "it": "Due vittorie, in Giappone e in Australia, e tre pole di Berger.",
+            "en": "Two wins, in Japan and Australia, and three pole positions for Berger."
+          },
+          "powertrain": {
+            "engine": "033",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "michele-alboreto",
+            "gerhard-berger"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1987,
+              "season_end": 1987,
+              "races": 16,
+              "wins": 2,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "poles": 3
+            }
+          ],
+          "designers": [
+            {
+              "slug": "gustav-brunner",
+              "role": "design"
+            }
+          ]
+        }
+      ],
+      "predecessor": "f1-86"
+    },
+    {
+      "slug": "f1-87-88c",
+      "name": "F1/87/88C",
+      "category": "formula-1",
+      "description": {
+        "it": "L'ultima Ferrari turbo: vinse a Monza poche settimane dopo la morte di Enzo Ferrari.",
+        "en": "The last turbo Ferrari: it won at Monza a few weeks after Enzo Ferrari's death."
+      },
+      "versions": [
+        {
+          "slug": "f1-87-88c",
+          "name": "F1/87/88C",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1988,
+          "year_end": 1988,
+          "in_production": false,
+          "description": {
+            "it": "L'unica gara non vinta dalla McLaren nel 1988, il Gran Premio d'Italia, con Berger e Alboreto primo e secondo.",
+            "en": "The only race McLaren did not win in 1988, the Italian Grand Prix, with Berger and Alboreto first and second."
+          },
+          "powertrain": {
+            "engine": "033",
+            "gearbox_type": "manuale",
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "michele-alboreto",
+            "gerhard-berger"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1988,
+              "season_end": 1988,
+              "races": 16,
+              "wins": 1,
+              "drivers_titles": 0,
+              "constructors_titles": 0,
+              "poles": 1
+            }
+          ]
+        }
+      ],
+      "predecessor": "f1-87"
+    },
+    {
+      "slug": "640",
+      "name": "640",
+      "category": "formula-1",
+      "description": {
+        "it": "La prima monoposto con il cambio a palette dietro il volante, una soluzione poi adottata da tutta la Formula 1.",
+        "en": "The first car with paddle shifters behind the steering wheel, a solution later adopted by all of Formula 1."
+      },
+      "versions": [
+        {
+          "slug": "640",
+          "name": "640",
+          "vehicle_type": "f1",
+          "body_type": "monoposto",
+          "seats": 1,
+          "year_start": 1989,
+          "year_end": 1989,
+          "in_production": false,
+          "description": {
+            "it": "Vinse all'esordio in Brasile con Nigel Mansell; tre vittorie in tutto.",
+            "en": "It won on its debut in Brazil with Nigel Mansell; three wins in all."
+          },
+          "powertrain": {
+            "engine": "035",
+            "gearbox_type": "sequenziale",
+            "drivetrain": "posteriore",
+            "gears": 7
+          },
+          "specs": {
+            "chassis_material": "fibra_di_carbonio"
+          },
+          "drivers": [
+            "nigel-mansell",
+            "gerhard-berger"
+          ],
+          "racing": [
+            {
+              "championship": "Formula 1",
+              "season_start": 1989,
+              "season_end": 1989,
+              "races": 16,
+              "wins": 3,
+              "drivers_titles": 0,
+              "constructors_titles": 0
+            }
+          ],
+          "designers": [
+            {
+              "slug": "john-barnard",
+              "role": "design"
+            }
+          ]
+        }
+      ],
+      "predecessor": "f1-87-88c"
+    }
+  ]
+}
