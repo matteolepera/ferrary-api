@@ -1,0 +1,1171 @@
+{
+  "engines": [
+    {
+      "code": "166",
+      "name": "V12 Colombo",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 1995,
+      "bore_mm": 60,
+      "stroke_mm": 58.8,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "128C",
+      "name": "V12 Colombo",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 2953,
+      "bore_mm": 73,
+      "stroke_mm": 58.8,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "128E",
+      "name": "V12 Colombo",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 2953,
+      "bore_mm": 73,
+      "stroke_mm": 58.8,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "168U",
+      "name": "V12 Colombo",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 2953,
+      "bore_mm": 73,
+      "stroke_mm": 58.8,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "209",
+      "name": "V12 Colombo",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 3967,
+      "bore_mm": 77,
+      "stroke_mm": 71,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "245",
+      "name": "V12 Colombo",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 4390,
+      "bore_mm": 81,
+      "stroke_mm": 71,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F101AC",
+      "name": "V12 quattro alberi",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 4390,
+      "bore_mm": 81,
+      "stroke_mm": 71,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F101C",
+      "name": "V12 quattro alberi",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 4823,
+      "bore_mm": 81,
+      "stroke_mm": 78,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F101D",
+      "name": "V12 quattro alberi a iniezione",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 4823,
+      "bore_mm": 81,
+      "stroke_mm": 78,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F101E",
+      "name": "V12 quattro alberi a iniezione",
+      "architecture": "V",
+      "v_angle_deg": 60,
+      "cylinders": 12,
+      "displacement_cc": 4943,
+      "bore_mm": 82,
+      "stroke_mm": 78,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F106AL",
+      "name": "V8 a carburatori",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 2927,
+      "bore_mm": 81,
+      "stroke_mm": 71,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    },
+    {
+      "code": "F106C",
+      "name": "V8 due litri",
+      "architecture": "V",
+      "v_angle_deg": 90,
+      "cylinders": 8,
+      "displacement_cc": 1991,
+      "bore_mm": 66.8,
+      "stroke_mm": 71,
+      "valves_per_cylinder": 2,
+      "aspiration": "aspirato"
+    }
+  ],
+  "designers": [
+    {
+      "slug": "bertone",
+      "name": "Bertone",
+      "type": "studio",
+      "country": "IT"
+    }
+  ],
+  "models": [
+    {
+      "slug": "166-inter",
+      "name": "166 Inter",
+      "category": "gran-turismo",
+      "description": {
+        "it": "La prima Ferrari pensata per la strada e non per le corse, carrozzata da diversi atelier italiani.",
+        "en": "The first Ferrari designed for the road rather than racing, bodied by several Italian coachbuilders."
+      },
+      "versions": [
+        {
+          "slug": "166-inter",
+          "name": "166 Inter",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie_limitata",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1948,
+          "year_end": 1950,
+          "units_produced": 38,
+          "description": {
+            "it": "Quasi ogni esemplare è diverso: le carrozzerie sono di Touring, Ghia, Vignale e Stabilimenti Farina.",
+            "en": "Almost every example is different: the bodies are by Touring, Ghia, Vignale and Stabilimenti Farina."
+          },
+          "powertrain": {
+            "engine": "166",
+            "ice_power_cv": 110,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "250-gt-coupe",
+      "name": "250 GT Coupé Pinin Farina",
+      "category": "gran-turismo",
+      "description": {
+        "it": "La prima Ferrari costruita in serie, con una carrozzeria uguale per tutti gli esemplari.",
+        "en": "The first Ferrari built in series, with the same body on every example."
+      },
+      "versions": [
+        {
+          "slug": "250-gt-coupe-pinin-farina",
+          "name": "250 GT Coupé Pinin Farina",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1958,
+          "year_end": 1960,
+          "units_produced": 350,
+          "description": {
+            "it": "Disegnata e costruita da Pinin Farina nel nuovo stabilimento di Grugliasco.",
+            "en": "Designed and built by Pinin Farina at the new Grugliasco plant."
+          },
+          "powertrain": {
+            "engine": "128C",
+            "ice_power_cv": 240,
+            "gearbox_type": "manuale",
+            "gears": 4,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2600,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "250-gt-2-2",
+      "name": "250 GT/E 2+2",
+      "category": "gran-turismo",
+      "description": {
+        "it": "La prima Ferrari a quattro posti prodotta in serie.",
+        "en": "The first series-production four-seat Ferrari."
+      },
+      "versions": [
+        {
+          "slug": "250-gt-e-2-2",
+          "name": "250 GT/E 2+2",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1960,
+          "year_end": 1963,
+          "description": {
+            "it": "Il motore spostato in avanti fa posto ai due sedili posteriori.",
+            "en": "The engine moved forward makes room for the two rear seats."
+          },
+          "powertrain": {
+            "engine": "128E",
+            "ice_power_cv": 240,
+            "gearbox_type": "manuale",
+            "gears": 4,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2600,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "250-gt-lusso",
+      "name": "250 GT Berlinetta Lusso",
+      "category": "gran-turismo",
+      "description": {
+        "it": "L'ultima delle 250 GT stradali, considerata una delle Ferrari più eleganti di sempre.",
+        "en": "The last of the road-going 250 GTs, considered one of the most elegant Ferraris ever."
+      },
+      "versions": [
+        {
+          "slug": "250-gt-lusso",
+          "name": "250 GT Berlinetta Lusso",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1962,
+          "year_end": 1964,
+          "units_produced": 350,
+          "description": {
+            "it": "Disegnata da Pininfarina e costruita da Scaglietti, sul telaio della 250 GT SWB.",
+            "en": "Designed by Pininfarina and built by Scaglietti, on the 250 GT SWB chassis."
+          },
+          "powertrain": {
+            "engine": "168U",
+            "ice_power_cv": 250,
+            "gearbox_type": "manuale",
+            "gears": 4,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2400,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "scaglietti",
+              "role": "carrozzeria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "330-gt-2-2",
+      "name": "330 GT 2+2",
+      "category": "gran-turismo",
+      "predecessor": "250-gt-2-2",
+      "description": {
+        "it": "L'erede della 250 GT/E, con il V12 portato a quattro litri.",
+        "en": "The successor to the 250 GT/E, with the V12 enlarged to four litres."
+      },
+      "versions": [
+        {
+          "slug": "330-gt-2-2",
+          "name": "330 GT 2+2",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1964,
+          "year_end": 1967,
+          "description": {
+            "it": "La prima serie aveva i fari doppi, la seconda singoli.",
+            "en": "The first series had twin headlights, the second single ones."
+          },
+          "powertrain": {
+            "engine": "209",
+            "ice_power_cv": 300,
+            "gearbox_type": "manuale",
+            "gears": 4,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2650,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "330-gtc",
+      "name": "330 GTC",
+      "category": "gran-turismo",
+      "description": {
+        "it": "La Gran Turismo a due posti con il frontale ispirato alla 500 Superfast.",
+        "en": "The two-seat grand tourer with a front end inspired by the 500 Superfast."
+      },
+      "versions": [
+        {
+          "slug": "330-gtc",
+          "name": "330 GTC",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1966,
+          "year_end": 1968,
+          "units_produced": 598,
+          "sort_order": 1,
+          "description": {
+            "it": "La coupé.",
+            "en": "The coupé."
+          },
+          "powertrain": {
+            "engine": "209",
+            "ice_power_cv": 300,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2400,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "330-gts",
+          "name": "330 GTS",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 1966,
+          "year_end": 1968,
+          "units_produced": 100,
+          "sort_order": 2,
+          "description": {
+            "it": "La spider.",
+            "en": "The spider."
+          },
+          "powertrain": {
+            "engine": "209",
+            "ice_power_cv": 300,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2400,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "365-gt-2-2",
+      "name": "365 GT 2+2",
+      "category": "gran-turismo",
+      "predecessor": "330-gt-2-2",
+      "description": {
+        "it": "La 2+2 con le sospensioni posteriori autolivellanti, soprannominata \"Queen Mary\" per le sue dimensioni.",
+        "en": "The 2+2 with self-levelling rear suspension, nicknamed \"Queen Mary\" for its size."
+      },
+      "versions": [
+        {
+          "slug": "365-gt-2-2",
+          "name": "365 GT 2+2",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1967,
+          "year_end": 1971,
+          "units_produced": 801,
+          "description": {
+            "it": "Servosterzo e aria condizionata di serie, una novità per Ferrari.",
+            "en": "Power steering and air conditioning as standard, a first for Ferrari."
+          },
+          "powertrain": {
+            "engine": "245",
+            "ice_power_cv": 320,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2650,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "365-gtc",
+      "name": "365 GTC",
+      "category": "gran-turismo",
+      "predecessor": "330-gtc",
+      "description": {
+        "it": "L'evoluzione della 330 GTC, con il V12 di 4,4 litri.",
+        "en": "The evolution of the 330 GTC, with the 4.4-litre V12."
+      },
+      "versions": [
+        {
+          "slug": "365-gtc",
+          "name": "365 GTC",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1968,
+          "year_end": 1970,
+          "sort_order": 1,
+          "description": {
+            "it": "La coupé.",
+            "en": "The coupé."
+          },
+          "powertrain": {
+            "engine": "245",
+            "ice_power_cv": 320,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2400,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "365-gts",
+          "name": "365 GTS",
+          "vehicle_type": "stradale",
+          "seats": 2,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 1968,
+          "year_end": 1969,
+          "units_produced": 20,
+          "sort_order": 2,
+          "description": {
+            "it": "La spider, una delle Ferrari stradali più rare.",
+            "en": "The spider, one of the rarest road-going Ferraris."
+          },
+          "powertrain": {
+            "engine": "245",
+            "ice_power_cv": 320,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2400,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "365-gtc4",
+      "name": "365 GTC/4",
+      "category": "gran-turismo",
+      "predecessor": "365-gtc",
+      "description": {
+        "it": "La Gran Turismo con il V12 a quattro alberi della Daytona, e un abitacolo 2+2 di emergenza.",
+        "en": "The grand tourer with the Daytona's four-cam V12, and an occasional 2+2 cabin."
+      },
+      "versions": [
+        {
+          "slug": "365-gtc4",
+          "name": "365 GTC/4",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1971,
+          "year_end": 1972,
+          "units_produced": 500,
+          "description": {
+            "it": "Soprannominata \"il gobbone\" per il cofano alto.",
+            "en": "Nicknamed \"the hunchback\" for its high bonnet."
+          },
+          "powertrain": {
+            "engine": "F101AC",
+            "ice_power_cv": 340,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2500,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "365-gt4-2-2",
+      "name": "365 GT4 2+2",
+      "category": "gran-turismo",
+      "predecessor": "365-gt-2-2",
+      "description": {
+        "it": "La 2+2 dalle linee tese degli anni Settanta, capostipite di una famiglia rimasta in produzione fino al 1989.",
+        "en": "The sharp-lined 1970s 2+2, the first of a family that stayed in production until 1989."
+      },
+      "versions": [
+        {
+          "slug": "365-gt4-2-2",
+          "name": "365 GT4 2+2",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1972,
+          "year_end": 1976,
+          "units_produced": 524,
+          "description": {
+            "it": "Quattro posti veri, con il passo allungato.",
+            "en": "Four real seats, with a lengthened wheelbase."
+          },
+          "powertrain": {
+            "engine": "F101AC",
+            "ice_power_cv": 340,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2700,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "400",
+      "name": "400",
+      "category": "gran-turismo",
+      "predecessor": "365-gt4-2-2",
+      "description": {
+        "it": "La prima Ferrari con il cambio automatico, pensata soprattutto per il mercato americano.",
+        "en": "The first Ferrari with an automatic gearbox, aimed above all at the American market."
+      },
+      "versions": [
+        {
+          "slug": "400-automatic",
+          "name": "400 Automatic",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1976,
+          "year_end": 1979,
+          "sort_order": 1,
+          "description": {
+            "it": "Con il cambio automatico a tre marce di origine General Motors.",
+            "en": "With a three-speed automatic gearbox sourced from General Motors."
+          },
+          "powertrain": {
+            "engine": "F101C",
+            "ice_power_cv": 340,
+            "gearbox_type": "automatico",
+            "gears": 3,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2700,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "400-gt",
+          "name": "400 GT",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1976,
+          "year_end": 1979,
+          "sort_order": 2,
+          "description": {
+            "it": "Con il cambio manuale a cinque marce.",
+            "en": "With the five-speed manual gearbox."
+          },
+          "powertrain": {
+            "engine": "F101C",
+            "ice_power_cv": 340,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2700,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "400i",
+          "name": "400i",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1979,
+          "year_end": 1985,
+          "sort_order": 3,
+          "description": {
+            "it": "L'iniezione elettronica sostituisce i carburatori.",
+            "en": "Fuel injection replaces the carburettors."
+          },
+          "powertrain": {
+            "engine": "F101D",
+            "ice_power_cv": 310,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2700,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "412",
+      "name": "412",
+      "category": "gran-turismo",
+      "predecessor": "400",
+      "description": {
+        "it": "L'ultima evoluzione della famiglia nata con la 365 GT4 2+2, con il V12 portato a quasi cinque litri.",
+        "en": "The last evolution of the family born with the 365 GT4 2+2, with the V12 enlarged to almost five litres."
+      },
+      "versions": [
+        {
+          "slug": "412",
+          "name": "412",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1985,
+          "year_end": 1989,
+          "units_produced": 576,
+          "description": {
+            "it": "La prima Ferrari con l'ABS.",
+            "en": "The first Ferrari with ABS."
+          },
+          "powertrain": {
+            "engine": "F101E",
+            "ice_power_cv": 340,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2700,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "dino-gt4",
+      "name": "Dino GT4",
+      "category": "gran-turismo",
+      "description": {
+        "it": "La prima Ferrari stradale con un V8 e l'unica disegnata da Bertone: nata come Dino, dal 1976 porta il Cavallino.",
+        "en": "The first road-going Ferrari with a V8 and the only one designed by Bertone: born a Dino, it wore the Prancing Horse from 1976."
+      },
+      "versions": [
+        {
+          "slug": "dino-308-gt4",
+          "name": "Dino 308 GT4",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1973,
+          "year_end": 1980,
+          "units_produced": 2826,
+          "sort_order": 1,
+          "description": {
+            "it": "La 2+2 a motore centrale, con il V8 di tre litri.",
+            "en": "The mid-engined 2+2, with the three-litre V8."
+          },
+          "powertrain": {
+            "engine": "F106AL",
+            "ice_power_cv": 255,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2550,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "bertone",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "dino-208-gt4",
+          "name": "Dino 208 GT4",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1975,
+          "year_end": 1980,
+          "units_produced": 840,
+          "sort_order": 2,
+          "description": {
+            "it": "La versione di due litri per il mercato italiano.",
+            "en": "The two-litre version for the Italian market."
+          },
+          "powertrain": {
+            "engine": "F106C",
+            "ice_power_cv": 170,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2550,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "bertone",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "mondial",
+      "name": "Mondial",
+      "category": "gran-turismo",
+      "predecessor": "dino-gt4",
+      "description": {
+        "it": "La 2+2 a motore centrale che prese il posto della GT4, rimasta in produzione per tredici anni.",
+        "en": "The mid-engined 2+2 that replaced the GT4, in production for thirteen years."
+      },
+      "versions": [
+        {
+          "slug": "mondial-8",
+          "name": "Mondial 8",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1980,
+          "year_end": 1982,
+          "units_produced": 703,
+          "sort_order": 1,
+          "description": {
+            "it": "La prima serie, con il V8 della 308 GTBi.",
+            "en": "The first series, with the 308 GTBi's V8."
+          },
+          "powertrain": {
+            "engine": "F106BB",
+            "ice_power_cv": 214,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2650,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "mondial-qv",
+          "name": "Mondial Quattrovalvole",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1982,
+          "year_end": 1985,
+          "sort_order": 2,
+          "description": {
+            "it": "Con il V8 a quattro valvole per cilindro.",
+            "en": "With the four-valve-per-cylinder V8."
+          },
+          "powertrain": {
+            "engine": "F105AB",
+            "ice_power_cv": 240,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2650,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "mondial-qv-cabriolet",
+          "name": "Mondial Cabriolet Quattrovalvole",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 1983,
+          "year_end": 1985,
+          "sort_order": 3,
+          "description": {
+            "it": "La prima Ferrari scoperta a quattro posti dai tempi della 365 California.",
+            "en": "The first open four-seat Ferrari since the 365 California."
+          },
+          "powertrain": {
+            "engine": "F105AB",
+            "ice_power_cv": 240,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2650,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "mondial-3-2",
+          "name": "Mondial 3.2",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1985,
+          "year_end": 1989,
+          "sort_order": 4,
+          "description": {
+            "it": "Con il V8 di 3,2 litri della 328.",
+            "en": "With the 328's 3.2-litre V8."
+          },
+          "powertrain": {
+            "engine": "F105CB",
+            "ice_power_cv": 270,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2650,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "mondial-3-2-cabriolet",
+          "name": "Mondial 3.2 Cabriolet",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 1985,
+          "year_end": 1989,
+          "sort_order": 5,
+          "description": {
+            "it": "La 3.2 scoperta.",
+            "en": "The open-top 3.2."
+          },
+          "powertrain": {
+            "engine": "F105CB",
+            "ice_power_cv": 270,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2650,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "mondial-t",
+          "name": "Mondial t",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "coupe",
+          "year_start": 1989,
+          "year_end": 1993,
+          "sort_order": 6,
+          "description": {
+            "it": "Il motore diventa longitudinale, con il cambio trasversale: la \"t\".",
+            "en": "The engine becomes longitudinal, with a transverse gearbox: the \"t\"."
+          },
+          "powertrain": {
+            "engine": "F119D",
+            "ice_power_cv": 300,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2650,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        },
+        {
+          "slug": "mondial-t-cabriolet",
+          "name": "Mondial t Cabriolet",
+          "vehicle_type": "stradale",
+          "seats": 4,
+          "production_type": "serie",
+          "in_production": false,
+          "body_type": "spider",
+          "year_start": 1989,
+          "year_end": 1993,
+          "sort_order": 7,
+          "description": {
+            "it": "La Mondial t scoperta, l'ultima della famiglia.",
+            "en": "The open-top Mondial t, the last of the family."
+          },
+          "powertrain": {
+            "engine": "F119D",
+            "ice_power_cv": 300,
+            "gearbox_type": "manuale",
+            "gears": 5,
+            "drivetrain": "posteriore"
+          },
+          "specs": {
+            "wheelbase_mm": 2650,
+            "chassis_material": "acciaio",
+            "brakes": "disco_acciaio"
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -126,6 +126,7 @@
       "slug": "456",
       "name": "456",
       "category": "gran-turismo",
+      "predecessor": "412",
       "description": {
         "it": "La 2+2 con il V12 anteriore che riportò Ferrari alle grandi Gran Turismo, dopo la 412.",
         "en": "The front-V12 2+2 that brought Ferrari back to the grand tourer, after the 412."
