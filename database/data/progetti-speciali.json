@@ -1,0 +1,715 @@
+{
+  "models": [
+    {
+      "slug": "p4-5",
+      "name": "P4/5 by Pininfarina",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "Un esemplare unico costruito per il collezionista James Glickenhaus sulla meccanica della Enzo, ispirato alle sport prototipo degli anni Sessanta.",
+        "en": "A one-off built for collector James Glickenhaus on Enzo mechanicals, inspired by the sports prototypes of the 1960s."
+      },
+      "versions": [
+        {
+          "slug": "p4-5",
+          "name": "P4/5 by Pininfarina",
+          "vehicle_type": "stradale",
+          "year_start": 2006,
+          "year_end": 2006,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Carrozzeria disegnata e costruita da Pininfarina, riconosciuta da Ferrari come una Ferrari a tutti gli effetti.",
+            "en": "Bodywork designed and built by Pininfarina, recognised by Ferrari as a Ferrari in its own right."
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "powertrain": {
+            "engine": "F140B",
+            "ice_power_cv": 660
+          },
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "sp1",
+      "name": "SP1",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "Il primo esemplare unico del programma Progetti speciali, costruito sulla F430 per un collezionista giapponese.",
+        "en": "The first one-off of the Special Projects programme, built on the F430 for a Japanese collector."
+      },
+      "versions": [
+        {
+          "slug": "sp1",
+          "name": "SP1",
+          "vehicle_type": "stradale",
+          "year_start": 2008,
+          "year_end": 2008,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Disegnata da Leonardo Fioravanti.",
+            "en": "Designed by Leonardo Fioravanti."
+          },
+          "designers": [
+            {
+              "slug": "leonardo-fioravanti",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "powertrain": {
+            "engine": "F136E"
+          },
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "sa-aperta",
+      "name": "SA Aperta",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "La spider in serie limitata della 599, dedicata a Sergio e Andrea Pininfarina: le iniziali SA.",
+        "en": "The limited-series spider of the 599, dedicated to Sergio and Andrea Pininfarina: the SA initials."
+      },
+      "versions": [
+        {
+          "slug": "sa-aperta",
+          "name": "SA Aperta",
+          "vehicle_type": "stradale",
+          "year_start": 2010,
+          "year_end": 2011,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Ottanta esemplari, con il V12 della 599 GTO.",
+            "en": "Eighty units, with the 599 GTO's V12."
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ],
+          "body_type": "spider",
+          "units_produced": 80,
+          "powertrain": {
+            "engine": "F140C",
+            "ice_power_cv": 670
+          }
+        }
+      ]
+    },
+    {
+      "slug": "superamerica-45",
+      "name": "Superamerica 45",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "Un esemplare unico sulla 599, con il tetto in fibra di carbonio che ruota come quello della Superamerica.",
+        "en": "A one-off on the 599, with a carbon-fibre roof that rotates like the Superamerica's."
+      },
+      "versions": [
+        {
+          "slug": "superamerica-45",
+          "name": "Superamerica 45",
+          "vehicle_type": "stradale",
+          "year_start": 2011,
+          "year_end": 2011,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Costruita per il collezionista Peter Kalikow.",
+            "en": "Built for collector Peter Kalikow."
+          },
+          "designers": [],
+          "body_type": "targa",
+          "powertrain": {
+            "engine": "F140C"
+          },
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "sp12-ec",
+      "name": "SP12 EC",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "L'esemplare unico costruito per Eric Clapton sulla 458, ispirato alla 512 BB.",
+        "en": "The one-off built for Eric Clapton on the 458, inspired by the 512 BB."
+      },
+      "versions": [
+        {
+          "slug": "sp12-ec",
+          "name": "SP12 EC",
+          "vehicle_type": "stradale",
+          "year_start": 2012,
+          "year_end": 2012,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Le iniziali EC sono quelle del musicista.",
+            "en": "The EC initials are the musician's."
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            },
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "powertrain": {
+            "engine": "F136FB"
+          },
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "f12-trs",
+      "name": "F12 TRS",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "Un esemplare unico sulla F12berlinetta, una barchetta che richiama la 250 Testa Rossa.",
+        "en": "A one-off on the F12berlinetta, a barchetta recalling the 250 Testa Rossa."
+      },
+      "versions": [
+        {
+          "slug": "f12-trs",
+          "name": "F12 TRS",
+          "vehicle_type": "stradale",
+          "year_start": 2014,
+          "year_end": 2014,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Senza tetto né parabrezza tradizionale.",
+            "en": "Without a roof or a conventional windscreen."
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "barchetta",
+          "powertrain": {
+            "engine": "F140FC"
+          },
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "sp-ffx",
+      "name": "SP FFX",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "Un esemplare unico sulla FF, con la coda da coupé invece della linea da shooting brake.",
+        "en": "A one-off on the FF, with a coupé tail instead of the shooting-brake line."
+      },
+      "versions": [
+        {
+          "slug": "sp-ffx",
+          "name": "SP FFX",
+          "vehicle_type": "stradale",
+          "year_start": 2014,
+          "year_end": 2014,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Costruita per un collezionista giapponese.",
+            "en": "Built for a Japanese collector."
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "powertrain": {
+            "engine": "F140EB"
+          },
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "f60-america",
+      "name": "F60America",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "Dieci esemplari per i sessant'anni di Ferrari negli Stati Uniti, sulla F12berlinetta.",
+        "en": "Ten units for sixty years of Ferrari in the United States, on the F12berlinetta."
+      },
+      "versions": [
+        {
+          "slug": "f60-america",
+          "name": "F60America",
+          "vehicle_type": "stradale",
+          "year_start": 2014,
+          "year_end": 2015,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Una spider con la livrea ispirata alle Ferrari da corsa americane.",
+            "en": "A spider with a livery inspired by American racing Ferraris."
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "spider",
+          "units_produced": 10,
+          "powertrain": {
+            "engine": "F140FC",
+            "ice_power_cv": 740
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sergio",
+      "name": "Sergio",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "La barchetta dedicata a Sergio Pininfarina, prodotta in sei esemplari sulla 458 Speciale A.",
+        "en": "The barchetta dedicated to Sergio Pininfarina, built in six units on the 458 Speciale A."
+      },
+      "versions": [
+        {
+          "slug": "sergio",
+          "name": "Sergio",
+          "vehicle_type": "stradale",
+          "year_start": 2015,
+          "year_end": 2015,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Nata da una concept del 2013, senza parabrezza.",
+            "en": "Born from a 2013 concept, without a windscreen."
+          },
+          "designers": [
+            {
+              "slug": "pininfarina",
+              "role": "design"
+            }
+          ],
+          "body_type": "barchetta",
+          "units_produced": 6,
+          "powertrain": {
+            "engine": "F136FL",
+            "ice_power_cv": 605
+          }
+        }
+      ]
+    },
+    {
+      "slug": "j50",
+      "name": "J50",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "Dieci esemplari per i cinquant'anni di Ferrari in Giappone, sulla 488 Spider.",
+        "en": "Ten units for fifty years of Ferrari in Japan, on the 488 Spider."
+      },
+      "versions": [
+        {
+          "slug": "j50",
+          "name": "J50",
+          "vehicle_type": "stradale",
+          "year_start": 2016,
+          "year_end": 2017,
+          "in_production": false,
+          "production_type": "serie_limitata",
+          "description": {
+            "it": "Una targa con il tetto in fibra di carbonio asportabile.",
+            "en": "A targa with a removable carbon-fibre roof."
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "targa",
+          "units_produced": 10,
+          "powertrain": {
+            "engine": "F154CB",
+            "ice_power_cv": 690
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sp275-rw-competizione",
+      "name": "SP275 RW Competizione",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "Un esemplare unico sulla F12tdf, ispirato alla 275 GTB/C.",
+        "en": "A one-off on the F12tdf, inspired by the 275 GTB/C."
+      },
+      "versions": [
+        {
+          "slug": "sp275-rw-competizione",
+          "name": "SP275 RW Competizione",
+          "vehicle_type": "stradale",
+          "year_start": 2016,
+          "year_end": 2016,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Costruita per un collezionista americano.",
+            "en": "Built for an American collector."
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "powertrain": {
+            "engine": "F140FC"
+          },
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "sp38",
+      "name": "SP38",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "Un esemplare unico sulla 488 GTB, con il frontale ispirato alla F40.",
+        "en": "A one-off on the 488 GTB, with a front end inspired by the F40."
+      },
+      "versions": [
+        {
+          "slug": "sp38",
+          "name": "SP38",
+          "vehicle_type": "stradale",
+          "year_start": 2018,
+          "year_end": 2018,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Con il V8 da 720 cv della 488 Pista.",
+            "en": "With the 488 Pista's 720 cv V8."
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "powertrain": {
+            "engine": "F154CD",
+            "ice_power_cv": 720
+          },
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "sp3jc",
+      "name": "SP3JC",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "Un esemplare unico sulla F12tdf, una roadster ispirata alle Ferrari degli anni Sessanta.",
+        "en": "A one-off on the F12tdf, a roadster inspired by 1960s Ferraris."
+      },
+      "versions": [
+        {
+          "slug": "sp3jc",
+          "name": "SP3JC",
+          "vehicle_type": "stradale",
+          "year_start": 2018,
+          "year_end": 2018,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Le iniziali JC sono quelle del collezionista.",
+            "en": "The JC initials are the collector's."
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "barchetta",
+          "powertrain": {
+            "engine": "F140FC",
+            "ice_power_cv": 780
+          },
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "p80-c",
+      "name": "P80/C",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "Un esemplare unico solo da pista, sulla 488 GT3, ispirato alle sport prototipo degli anni Sessanta.",
+        "en": "A track-only one-off, on the 488 GT3, inspired by the sports prototypes of the 1960s."
+      },
+      "versions": [
+        {
+          "slug": "p80-c",
+          "name": "P80/C",
+          "vehicle_type": "pista",
+          "year_start": 2019,
+          "year_end": 2019,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Il progetto più lungo del programma, durato quattro anni.",
+            "en": "The longest project in the programme, lasting four years."
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "powertrain": {
+            "engine": "F154"
+          },
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "omologata",
+      "name": "Omologata",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "Un esemplare unico sulla 812 Superfast, con una livrea da corsa e il V12 da 800 cv.",
+        "en": "A one-off on the 812 Superfast, with a racing livery and the 800 cv V12."
+      },
+      "versions": [
+        {
+          "slug": "omologata",
+          "name": "Omologata",
+          "vehicle_type": "stradale",
+          "year_start": 2020,
+          "year_end": 2020,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Il nome richiama le auto da corsa omologate per la strada.",
+            "en": "The name recalls racing cars homologated for the road."
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "powertrain": {
+            "engine": "F140GA",
+            "ice_power_cv": 800
+          },
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "br20",
+      "name": "BR20",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "Un esemplare unico sulla GTC4Lusso, una coupé a due posti ispirata alle Gran Turismo degli anni Cinquanta e Sessanta.",
+        "en": "A one-off on the GTC4Lusso, a two-seat coupé inspired by the grand tourers of the 1950s and 1960s."
+      },
+      "versions": [
+        {
+          "slug": "br20",
+          "name": "BR20",
+          "vehicle_type": "stradale",
+          "year_start": 2021,
+          "year_end": 2021,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Con il V12 da 690 cv della GTC4Lusso.",
+            "en": "With the GTC4Lusso's 690 cv V12."
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "powertrain": {
+            "engine": "F140ED",
+            "ice_power_cv": 690
+          },
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "sp51",
+      "name": "SP51",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "Un esemplare unico sulla 812 GTS, una roadster senza tetto.",
+        "en": "A one-off on the 812 GTS, a roofless roadster."
+      },
+      "versions": [
+        {
+          "slug": "sp51",
+          "name": "SP51",
+          "vehicle_type": "stradale",
+          "year_start": 2022,
+          "year_end": 2022,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Con il V12 da 800 cv della 812.",
+            "en": "With the 812's 800 cv V12."
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "barchetta",
+          "powertrain": {
+            "engine": "F140GA",
+            "ice_power_cv": 800
+          },
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "sp48-unica",
+      "name": "SP48 Unica",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "Un esemplare unico sulla F8 Tributo, senza lunotto, con un pannello in fibra di carbonio al suo posto.",
+        "en": "A one-off on the F8 Tributo, without a rear screen, with a carbon-fibre panel in its place."
+      },
+      "versions": [
+        {
+          "slug": "sp48-unica",
+          "name": "SP48 Unica",
+          "vehicle_type": "stradale",
+          "year_start": 2022,
+          "year_end": 2022,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Con il V8 da 720 cv della F8 Tributo.",
+            "en": "With the F8 Tributo's 720 cv V8."
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "powertrain": {
+            "engine": "F154CD",
+            "ice_power_cv": 720
+          },
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "sp-8",
+      "name": "SP-8",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "Un esemplare unico sulla F8 Spider, una roadster senza parabrezza tradizionale.",
+        "en": "A one-off on the F8 Spider, a roadster without a conventional windscreen."
+      },
+      "versions": [
+        {
+          "slug": "sp-8",
+          "name": "SP-8",
+          "vehicle_type": "stradale",
+          "year_start": 2023,
+          "year_end": 2023,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Con il V8 da 720 cv della F8 Spider.",
+            "en": "With the F8 Spider's 720 cv V8."
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "barchetta",
+          "powertrain": {
+            "engine": "F154CD",
+            "ice_power_cv": 720
+          },
+          "units_produced": 1
+        }
+      ]
+    },
+    {
+      "slug": "kc23",
+      "name": "KC23",
+      "category": "progetti-speciali",
+      "description": {
+        "it": "Un esemplare unico solo da pista, sulla 488 GT3 Evo 2020.",
+        "en": "A track-only one-off, on the 488 GT3 Evo 2020."
+      },
+      "versions": [
+        {
+          "slug": "kc23",
+          "name": "KC23",
+          "vehicle_type": "pista",
+          "year_start": 2023,
+          "year_end": 2023,
+          "in_production": false,
+          "production_type": "one_off",
+          "description": {
+            "it": "Le prese d'aria si aprono solo quando il motore ha bisogno di raffreddamento.",
+            "en": "The air intakes open only when the engine needs cooling."
+          },
+          "designers": [
+            {
+              "slug": "centro-stile-ferrari",
+              "role": "design"
+            }
+          ],
+          "body_type": "coupe",
+          "powertrain": {
+            "engine": "F154"
+          },
+          "units_produced": 1
+        }
+      ]
+    }
+  ]
+}
