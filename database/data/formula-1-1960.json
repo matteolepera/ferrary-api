@@ -213,7 +213,8 @@
             "chassis_material": "acciaio"
           }
         }
-      ]
+      ],
+      "predecessor": "dino-246-f1"
     },
     {
       "slug": "158",
