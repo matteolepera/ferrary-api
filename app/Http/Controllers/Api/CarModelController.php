@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Public\CarModelIndexRequest;
 use App\Http\Resources\CarModelResource;
+use App\Http\Resources\TimelineModelResource;
 use App\Models\CarModel;
 use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -58,5 +59,23 @@ class CarModelController extends Controller
         abort_if($carModel->versions->isEmpty(), 404);
 
         return new CarModelResource($carModel);
+    }
+
+    /**
+     * Tutti i modelli visibili in ordine di anno, leggeri e senza paginazione:
+     * per la linea del tempo della storia.
+     */
+    public function timeline(): AnonymousResourceCollection
+    {
+        $models = CarModel::query()
+            ->visible()
+            ->with('category')
+            ->withMin(['versions' => fn ($query) => $query->published()], 'year_start')
+            // Dal più vecchio al più recente; a parità di anno, in ordine di nome
+            ->orderBy('versions_min_year_start')
+            ->orderBy('name')
+            ->get();
+
+        return TimelineModelResource::collection($models);
     }
 }

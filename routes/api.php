@@ -17,7 +17,7 @@ Route::post('/login', [AuthController::class, 'login'])->middleware('throttle:lo
 Route::get('/categories', [CategoryController::class, 'index']);
 
 Route::get('/models', [CarModelController::class, 'index']);
-
+Route::get('/models/timeline', [CarModelController::class, 'timeline']);
 Route::get('/models/{carModel:slug}', [CarModelController::class, 'show']);
 
 Route::get('/versions/{version:slug}', [VersionController::class, 'show']);
