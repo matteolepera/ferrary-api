@@ -4,6 +4,7 @@ use App\Models\CarModel;
 use App\Models\Image;
 use App\Models\Version;
 use App\Models\VersionPowertrain;
+use App\Models\VersionRacing;
 use App\Models\VersionSpec;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -128,4 +129,45 @@ it('restituisce dati chiave vuoti se la versione non ha scheda tecnica', functio
         ->assertOk()
         ->assertJsonPath('data.0.highlights.power_cv', null)
         ->assertJsonPath('data.0.highlights.top_speed_kmh', null);
+});
+
+it('somma i risultati in gara della versione principale', function () {
+    $version = visibleCarModel()->versions()->first();
+
+    // Due campionati: le gare e le vittorie si sommano, i titoli piloti e costruttori pure.
+    // Vittorie, podi e gare sono legati da vincoli, quindi vanno scelti coerenti
+    VersionRacing::factory()->create([
+        'version_id' => $version->id,
+        'championship' => 'Formula 1',
+        'races' => 18,
+        'wins' => 15,
+        'podiums' => 16,
+        'poles' => 12,
+        'fastest_laps' => 10,
+        'drivers_titles' => 1,
+        'constructors_titles' => 1,
+    ]);
+    VersionRacing::factory()->create([
+        'version_id' => $version->id,
+        'championship' => 'Gare non valide per il titolo',
+        'races' => 2,
+        'wins' => 0,
+        'podiums' => 0,
+        'poles' => 0,
+        'fastest_laps' => 0,
+    ]);
+
+    $this->getJson('/api/models')
+        ->assertOk()
+        ->assertJsonPath('data.0.highlights.racing.races', 20)
+        ->assertJsonPath('data.0.highlights.racing.wins', 15)
+        ->assertJsonPath('data.0.highlights.racing.titles', 2);
+});
+
+it('senza risultati in gara non li manda', function () {
+    visibleCarModel();
+
+    $this->getJson('/api/models')
+        ->assertOk()
+        ->assertJsonPath('data.0.highlights.racing', null);
 });

@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use App\Models\CarModel;
+use App\Models\Version;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -44,6 +45,9 @@ class CarModelResource extends JsonResource
                     'power_cv' => $powertrain->system_power_cv ?? $powertrain?->ice_power_cv,
                     'zero_to_100_sec' => $specs?->zero_to_100_sec === null ? null : (float) $specs->zero_to_100_sec,
                     'top_speed_kmh' => $specs?->top_speed_kmh,
+                    // I risultati in gara, sommati su tutti i campionati: per le auto da corsa
+                    // dicono più della velocità. Null se la versione non ha mai corso
+                    'racing' => $this->racingTotals($version),
                 ];
             }),
 
@@ -60,6 +64,34 @@ class CarModelResource extends JsonResource
 
             // Anno della prima versione pubblicata, se calcolato dal controller con withMin
             'first_year' => $this->whenAggregated('versions', 'year_start', 'min'),
+        ];
+    }
+
+    /**
+     * Gare, vittorie e titoli di una versione, sommati su tutti i suoi campionati.
+     * Gare e vittorie restano null se nessun campionato le indica, come nella scheda del modello;
+     * i titoli sono quelli piloti più quelli costruttori.
+     *
+     * @return array{races: int|null, wins: int|null, titles: int}|null
+     */
+    private function racingTotals(Version $version): ?array
+    {
+        // Senza il caricamento anticipato, leggere i risultati farebbe partire una query per ogni modello
+        if (! $version->relationLoaded('racingRecords') || $version->racingRecords->isEmpty()) {
+            return null;
+        }
+
+        $records = $version->racingRecords;
+
+        // La somma di un campo, o null se nessun campionato lo indica
+        $total = fn (string $field): ?int => $records->whereNotNull($field)->isEmpty()
+            ? null
+            : (int) $records->sum($field);
+
+        return [
+            'races' => $total('races'),
+            'wins' => $total('wins'),
+            'titles' => (int) ($records->sum('drivers_titles') + $records->sum('constructors_titles')),
         ];
     }
 }
