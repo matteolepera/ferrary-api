@@ -91,6 +91,38 @@ test('mette prima le schede modificate più di recente', function () {
     expect($names)->toBe(['Recente', 'Vecchia']);
 });
 
+test('conta le mancanze nel database, anche oltre le schede che manda', function () {
+    // Sette pubblicate con la copertina ma senza scheda tecnica, modificate da poco
+    foreach (range(1, 7) as $hours) {
+        $version = Version::factory()->published()->create(['updated_at' => now()->subHours($hours)]);
+        Image::factory()->cover()->create(['version_id' => $version->id]);
+    }
+
+    // Una bozza completa, modificata un mese fa: le sette la superano nell'elenco generale
+    $draft = Version::factory()->create([
+        'name' => 'Bozza vecchia',
+        'published_at' => null,
+        'updated_at' => now()->subMonth(),
+    ]);
+    Image::factory()->cover()->create(['version_id' => $draft->id]);
+    VersionSpec::factory()->create(['version_id' => $draft->id]);
+
+    $data = $this->actingAs(User::factory()->moderator()->create())
+        ->getJson('/api/admin/dashboard')
+        ->assertOk()
+        ->json('data');
+
+    expect($data['to_complete_counts'])->toBe([
+        'all' => 8,
+        'draft' => 1,
+        'no_photos' => 0,
+        'no_specs' => 7,
+    ])
+        // Le 6 più recenti in generale, più la bozza: è la più recente tra le bozze
+        ->and($data['to_complete'])->toHaveCount(7)
+        ->and(collect($data['to_complete'])->pluck('name'))->toContain('Bozza vecchia');
+});
+
 test("mostra l'attività del catalogo a tutti, quella dello staff solo a chi gestisce le persone", function () {
     $master = User::factory()->master()->create();
     $this->actingAs($master);
